@@ -29,13 +29,17 @@ body {
 
 .treeContainer {
     width: 50%;
-    height: 100%;
+    height: 1800px;
     background-color: aquamarine;
     text-align: center;
 }
 
 .detailsContainer {
     width: 50%;
-    height: 100%;
+    height: 1800px;
     background-color: azure;
+}
+
+.tabSize {
+    margin-left: 130px;
 }
