@@ -7,14 +7,14 @@
 
 .level2 {
     margin: 100px 125px;
-    height: 300px;
+    height: 600px;
     width: 250px;
     background-color: aliceblue;
 }
 
 .level3 {
     margin: 100px 125px;
-    height: 200px;
+    height: 300px;
     width: 250px;
     background-color: aliceblue;
 }
@@ -29,13 +29,13 @@ body {
 
 .treeContainer {
     width: 50%;
-    height: 500px;
+    height: 100%;
     background-color: aquamarine;
     text-align: center;
 }
 
 .detailsContainer {
     width: 50%;
-    height: 500px;
+    height: 100%;
     background-color: azure;
 }
