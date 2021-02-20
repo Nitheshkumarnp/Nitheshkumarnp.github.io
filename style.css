@@ -1,0 +1,43 @@
+.level1 {
+    height: 200px;
+    width: 150px;
+    background-color: aliceblue;
+}
+
+.leve2 {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    height: 200px;
+    width: 150px;
+    background-color: aliceblue;
+}
+
+.level3 {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    height: 200px;
+    width: 150px;
+    background-color: aliceblue;
+}
+
+span {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+}
+
+.treeContainer {
+    width: 50%;
+    height: 500px;
+    background-color: aquamarine;
+}
+
+.detailsContainer {
+    width: 50%;
+    height: 500px;
+    background-color: azure;
+}
