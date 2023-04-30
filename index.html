@@ -1,42 +1,12 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>my family</title>
-        <link rel="stylesheet" href="./style.css">
-        <script src="./angular.min.js"></script>
-        <script src="./script.js"></script>
+        <title>
+            Complete Profile
+        </title>
+        <script src="script.js"></script>
     </head>
-
-    <body ng-app="myApp" ng-controller="myCtrl">
-        <div class="treeContainer">
-            <h1>Family details</h1>
-            <div class="level1">
-                <h1 ng-repeat='i in familyData' ng-if='i.level == 1'>
-                    <span ng-click='showDetails(i)'>{{i.name}}</span>
-                    <span ng-click='showLevel(i)' ng-if='!i.show'>&gt;</span>
-                    <span ng-click='showLevel(i)' ng-if='i.show'>&lt;</span>
-                </h1>
-            </div>
-            <div class="level2" ng-if='showLevel2'>
-                <h1 ng-repeat='i in level2Gen'>
-                    <span ng-click='showDetails(i)'>{{i.name}}</span>
-                    <span ng-click='showLevel(i)' ng-if='!i.show'>&gt;</span>
-                    <span ng-click='showLevel(i)' ng-if='i.show'>&lt;</span><br><br><br>
-                </h1>
-            </div>
-            <div class="level3" ng-if='showLevel3'>
-                <h1 ng-repeat='i in level3Gen'>
-                    <span ng-click='showDetails(i)'>{{i.name}}</span>
-                    <br><br><br>
-                </h1>
-            </div>
-        </div>
-        <div class="detailsContainer">
-            <h1>Name: {{name}}</h1><br><br>
-            <h1>Age: {{age}}</h1><br><br>
-            <h1>Parent: {{parent}}</h1><br><br>
-            <h1>Mobile Number: {{mobileNumber}}</h1><br><br>
-            <h1 >children: <span ng-repeat='i in children'>{{i}} <br><br><span class='tabSize'></span></span></h1>
-        </div>
+    <body>
+        <h1>Let's start</h1>
+        <h2 id="check"></h2>
     </body>
 </html>
