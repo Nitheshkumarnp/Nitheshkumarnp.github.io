@@ -3,10 +3,18 @@
         <title>
             Complete Profile
         </title>
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <h1>Let's start</h1>
-        <h2 id="check"></h2>
+        <div class="flex bg-black font-white">
+            <h1 class="pd-5-15 mr-0" onclick="show('MLContent')">Machine learning</h1>
+            <div class="gap"></div>
+            <h1 class="pd-5-15 mr-0" onclick="show('PythonContent')">Python</h1>
+        </div>
+        <div id="empty">Select any one of the above topic</div>
+        <div id="MLContent" class="content"></div>
+        <div id="PythonContent" class="content"></div>
+        <script src="./script.js"></script>
     </body>
 </html>
