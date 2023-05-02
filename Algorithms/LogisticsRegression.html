@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>
+            Complete Profile
+        </title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <h1>Let's start</h1>
+        <div class="flex bg-black font-white">
+            <h1 class="pd-5-15 mr-0" onclick="document.location='../MachineLearning/MachineLearning.html'">
+                Machine learning</h1>
+            <div class="gap"></div>
+            <h1 class="pd-5-15 mr-0" onclick="document.location='../Python/python.html'">Python</h1>
+            <div class="gap"></div>
+            <h1 class="pd-5-15 mr-0" onclick="document.location='../Algorithms/Algorithms.html'">
+                ML Algorithms</h1>
+        </div>
+        <div>
+            <h4>What is logistic regression?</h4>
+        <p>Logistic regression is a supervised machine learning algorithm mainly used for 
+        classification tasks where the goal is to predict the probability that an instance 
+        of belonging to a given class.<br><br>It's referred to as regression because it takes 
+        the output of the linear regression function as input and uses a sigmoid function to 
+        estimate the probability for the given class.</p>
+        <p><b>Independent variables:</b> The input characteristics or predictor factors 
+        applied to the dependent variable's predictions.<br>
+        <b>Dependent variable:</b> The target variable in a logistic regression model, which 
+        we are trying to predict.<br>
+        <b>Logistic function:</b> The formula used to represent how the independent and 
+        dependent variables relate to one another. The logistic function transforms the 
+        input variables into a probability value between 0 and 1, which represents the 
+        likelihood of the dependent variable being 1 or 0.<br>
+        <b>Odds:</b> It is the ratio of something occurring to something not occurring. it 
+        is different from probability as probability is the ratio of something occurring to 
+        everything that could possibly occur.<br>
+        <b>Log-odds:</b> The log-odds, also known as the logit function, is the natural 
+        logarithm of the odds. In logistic regression, the log odds of the dependent 
+        variable are modeled as a linear combination of the independent variables and the 
+        intercept.<br>
+        <b>Coefficient:</b> The logistic regression model's estimated parameters, show how 
+        the independent and dependent variables relate to one another.<br>
+        <b>Intercept:</b> A constant term in the logistic regression model, which represents 
+        the log odds when all independent variables are equal to zero.<br>
+        <b>Maximum likelihood estimation:</b> The method used to estimate the coefficients 
+        of the logistic regression model, which maximizes the likelihood of observing the 
+        data given the model.</p>
+        <p><b>Working of Logistics Regression:</b></p>
+        <p>The logistic regression model transforms the linear regression function 
+        continuous value output into categorical value output using a sigmoid function, 
+        which maps any real-valued set of independent variables input into a value between 
+        0 and 1. This function is known as the logistic function.</p>
+        <p>* <b>Eg.</b> In summer day, catching 2 fishes in 5 days. in winter day, catching 
+        3 fishes in 5 days.<br>
+        * prob = 2/5 in summer, prob = 3/5 in winter.<br>
+        * odds = 2/3 in summer, odds = 3/2 in winter.<br>
+        * log(odds) = log(2/3) in summer, log(odds) = log(3/2) in winter.<br>
+        * log(odd ratio) = log(odds in summer/odds in winter) = log((2/3)/(3/2)) = 
+        log(0.44)</p>
+        <p>There are three types of logistic regression:<br>
+          1.Binomial<br>
+          2.Multinomial<br>
+          3.Ordinal<br>
+          * Binomial means have two outcomes.<br>
+          * Multinomial means have three or more outcomes, outcomes don't have specific order 
+          or rating. Eg. Colors: Blue, Red, Yellow<br>
+          * Ordinal mean have three or more outcomes, outcomes have specific order or rating. 
+          Eg. Grade Rank, A, B, C, D.
+        </p>
+        <p>Formula, y =  1 / (1 + e^-x)<br>
+          y = output value<br>
+          e = base of natural logarithms<br>
+          x = input value</p>
+        <p>Formula, y = e^(b0 + b1*x) / (1 + e^(b0 + b1*x))<br>
+          x = input value<br>
+          y = predicted output<br>
+          b0 = bias or intercept term<br>
+          b1 = coefficient for the single input value (x)</p>
+        <p><b>Assumptions:</b><br>
+        * There should be no outliers in the dataset.<br>
+        * There is no correlation between any input variables.<br>
+        * The dependent variable must be categorical in nature.
+        </p>
+        <p><b>Accuracy</b> simply measures how often the classifier correctly predicts. We 
+        can define accuracy as the ratio of the number of correct predictions and the total 
+        number of predictions.</p>
+        <p><b>Confusion Matrix</b> is a performance measurement for the machine learning 
+        classification problems where the output can be two or more classes. It is a table 
+        with combinations of predicted and actual values.<br>A confusion matrix is defined 
+        as the table that is often used to describe the performance of a classification 
+        model on a set of the test data for which the true values are known.</p>
+        <p><b>Precision</b> for a label is defined as the number of true positives divided 
+        by the number of predicted positives.<br> Precision = TP/(TP+FP)</p>
+        <p><b>Recall/Sensitivity</b> for a label is defined as the number of true 
+        positives divided by the total number of actual positives.<br> 
+        Recall = TP/(TP+FN)</p>
+        <p><b>Specificity</b> tells us what proportion of the negative class got correctly 
+        classified.<br>Specificity = TN/(TN + FP)</p>
+        <p><b>F1 Score</b> is the harmonic mean of precision and recall. It is maximum 
+        when Precision is equal to Recall.<br>
+        F1 Score = 2*(Precision*Recall)/(Precision+Recall)</p>
+        <p><b>What is the AUC - ROC Curve?</b><br>AUC - ROC curve is a performance 
+        measurement for the classification problems at various threshold settings. ROC is 
+        a probability curve and AUC represents the degree or measure of separability. It 
+        tells how much the model is capable of distinguishing between classes.</p>
+        </div>
+    </body>
+</html>
