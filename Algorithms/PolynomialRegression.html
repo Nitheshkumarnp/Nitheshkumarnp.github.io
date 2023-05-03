@@ -1,1 +1,103 @@
+<html>
+    <head>
+        <title>
+            Complete Profile
+        </title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <h1>Let's start</h1>
+        <div class="flex bg-black font-white">
+            <h1 class="pd-5-15 mr-0" onclick="document.location='../MachineLearning/MachineLearning.html'">
+                Machine learning</h1>
+            <div class="gap"></div>
+            <h1 class="pd-5-15 mr-0" onclick="document.location='../Python/python.html'">Python</h1>
+            <div class="gap"></div>
+            <h1 class="pd-5-15 mr-0" onclick="document.location='../Algorithms/Algorithms.html'">
+                ML Algorithms</h1>
+        </div>
+        <div>
+        <h4>What is Polynomial regression?</h4>
 
+        <p>In polynomial regression, the relationship between the independent variable x 
+        and the dependent variable y is described as an nth degree polynomial in x<br><br>
+        Formula, y= b0+b1x1+ b2x12+ b2x13+...... bnx1n</p>
+        <p>The algorithm of linear regression works only when the regression in the data 
+        is linear. Polynomial regression can be considered one of the exceptional cases of 
+        multiple linear regression models. In other words, it is a linear regression type 
+        containing dependent and independent variables, and they both share a curvilinear 
+        relationship. A polynomial relationship is fitted in the data</p>
+        <p><b>How?</b><br><br>We are converting the Multiple Linear Regression equation into 
+        a Polynomial Regression equation by including more polynomial elements to make 
+        Polynomial Regression</p>
+        <p><b>Types of Polynomial Regression:</b><br>
+        * Linear - if degree as 1<br>
+        * Quadratic - if degree as 2<br>
+        * Cubic - if degree as 3 and goes on, on the basis of degree.</p>
+        <b>Why?</b><br>* A good result is provided if a linear model is applied to a linear 
+        database, as is the case with simple linear regression. However, a drastic output 
+        is produced if the same model is applied to a non-linear dataset with no 
+        modifications. These cause an increase in the loss function, high error rates, and 
+        a decrease in accuracy.<br>
+        * For cases where the data points are arranged in a non-linear fashion, there is a 
+        need for polynomial regression.<br>
+        * If a non-linear model is present and you try to cover it using a linear model, 
+        it will cover no data points. Hence, a polynomial model is used to ensure that the 
+        data points are covered. That said, a curve will be suitable for covering most data 
+        points using polynomial models instead of a straight line. <br>
+        <p><b>Equation of the Polynomial Regression Model:</b><br>* Simple Linear Regression 
+        equation:         y = b0+b1x<br>
+        * Multiple Linear Regression equation:         y= b0+b1x+ b2x2+ b3x3+....+ bnxn<br>
+        * Polynomial Regression equation:         y= b0+b1x + b2x2+ b3x3+....+ bnxn</p>
+        <b>Assumptions:</b> <br>* The relationship between the dependent variable and any 
+        independent variable is linear or curvilinear.<br>
+        * The independent variables do no depend on each other too.<br>
+        * The errors are independent, normally distributed with mean zero and a constant 
+        variance.<br>
+        <p><b>Advantages:</b><br>* The polynomial regression is flexible enough to get fitted in 
+        a vast range of curvatures.<br>
+        * A broad range of functions can easily fit under it. <br>
+        * The polynomial regression offers the best approximation of the relationship 
+        between the two dependent and independent variables. </p> 
+        <p><b>Disadvantages:</b><br>* The presence of one or more outliers in the data can 
+        hurt the final results of the nonlinear analysis. <br>
+        * The polynomial regression is very sensitive to the outliers. <br>
+        * Very few model validation tools are available that help detect the outliers in 
+        nonlinear regression compared to the ones present for linear regression. </p>
+        <div>
+          <h4>Mean Squared Error(MSE):</h4>
+          <p>The MSE is calculated as the mean or average of the squared differences 
+          between predicted and expected target values in a dataset.<br>It is also an 
+          important loss function for algorithms fit or optimized using the least squares 
+          framing of a regression problem.<br>we perform squared to avoid the cancellation 
+          of negative terms and it is the benefit of MSE.</p>
+          <p><b>Advantages:</b><br>* The graph of MSE is differentiable, so you can easily 
+          use it as a loss function.</p>
+          <p><b>Disadvantages:</b><br>* The value you get after calculating MSE is a squared unit 
+          of output. for example, the output variable is in meter(m) then after calculating 
+          MSE the output we get is in meter squared.<br>
+          * If you have outliers in the dataset then it penalizes the outliers most and the 
+          calculated MSE is bigger. So, in short, It is not Robust to outliers which were 
+          an advantage in MAE.</p>
+        </div>
+        <div>
+          <h4>Root Mean Squared Error(RMSE):</h4>
+          <p>* It is square of RME.<br>* The square root of the error is calculated, which means that the units of the 
+          RMSE are the same as the original units of the target value that is being 
+          predicted.<br>* A perfect RMSE value is 0.0, which means that all predictions 
+          matched the expected values exactly.<br>
+          <b>Advantage: </b>The output value you get is in the same unit as the required 
+          output variable which makes interpretation of loss easy.<br>
+          <b>Disadvantage: </b>It is not that robust to outliers as compared to MAE.</p>
+        </div>
+        <div>
+          <h4>Mean Absolute Error(MAE):</h4>
+          <p>MAE is a very simple metric which calculates the absolute difference between 
+          actual and predicted values.<br><b>Advantage: </b><br>* The MAE you get is in the same 
+          unit as the output variable.<br>
+          * It is most Robust to outliers.<br>
+          <b>Disadvantage:</b> The graph of MAE is not differentiable so we have to apply 
+          various optimizers like Gradient descent which can be differentiable.</p>
+        </div>    
+    </body>
+</html>
