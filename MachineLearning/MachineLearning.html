@@ -112,25 +112,99 @@
                 * odds = 2/3 in summer, odds = 3/2 in winter.<br></p>
               </div>
               <div>
-                <h4>What is the AUC ROC curve?</h4>
-                <p>AUC ROC stands for 'Area Under the Curve' of the 'Receiver Operating 
-                Characteristic' curve. The AUC ROC curve is basically a way of measuring the 
-                performance of an ML model. AUC measures the ability of a binary classifier to 
-                distinguish between classes and is used as a summary of the ROC curve.<br><br>The 
-                ROC AUC score tells us how efficient the model is. The higher the AUC, the better 
-                the model's performance at distinguishing between the positive and negative 
-                classes. An AUC score of 1 means the classifier can perfectly distinguish between 
-                all the Positive and the Negative class points. An AUC value of 0 shows that the 
-                classifier predicts all Negatives as Positives and vice versa.</p>
+                <h4>Evaluation Metrics for Regression: </h4>
+                <p>&nbsp;&nbsp;&nbsp;MAE<br>&nbsp;&nbsp;&nbsp;MSE<br>&nbsp;&nbsp;&nbsp;RMSE</p>
               </div>
-            <div>
-                <h4></h4>
-                <p></p>
-            </div>
-            <div>
-                <h4></h4>
-                <p></p>
-            </div>
-        </div>
+              <div>
+                <h4>What is Mean Squared Error(MSE)?</h4>
+                <p>The MSE is calculated as the mean or average of the squared differences 
+            between predicted and expected target values in a dataset.<br>It is also an 
+            important loss function for algorithms fit or optimized using the least squares 
+            framing of a regression problem.<br>we perform squared to avoid the cancellation 
+            of negative terms and it is the benefit of MSE.</p>
+            <p><b>Advantages:</b><br>* The graph of MSE is differentiable, so you can easily 
+            use it as a loss function.</p>
+            <p><b>Disadvantages:</b><br>* The value you get after calculating MSE is a squared unit 
+            of output. for example, the output variable is in meter(m) then after calculating 
+            MSE the output we get is in meter squared.<br>
+            * If you have outliers in the dataset then it penalizes the outliers most and the 
+            calculated MSE is bigger. So, in short, It is not Robust to outliers which were 
+            an advantage in MAE.</p>
+          </div>
+          <div>
+            <h4>What is Root Mean Squared Error(RMSE)?</h4>
+            <p>* It is square of RME.<br>* The square root of the error is calculated, which means that the units of the 
+            RMSE are the same as the original units of the target value that is being 
+            predicted.<br>* A perfect RMSE value is 0.0, which means that all predictions 
+            matched the expected values exactly.<br>
+            <b>Advantage: </b>The output value you get is in the same unit as the required 
+            output variable which makes interpretation of loss easy.<br>
+            <b>Disadvantage: </b>It is not that robust to outliers as compared to MAE.</p>
+          </div>
+          <div>
+            <h4>What is Mean Absolute Error(MAE)?</h4>
+            <p>MAE is a very simple metric which calculates the absolute difference between 
+            actual and predicted values.<br><b>Advantage: </b><br>* The MAE you get is in the same 
+            unit as the output variable.<br>
+            * It is most Robust to outliers.<br>
+            <b>Disadvantage:</b> The graph of MAE is not differentiable so we have to apply 
+            various optimizers like Gradient descent which can be differentiable.</p>
+          </div>
+          <div>
+            <h4>Evaluation Metrics for classification: </h4>
+            <p>&nbsp;&nbsp;&nbsp;Confusion Matrix<br>&nbsp;&nbsp;&nbsp;Accuracy<br>
+            &nbsp;&nbsp;&nbsp;Precision<br>&nbsp;&nbsp;&nbsp;Recall/Sensitivity<br>
+            &nbsp;&nbsp;&nbsp;Specificity<br>&nbsp;&nbsp;&nbsp;F1 Score<br>&nbsp;&nbsp;
+            ROC AUC curve</p>
+          </div>
+          <div>
+            <h4>What is Confusion Matrix?</h4>
+            <p>Confusion Matrix is a performance measurement for the machine learning 
+            classification problems where the output can be two or more classes. It is a 
+            table with combinations of predicted and actual values.<br>A confusion matrix 
+            is defined as the table that is often used to describe the performance of a 
+            classification model on a set of the test data for which the true values are 
+            known.</p>
+          </div>
+          <div>
+            <h4>What is Accuracy?</h4>
+            <p>It simply measures how often the classifier correctly predicts. We can 
+            define accuracy as the ratio of the number of correct predictions and the total 
+            number of predictions.</p>
+          </div>
+          <div>
+            <h4>What is Precision?</h4>
+            <p>Precision for a label is defined as the number of true positives divided by 
+            the number of predicted positives.<br>Precision = TP/(TP+FP)</p>
+          </div>
+          <div>
+            <h4>What is Recall/Sensitivity?</h4>
+            <p>Recall/Sensitivity for a label is defined as the number of true positives 
+            divided by the total number of actual positives.<br>Recall = TP/(TP+FN)</p>
+          </div>
+          <div>
+            <h4>What is Specificity?</h4>
+            <p>Specificity tells us what proportion of the negative class got correctly 
+            classified.<br>Specificity = TN/(TN + FP)</p>
+          </div>
+          <div>
+            <h4>What is F1 Score?</h4>
+            <p>F1 Score is the harmonic mean of precision and recall. It is maximum when 
+            Precision is equal to Recall.<br>F1 Score = 2*(Precision*Recall)/
+            (Precision+Recall)</p>
+          </div>
+          <div>
+            <h4>What is the AUC ROC curve?</h4>
+            <p>AUC ROC stands for 'Area Under the Curve' of the 'Receiver Operating 
+            Characteristic' curve. The AUC ROC curve is basically a way of measuring the 
+            performance of an ML model. AUC measures the ability of a binary classifier to 
+            distinguish between classes and is used as a summary of the ROC curve.<br><br>The 
+            ROC AUC score tells us how efficient the model is. The higher the AUC, the better 
+            the model's performance at distinguishing between the positive and negative 
+            classes. An AUC score of 1 means the classifier can perfectly distinguish between 
+            all the Positive and the Negative class points. An AUC value of 0 shows that the 
+            classifier predicts all Negatives as Positives and vice versa.</p>
+          </div>        
+       </div>
     </body>
 </html>
