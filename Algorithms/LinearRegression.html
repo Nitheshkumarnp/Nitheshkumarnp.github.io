@@ -1,80 +1,440 @@
 <html>
-    <head>
-        <title>
-            Complete Profile
-        </title>
-        <link rel="stylesheet" href="../style.css">
-    </head>
-    <>
-        <h1>Let's start</h1>
-        <div class="flex bg-black font-white">
-            <h1 class="pd-5-15 mr-0" onclick="document.location='../MachineLearning/MachineLearning.html'">
-                Machine learning</h1>
-            <div class="gap"></div>
-            <h1 class="pd-5-15 mr-0" onclick="document.location='../Python/python.html'">Python</h1>
-            <div class="gap"></div>
-            <h1 class="pd-5-15 mr-0" onclick="document.location='../Algorithms/Algorithms.html'">
-                ML Algorithms</h1>
-        </div>
-        <div>
-          <h4>Linear Regression</h4>
-          <h4>What is linear regression?</h4>
-          <p>&nbsp;&nbsp;&nbsp;Linear Regression is the supervised Machine Learning model 
-          in which the model finds the best fit linear line between the independent and 
-          dependent variable i.e it finds the linear relationship between the dependent 
-          and independent variable.</p>
-          <h4>Why:</h4>
-          <p>&nbsp;&nbsp;&nbsp;predicts continuous values.</p>
-          <p>&nbsp;&nbsp;&nbsp;The goal of is to adjust the values of the model's 
-          parameters to find the line or curve that comes closest to your data. For example,
-           with linear regression, the goal is to find the best-fit values of the slope and 
-          intercept that makes the line come close to the data.</p>
-          <h4>How:</h4>
-          <p>&nbsp;&nbsp;&nbsp;OLS or Ordinary Least Squares is a method used in Linear 
-          Regression for estimating the unknown parameters by creating a model which will 
-          minimize the sum of the squared errors between the observed data and the predicted 
-          one.<br>
-          &nbsp;&nbsp;&nbsp;Ordinary Least Squares regression (OLS) is a common technique 
-          for estimating coefficients of linear regression equations which describe the 
-          relationship between one or more independent quantitative variables and a 
-          dependent variable (simple or multiple linear regression).</p>
-          <h4>Types:</h4>
-          <p>&nbsp;&nbsp;&nbsp;Simple Linear Regression</p>
-          <p>&nbsp;&nbsp;&nbsp;Multiple Linear Regression</p>
-          <h4>Simple Linear Regression</h4>
-          <p>&nbsp;&nbsp;&nbsp;It finds relationship between one input variable and output 
-          variable.</p>
-          <h4>Multiple Linear Regression</h4>
-          <p>&nbsp;&nbsp;&nbsp;It finds relationship between two or more input variables 
-          and output variable.</p>
-          <h4>Equations:</h4>
-          <p>&nbsp;&nbsp;&nbsp;Simple Linear Regression equation: y = b0+b1x<br>
-          &nbsp;&nbsp;&nbsp;Multiple Linear Regression equation: y= b0+b1x+ b2x2+ 
-          b3x3+....+ bnxn</p>
-          <h4>Assumptions:</h4>
-          <p>&nbsp;&nbsp;&nbsp;<b>Independence of observations : </b>Independence means that 
-          there is no relation between the different examples. There should no duplicate 
-          datas.<br>&nbsp;&nbsp;&nbsp;<b>No Hidden or Missing Variables : </b>you have used 
-          all relevant explanatory variables in your model. If you do not do this, you end 
-          up with a wrong model.<br>&nbsp;&nbsp;&nbsp;<b>Relationship : </b>Relations 
-          between the independent and dependent variables must be linear.You can check for 
-          linear relationships easily by making a scatter plot for each independent 
-          variable with the dependent variable.<br>&nbsp;&nbsp;&nbsp;<b>Normality of the 
-          residuals : </b>Residuals should follow a normal distribution.<br>
-          &nbsp;&nbsp;&nbsp;No or little Multicollinearity. <br>&nbsp;&nbsp;
-          Homoscedasticity</p>
-          <h4>Advantages: </h4>
-          <p>&nbsp;&nbsp;&nbsp;Linear regression performs exceptionally well for linearly 
-          separable data.<br>&nbsp;&nbsp;&nbsp;Easier to implement, interpret and efficient 
-          to train.<br>&nbsp;&nbsp;&nbsp;It handles overfitting pretty well using 
-          dimensionally reduction techniques, regularization, and cross-validation.<br>
-          &nbsp;&nbsp;&nbsp;Extrapolation beyond a specific data set.</p>
-          <h4>Disdvantages: </h4>
-          <p>&nbsp;&nbsp;&nbsp;It is often quite prone to noise and overfitting.<br>
-          &nbsp;&nbsp;&nbsp;Linear regression is quite sensitive to outliers.<br>
-          &nbsp;&nbsp;&nbsp;It is prone to multicollinearity.</p>
-          <h4>Evaluation Metrics: </h4>
-          <p>&nbsp;&nbsp;&nbsp;MAE<br>&nbsp;&nbsp;&nbsp;MSE<br>&nbsp;&nbsp;&nbsp;RMSE</p>
-      </div>
-    </body>
+  <head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Let's start</h1>
+    <div class="flex bg-black font-white">
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../MachineLearning/MachineLearning.html'"
+      >
+        Machine learning
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Python/python.html'"
+      >
+        Python
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Algorithms/Algorithms.html'"
+      >
+        ML Algorithms
+      </h1>
+    </div>
+    <div>
+      <h4>Linear Regression</h4>
+      <h4>What is linear regression?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Linear Regression is the supervised Machine Learning
+        model in which the model finds the best fit linear line between the
+        independent and dependent variable i.e it finds the linear relationship
+        between the dependent and independent variable.
+      </p>
+      <h4>When to use linear regression?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Predictive modeling:</b> If you have a dataset with
+        a continuous dependent variable and a set of independent variables that
+        can be used to predict the dependent variable, you can use linear
+        regression to build a predictive model.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Trend analysis:</b> If you want to analyze
+        the trend in your data over time or across different groups, linear
+        regression can help you identify the relationship between the
+        independent variable(s) and the dependent variable.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Hypothesis testing:</b> If you have a
+        hypothesis about the relationship between the independent and dependent
+        variables, linear regression can be used to test the hypothesis and
+        determine whether there is a statistically significant relationship.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Forecasting:</b> If you have historical data
+        and want to predict future values of the dependent variable, linear
+        regression can be used to build a forecasting model.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data exploration:</b> Linear regression can
+        be used to explore the relationship between two or more variables and
+        gain insights into the underlying patterns in the data.
+
+        <br />&nbsp;&nbsp;&nbsp;It's worth noting that linear regression assumes
+        a linear relationship between the dependent and independent variables.
+        If the relationship is not linear, other machine learning algorithms may
+        be more appropriate.
+      </p>
+      <p>
+        &nbsp;&nbsp;&nbsp;The goal of is to adjust the values of the model's
+        parameters to find the line or curve that comes closest to your data.
+        For example, with linear regression, the goal is to find the best-fit
+        values of the slope and intercept that makes the line come close to the
+        data.
+      </p>
+      <h4>Why to use linear regression?</h4>
+      <p>
+        Linear regression is a popular machine learning algorithm because it
+        offers a number of advantages:
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Simplicity</b>: Linear regression is a simple
+        algorithm that is easy to understand and implement. It does not require
+        a lot of computational power, which makes it suitable for handling large
+        datasets.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Linear regression
+        provides interpretable coefficients that can be used to understand the
+        relationship between the independent and dependent variables. This makes
+        it easier to explain the model to stakeholders and draw actionable
+        insights from the results.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Linear regression can be
+        used for both regression and classification problems. By modifying the
+        threshold, linear regression can be used to classify data into different
+        categories.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: Linear regression can be
+        easily scaled to handle large datasets by using techniques such as
+        stochastic gradient descent.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Efficiency</b>: Linear regression is a fast
+        algorithm that can be trained on large datasets in a relatively short
+        amount of time.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Versatility</b>: Linear regression can be
+        used in a wide range of applications, such as predicting sales,
+        estimating stock prices, and forecasting weather conditions.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, linear regression is a versatile
+        algorithm that offers a good balance between simplicity,
+        interpretability, and efficiency, making it a popular choice for many
+        machine learning applications.
+      </p>
+      <h4>Types:</h4>
+      <p>&nbsp;&nbsp;&nbsp;Simple Linear Regression</p>
+      <p>&nbsp;&nbsp;&nbsp;Multiple Linear Regression</p>
+      <h4>Simple Linear Regression</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;In simple linear regression, the model assumes a
+        linear relationship between the dependent variable and a single
+        independent variable. The algorithm finds the best-fit line that
+        represents the relationship between the two variables by minimizing the
+        sum of the squared errors between the predicted and actual values.
+        &nbsp;&nbsp;&nbsp;<br />The equation for a simple linear regression
+        model with one independent variable can be written as:
+
+        <br />&nbsp;&nbsp;&nbsp;y = b0 + b1x
+
+        <br />&nbsp;&nbsp;&nbsp;Where:
+
+        <br />&nbsp;&nbsp;&nbsp;y is the dependent variable
+        <br />&nbsp;&nbsp;&nbsp;x is the independent variable
+        <br />&nbsp;&nbsp;&nbsp;b0 is the intercept (the point where the line
+        intersects the y-axis) <br />&nbsp;&nbsp;&nbsp;b1 is the slope of the
+        line (the change in y for each unit change in x)
+      </p>
+      <h4>Multiple Linear Regression</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;In multiple linear regression, the model assumes a
+        linear relationship between the dependent variable and multiple
+        independent variables. The algorithm finds the best-fit plane or
+        hyperplane that represents the relationship between the variables by
+        minimizing the sum of the squared errors.
+
+        <br />&nbsp;&nbsp;&nbsp;y = b0 + b1x1 + b2x2 + ... + bnxn
+
+        <br />&nbsp;&nbsp;&nbsp;Where:
+
+        <br />&nbsp;&nbsp;&nbsp;y is the dependent variable
+        <br />&nbsp;&nbsp;&nbsp;x1, x2, ..., xn are the independent variables
+        <br />&nbsp;&nbsp;&nbsp;b0 is the intercept <br />&nbsp;&nbsp;&nbsp;b1,
+        b2, ..., bn are the coefficients of the independent variables
+      </p>
+      <h4>Assumptions:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Linearity</b>: Linear regression assumes that there
+        is a linear relationship between the independent variables and the
+        dependent variable. If this assumption is violated, the model may not
+        accurately capture the relationship between the variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: Linear regression assumes
+        that the observations in the dataset are independent of each other. This
+        means that there is no correlation between the residuals (the difference
+        between the predicted and actual values) and the independent variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Homoscedasticity</b>: Linear regression
+        assumes that the variance of the residuals is constant across all levels
+        of the independent variables. In other words, the residuals should be
+        equally distributed across the range of the independent variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Normality</b>: Linear regression assumes that
+        the residuals are normally distributed. This means that the distribution
+        of the residuals should be symmetric and bell-shaped.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>No multicollinearity</b>: Linear regression
+        assumes that there is no perfect multicollinearity between the
+        independent variables. This means that the independent variables should
+        not be highly correlated with each other.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>No outliers</b>: Linear regression assumes
+        that there are no outliers in the data. Outliers can have a large impact
+        on the model and can skew the results.
+
+        <br />&nbsp;&nbsp;&nbsp;Violations of these assumptions can lead to
+        biased or unreliable results, so it's important to check these
+        assumptions before using linear regression. There are several techniques
+        for checking these assumptions, such as residual plots, normal
+        probability plots, and multicollinearity tests. If the assumptions are
+        not met, other machine learning algorithms may be more appropriate.
+      </p>
+      <h4>Advantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: Linear regression is a simple
+        algorithm that is easy to understand and implement. It does not require
+        a lot of computational power, which makes it suitable for handling large
+        datasets.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Linear regression
+        provides interpretable coefficients that can be used to understand the
+        relationship between the independent and dependent variables. This makes
+        it easier to explain the model to stakeholders and draw actionable
+        insights from the results.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Linear regression can be
+        used for both regression and classification problems. By modifying the
+        threshold, linear regression can be used to classify data into different
+        categories.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: Linear regression can be
+        easily scaled to handle large datasets by using techniques such as
+        stochastic gradient descent.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Efficiency</b>: Linear regression is a fast
+        algorithm that can be trained on large datasets in a relatively short
+        amount of time.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Versatility</b>: Linear regression can be
+        used in a wide range of applications, such as predicting sales,
+        estimating stock prices, and forecasting weather conditions.
+      </p>
+      <h4>Disdvantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Linearity assumption</b>: Linear regression assumes
+        a linear relationship between the independent and dependent variables.
+        If this assumption is violated, the model may not accurately capture the
+        relationship between the variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Overfitting</b>: If the model is too complex
+        or has too many features, it can overfit the data, which means that it
+        performs well on the training set but poorly on the testing set.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Underfitting</b>: If the model is too simple
+        or does not have enough features, it can underfit the data, which means
+        that it performs poorly on both the training and testing sets.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Outliers</b>: Linear regression is sensitive
+        to outliers, which can have a large impact on the model and skew the
+        results.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity</b>: Linear regression
+        assumes that there is no perfect multicollinearity between the
+        independent variables. This means that the independent variables should
+        not be highly correlated with each other.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Limited to linear relationships</b>: Linear
+        regression is limited to modeling linear relationships between the
+        independent and dependent variables. If the relationship is nonlinear,
+        other machine learning algorithms may be more appropriate.
+      </p>
+      <h4>How linear regression algorithm works?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Data preparation</b>: First, the data is collected
+        and prepared for analysis. This includes cleaning the data, removing
+        missing values, and converting categorical variables to numerical
+        values.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data splitting</b>: The data is split into
+        training and testing sets. The training set is used to train the model,
+        and the testing set is used to evaluate the performance of the model.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Model building</b>: The linear regression
+        model is built by finding the best fit line that describes the
+        relationship between the input variables and the output variable. This
+        is done by minimizing the sum of the squared errors between the
+        predicted values and the actual values.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Cost function</b>: The cost function is used
+        to measure the difference between the predicted values and the actual
+        values. The goal of the model is to minimize the cost function.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Gradient descent</b>: Gradient descent is an
+        optimization algorithm used to find the optimal values of the
+        coefficients that minimize the cost function. The gradient descent
+        algorithm iteratively adjusts the coefficients until the cost function
+        is minimized.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Model evaluation</b>: The performance of the
+        linear regression model is evaluated using metrics such as mean squared
+        error (MSE), root mean squared error (RMSE), and R-squared. The model is
+        also evaluated visually using residual plots.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Fine-tune the model</b>: If the model is not
+        performing well, you can fine-tune the model by adjusting
+        hyperparameters such as the learning rate and regularization strength.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Model prediction</b>: Once the model is
+        trained and evaluated, it can be used to make predictions on new data.
+        The input variables are entered into the model, and the output variable
+        is predicted based on the best fit line.
+
+        <br />&nbsp;&nbsp;&nbsp;The linear regression algorithm assumes that
+        there is a linear relationship between the input variables and the
+        output variable. If the relationship is nonlinear, other machine
+        learning algorithms may be more appropriate. Additionally, linear
+        regression assumes that there is no perfect multicollinearity between
+        the independent variables, and the residuals are normally distributed.
+        If these assumptions are not met, the model may not accurately capture
+        the relationship between the variables.
+      </p>
+      <h4>Evaluation Metrics:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;In linear regression, the performance of the model is
+        evaluated using various metrics. Here are some commonly used evaluation
+        metrics for linear regression:
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: MSE measures
+        the average squared difference between the predicted and actual values.
+        It is calculated by taking the sum of the squared differences between
+        the predicted and actual values and dividing by the number of samples.
+        Lower values of MSE indicate better model performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: RMSE is
+        the square root of the MSE. It provides a measure of the standard
+        deviation of the residuals (the differences between predicted and actual
+        values). Lower values of RMSE indicate better model performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: MAE measures
+        the average absolute difference between the predicted and actual values.
+        It is calculated by taking the sum of the absolute differences between
+        the predicted and actual values and dividing by the number of samples.
+        Like MSE, lower values of MAE indicate better model performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R2)</b>: R-squared is a measure of
+        how well the linear regression model fits the data. It represents the
+        proportion of variance in the dependent variable that is explained by
+        the independent variables. R-squared values range from 0 to 1, with
+        higher values indicating better model performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Adjusted R-squared</b>: Adjusted R-squared is
+        similar to R-squared, but takes into account the number of independent
+        variables in the model. It penalizes the inclusion of unnecessary
+        variables that do not improve model performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Percentage Error (MAPE)</b>:
+        MAPE measures the average percentage difference between the predicted
+        and actual values. It is calculated by taking the absolute difference
+        between the predicted and actual values, dividing by the actual value,
+        and multiplying by 100. Lower values of MAPE indicate better model
+        performance.
+
+        <br />&nbsp;&nbsp;&nbsp;These evaluation metrics help to determine the
+        accuracy and performance of the linear regression model, and can be used
+        to compare different models or to tune the hyperparameters of the model.
+      </p>
+      <h4>Ordinary least squares:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Ordinary Least Squares (OLS) is a commonly used method
+        for estimating the parameters of a linear regression model. The goal of
+        OLS is to find the values of the intercept and coefficients of the
+        independent variables that minimize the sum of the squared errors
+        between the predicted values and the actual values.
+
+        <br />&nbsp;&nbsp;&nbsp;To implement OLS, we first define the linear
+        regression equation as:
+
+        <br />&nbsp;&nbsp;&nbsp;y = b0 + b1x1 + b2x2 + ... + bnxn + e
+
+        <br />&nbsp;&nbsp;&nbsp;Where:
+
+        <br />&nbsp;&nbsp;&nbsp;y is the dependent variable
+        <br />&nbsp;&nbsp;&nbsp;x1, x2, ..., xn are the independent variables
+        <br />&nbsp;&nbsp;&nbsp;b0 is the intercept <br />&nbsp;&nbsp;&nbsp;b1,
+        b2, ..., bn are the coefficients of the independent variables
+        <br />&nbsp;&nbsp;&nbsp;e is the error term (the difference between the
+        predicted value and the actual value) <br />&nbsp;&nbsp;&nbsp;The goal
+        of OLS is to find the values of b0, b1, b2, ..., bn that minimize the
+        sum of the squared errors between the predicted values and the actual
+        values:
+
+        <br />&nbsp;&nbsp;&nbsp;SSE = Σ(y - ŷ)^2
+
+        <br />&nbsp;&nbsp;&nbsp;Where:
+
+        <br />&nbsp;&nbsp;&nbsp;SSE is the sum of squared errors
+        <br />&nbsp;&nbsp;&nbsp;y is the actual value of the dependent variable
+        <br />&nbsp;&nbsp;&nbsp;ŷ is the predicted value of the dependent
+        variable <br />&nbsp;&nbsp;&nbsp;To find the values of b0, b1, b2, ...,
+        bn that minimize SSE, we use the method of calculus and take partial
+        derivatives of SSE with respect to each coefficient, and set each
+        partial derivative equal to zero. This gives us a system of equations
+        that can be solved to find the values of b0, b1, b2, ..., bn that
+        minimize SSE.
+
+        <br />&nbsp;&nbsp;&nbsp;Once we have the values of b0, b1, b2, ..., bn,
+        we can use them to make predictions on new data.
+
+        <br />&nbsp;&nbsp;&nbsp;OLS is a widely used method for linear
+        regression because it is simple, easy to implement, and has many
+        desirable statistical properties. However, OLS assumes that the errors
+        are normally distributed, have constant variance, and are independent of
+        each other. Violations of these assumptions can lead to biased and
+        inefficient parameter estimates.
+      </p>
+      <h4>Gradient descent:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Gradient Descent is an iterative optimization
+        algorithm used to find the minimum of a function. It is commonly used in
+        machine learning to update the parameters of a model to minimize the
+        loss function.
+
+        <br />&nbsp;&nbsp;&nbsp;The basic idea of Gradient Descent is to
+        iteratively adjust the parameters in the direction of the negative
+        gradient of the loss function, which is the steepest descent towards the
+        minimum. The algorithm starts at an initial point, calculates the
+        gradient of the loss function at that point, and then moves in the
+        direction of the negative gradient with a step size determined by the
+        learning rate.
+
+        <br />&nbsp;&nbsp;&nbsp;The steps of the Gradient Descent algorithm can
+        be summarized as follows:
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Initialize the parameters of the model
+        randomly or with some initial guess.
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Calculate the loss function for the
+        current set of parameters. <br />&nbsp;&nbsp;&nbsp;&nbsp;Calculate the
+        gradient of the loss function with respect to each parameter.
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Update each parameter in the direction of
+        the negative gradient by multiplying the gradient by the learning rate
+        and subtracting the result from the current parameter.
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;Repeat steps 2-4 until convergence (i.e.,
+        the loss function is minimized to a satisfactory level or a maximum
+        number of iterations is reached). <br />&nbsp;&nbsp;&nbsp;&nbsp;There
+        are two main types of Gradient Descent: batch gradient descent and
+        stochastic gradient descent. In batch gradient descent, the gradient is
+        calculated for the entire training dataset, which can be computationally
+        expensive for large datasets. In stochastic gradient descent, the
+        gradient is calculated for a randomly selected subset of the training
+        dataset (called a mini-batch), which can be much faster but can also be
+        noisy and may require more iterations to converge.
+
+        <br />&nbsp;&nbsp;&nbsp;Gradient Descent is a widely used optimization
+        algorithm in machine learning because it is flexible and can be applied
+        to a wide range of models and loss functions. However, the performance
+        of Gradient Descent depends on the choice of learning rate, batch size,
+        and convergence criteria, and it can get stuck in local minima if the
+        loss function is non-convex.
+      </p>
+    </div>
+  </body>
 </html>
