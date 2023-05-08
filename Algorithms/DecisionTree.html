@@ -1,0 +1,436 @@
+<html>
+  <head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Let's start</h1>
+    <div class="flex bg-black font-white">
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../MachineLearning/MachineLearning.html'"
+      >
+        Machine learning
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Python/python.html'"
+      >
+        Python
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Algorithms/Algorithms.html'"
+      >
+        ML Algorithms
+      </h1>
+    </div>
+    <div>
+      <h4>What is Decision tree?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;A decision tree is a type of supervised machine
+        learning algorithm that is commonly used for both classification and
+        regression tasks.
+
+        <br />&nbsp;&nbsp;&nbsp;It is a tree-like model where each node
+        represents a feature or attribute, and each branch represents a possible
+        value or decision based on that feature or attribute. The model is built
+        by recursively splitting the data based on the most informative feature
+        at each node, with the goal of maximizing the separation between
+        different classes or predicting the target variable.
+
+        <br />&nbsp;&nbsp;&nbsp;At the bottom of the tree, the leaves represent
+        the predicted class or value for the given input. Decision trees can be
+        used for both categorical and continuous variables, and they are easy to
+        interpret and visualize, making them a popular choice for machine
+        learning tasks. However, decision trees can suffer from overfitting and
+        instability, which can be addressed through techniques such as pruning,
+        ensemble methods, or using more advanced models like random forests or
+        gradient boosting.
+      </p>
+      <h4>When to use Decision tree?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b
+          >When the data has both categorical and numerical features</b
+        >: Decision trees can handle both types of features, making them a good
+        choice when the dataset contains a mix of categorical and numerical
+        variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >When you need a transparent and interpretable model</b
+        >: Decision trees are easy to interpret and understand, as the structure
+        of the tree can be visualized and easily explained to non-technical
+        stakeholders. This makes them a good choice when transparency and
+        interpretability are important.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>When the data has nonlinear relationships</b
+        >: Decision trees can capture nonlinear relationships between the
+        features and the target variable, which can be difficult for linear
+        models to do.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>When you have a large number of features</b>:
+        Decision trees are computationally efficient, even with a large number
+        of features, making them a good choice for datasets with many features.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>When you have imbalanced classes</b>:
+        Decision trees can handle imbalanced datasets well, as they can adjust
+        the class weights to account for the imbalance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>When you want to use an ensemble method</b>:
+        Decision trees can be combined into ensemble models like Random Forests
+        or Gradient Boosting, which often improve predictive performance over a
+        single decision tree.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, decision trees can be a good choice for
+        a wide range of machine learning problems, but their performance can
+        vary depending on the specific dataset and problem at hand. It's
+        important to carefully evaluate the performance of decision trees and
+        compare them to other models to determine the best approach for a given
+        task.
+      </p>
+      <h4>Why to use Decision tree?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Easy to understand and interpret</b>: Decision
+        trees provide a clear and understandable model that can be visualized
+        and explained easily to non-technical stakeholders, making them a
+        popular choice in fields like finance, healthcare, and marketing.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Nonlinear relationships</b>: Decision trees
+        can capture nonlinear relationships between the features and the target
+        variable, which can be difficult for linear models to do. This makes
+        decision trees a powerful tool in many real-world applications.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Can handle both categorical and numerical data</b
+        >: Decision trees can handle both types of data, making them a good
+        choice for datasets with a mix of categorical and numerical variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Can handle missing values</b>: Decision trees
+        can handle missing values in the dataset, making them a good choice when
+        working with incomplete data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Robust to outliers</b>: Decision trees are
+        relatively robust to outliers and noise in the data, making them a good
+        choice for datasets with noisy or sparse features.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Can be used for both classification and regression</b
+        >: Decision trees can be used for both classification and regression
+        tasks, making them a versatile algorithm in machine learning.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Can be used in ensemble methods</b>: Decision
+        trees can be combined into ensemble models like Random Forests or
+        Gradient Boosting, which often improve predictive performance over a
+        single decision tree.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, decision trees are a popular and
+        powerful algorithm in machine learning that can be used in a wide range
+        of applications. While they may not always outperform other models,
+        decision trees can often provide a simple and interpretable solution
+        that can be easily understood and implemented in real-world scenarios.
+      </p>
+      <h4>Assumptions:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Data is representative and unbiased</b>: Decision
+        trees assume that the training data is representative of the population
+        and that there is no significant bias in the data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Attributes are independent</b>: Decision
+        trees assume that the features or attributes used in the tree are
+        independent of each other. If there are correlated or dependent
+        variables in the data, the performance of the decision tree may be
+        affected.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data is complete</b>: Decision trees assume
+        that the training data is complete and there are no missing values in
+        the data. If there are missing values in the data, decision trees may
+        not be able to make accurate predictions.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data is noise-free</b>: Decision trees assume
+        that the training data is free of noise or errors. If there are noisy or
+        erroneous values in the data, decision trees may not be able to make
+        accurate predictions.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>The right features are selected</b>: Decision
+        trees assume that the right features are selected to split the data at
+        each node. If irrelevant or noisy features are included in the tree, the
+        performance of the tree may be affected.
+
+        <br />&nbsp;&nbsp;&nbsp;It is important to note that some of these
+        assumptions may not hold true in real-world scenarios. For example, the
+        assumption of independent attributes may not hold if there are
+        correlated variables in the data. As such, it is important to carefully
+        evaluate the performance of decision trees on a given dataset and
+        compare it to other models to determine the best approach for a given
+        task.
+      </p>
+      <h4>Advantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Easy to understand and interpret</b>: Decision
+        trees provide a clear and understandable model that can be visualized
+        and explained easily to non-technical stakeholders, making them a
+        popular choice in fields like finance, healthcare, and marketing.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Nonlinear relationships</b>: Decision trees
+        can capture nonlinear relationships between the features and the target
+        variable, which can be difficult for linear models to do. This makes
+        decision trees a powerful tool in many real-world applications.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Can handle both categorical and numerical data</b
+        >: Decision trees can handle both types of data, making them a good
+        choice for datasets with a mix of categorical and numerical variables.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Can handle missing values</b>: Decision trees
+        can handle missing values in the dataset, making them a good choice when
+        working with incomplete data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Robust to outliers</b>: Decision trees are
+        relatively robust to outliers and noise in the data, making them a good
+        choice for datasets with noisy or sparse features.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Can be used for both classification and regression</b
+        >: Decision trees can be used for both classification and regression
+        tasks, making them a versatile algorithm in machine learning.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Can be used in ensemble methods</b>: Decision
+        trees can be combined into ensemble models like Random Forests or
+        Gradient Boosting, which often improve predictive performance over a
+        single decision tree.
+      </p>
+      <h4>Disadvantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Overfitting</b>: Decision trees can easily overfit
+        the training data, leading to poor generalization performance on new
+        data. This can be addressed through techniques like pruning or ensemble
+        methods.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Instability</b>: Decision trees can be
+        unstable, as small changes in the data can result in different trees
+        being generated. This can be addressed through techniques like ensemble
+        methods or using more advanced models.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Biased towards certain classes</b>: Decision
+        trees can be biased towards classes that have more instances in the
+        data, leading to poor performance on underrepresented classes. This can
+        be addressed through techniques like class weighting or resampling.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Can be sensitive to the ordering of the data</b
+        >: The performance of decision trees can be sensitive to the ordering of
+        the data, which can affect the splits made at each node. This can be
+        addressed through techniques like randomizing the order of the data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Can be computationally expensive</b>:
+        Decision trees can be computationally expensive, especially for large
+        datasets or trees with many nodes. This can be addressed through
+        techniques like reducing the depth of the tree or using more efficient
+        algorithms.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, decision trees can be a powerful and
+        versatile algorithm in machine learning, but their performance can vary
+        depending on the specific dataset and problem at hand. It's important to
+        carefully evaluate the performance of decision trees and compare them to
+        other models to determine the best approach for a given task.
+      </p>
+      <h4>How Decision tree algorithms works?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;The decision tree algorithm is a popular method in
+        machine learning for both classification and regression tasks. The
+        algorithm works by recursively splitting the data into subsets based on
+        the values of the features, with the goal of maximizing the separation
+        of the target variable in each subset. The resulting tree is a set of
+        decision rules that can be used to make predictions on new data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Select a feature to split the data</b>: The
+        first step is to select a feature that can be used to split the data
+        into two subsets. The goal is to choose the feature that maximizes the
+        separation of the target variable between the two subsets.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Calculate a split criterion</b>: Once a
+        feature is selected, a split criterion is calculated to determine the
+        optimal value to split the data on. For categorical features, the split
+        criterion is usually based on the frequency of each category in each
+        subset. For numerical features, the split criterion can be based on
+        metrics like information gain, Gini impurity, or mean squared error.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Split the data</b>: Once a split criterion is
+        calculated, the data is split into two subsets based on the selected
+        feature and split value. This process is then repeated recursively on
+        each subset until a stopping criterion is met.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Stopping criterion</b>: The decision tree
+        algorithm continues splitting the data until a stopping criterion is
+        met. Common stopping criteria include a maximum tree depth, a minimum
+        number of samples required to split a node, or a minimum improvement in
+        the split criterion.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Make predictions</b>: Once the decision tree
+        is constructed, it can be used to make predictions on new data by
+        traversing the tree and following the decision rules at each node.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Pruning</b>: After the decision tree is
+        constructed, it may be necessary to prune the tree to improve its
+        performance. This involves removing nodes or branches that do not
+        contribute significantly to the accuracy of the tree.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, the decision tree algorithm is a
+        powerful and flexible algorithm that can handle both categorical and
+        numerical data and can be used for both classification and regression
+        tasks. However, the performance of the algorithm can be affected by
+        factors like overfitting, instability, and bias, and it's important to
+        carefully evaluate the performance of the decision tree and compare it
+        to other models to determine the best approach for a given task.
+      </p>
+      <h4>Evaluation Metrics:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy is the most basic evaluation
+        metric and is defined as the proportion of correctly classified
+        instances to the total number of instances in the dataset.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Precision and recall</b>: Precision is the
+        proportion of true positives (correctly predicted positive instances) to
+        the total number of instances predicted as positive. Recall is the
+        proportion of true positives to the total number of actual positive
+        instances in the dataset.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>F1 score</b>: The F1 score is the harmonic
+        mean of precision and recall, and is a way to balance the tradeoff
+        between precision and recall.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Area under the ROC curve (AUC-ROC)</b>: The
+        ROC curve is a plot of true positive rate (TPR) versus false positive
+        rate (FPR) at different classification thresholds. The AUC-ROC is a
+        measure of the model's ability to discriminate between positive and
+        negative instances.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Confusion matrix</b>: A confusion matrix is a
+        table that summarizes the number of true positives, true negatives,
+        false positives, and false negatives in the dataset. It can be used to
+        compute evaluation metrics like accuracy, precision, recall, and F1
+        score.
+
+        <br />&nbsp;&nbsp;&nbsp;The choice of evaluation metric depends on the
+        specific problem and the goals of the analysis. For example, accuracy
+        may be appropriate for balanced datasets, while precision and recall may
+        be more useful for imbalanced datasets. AUC-ROC is often used in binary
+        classification problems, while the confusion matrix provides a more
+        detailed view of the model's performance. It's important to carefully
+        select appropriate evaluation metrics and interpret the results in the
+        context of the problem being solved.
+      </p>
+      <h4>What is Information gain?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Information gain is a measure used in decision tree
+        algorithms to determine the usefulness of a feature for splitting the
+        dataset. It measures the difference in entropy (or impurity) before and
+        after a feature is used for splitting.
+
+        <br />&nbsp;&nbsp;&nbsp;Entropy is a measure of the impurity or
+        randomness of the dataset. In the context of decision trees, entropy is
+        used to measure the diversity of classes in a subset of the data. If a
+        subset contains only one class, it has zero entropy and is considered
+        pure. If a subset contains an equal number of each class, it has maximum
+        entropy and is considered impure.
+
+        <br />&nbsp;&nbsp;&nbsp;The information gain of a feature is calculated
+        as the difference between the entropy of the dataset before the split
+        and the weighted average of the entropies of the subsets after the
+        split. In other words, information gain measures how much the
+        uncertainty (entropy) of the target variable is reduced after the split.
+
+        <br />&nbsp;&nbsp;&nbsp;When building a decision tree, the algorithm
+        searches for the feature that maximizes the information gain. This means
+        that the feature that results in the largest reduction in entropy (or
+        impurity) is chosen as the split feature.
+
+        <br />&nbsp;&nbsp;&nbsp;Information gain is a commonly used measure in
+        decision tree algorithms, particularly in CART algorithms. However, it's
+        worth noting that information gain has limitations, particularly in
+        handling continuous and high cardinality features. Other measures like
+        gain ratio and Gini impurity may be more appropriate for these cases.
+      </p>
+      <h4>What is gini impurity?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Gini impurity is another measure used in decision tree
+        algorithms to determine the quality of a split. It measures the
+        probability of incorrectly classifying a randomly chosen element in the
+        dataset if it were randomly labeled according to the distribution of
+        labels in the subset.
+
+        <br />&nbsp;&nbsp;&nbsp;In other words, gini impurity measures the
+        degree of inequality among the class distributions in a subset of the
+        data. If a subset contains only one class, it has zero gini impurity and
+        is considered pure. If a subset contains an equal number of each class,
+        it has maximum gini impurity and is considered impure.
+
+        <br />&nbsp;&nbsp;&nbsp;The gini impurity of a subset S is calculated as
+        follows:
+
+        <br />&nbsp;&nbsp;&nbsp;Gini(S) = 1 - sum(p_i^2)
+        <br />&nbsp;&nbsp;&nbsp;where p_i is the proportion of class i in subset
+        S.
+
+        <br />&nbsp;&nbsp;&nbsp;The gini impurity of a split is then calculated
+        as the weighted average of the gini impurities of the subsets resulting
+        from the split.
+
+        <br />&nbsp;&nbsp;&nbsp;When building a decision tree, the algorithm
+        searches for the feature that results in the lowest gini impurity. This
+        means that the feature that results in the most homogeneous subsets
+        (i.e., the smallest gini impurity) is chosen as the split feature.
+
+        <br />&nbsp;&nbsp;&nbsp;Gini impurity is a commonly used measure in
+        decision tree algorithms, particularly in the CART algorithm. It is
+        known to be less biased towards selecting features with many categories
+        compared to information gain, which can sometimes favor features with
+        many categories.
+      </p>
+      <h4>What is gain ratio?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Gain ratio is a measure used in decision tree
+        algorithms to overcome the bias of information gain towards features
+        with many categories. It is a modification of information gain that
+        takes into account the intrinsic information of a feature, which is the
+        amount of information a feature provides on its own, independent of the
+        class distribution.
+
+        <br />&nbsp;&nbsp;&nbsp;The gain ratio of a feature is defined as the
+        ratio of information gain and intrinsic information. It measures the
+        degree to which a feature can improve the homogeneity of the dataset
+        while taking into account the potential for overfitting due to the size
+        of the feature space.
+
+        <br />&nbsp;&nbsp;&nbsp;The intrinsic information of a feature is
+        calculated as follows:
+
+        <br />&nbsp;&nbsp;&nbsp;Intrinsic Info(A) = - sum((p_i / log2(|A|)) *
+        log2(p_i / |A|)) <br />&nbsp;&nbsp;&nbsp;where A is the feature being
+        considered, p_i is the proportion of instances with value i in the
+        dataset, and |A| is the total number of possible values for feature A.
+
+        <br />&nbsp;&nbsp;&nbsp;The gain ratio of a feature is calculated as
+        follows:
+
+        <br />&nbsp;&nbsp;&nbsp;Gain Ratio(A) = Gain(A) / Intrinsic Info(A)
+        <br />&nbsp;&nbsp;&nbsp;where Gain(A) is the information gain of feature
+        A.
+
+        <br />&nbsp;&nbsp;&nbsp;When building a decision tree, the algorithm
+        searches for the feature that maximizes the gain ratio. This means that
+        the feature that results in the most homogeneous subsets while taking
+        into account the intrinsic information of the feature is chosen as the
+        split feature.
+
+        <br />&nbsp;&nbsp;&nbsp;Gain ratio is a commonly used measure in
+        decision tree algorithms, particularly in the C4.5 algorithm. It is
+        known to be more effective than information gain in handling features
+        with many categories, as it penalizes features with a large number of
+        categories.
+      </p>
+    </div>
+  </body>
+</html>
