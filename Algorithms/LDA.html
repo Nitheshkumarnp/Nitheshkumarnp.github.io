@@ -1,0 +1,386 @@
+<html>
+  <head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Let's start</h1>
+    <div class="flex bg-black font-white">
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../MachineLearning/MachineLearning.html'"
+      >
+        Machine learning
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Python/python.html'"
+      >
+        Python
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Algorithms/Algorithms.html'"
+      >
+        ML Algorithms
+      </h1>
+    </div>
+    <div>
+      <h4>Linear Discriminant Analysis</h4>
+      <h4>What is LDA?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Linear Discriminant Analysis (LDA), also known as
+        Fisher's Linear Discriminant, is a supervised learning algorithm used
+        for classification tasks. It is commonly employed for dimensionality
+        reduction and feature extraction as well.
+
+        <br />&nbsp;&nbsp;&nbsp;LDA aims to find a linear combination of
+        features that can best separate or discriminate between different
+        classes or categories of a target variable. It assumes that the input
+        data is normally distributed and that the classes have equal covariance
+        matrices.
+
+        <br />&nbsp;&nbsp;&nbsp;The main goal of LDA is to maximize the ratio of
+        between-class scatter to within-class scatter. In simpler terms, it
+        tries to find a projection of the data onto a lower-dimensional space,
+        such that the distance between the means of different classes is
+        maximized, while the variance within each class is minimized.
+      </p>
+      <h4>When to use LDA?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Classification problems</b>: LDA is primarily
+        employed for classification tasks. It can be applied when you have
+        labeled data and want to find a linear projection that maximizes the
+        separation between different classes. LDA works well when the classes
+        are well-separated and the assumption of normally distributed data
+        holds.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Dimensionality reduction</b>: LDA is often
+        used as a dimensionality reduction technique. By projecting the data
+        onto a lower-dimensional space, LDA can capture the most discriminative
+        information while reducing the feature space's dimensionality. This can
+        be beneficial when dealing with high-dimensional data, as it can
+        simplify subsequent analysis and improve computational efficiency.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Feature extraction</b>: LDA can also be
+        utilized for feature extraction. It extracts new features that are
+        linear combinations of the original features but have higher
+        discriminatory power. These new features can be more effective for
+        classification tasks, especially when dealing with limited labeled data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Preprocessing step</b>: LDA can serve as a
+        preprocessing step in machine learning pipelines. It can be applied to
+        transform the input data before using other classification algorithms,
+        such as logistic regression or support vector machines (SVM). By
+        applying LDA as a preprocessing step, it can enhance the performance of
+        subsequent classifiers.
+
+        <br />&nbsp;&nbsp;&nbsp;However, it's important to consider certain
+        factors when deciding to use LDA:
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LDA assumes that the data is
+        normally distributed and the classes have equal covariance matrices. If
+        these assumptions are violated, LDA may not perform optimally.
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LDA is a linear technique, so it may
+        not capture complex nonlinear relationships in the data. In such cases,
+        nonlinear dimensionality reduction or classification techniques may be
+        more suitable. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LDA requires labeled
+        data for training since it is a supervised learning algorithm. If you
+        have only unlabeled data, alternative unsupervised techniques like
+        Principal Component Analysis (PCA) can be considered.
+        <br />&nbsp;&nbsp;&nbsp;Overall, LDA is a valuable tool in machine
+        learning, especially for classification, dimensionality reduction, and
+        feature extraction tasks. It is commonly employed when the data adheres
+        to certain assumptions and when linear separation of classes is
+        effective.
+      </p>
+      <h4>Why to use LDA?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Dimensionality reduction</b>: LDA helps reduce the
+        dimensionality of the feature space while preserving the class
+        discriminatory information. By projecting the data onto a
+        lower-dimensional space, LDA can capture the most important features
+        that differentiate between classes. This can lead to more efficient and
+        accurate learning algorithms, especially when dealing with
+        high-dimensional data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Improved classification performance</b>: LDA
+        aims to find a linear projection that maximizes the separation between
+        classes. By focusing on the class discrimination, LDA can enhance the
+        performance of subsequent classification algorithms. It can potentially
+        increase the accuracy and robustness of the classifiers by transforming
+        the data into a space where the classes are better separated.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Feature extraction</b>: LDA extracts new
+        features that are linear combinations of the original features,
+        emphasizing the differences between classes. These extracted features
+        can often be more informative and discriminating compared to the
+        original features. They can help uncover hidden patterns or
+        relationships in the data that are crucial for classification tasks.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability and visualization</b>: LDA
+        provides a clear interpretation of the relationships between features
+        and classes. The transformed feature space generated by LDA allows for
+        visualizing the data in a lower-dimensional subspace, facilitating the
+        understanding of class separability and the distribution of data points.
+        This can aid in data exploration, insights generation, and
+        decision-making processes.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Robustness to overfitting</b>: LDA has a
+        simple and computationally efficient formulation, which makes it less
+        prone to overfitting compared to more complex models. It is especially
+        useful when dealing with limited labeled data, where high-dimensional
+        models may struggle due to the curse of dimensionality. LDA can provide
+        a reliable solution with a reduced risk of overfitting.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Preprocessing step</b>: LDA can be used as a
+        preprocessing step in machine learning pipelines. By applying LDA before
+        using other classification algorithms, it can enhance the performance of
+        subsequent models. It can reduce the computational complexity and
+        improve the convergence speed of the learning algorithms.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that the effectiveness of
+        LDA depends on the underlying assumptions of the data, such as the
+        assumption of normally distributed classes and equal covariance
+        matrices. It is crucial to assess the validity of these assumptions
+        before applying LDA to ensure its suitability for the specific problem
+        at hand.
+      </p>
+      <h4>Assumptions:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Normal distribution</b>: LDA assumes that the data
+        within each class follows a multivariate normal distribution. This means
+        that the distribution of feature values for each class is bell-shaped
+        and symmetric. If the data significantly deviates from a normal
+        distribution, LDA may not perform optimally. In such cases, data
+        transformation techniques or alternative methods might be more
+        appropriate.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Equal covariance matrices</b>: LDA assumes
+        that the covariance matrices of different classes are equal. This
+        implies that the spread or variability of the data is consistent across
+        all classes. If the covariance matrices are significantly different, LDA
+        may not accurately capture the discriminative information between
+        classes. In such cases, quadratic discriminant analysis (QDA) can be
+        considered as an alternative to LDA, which relaxes the assumption of
+        equal covariance matrices.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Independent samples</b>: LDA assumes that the
+        data samples within each class are independent of each other. This
+        assumption implies that the observations or instances within a class do
+        not influence each other. Violations of this assumption, such as
+        autocorrelation or dependence between samples, can affect the validity
+        of LDA results. In such situations, other techniques specifically
+        designed for dependent data, like linear mixed models, might be more
+        suitable.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Balanced classes</b>: LDA assumes that the
+        number of samples in each class is roughly balanced or proportional. If
+        there is a significant imbalance in the class sizes, LDA may be biased
+        towards the larger classes. Class imbalance can lead to
+        misclassification or a lack of sufficient representation of minority
+        classes in the analysis. In such cases, techniques like weighted LDA or
+        sampling techniques (e.g., oversampling, undersampling) can be employed
+        to mitigate the effects of class imbalance.
+
+        <br />&nbsp;&nbsp;&nbsp;It is crucial to assess whether these
+        assumptions hold true for a given dataset before applying LDA.
+        Violations of these assumptions can lead to suboptimal results or
+        inaccurate conclusions. Exploratory data analysis and diagnostic tests
+        can help determine the suitability of LDA and identify potential issues
+        with the assumptions.
+      </p>
+      <h4>Advantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Dimensionality reduction</b>: LDA helps reduce the
+        dimensionality of the feature space while preserving the discriminatory
+        information. By projecting the data onto a lower-dimensional space, LDA
+        can improve computational efficiency and reduce the risk of overfitting,
+        especially when dealing with high-dimensional data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Improved classification performance</b>: LDA
+        focuses on finding a linear projection that maximizes the separation
+        between classes. By emphasizing class discrimination, LDA can enhance
+        the performance of subsequent classification algorithms. It can
+        potentially increase the accuracy and robustness of classifiers by
+        transforming the data into a space where the classes are better
+        separated.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Feature extraction</b>: LDA extracts new
+        features that capture the differences between classes. These extracted
+        features can be more informative and discriminating compared to the
+        original features. They can help uncover hidden patterns or
+        relationships in the data that are crucial for classification tasks.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability and visualization</b>: LDA
+        provides a clear interpretation of the relationships between features
+        and classes. The transformed feature space generated by LDA allows for
+        visualizing the data in a lower-dimensional subspace, facilitating the
+        understanding of class separability and the distribution of data points.
+        This aids in data exploration, insights generation, and decision-making
+        processes.
+      </p>
+      <h4>Disdvantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Assumptions on data distribution</b>: LDA assumes
+        that the data within each class follows a multivariate normal
+        distribution and that the covariance matrices of different classes are
+        equal. Violations of these assumptions can impact the effectiveness of
+        LDA. If the data significantly deviates from normality or if the
+        covariance matrices are unequal, LDA may not perform optimally.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Linearity assumption</b>: LDA is
+        a linear technique and assumes that the decision boundaries between
+        classes are linear. This limits its ability to capture complex nonlinear
+        relationships in the data. In scenarios where the data exhibits
+        nonlinear separability, other nonlinear classification techniques may be
+        more suitable.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Sensitivity to outliers</b>: LDA
+        is sensitive to outliers, as outliers can significantly affect the
+        estimation of covariance matrices and distort the decision boundaries.
+        Outliers that are not representative of the underlying class structure
+        can lead to suboptimal results in LDA.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
+          >Limited effectiveness for unbalanced classes</b
+        >: LDA assumes that the number of samples in each class is roughly
+        balanced or proportional. If there is a significant imbalance in class
+        sizes, LDA may be biased towards the larger classes and may not
+        adequately represent the minority classes. Techniques like weighted LDA
+        or sampling methods can be used to address class imbalance, but they add
+        complexity to the analysis.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's important to consider these
+        advantages and disadvantages of LDA while deciding whether to use it in
+        a specific machine learning problem. Evaluating the compatibility of the
+        assumptions with the data and considering alternative methods based on
+        the specific characteristics of the problem are essential steps in model
+        selection.
+      </p>
+      <h4>How LDA algorithm works?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Input data</b>: Start with a dataset containing
+        labeled instances, where each instance belongs to a specific class.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Compute class means</b>: Calculate the mean
+        vector for each class. The mean vector represents the average values of
+        the features for instances within each class.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Compute scatter matrices</b>: Compute two
+        scatter matrices: within-class scatter matrix (Sw) and between-class
+        scatter matrix (Sb).
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Within-class scatter matrix (Sw)</b>: This
+        matrix measures the variance within each class. It is computed by
+        summing up the scatter matrices of individual classes.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Between-class scatter matrix (Sb)</b>: This
+        matrix measures the difference between class means. It quantifies the
+        separation between classes and is computed by taking the weighted sum of
+        the outer product of the difference between class means and the number
+        of instances in each class.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Calculate eigenvectors and eigenvalues</b>:
+        Compute the eigenvectors and eigenvalues of the matrix (Sw^(-1) * Sb).
+        The eigenvectors represent the directions or axes in the feature space
+        that maximize the separation between classes, and the eigenvalues
+        represent the amount of variance explained by each eigenvector.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Sort eigenvectors</b>: Sort the eigenvectors
+        based on their corresponding eigenvalues in descending order. The
+        eigenvectors with higher eigenvalues capture more discriminatory
+        information and are more relevant for classification.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Choose top k eigenvectors</b>: Select the top
+        k eigenvectors that correspond to the k highest eigenvalues. The number
+        of eigenvectors chosen corresponds to the desired number of dimensions
+        in the reduced feature space.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Create a transformation matrix</b>: Construct
+        a transformation matrix by concatenating the selected eigenvectors as
+        columns. This matrix defines the linear projection that maps the
+        original feature space to the reduced feature space.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Project the data</b>: Project the input data
+        onto the new feature space by multiplying it with the transformation
+        matrix. This step transforms the data into the lower-dimensional space,
+        emphasizing the discriminatory information between classes.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Classification</b>: Perform classification
+        using the reduced feature space. A simple threshold-based classification
+        can be applied, or other classification algorithms such as logistic
+        regression or linear SVM can be used.
+
+        <br />&nbsp;&nbsp;&nbsp;The LDA algorithm aims to maximize the ratio of
+        between-class scatter to within-class scatter, ensuring good separation
+        between classes while minimizing overlap within classes. By projecting
+        the data onto a lower-dimensional space, LDA reduces the feature space's
+        dimensionality while preserving the discriminatory information.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that LDA assumes certain
+        data distribution and covariance matrix equality, and these assumptions
+        should be verified before applying LDA to ensure its effectiveness in a
+        given problem.
+      </p>
+      <h4>Evaluation Metrics:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy measures the overall
+        correctness of the LDA classifier by calculating the ratio of correctly
+        classified instances to the total number of instances. It provides a
+        general assessment of the classifier's performance but can be misleading
+        in the presence of class imbalance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Confusion Matrix</b>: The confusion matrix
+        provides a more detailed evaluation of LDA's performance by showing the
+        counts of true positive, true negative, false positive, and false
+        negative predictions. From the confusion matrix, additional metrics can
+        be derived:
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: Precision calculates the
+        proportion of true positive predictions out of all positive predictions.
+        It measures the classifier's ability to correctly identify positive
+        instances without including false positives.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Recall (Sensitivity or True Positive Rate)</b
+        >: Recall calculates the proportion of true positive predictions out of
+        all actual positive instances. It measures the classifier's ability to
+        correctly identify positive instances without missing any.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>F1 Score</b>: The F1 score is the harmonic
+        mean of precision and recall. It provides a balanced measure of
+        precision and recall, making it useful when both metrics are important.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Receiver Operating Characteristic (ROC) Curve</b
+        >: The ROC curve is a graphical representation of the classifier's
+        performance across different classification thresholds. It plots the
+        true positive rate (sensitivity) against the false positive rate
+        (1-specificity) for various threshold values. The area under the ROC
+        curve (AUC) is a commonly used metric to assess the overall performance
+        of the classifier. Higher AUC values indicate better performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Cross-Validation</b>: Cross-validation is a
+        resampling technique used to assess the LDA model's generalization
+        ability. It involves splitting the data into multiple folds, training
+        the model on a subset of folds, and evaluating it on the remaining fold.
+        Common cross-validation methods include k-fold cross-validation and
+        stratified cross-validation.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Class-specific metrics</b>: In some cases, it
+        may be necessary to evaluate the performance of LDA for individual
+        classes separately. Class-specific metrics such as precision, recall,
+        and F1 score can be calculated for each class to assess how well LDA
+        performs in classifying specific categories.
+
+        <br />&nbsp;&nbsp;&nbsp;When evaluating LDA, it's important to consider
+        the specific requirements and characteristics of the problem at hand.
+        Different evaluation metrics may be more relevant based on factors such
+        as class imbalance, cost considerations, or specific objectives of the
+        application.
+      </p>
+    </div>
+  </body>
+</html>
