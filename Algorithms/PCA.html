@@ -1,0 +1,340 @@
+<html>
+  <head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Let's start</h1>
+    <div class="flex bg-black font-white">
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../MachineLearning/MachineLearning.html'"
+      >
+        Machine learning
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Python/python.html'"
+      >
+        Python
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Algorithms/Algorithms.html'"
+      >
+        ML Algorithms
+      </h1>
+    </div>
+    <div>
+      <h4>Principal Component Analysis</h4>
+      <h4>What is PCA?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;PCA, which stands for Principal Component Analysis, is
+        a widely used technique in machine learning and data analysis for
+        dimensionality reduction. It is primarily used to transform
+        high-dimensional datasets into a lower-dimensional space while
+        preserving the most important information in the data.
+
+        <br />&nbsp;&nbsp;&nbsp;The main goal of PCA is to find a set of new
+        variables, called principal components, that are linear combinations of
+        the original variables. These principal components are orthogonal to
+        each other and capture the maximum amount of variance in the data. The
+        first principal component accounts for the largest possible variance,
+        and each succeeding component explains the remaining variance in
+        decreasing order.
+      </p>
+      <h4>When to use PCA?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>: When dealing with
+        high-dimensional data, PCA can be used to reduce the number of variables
+        while retaining most of the important information. This is particularly
+        useful when the original dataset contains many correlated features or
+        when the computational cost of training models on the high-dimensional
+        data is prohibitive.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Visualization</b>: PCA can be employed to
+        visualize high-dimensional data in two or three dimensions. By
+        projecting the data onto the principal components, it becomes possible
+        to plot and explore the data in a reduced space, which can aid in
+        identifying patterns, clusters, or outliers.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data Preprocessing</b>: PCA can serve as a
+        preprocessing step to remove noise, redundancy, or outliers from the
+        data. By eliminating the least important principal components, which
+        contribute the least to the variance, the resulting dataset may be
+        cleaner and more suitable for subsequent analysis or modeling.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity Detection</b>: PCA can help
+        identify multicollinearity, which occurs when variables in a dataset are
+        highly correlated with each other. By examining the correlation
+        structure of the principal components, it becomes easier to detect and
+        address multicollinearity issues, which can affect the performance and
+        interpretability of machine learning models.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Feature Engineering</b>: PCA can be used to
+        create new features that capture the most important patterns in the
+        data. The principal components can be considered as new variables that
+        are linear combinations of the original features. These derived features
+        can be fed into machine learning algorithms to potentially improve their
+        performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Noise Filtering</b>: If the dataset contains
+        noisy features or measurement errors, PCA can help separate the signal
+        from the noise. The principal components with higher eigenvalues are
+        associated with the signal, while those with lower eigenvalues are more
+        likely to represent noise. By reconstructing the data using a subset of
+        the principal components, the noise can be attenuated or removed.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that PCA is not suitable
+        for all situations. It assumes linearity and can lose some nonlinear
+        relationships in the data. Additionally, if the dataset contains
+        categorical or discrete variables, other dimensionality reduction
+        techniques or preprocessing methods may be more appropriate.
+      </p>
+      <h4>Why to use PCA?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>: One of the main
+        motivations for using PCA is to reduce the number of features in
+        high-dimensional datasets. By transforming the data into a
+        lower-dimensional space, PCA can simplify the learning problem, improve
+        computational efficiency, and reduce the risk of overfitting. With fewer
+        dimensions, models can be trained more quickly and require less memory.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Feature Extraction</b>: PCA allows for the
+        extraction of important patterns and structures from the data. The
+        principal components obtained from PCA are linear combinations of the
+        original features and can capture the most significant variations in the
+        data. These new features can be used as inputs for machine learning
+        algorithms and may improve their performance by focusing on the most
+        relevant information.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity Resolution</b>: When
+        dealing with highly correlated features, multicollinearity can pose
+        challenges in machine learning models. It can lead to unstable parameter
+        estimates and make it difficult to interpret the importance of
+        individual features. By applying PCA, which transforms the original
+        features into uncorrelated principal components, multicollinearity can
+        be reduced, resulting in more reliable model results.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data Visualization</b>: PCA can be used to
+        visualize high-dimensional data in a lower-dimensional space. By
+        projecting the data onto a few principal components, which capture most
+        of the variance, it becomes possible to plot and explore the data in two
+        or three dimensions. Visualization can help uncover patterns, clusters,
+        and outliers in the data, providing insights that may guide further
+        analysis and modeling decisions.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Noise Reduction</b>: In some cases, datasets
+        may contain noise or irrelevant features that can hinder model
+        performance. PCA can help filter out noisy components by identifying the
+        principal components associated with the most significant signal and
+        disregarding those with lower contributions. This noise reduction can
+        enhance the signal-to-noise ratio and improve the quality of the data
+        for subsequent modeling steps.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, PCA can be a powerful tool in machine
+        learning when dealing with high-dimensional data, multicollinearity,
+        feature extraction, visualization, and noise reduction. It offers a way
+        to simplify and enhance the data representation, leading to more
+        efficient and effective learning algorithms.
+      </p>
+      <h4>Assumptions:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Linearity</b>: PCA assumes that the relationship
+        between variables is linear. It looks for linear combinations of
+        variables that explain the maximum amount of variance. If the underlying
+        relationships in the data are nonlinear, PCA may not capture them
+        accurately.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Standardization</b>: PCA assumes that the
+        variables in the dataset are standardized, meaning they have zero mean
+        and unit variance. Standardization is important because variables with
+        different scales can dominate the PCA results and bias the principal
+        components towards those with larger variances.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Orthogonality</b>: PCA assumes that the
+        principal components are orthogonal to each other, meaning they are
+        uncorrelated. This assumption allows each principal component to capture
+        a distinct source of variation in the data. Orthogonality simplifies the
+        interpretation of the principal components and facilitates
+        dimensionality reduction.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Variance Capture</b>: PCA assumes that the
+        principal components are sorted in descending order of the variance they
+        explain. The first principal component accounts for the largest amount
+        of variance, the second component explains the second-largest amount of
+        variance, and so on. This assumption allows for selecting a subset of
+        the principal components that capture a desired level of variance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Normality</b>: PCA assumes that the variables
+        follow a normal distribution. While PCA can still work reasonably well
+        with non-normal data, normality facilitates optimal performance. If the
+        variables are strongly non-normal, it may be necessary to apply
+        transformations or consider alternative dimensionality reduction
+        techniques.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that violating these
+        assumptions can affect the performance and interpretation of PCA. If the
+        assumptions are not met, other techniques like nonlinear dimensionality
+        reduction or feature selection methods may be more appropriate.
+        Additionally, it's advisable to assess the validity of the assumptions
+        and consider the implications for the specific machine learning task at
+        hand.
+      </p>
+      <h4>Advantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>: PCA is a widely-used
+        technique for reducing the number of features in high-dimensional
+        datasets, making it easier and faster to process and analyze large
+        amounts of data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Feature Extraction</b>: PCA can identify the
+        most important features in a dataset by transforming the data into a
+        lower-dimensional space, capturing the most significant variations in
+        the data, and creating new features that may improve machine learning
+        algorithms' performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Data Visualization</b>: PCA can provide
+        valuable insights into data by allowing it to be visualized in
+        lower-dimensional space. By plotting data points along the first two or
+        three principal components, data patterns and relationships that may not
+        be apparent in high-dimensional space can be easily visualized.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity Reduction</b>: PCA can
+        mitigate the effects of multicollinearity, a phenomenon in which two or
+        more predictors in a regression model are highly correlated with each
+        other, making it difficult to determine the relative importance of each
+        predictor.
+      </p>
+      <h4>Disdvantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Interpretability</b>: PCA can make it more
+        challenging to interpret results since the principal components created
+        during the PCA process may not have a clear physical interpretation.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Loss of Information</b>: While PCA can
+        simplify and improve the analysis of high-dimensional datasets, it does
+        so at the cost of losing some information about the original data. By
+        reducing the dimensionality of the dataset, some information about the
+        original features may be lost.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Algorithmic Complexity</b>: PCA involves
+        multiple computationally intensive steps that can require significant
+        computational resources and time to complete, particularly when
+        processing large datasets.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Outliers</b>: PCA is sensitive
+        to outliers since outliers can have a significant impact on the
+        principal components, leading to results that may not be representative
+        of the overall data. Robust alternatives to PCA can be used to mitigate
+        the impact of outliers.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, PCA can be a powerful tool for reducing
+        the dimensionality of high-dimensional datasets, identifying important
+        features, and visualizing data in lower-dimensional space. However, the
+        potential for loss of information, algorithmic complexity, and
+        sensitivity to outliers should be considered when applying PCA to
+        machine learning problems.
+      </p>
+      <h4>How PCA algorithm works?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Standardization</b>: The first step is to
+        standardize the features in the dataset, ensuring they have zero mean
+        and unit variance. This step is important as it eliminates any biases
+        that may arise from features with different scales.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Covariance Matrix Calculation</b
+        >: The algorithm calculates the covariance matrix of the standardized
+        dataset. The covariance matrix provides insights into the relationships
+        between the features, indicating how they vary together. The covariance
+        between two features measures their joint variability.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Eigendecomposition</b>: The next
+        step involves performing an eigendecomposition of the covariance matrix.
+        This decomposition yields a set of eigenvectors and eigenvalues. The
+        eigenvectors represent the principal components, and the eigenvalues
+        correspond to the amount of variance explained by each principal
+        component.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
+          >Sorting Eigenvalues and Selecting Principal Components</b
+        >: The eigenvalues are sorted in descending order, indicating the amount
+        of variance explained by each principal component. The goal is to select
+        a subset of the principal components that capture a desired amount of
+        variance. Typically, the top-k eigenvectors with the highest eigenvalues
+        are chosen.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Projection</b>: Finally, the
+        selected principal components are used to project the original dataset
+        into a new lower-dimensional space. Each data point is transformed into
+        a new set of coordinates representing its projections onto the selected
+        principal components.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The resulting lower-dimensional
+        dataset retains most of the important information from the original
+        dataset while reducing the number of features. This reduction
+        facilitates computational efficiency, visualization, and potentially
+        improved performance in subsequent machine learning tasks.
+
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's important to note that after
+        applying PCA, it may be necessary to perform additional steps such as
+        feature scaling, model training, or other preprocessing techniques
+        depending on the specific machine learning problem at hand.
+      </p>
+      <h4>Evaluation Metrics:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;When evaluating the performance of PCA (Principal
+        Component Analysis) in machine learning, several evaluation metrics can
+        be utilized to assess the effectiveness of dimensionality reduction and
+        its impact on subsequent modeling. Here are some common evaluation
+        metrics for PCA:
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Explained Variance Ratio</b>: This metric
+        measures the proportion of variance in the original data that is
+        explained by each principal component. It provides insights into how
+        much information is retained by each component and helps determine the
+        number of components to retain. Higher explained variance ratios
+        indicate that the principal components capture a significant portion of
+        the original data's variability.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Cumulative Explained Variance</b>: This
+        metric calculates the cumulative proportion of variance explained by a
+        given number of principal components. It helps determine the optimal
+        number of components to retain by examining the cumulative contribution
+        of each component. Generally, a higher cumulative explained variance
+        indicates better performance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Reconstruction Error</b>: Reconstruction
+        error measures the dissimilarity between the original data and its
+        reconstruction from the reduced-dimensional space. It evaluates how well
+        the lower-dimensional representation captures the original data. A lower
+        reconstruction error indicates better preservation of the data's
+        structure and features during the dimensionality reduction process.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Model Performance</b>: After applying PCA,
+        the reduced-dimensional data can be used as input for a machine learning
+        model. The performance of the model can be evaluated using various
+        metrics such as accuracy, precision, recall, F1 score, or area under the
+        ROC curve (AUC-ROC). Comparing the model's performance with and without
+        PCA can help determine the impact of dimensionality reduction on the
+        model's predictive capabilities.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Visualization</b>: If the purpose of PCA is
+        data visualization, visual assessment can be used to evaluate the
+        quality of the visual representation. Plotting the reduced-dimensional
+        data and examining data patterns, clusters, or separability can provide
+        insights into the effectiveness of PCA in revealing the underlying
+        structure of the data.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that the choice of
+        evaluation metrics may depend on the specific goals of the analysis and
+        the subsequent machine learning task. Different metrics may be more
+        appropriate for different scenarios, and a comprehensive evaluation
+        should consider multiple aspects, such as variance retention,
+        reconstruction accuracy, and downstream model performance.
+      </p>
+    </div>
+  </body>
+</html>
