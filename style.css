@@ -31,3 +31,22 @@
     text-align: center;
     margin-top: 10%;
 }
+table,
+
+td {
+
+        border: 1px solid black;
+
+      }
+
+      td {
+
+        text-align: center;
+
+      }
+
+      h1 {
+
+        margin: 5px;
+
+      }
