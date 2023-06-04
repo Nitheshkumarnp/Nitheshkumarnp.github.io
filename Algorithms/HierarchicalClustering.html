@@ -1,0 +1,398 @@
+<html>
+  <head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <div class="flex bg-black font-white">
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../MachineLearning/MachineLearning.html'"
+      >
+        Machine learning
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Python/python.html'"
+      >
+        Python
+      </h1>
+      <div class="gap"></div>
+      <h1
+        class="pd-5-15 mr-0"
+        onclick="document.location='../Algorithms/Algorithms.html'"
+      >
+        ML Algorithms
+      </h1>
+    </div>
+    <div>
+      <h4>Hierarchical Clustering</h4>
+      <h4>What is Hierarchical Clustering?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Hierarchical clustering is a popular unsupervised
+        learning technique used in machine learning and data mining. It is a
+        clustering algorithm that aims to group similar data points together
+        based on their distance or similarity measures.
+
+        <br />&nbsp;&nbsp;&nbsp;The process starts by considering each data
+        point as an individual cluster. Then, the algorithm iteratively merges
+        the most similar clusters into a single cluster until all data points
+        belong to one big cluster or until a stopping criterion is met.
+
+        <br />&nbsp;&nbsp;&nbsp;Hierarchical clustering can be performed in two
+        ways: agglomerative and divisive clustering.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Agglomerative Clustering</b>: It starts with
+        each data point as a separate cluster and merges the closest pairs of
+        clusters until a stopping criterion is satisfied. At each step, the
+        algorithm calculates the distance between all pairs of clusters and
+        combines the two clusters with the smallest distance. This process
+        continues until all data points belong to a single cluster.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Divisive Clustering</b>: It takes the
+        opposite approach to agglomerative clustering. It starts with all data
+        points in a single cluster and recursively divides it into smaller
+        clusters until a stopping criterion is met. At each step, the algorithm
+        selects a cluster and divides it into two subclusters based on a chosen
+        criterion, such as maximizing the distance between data points in
+        different clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;Both agglomerative and divisive hierarchical
+        clustering methods produce a hierarchy of clusters, represented by a
+        tree-like structure called a dendrogram. The dendrogram allows users to
+        visualize the clustering process and make decisions about the number of
+        clusters to extract from the data.
+
+        <br />&nbsp;&nbsp;&nbsp;Hierarchical clustering has several advantages.
+        It does not require prior knowledge of the number of clusters, as the
+        dendrogram can be cut at different levels to obtain different numbers of
+        clusters. It can handle different types of distance measures and is
+        relatively insensitive to the initial conditions. However, hierarchical
+        clustering can be computationally expensive, especially for large
+        datasets, and it may not scale well.
+
+        <br />&nbsp;&nbsp;&nbsp;Overall, hierarchical clustering is a useful
+        technique for exploratory data analysis and finding meaningful patterns
+        or groups within data. It is commonly used in various fields such as
+        biology, social sciences, image analysis, and customer segmentation.
+      </p>
+      <h4>When to use Hierarchical Clustering?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Explore the structure of your data</b>:
+        Hierarchical clustering helps to understand the relationships and
+        similarities between data points. By visualizing the dendrogram, you can
+        gain insights into the natural groupings or patterns present in your
+        data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Determine the number of clusters</b>: The
+        dendrogram allows you to cut it at different levels, resulting in
+        different numbers of clusters. This can help you decide on an
+        appropriate number of clusters based on the structure of your data.
+        Unlike some other clustering algorithms, hierarchical clustering does
+        not require you to specify the number of clusters in advance.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Perform hierarchical data analysis</b>: If
+        you have a hierarchical or nested dataset, such as a taxonomy or
+        organizational hierarchy, hierarchical clustering can be useful for
+        analyzing the relationships between different levels of the hierarchy.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Handle non-globular or non-convex data shapes</b
+        >: Unlike some other clustering algorithms, hierarchical clustering can
+        handle data with irregular shapes and does not assume any specific
+        distribution of clusters. It is particularly suitable for datasets where
+        clusters may have complex or overlapping boundaries.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Assess cluster stability</b>: Hierarchical
+        clustering can be used to evaluate the stability of clusters. By
+        applying the algorithm multiple times or using resampling techniques,
+        you can assess the consistency of the cluster assignments and identify
+        robust clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that hierarchical
+        clustering may not be suitable for large datasets due to its
+        computational complexity. Additionally, it assumes a notion of distance
+        or similarity between data points, which may not always capture the
+        desired characteristics of your data. Therefore, it's recommended to
+        consider the specific properties of your dataset and the goals of your
+        analysis before deciding to use hierarchical clustering.
+      </p>
+      <h4>Why to use Hierarchical Clustering?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Unsupervised learning</b>: Hierarchical clustering
+        is an unsupervised learning technique, meaning it doesn't require
+        labeled data or prior knowledge of class labels. It allows you to
+        explore and discover inherent patterns or structures in your data
+        without the need for predefined labels.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility in cluster formation</b>:
+        Hierarchical clustering can handle various types of data and doesn't
+        assume any specific shape or distribution of clusters. It is
+        particularly useful when dealing with non-globular or non-convex
+        clusters, as it can capture complex relationships and overlapping
+        patterns in the data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Visualization and interpretation</b>: The
+        dendrogram produced by hierarchical clustering provides a visual
+        representation of the clustering process, making it easier to interpret
+        and understand the relationships between data points. It allows you to
+        observe the hierarchical structure and identify meaningful groupings at
+        different levels of similarity.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Determining the number of clusters</b>:
+        Hierarchical clustering provides a way to explore different levels of
+        granularity in clustering. By cutting the dendrogram at different
+        heights, you can obtain different numbers of clusters. This can help you
+        determine the optimal number of clusters based on the structure of your
+        data, without needing to specify the number of clusters beforehand.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Hierarchical data analysis</b>: If your data
+        has a hierarchical or nested structure, such as gene ontology,
+        organizational hierarchy, or document topics with subtopics,
+        hierarchical clustering can be used to analyze and uncover relationships
+        between different levels of the hierarchy. It helps in understanding the
+        grouping and organization within the hierarchical structure.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Cluster stability assessment</b>:
+        Hierarchical clustering can be used to assess the stability or
+        robustness of clusters. By applying the algorithm multiple times or
+        using resampling techniques, you can evaluate the consistency of the
+        cluster assignments and identify stable clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that hierarchical
+        clustering has its limitations, such as computational complexity for
+        large datasets and sensitivity to noise and outliers. Therefore, it's
+        crucial to consider the specific characteristics of your data and the
+        goals of your analysis when deciding whether to use hierarchical
+        clustering in your machine learning tasks.
+      </p>
+      <h4>Assumptions:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Similarity or distance measure</b>: Hierarchical
+        clustering assumes that a meaningful similarity or distance measure can
+        be defined between pairs of data points. The choice of distance metric
+        is crucial and can significantly impact the clustering results. Common
+        distance measures used in hierarchical clustering include Euclidean
+        distance, Manhattan distance, and correlation distance, among others.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Pairwise comparison</b>: Hierarchical
+        clustering assumes that clustering can be performed by comparing pairs
+        of data points or clusters at each step. It relies on calculating the
+        similarity or dissimilarity between every pair of data points or
+        clusters to determine the merging or splitting process.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Hierarchical structure</b>: The fundamental
+        assumption of hierarchical clustering is that the data points can be
+        organized in a hierarchical structure, where clusters are nested within
+        larger clusters. It assumes that there is a hierarchical relationship
+        between the data points and that the data points can be grouped into
+        nested clusters based on their similarities.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Agglomerative or divisive process</b>:
+        Hierarchical clustering assumes that the clustering process can be
+        performed in an agglomerative (bottom-up) or divisive (top-down) manner.
+        Agglomerative clustering starts with individual data points as separate
+        clusters and merges the most similar ones iteratively. Divisive
+        clustering starts with all data points in a single cluster and
+        recursively divides it into smaller clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >No prior knowledge of the number of clusters</b
+        >: Hierarchical clustering does not assume prior knowledge about the
+        number of clusters in the data. It allows for an exploration of
+        different levels of clustering granularity by cutting the dendrogram at
+        different heights, enabling the identification of the optimal number of
+        clusters based on the structure of the data.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that while these
+        assumptions are typically made in hierarchical clustering, they may not
+        always hold in all scenarios. The choice of distance metric, data
+        characteristics, and the specific goals of the analysis should be
+        carefully considered to ensure the appropriate use of hierarchical
+        clustering.
+      </p>
+      <h4>Advantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Flexibility in cluster shapes</b>: Hierarchical
+        clustering can handle various shapes and sizes of clusters. It is
+        effective in identifying clusters with irregular shapes, non-convex
+        boundaries, and overlapping patterns, which may not be easily captured
+        by other clustering algorithms.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>No predetermined number of clusters</b>:
+        Unlike some other clustering algorithms, hierarchical clustering does
+        not require specifying the number of clusters in advance. The dendrogram
+        resulting from hierarchical clustering allows for a flexible choice of
+        the number of clusters by cutting the tree at different levels. This
+        makes it suitable for exploratory analysis when the optimal number of
+        clusters is unknown.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Visualization and interpretation</b>:
+        Hierarchical clustering produces a dendrogram that provides a visual
+        representation of the clustering process. The dendrogram allows for a
+        hierarchical visualization of data relationships and facilitates the
+        interpretation of clusters at different levels of similarity. This makes
+        it easier to understand the structure and organization of the data.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Hierarchical data analysis</b>: If your data
+        has a hierarchical or nested structure, such as taxonomies or
+        organizational hierarchies, hierarchical clustering can be particularly
+        useful. It enables the analysis of relationships and groupings at
+        different levels of the hierarchy, providing insights into the
+        hierarchical organization of the data.
+      </p>
+      <h4>Disadvantages:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;<b>Computational complexity</b>: Hierarchical
+        clustering can be computationally expensive, especially for large
+        datasets. The algorithm needs to calculate the distance or similarity
+        between all pairs of data points or clusters at each step. This can make
+        it time-consuming and memory-intensive, limiting its scalability for
+        datasets with a large number of observations.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to noise and outliers</b>:
+        Hierarchical clustering can be sensitive to noise and outliers in the
+        data. Outliers or noise points can significantly affect the clustering
+        process, leading to suboptimal results. Preprocessing techniques or
+        outlier detection methods may be necessary to mitigate these effects.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Lack of scalability</b>: As the number of
+        data points increases, the computational cost and memory requirements of
+        hierarchical clustering grow rapidly. This limits its scalability for
+        very large datasets. Alternative clustering algorithms, such as k-means
+        or DBSCAN, are often preferred for large-scale clustering tasks.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Lack of formal optimization</b>: Hierarchical
+        clustering does not optimize a global objective function, unlike some
+        other clustering algorithms. The merging or splitting decisions are
+        based on local pairwise comparisons. Consequently, hierarchical
+        clustering may not always find the globally optimal clustering solution.
+
+        <br />&nbsp;&nbsp;&nbsp;<b
+          >Difficulty in handling high-dimensional data</b
+        >: Hierarchical clustering tends to struggle with high-dimensional data.
+        As the dimensionality increases, the notion of distance becomes less
+        reliable, and the interpretation of clusters in high-dimensional space
+        becomes challenging. Dimensionality reduction techniques or feature
+        selection methods can be applied before performing hierarchical
+        clustering on high-dimensional data.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to consider these advantages and
+        disadvantages when deciding to use hierarchical clustering in your
+        machine learning tasks. The choice of clustering algorithm should depend
+        on the specific characteristics of your data, the goals of your
+        analysis, and the computational constraints you have.
+      </p>
+      <h4>How Hierarchical Clustering works?</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;The hierarchical clustering algorithm is a bottom-up
+        (agglomerative) or top-down (divisive) approach that iteratively merges
+        or splits clusters based on their similarity or distance. Here's a
+        step-by-step explanation of how the agglomerative hierarchical
+        clustering algorithm works:
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Initialize the process</b>: Begin by
+        considering each data point as a separate cluster. Assign each data
+        point to its own cluster.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Calculate the distance/similarity matrix</b>:
+        Calculate the pairwise distances or similarities between all pairs of
+        data points. This distance/similarity matrix serves as the basis for
+        determining which clusters to merge at each step.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Merge the most similar clusters</b>: Identify
+        the two most similar clusters based on a chosen distance metric. This
+        can be done using methods like single linkage, complete linkage, or
+        average linkage. Single linkage considers the minimum distance between
+        any pair of points from different clusters. Complete linkage considers
+        the maximum distance between any pair of points from different clusters.
+        Average linkage takes the average distance between all pairs of points
+        from different clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Update the distance/similarity matrix</b>:
+        Recalculate the distance/similarity matrix by incorporating the merged
+        clusters. Depending on the linkage method, update the
+        distances/similarities between the merged cluster and other clusters.
+        This step is crucial for subsequent merging decisions.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Repeat steps 3 and 4</b>: Repeat the process
+        of merging the most similar clusters and updating the
+        distance/similarity matrix until all data points belong to a single
+        cluster or until a stopping criterion is met. The stopping criterion can
+        be based on a predefined number of clusters, a threshold
+        distance/similarity, or any other criterion suitable for the problem at
+        hand.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Obtain the dendrogram</b>: During the merging
+        process, track the merging history to create a dendrogram—a tree-like
+        structure that represents the hierarchical relationships between
+        clusters. The dendrogram provides a visual representation of the
+        clustering process, allowing for analysis at different levels of
+        clustering granularity.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Cut the dendrogram</b>: Based on the desired
+        number of clusters or the structure revealed by the dendrogram, cut the
+        dendrogram at an appropriate height to obtain the final clusters. Each
+        horizontal cut on the dendrogram corresponds to a different number of
+        clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;The divisive hierarchical clustering algorithm
+        follows a similar process but in the opposite direction. It starts with
+        all data points in a single cluster and recursively divides clusters
+        into smaller subclusters until the desired number of clusters is
+        achieved or a stopping criterion is met.
+
+        <br />&nbsp;&nbsp;&nbsp;It's important to note that the choice of
+        distance metric, linkage method, and stopping criterion can
+        significantly impact the clustering results. These choices should be
+        carefully considered based on the characteristics of the data and the
+        goals of the analysis.
+      </p>
+      <h4>Evaluation metrics for Hierarchical Clustering:</h4>
+      <p>
+        &nbsp;&nbsp;&nbsp;Evaluating the performance of hierarchical clustering
+        can be challenging due to its unsupervised nature. However, there are a
+        few evaluation metrics that can provide insights into the quality of the
+        clustering results. Here are some commonly used evaluation metrics for
+        hierarchical clustering:
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Cophenetic correlation coefficient (CPCC)</b
+        >: CPCC measures the correlation between the pairwise distances of the
+        original data points and the distances obtained from the hierarchical
+        clustering. A higher CPCC value (close to 1) indicates that the
+        clustering preserves the original distances well.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Silhouette coefficient</b>: The silhouette
+        coefficient measures the compactness and separation of clusters. It
+        considers the average distance between data points within a cluster (a)
+        and the average distance between data points in one cluster to the data
+        points in the nearest neighboring cluster (b). A higher silhouette
+        coefficient (closer to 1) indicates better-defined and well-separated
+        clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Rand index</b>: The Rand index measures the
+        similarity between two clusterings, such as the clustering obtained from
+        hierarchical clustering and a ground truth clustering (if available). It
+        calculates the number of pairs of data points that are either in the
+        same cluster or in different clusters in both clusterings. A higher Rand
+        index (closer to 1) indicates a higher agreement between the two
+        clusterings.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Dunn index</b>: The Dunn index evaluates the
+        compactness and separation of clusters. It considers the minimum
+        inter-cluster distance (the distance between the closest pair of points
+        from different clusters) and the maximum intra-cluster distance (the
+        maximum distance between any two points within a cluster). A higher Dunn
+        index indicates better-defined and well-separated clusters.
+
+        <br />&nbsp;&nbsp;&nbsp;<b>Variation of Information (VI)</b>: VI
+        measures the amount of information shared between two clusterings. It
+        calculates the entropy of each clustering and the conditional entropy of
+        one clustering given the other. A lower VI value indicates a higher
+        similarity between the two clusterings.
+      </p>
+    </div>
+  </body>
+</html>
