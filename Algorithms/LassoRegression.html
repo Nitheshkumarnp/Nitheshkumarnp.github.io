@@ -1,303 +1,287 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>What is Lasso regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Lasso regression, also known as L1 regularization, is
-        a type of linear regression model used in machine learning that performs
-        variable(feature) selection and regularization.
 
-        <br />&nbsp;&nbsp;&nbsp;The main idea behind lasso regression is to add
-        a penalty term to the loss function of the linear regression model. This
-        penalty term is a sum of the absolute values of the coefficients of the
-        model, multiplied by a regularization parameter alpha. The effect of
-        this penalty term is to force some of the coefficients to be exactly
-        zero, effectively performing variable selection and producing a sparse
-        model.
-      </p>
-      <h4>When to use Lasso regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Lasso regression can be used in machine learning when
-        you have a dataset with many features and you suspect that only a subset
-        of those features are important for predicting the target variable. Here
-        are some scenarios where lasso regression may be useful:
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature selection</b>: When you have a large
-        number of features and you want to identify the most important ones for
-        predicting the target variable, lasso regression can be used to select a
-        subset of the features and set the coefficients of the others to zero.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>What is Lasso regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Lasso regression, also known as L1 regularization, is
+      a type of linear regression model used in machine learning that performs
+      variable(feature) selection and regularization.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity</b>: When you have highly
-        correlated features, lasso regression can help to select one feature
-        over the others, effectively reducing the multicollinearity in the
-        model.
+      <br />&nbsp;&nbsp;&nbsp;The main idea behind lasso regression is to add
+      a penalty term to the loss function of the linear regression model. This
+      penalty term is a sum of the absolute values of the coefficients of the
+      model, multiplied by a regularization parameter alpha. The effect of
+      this penalty term is to force some of the coefficients to be exactly
+      zero, effectively performing variable selection and producing a sparse
+      model.
+    </p>
+    <h4>When to use Lasso regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Lasso regression can be used in machine learning when
+      you have a dataset with many features and you suspect that only a subset
+      of those features are important for predicting the target variable. Here
+      are some scenarios where lasso regression may be useful:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretable models</b>: When you want a
-        simple and interpretable model, lasso regression can help by selecting
-        only a subset of the features that are most important for predicting the
-        target variable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature selection</b>: When you have a large
+      number of features and you want to identify the most important ones for
+      predicting the target variable, lasso regression can be used to select a
+      subset of the features and set the coefficients of the others to zero.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sparse models</b>: When you want a model with
-        fewer parameters and fewer degrees of freedom, lasso regression can help
-        to produce a sparse model that only uses a subset of the available
-        features.
+      <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity</b>: When you have highly
+      correlated features, lasso regression can help to select one feature
+      over the others, effectively reducing the multicollinearity in the
+      model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Outlier detection</b>: Lasso regression can
-        be more sensitive to outliers than other types of regularization, which
-        may be useful in identifying potential outliers in the dataset.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretable models</b>: When you want a
+      simple and interpretable model, lasso regression can help by selecting
+      only a subset of the features that are most important for predicting the
+      target variable.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that lasso regression may
-        not be the best choice for every problem, and other types of
-        regularization, such as ridge regression or elastic net, may be more
-        appropriate in some cases. The choice of regularization technique will
-        depend on the specific characteristics of the dataset and the goals of
-        the modeling task.
-      </p>
-      <h4>Why to use lasso regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Feature selection</b>: Lasso regression is
-        particularly useful when there are many features in the dataset, some of
-        which may be irrelevant or redundant. By setting some of the
-        coefficients to zero, lasso regression can help to identify the most
-        important features for predicting the target variable, while ignoring
-        the rest.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sparse models</b>: When you want a model with
+      fewer parameters and fewer degrees of freedom, lasso regression can help
+      to produce a sparse model that only uses a subset of the available
+      features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Lasso regression is a
-        form of regularization, which can help to prevent overfitting of the
-        model to the training data. Regularization can improve the
-        generalization performance of the model by reducing the variance of the
-        model.
+      <br />&nbsp;&nbsp;&nbsp;<b>Outlier detection</b>: Lasso regression can
+      be more sensitive to outliers than other types of regularization, which
+      may be useful in identifying potential outliers in the dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sparsity</b>: Lasso regression tends to
-        produce sparse models, where only a subset of the features are used in
-        the model. Sparse models can be more interpretable and easier to
-        understand than models that use all the available features.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that lasso regression may
+      not be the best choice for every problem, and other types of
+      regularization, such as ridge regression or elastic net, may be more
+      appropriate in some cases. The choice of regularization technique will
+      depend on the specific characteristics of the dataset and the goals of
+      the modeling task.
+    </p>
+    <h4>Why to use lasso regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Feature selection</b>: Lasso regression is
+      particularly useful when there are many features in the dataset, some of
+      which may be irrelevant or redundant. By setting some of the
+      coefficients to zero, lasso regression can help to identify the most
+      important features for predicting the target variable, while ignoring
+      the rest.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Improved prediction accuracy</b>: Lasso
-        regression can sometimes improve the prediction accuracy of the model by
-        reducing the effects of irrelevant or redundant features, and by
-        reducing overfitting.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Lasso regression is a
+      form of regularization, which can help to prevent overfitting of the
+      model to the training data. Regularization can improve the
+      generalization performance of the model by reducing the variance of the
+      model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Outlier detection</b>: Lasso regression can
-        be more sensitive to outliers in the data than other types of
-        regularization, which can be useful in identifying potential outliers in
-        the dataset.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sparsity</b>: Lasso regression tends to
+      produce sparse models, where only a subset of the features are used in
+      the model. Sparse models can be more interpretable and easier to
+      understand than models that use all the available features.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, lasso regression can be a powerful tool
-        for feature selection, regularization, and improving the prediction
-        accuracy of linear regression models in machine learning. However, it's
-        important to choose the regularization parameter carefully and to tune
-        it using cross-validation to avoid underfitting or overfitting the model
-        to the data.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Linearity</b>: Lasso regression assumes that the
-        relationship between the independent variables and the dependent
-        variable is linear. If this assumption is violated, the model may
-        produce biased or inaccurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Improved prediction accuracy</b>: Lasso
+      regression can sometimes improve the prediction accuracy of the model by
+      reducing the effects of irrelevant or redundant features, and by
+      reducing overfitting.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: Lasso regression assumes
-        that the observations in the dataset are independent of each other. If
-        there is correlation between the observations, the model may be biased
-        or produce inaccurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Outlier detection</b>: Lasso regression can
+      be more sensitive to outliers in the data than other types of
+      regularization, which can be useful in identifying potential outliers in
+      the dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Homoscedasticity</b>: Lasso regression
-        assumes that the variance of the residuals is constant across all levels
-        of the independent variables. If the variance of the residuals is not
-        constant, the model may produce biased or inaccurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;Overall, lasso regression can be a powerful tool
+      for feature selection, regularization, and improving the prediction
+      accuracy of linear regression models in machine learning. However, it's
+      important to choose the regularization parameter carefully and to tune
+      it using cross-validation to avoid underfitting or overfitting the model
+      to the data.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Linearity</b>: Lasso regression assumes that the
+      relationship between the independent variables and the dependent
+      variable is linear. If this assumption is violated, the model may
+      produce biased or inaccurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Normality</b>: Lasso regression assumes that
-        the residuals (the differences between the predicted values and the
-        actual values) are normally distributed. If the residuals are not
-        normally distributed, the model may not be optimal.
+      <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: Lasso regression assumes
+      that the observations in the dataset are independent of each other. If
+      there is correlation between the observations, the model may be biased
+      or produce inaccurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity</b>: Lasso regression
-        assumes that the independent variables are not highly correlated with
-        each other. If there is multicollinearity, the model may be biased or
-        produce inaccurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Homoscedasticity</b>: Lasso regression
+      assumes that the variance of the residuals is constant across all levels
+      of the independent variables. If the variance of the residuals is not
+      constant, the model may produce biased or inaccurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to check these assumptions before
-        applying lasso regression to a dataset, and to take appropriate steps to
-        address any violations of the assumptions. For example, if there is
-        multicollinearity, you may need to remove or combine some of the
-        correlated features. If the residuals are not normally distributed, you
-        may need to apply a transformation to the data.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Feature selection</b>: Lasso regression can help to
-        identify the most important features for predicting the target variable,
-        while ignoring the rest. This can be useful when there are many features
-        in the dataset, some of which may be irrelevant or redundant.
+      <br />&nbsp;&nbsp;&nbsp;<b>Normality</b>: Lasso regression assumes that
+      the residuals (the differences between the predicted values and the
+      actual values) are normally distributed. If the residuals are not
+      normally distributed, the model may not be optimal.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Lasso regression is a
-        form of regularization, which can help to prevent overfitting of the
-        model to the training data. Regularization can improve the
-        generalization performance of the model by reducing the variance of the
-        model.
+      <br />&nbsp;&nbsp;&nbsp;<b>Multicollinearity</b>: Lasso regression
+      assumes that the independent variables are not highly correlated with
+      each other. If there is multicollinearity, the model may be biased or
+      produce inaccurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sparsity</b>: Lasso regression tends to
-        produce sparse models, where only a subset of the features are used in
-        the model. Sparse models can be more interpretable and easier to
-        understand than models that use all the available features.
+      <br />&nbsp;&nbsp;&nbsp;It's important to check these assumptions before
+      applying lasso regression to a dataset, and to take appropriate steps to
+      address any violations of the assumptions. For example, if there is
+      multicollinearity, you may need to remove or combine some of the
+      correlated features. If the residuals are not normally distributed, you
+      may need to apply a transformation to the data.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Feature selection</b>: Lasso regression can help to
+      identify the most important features for predicting the target variable,
+      while ignoring the rest. This can be useful when there are many features
+      in the dataset, some of which may be irrelevant or redundant.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Outlier detection</b>: Lasso regression can
-        be more sensitive to outliers in the data than other types of
-        regularization, which can be useful in identifying potential outliers in
-        the dataset.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Lasso regression is a
+      form of regularization, which can help to prevent overfitting of the
+      model to the training data. Regularization can improve the
+      generalization performance of the model by reducing the variance of the
+      model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Improved prediction accuracy</b>: Lasso
-        regression can sometimes improve the prediction accuracy of the model by
-        reducing the effects of irrelevant or redundant features, and by
-        reducing overfitting.
-      </p>
-      <h4>Disadvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Bias</b>: Lasso regression tends to produce biased
-        estimates of the coefficients, particularly when the number of features
-        is large relative to the sample size. This can lead to inaccurate
-        predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sparsity</b>: Lasso regression tends to
+      produce sparse models, where only a subset of the features are used in
+      the model. Sparse models can be more interpretable and easier to
+      understand than models that use all the available features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model instability</b>: Lasso regression can
-        be sensitive to small changes in the dataset, which can result in large
-        changes in the estimated coefficients. This can make the model unstable
-        and difficult to interpret.
+      <br />&nbsp;&nbsp;&nbsp;<b>Outlier detection</b>: Lasso regression can
+      be more sensitive to outliers in the data than other types of
+      regularization, which can be useful in identifying potential outliers in
+      the dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Assumptions</b>: Lasso regression makes many
-        of the same assumptions as linear regression, such as linearity,
-        normality, and independence. If these assumptions are violated, the
-        model may produce biased or inaccurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Improved prediction accuracy</b>: Lasso
+      regression can sometimes improve the prediction accuracy of the model by
+      reducing the effects of irrelevant or redundant features, and by
+      reducing overfitting.
+    </p>
+    <h4>Disadvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Bias</b>: Lasso regression tends to produce biased
+      estimates of the coefficients, particularly when the number of features
+      is large relative to the sample size. This can lead to inaccurate
+      predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Selection bias</b>: Lasso regression can lead
-        to selection bias if the subset of features selected by the model is not
-        representative of the true underlying relationship between the features
-        and the target variable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model instability</b>: Lasso regression can
+      be sensitive to small changes in the dataset, which can result in large
+      changes in the estimated coefficients. This can make the model unstable
+      and difficult to interpret.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Difficulty in choosing regularization parameter</b
-        >: Lasso regression requires the choice of a regularization parameter,
-        which determines the amount of regularization applied to the model.
-        Choosing the right value for this parameter can be difficult, and can
-        require cross-validation or other methods to tune the parameter.
+      <br />&nbsp;&nbsp;&nbsp;<b>Assumptions</b>: Lasso regression makes many
+      of the same assumptions as linear regression, such as linearity,
+      normality, and independence. If these assumptions are violated, the
+      model may produce biased or inaccurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, lasso regression can be a powerful tool
-        for feature selection, regularization, and improving the prediction
-        accuracy of linear regression models in machine learning. However, it's
-        important to consider the advantages and disadvantages of the method
-        before applying it to a particular problem, and to choose the
-        regularization parameter carefully to avoid underfitting or overfitting
-        the model to the data.
-      </p>
-      <h4>How lasso regression algorithms works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Lasso regression works by adding a penalty term to the
-        linear regression model, which encourages the model to select a smaller
-        subset of features for the final model. The penalty term is based on the
-        sum of the absolute values of the coefficients of the features, and is
-        multiplied by a regularization parameter λ.
+      <br />&nbsp;&nbsp;&nbsp;<b>Selection bias</b>: Lasso regression can lead
+      to selection bias if the subset of features selected by the model is not
+      representative of the true underlying relationship between the features
+      and the target variable.
 
-        <br />&nbsp;&nbsp;&nbsp;The objective function for lasso regression is:
+      <br />&nbsp;&nbsp;&nbsp;<b>Difficulty in choosing regularization parameter</b>: Lasso regression requires the
+      choice of a regularization parameter,
+      which determines the amount of regularization applied to the model.
+      Choosing the right value for this parameter can be difficult, and can
+      require cross-validation or other methods to tune the parameter.
 
-        <br />&nbsp;&nbsp;&nbsp;minimize: RSS + λ * ||β||_1
+      <br />&nbsp;&nbsp;&nbsp;Overall, lasso regression can be a powerful tool
+      for feature selection, regularization, and improving the prediction
+      accuracy of linear regression models in machine learning. However, it's
+      important to consider the advantages and disadvantages of the method
+      before applying it to a particular problem, and to choose the
+      regularization parameter carefully to avoid underfitting or overfitting
+      the model to the data.
+    </p>
+    <h4>How lasso regression algorithms works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Lasso regression works by adding a penalty term to the
+      linear regression model, which encourages the model to select a smaller
+      subset of features for the final model. The penalty term is based on the
+      sum of the absolute values of the coefficients of the features, and is
+      multiplied by a regularization parameter λ.
 
-        <br />&nbsp;&nbsp;&nbsp;where RSS is the residual sum of squares,
-        <br />&nbsp;&nbsp;&nbsp;||β||_1 is the L1-norm of the coefficient vector
-        β, and λ is the regularization parameter.
+      <br />&nbsp;&nbsp;&nbsp;The objective function for lasso regression is:
 
-        <br />&nbsp;&nbsp;&nbsp;The L1-norm of the coefficient vector β is the
-        sum of the absolute values of the coefficients:
+      <br />&nbsp;&nbsp;&nbsp;minimize: RSS + λ * ||β||_1
 
-        <br />&nbsp;&nbsp;&nbsp;||β||_1 = |β_1| + |β_2| + ... + |β_p|
+      <br />&nbsp;&nbsp;&nbsp;where RSS is the residual sum of squares,
+      <br />&nbsp;&nbsp;&nbsp;||β||_1 is the L1-norm of the coefficient vector
+      β, and λ is the regularization parameter.
 
-        <br />&nbsp;&nbsp;&nbsp;where p is the number of features in the
-        dataset.
+      <br />&nbsp;&nbsp;&nbsp;The L1-norm of the coefficient vector β is the
+      sum of the absolute values of the coefficients:
 
-        <br />&nbsp;&nbsp;&nbsp;The penalty term encourages the model to set
-        some of the coefficients to zero, effectively removing the corresponding
-        features from the model. This results in a sparse model, where only a
-        subset of the features are used for prediction.
+      <br />&nbsp;&nbsp;&nbsp;||β||_1 = |β_1| + |β_2| + ... + |β_p|
 
-        <br />&nbsp;&nbsp;&nbsp;To solve the optimization problem, various
-        algorithms can be used, such as coordinate descent or the least angle
-        regression (LARS) algorithm.
+      <br />&nbsp;&nbsp;&nbsp;where p is the number of features in the
+      dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;In practice, the regularization parameter λ
-        needs to be chosen carefully, as it controls the amount of sparsity in
-        the model. If λ is too small, the model may include too many features,
-        while if λ is too large, the model may be too simple and underfit the
-        data.
+      <br />&nbsp;&nbsp;&nbsp;The penalty term encourages the model to set
+      some of the coefficients to zero, effectively removing the corresponding
+      features from the model. This results in a sparse model, where only a
+      subset of the features are used for prediction.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, lasso regression can be a powerful tool
-        for feature selection and regularization, and can help to improve the
-        prediction accuracy of linear regression models in machine learning.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: This metric measures
-        the average squared difference between the predicted and actual values
-        of the target variable. Lower values of MSE indicate better prediction
-        accuracy.
+      <br />&nbsp;&nbsp;&nbsp;To solve the optimization problem, various
+      algorithms can be used, such as coordinate descent or the least angle
+      regression (LARS) algorithm.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R^2)</b>: This metric measures the
-        proportion of variance in the target variable that is explained by the
-        model. Higher values of R-squared indicate better prediction accuracy.
+      <br />&nbsp;&nbsp;&nbsp;In practice, the regularization parameter λ
+      needs to be chosen carefully, as it controls the amount of sparsity in
+      the model. If λ is too small, the model may include too many features,
+      while if λ is too large, the model may be too simple and underfit the
+      data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: This
-        metric is the square root of the mean squared error and is expressed in
-        the same units as the target variable. Lower values of RMSE indicate
-        better prediction accuracy.
+      <br />&nbsp;&nbsp;&nbsp;Overall, lasso regression can be a powerful tool
+      for feature selection and regularization, and can help to improve the
+      prediction accuracy of linear regression models in machine learning.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: This metric measures
+      the average squared difference between the predicted and actual values
+      of the target variable. Lower values of MSE indicate better prediction
+      accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: This metric
-        measures the average absolute difference between the predicted and
-        actual values of the target variable. Lower values of MAE indicate
-        better prediction accuracy.
+      <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R^2)</b>: This metric measures the
+      proportion of variance in the target variable that is explained by the
+      model. Higher values of R-squared indicate better prediction accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Akaike Information Criterion (AIC)</b>: This
-        metric is a measure of the relative quality of a statistical model for a
-        given set of data. Lower values of AIC indicate better model quality.
+      <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: This
+      metric is the square root of the mean squared error and is expressed in
+      the same units as the target variable. Lower values of RMSE indicate
+      better prediction accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Bayesian Information Criterion (BIC)</b>:
-        This metric is a similar to AIC, but it includes a penalty term for the
-        number of model parameters. Lower values of BIC indicate better model
-        quality.
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: This metric
+      measures the average absolute difference between the predicted and
+      actual values of the target variable. Lower values of MAE indicate
+      better prediction accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that the choice of
-        evaluation metric depends on the specific problem and the nature of the
-        target variable. For example, for a binary classification problem,
-        metrics such as accuracy, precision, recall, and F1-score may be more
-        appropriate than MSE or R-squared. Additionally, cross-validation can be
-        used to evaluate the performance of lasso regression models on multiple
-        folds of the data, and to estimate the generalization performance of the
-        model.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Akaike Information Criterion (AIC)</b>: This
+      metric is a measure of the relative quality of a statistical model for a
+      given set of data. Lower values of AIC indicate better model quality.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Bayesian Information Criterion (BIC)</b>:
+      This metric is a similar to AIC, but it includes a penalty term for the
+      number of model parameters. Lower values of BIC indicate better model
+      quality.
+
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that the choice of
+      evaluation metric depends on the specific problem and the nature of the
+      target variable. For example, for a binary classification problem,
+      metrics such as accuracy, precision, recall, and F1-score may be more
+      appropriate than MSE or R-squared. Additionally, cross-validation can be
+      used to evaluate the performance of lasso regression models on multiple
+      folds of the data, and to estimate the generalization performance of the
+      model.
+    </p>
+  </div>
+</body>
+
 </html>

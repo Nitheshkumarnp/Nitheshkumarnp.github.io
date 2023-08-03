@@ -1,329 +1,308 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>K-Nearest Neighbors</h4>
-      <h4>What is KNN?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;KNN, short for k-nearest neighbors, is a popular
-        algorithm used in machine learning for both classification and
-        regression tasks. It is a non-parametric and instance-based learning
-        method, meaning that it does not make any assumptions about the
-        underlying data distribution and instead relies on the data points
-        themselves.
 
-        <br />&nbsp;&nbsp;&nbsp;The basic idea behind the KNN algorithm is to
-        classify a new data point by finding the k nearest neighbors to that
-        point in the training dataset. The "nearest" neighbors are determined
-        based on a distance metric, commonly the Euclidean distance, although
-        other distance measures can also be used.
-      </p>
-      <h4>When to use KNN?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Classification</b>: KNN is often used for
-        classification tasks where the goal is to assign a class or label to a
-        new data point based on its features. It works well when the decision
-        boundaries are complex or nonlinear. KNN can handle both binary and
-        multi-class classification problems.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regression</b>: KNN can also be employed for
-        regression tasks, where the goal is to predict a continuous numerical
-        value. In this case, instead of assigning a class, the algorithm
-        calculates the average (or weighted average) of the target values of the
-        k nearest neighbors to estimate the output for the new data point.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>K-Nearest Neighbors</h4>
+    <h4>What is KNN?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;KNN, short for k-nearest neighbors, is a popular
+      algorithm used in machine learning for both classification and
+      regression tasks. It is a non-parametric and instance-based learning
+      method, meaning that it does not make any assumptions about the
+      underlying data distribution and instead relies on the data points
+      themselves.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Anomaly detection</b>: KNN can be used to
-        identify anomalies or outliers in a dataset. By comparing the distance
-        of a data point to its k nearest neighbors, we can determine whether it
-        deviates significantly from its surroundings.
+      <br />&nbsp;&nbsp;&nbsp;The basic idea behind the KNN algorithm is to
+      classify a new data point by finding the k nearest neighbors to that
+      point in the training dataset. The "nearest" neighbors are determined
+      based on a distance metric, commonly the Euclidean distance, although
+      other distance measures can also be used.
+    </p>
+    <h4>When to use KNN?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Classification</b>: KNN is often used for
+      classification tasks where the goal is to assign a class or label to a
+      new data point based on its features. It works well when the decision
+      boundaries are complex or nonlinear. KNN can handle both binary and
+      multi-class classification problems.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Recommender systems</b>: KNN can be applied
-        in collaborative filtering-based recommender systems. By considering the
-        similarity between users or items based on their ratings or preferences,
-        KNN can identify similar users or items to provide personalized
-        recommendations.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regression</b>: KNN can also be employed for
+      regression tasks, where the goal is to predict a continuous numerical
+      value. In this case, instead of assigning a class, the algorithm
+      calculates the average (or weighted average) of the target values of the
+      k nearest neighbors to estimate the output for the new data point.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Imputation of missing values</b>: KNN can be
-        utilized to fill in missing values in a dataset. By finding the k
-        nearest neighbors of a data point with missing values, the algorithm can
-        estimate those missing values based on the values of the neighbors.
+      <br />&nbsp;&nbsp;&nbsp;<b>Anomaly detection</b>: KNN can be used to
+      identify anomalies or outliers in a dataset. By comparing the distance
+      of a data point to its k nearest neighbors, we can determine whether it
+      deviates significantly from its surroundings.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while KNN can be
-        effective in certain scenarios, it may not be suitable for all
-        situations. Some considerations when using KNN include the choice of
-        distance metric, determining the appropriate value of k, handling
-        imbalanced datasets, and addressing the computational cost for large
-        datasets. It's always recommended to evaluate and compare different
-        algorithms to find the best approach for a particular problem.
-      </p>
-      <h4>Why to use KNN?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: KNN is a simple algorithm that is
-        easy to understand and implement. It does not require any assumptions
-        about the underlying data distribution or complex parameter tuning,
-        making it a straightforward choice for many beginners in machine
-        learning.
+      <br />&nbsp;&nbsp;&nbsp;<b>Recommender systems</b>: KNN can be applied
+      in collaborative filtering-based recommender systems. By considering the
+      similarity between users or items based on their ratings or preferences,
+      KNN can identify similar users or items to provide personalized
+      recommendations.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Non-linearity</b>: KNN can handle complex and
-        nonlinear decision boundaries. It is particularly useful when the
-        relationship between features and the target variable is not well
-        captured by linear models. KNN can identify intricate patterns in the
-        data, making it suitable for tasks where linear methods may not perform
-        well.
+      <br />&nbsp;&nbsp;&nbsp;<b>Imputation of missing values</b>: KNN can be
+      utilized to fill in missing values in a dataset. By finding the k
+      nearest neighbors of a data point with missing values, the algorithm can
+      estimate those missing values based on the values of the neighbors.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Instance-based learning</b>: KNN is an
-        instance-based learning algorithm, meaning that it stores the entire
-        training dataset in memory rather than building a specific model. This
-        allows for flexibility and adaptability to changes in the data. New data
-        points can be added to the training set, and the algorithm will
-        automatically adjust its predictions based on the updated information.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while KNN can be
+      effective in certain scenarios, it may not be suitable for all
+      situations. Some considerations when using KNN include the choice of
+      distance metric, determining the appropriate value of k, handling
+      imbalanced datasets, and addressing the computational cost for large
+      datasets. It's always recommended to evaluate and compare different
+      algorithms to find the best approach for a particular problem.
+    </p>
+    <h4>Why to use KNN?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: KNN is a simple algorithm that is
+      easy to understand and implement. It does not require any assumptions
+      about the underlying data distribution or complex parameter tuning,
+      making it a straightforward choice for many beginners in machine
+      learning.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: KNN provides
-        transparency in its decision-making process. The predicted class or
-        label for a new data point is determined by the majority voting of its
-        nearest neighbors. This makes it easy to interpret and understand the
-        reasoning behind the predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Non-linearity</b>: KNN can handle complex and
+      nonlinear decision boundaries. It is particularly useful when the
+      relationship between features and the target variable is not well
+      captured by linear models. KNN can identify intricate patterns in the
+      data, making it suitable for tasks where linear methods may not perform
+      well.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Robustness to outliers</b>: KNN is less
-        affected by outliers compared to some other algorithms. Outliers have a
-        smaller impact on the predictions because they are typically isolated
-        and do not affect the majority voting of the nearest neighbors.
+      <br />&nbsp;&nbsp;&nbsp;<b>Instance-based learning</b>: KNN is an
+      instance-based learning algorithm, meaning that it stores the entire
+      training dataset in memory rather than building a specific model. This
+      allows for flexibility and adaptability to changes in the data. New data
+      points can be added to the training set, and the algorithm will
+      automatically adjust its predictions based on the updated information.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>No training phase</b>: KNN does not require
-        an explicit training phase. Once the training data is stored, new
-        predictions can be made immediately. This makes KNN suitable for
-        situations where real-time or on-the-fly predictions are required.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: KNN provides
+      transparency in its decision-making process. The predicted class or
+      label for a new data point is determined by the majority voting of its
+      nearest neighbors. This makes it easy to interpret and understand the
+      reasoning behind the predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while KNN has its
-        advantages, it also has limitations. It can be computationally expensive
-        for large datasets, requires careful selection of the distance metric
-        and value of k, and may struggle with high-dimensional data.
-        Additionally, KNN assumes that all features are equally important, so
-        feature scaling and feature selection techniques might be necessary to
-        improve its performance.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Instance proximity</b>: KNN assumes that instances
-        that are close to each other in the feature space are likely to belong
-        to the same class or have similar output values. The algorithm
-        determines the proximity based on a distance metric, typically the
-        Euclidean distance, although other distance measures can be used.
+      <br />&nbsp;&nbsp;&nbsp;<b>Robustness to outliers</b>: KNN is less
+      affected by outliers compared to some other algorithms. Outliers have a
+      smaller impact on the predictions because they are typically isolated
+      and do not affect the majority voting of the nearest neighbors.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Local structure assumption</b>: KNN assumes
-        that the data instances are locally clustered, meaning that instances of
-        the same class or similar output values tend to be located near each
-        other in the feature space. This assumption allows KNN to make
-        predictions based on the local patterns present in the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>No training phase</b>: KNN does not require
+      an explicit training phase. Once the training data is stored, new
+      predictions can be made immediately. This makes KNN suitable for
+      situations where real-time or on-the-fly predictions are required.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature relevance assumption</b>: KNN treats
-        all features equally in its distance calculations. It assumes that each
-        feature contributes equally to the similarity or dissimilarity between
-        instances. However, in some cases, certain features may be more
-        informative or relevant than others. Feature scaling and feature
-        selection techniques can be employed to address this assumption and
-        improve the performance of KNN.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while KNN has its
+      advantages, it also has limitations. It can be computationally expensive
+      for large datasets, requires careful selection of the distance metric
+      and value of k, and may struggle with high-dimensional data.
+      Additionally, KNN assumes that all features are equally important, so
+      feature scaling and feature selection techniques might be necessary to
+      improve its performance.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Instance proximity</b>: KNN assumes that instances
+      that are close to each other in the feature space are likely to belong
+      to the same class or have similar output values. The algorithm
+      determines the proximity based on a distance metric, typically the
+      Euclidean distance, although other distance measures can be used.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Data representation assumption</b>: KNN
-        assumes that the feature representation adequately captures the relevant
-        information for the learning task. It does not perform feature
-        extraction or feature engineering automatically. It relies on the
-        provided feature set and their similarity measures to make predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Local structure assumption</b>: KNN assumes
+      that the data instances are locally clustered, meaning that instances of
+      the same class or similar output values tend to be located near each
+      other in the feature space. This assumption allows KNN to make
+      predictions based on the local patterns present in the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Stationarity assumption</b>: KNN assumes that
-        the underlying data distribution remains stationary, meaning that the
-        relationships between features and the target variable do not change
-        significantly over time or across different regions of the feature
-        space. If the data distribution is non-stationary, the performance of
-        KNN may be affected.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature relevance assumption</b>: KNN treats
+      all features equally in its distance calculations. It assumes that each
+      feature contributes equally to the similarity or dissimilarity between
+      instances. However, in some cases, certain features may be more
+      informative or relevant than others. Feature scaling and feature
+      selection techniques can be employed to address this assumption and
+      improve the performance of KNN.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while KNN makes
-        these assumptions, they may not always hold in all datasets or problem
-        domains. It's advisable to assess the data and evaluate the performance
-        of KNN in relation to other algorithms to determine its suitability for
-        a specific task.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: KNN is a straightforward and
-        intuitive algorithm, making it easy to understand and implement. It does
-        not require complex mathematical derivations or assumptions about the
-        data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Data representation assumption</b>: KNN
+      assumes that the feature representation adequately captures the relevant
+      information for the learning task. It does not perform feature
+      extraction or feature engineering automatically. It relies on the
+      provided feature set and their similarity measures to make predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Non-linearity</b>: KNN can handle complex and
-        nonlinear decision boundaries. It can capture intricate patterns in the
-        data that may not be well represented by linear models.
+      <br />&nbsp;&nbsp;&nbsp;<b>Stationarity assumption</b>: KNN assumes that
+      the underlying data distribution remains stationary, meaning that the
+      relationships between features and the target variable do not change
+      significantly over time or across different regions of the feature
+      space. If the data distribution is non-stationary, the performance of
+      KNN may be affected.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Instance-based learning</b>: KNN is an
-        instance-based learning algorithm, meaning it retains the entire
-        training dataset in memory. This allows for flexibility, as the model
-        can adapt to new data points without retraining. It also enables
-        incremental learning, where new instances can be added to the existing
-        dataset.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while KNN makes
+      these assumptions, they may not always hold in all datasets or problem
+      domains. It's advisable to assess the data and evaluate the performance
+      of KNN in relation to other algorithms to determine its suitability for
+      a specific task.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: KNN is a straightforward and
+      intuitive algorithm, making it easy to understand and implement. It does
+      not require complex mathematical derivations or assumptions about the
+      data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: KNN provides
-        transparency in its decision-making process. Predictions are based on
-        the majority voting of nearest neighbors, making it easy to understand
-        and interpret the reasoning behind the predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Non-linearity</b>: KNN can handle complex and
+      nonlinear decision boundaries. It can capture intricate patterns in the
+      data that may not be well represented by linear models.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Robustness to outliers</b>: KNN is less
-        affected by outliers compared to some other algorithms. Outliers have
-        limited influence on predictions since they are typically isolated and
-        do not affect the majority voting of nearest neighbors.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Computational complexity</b>: KNN can be
-        computationally expensive, especially for large datasets. As the
-        algorithm requires calculating distances between the new data point and
-        all training instances, the time complexity grows with the size of the
-        dataset. This can hinder its scalability and efficiency.
+      <br />&nbsp;&nbsp;&nbsp;<b>Instance-based learning</b>: KNN is an
+      instance-based learning algorithm, meaning it retains the entire
+      training dataset in memory. This allows for flexibility, as the model
+      can adapt to new data points without retraining. It also enables
+      incremental learning, where new instances can be added to the existing
+      dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Curse of dimensionality</b>: KNN's
-        performance deteriorates as the number of dimensions (features)
-        increases. In high-dimensional spaces, the concept of "nearest
-        neighbors" becomes less meaningful, and the data points become more
-        equidistant from each other. This can lead to a loss of accuracy and
-        increased computational cost.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: KNN provides
+      transparency in its decision-making process. Predictions are based on
+      the majority voting of nearest neighbors, making it easy to understand
+      and interpret the reasoning behind the predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Choosing an appropriate k value</b>: The
-        value of k, the number of neighbors to consider, is a crucial parameter
-        in KNN. Selecting the optimal k value depends on the dataset and problem
-        at hand. A smaller k value can make the model more sensitive to noise,
-        while a larger k value can oversmooth decision boundaries, potentially
-        introducing bias.
+      <br />&nbsp;&nbsp;&nbsp;<b>Robustness to outliers</b>: KNN is less
+      affected by outliers compared to some other algorithms. Outliers have
+      limited influence on predictions since they are typically isolated and
+      do not affect the majority voting of nearest neighbors.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Computational complexity</b>: KNN can be
+      computationally expensive, especially for large datasets. As the
+      algorithm requires calculating distances between the new data point and
+      all training instances, the time complexity grows with the size of the
+      dataset. This can hinder its scalability and efficiency.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced data</b>: KNN can be biased
-        towards the majority class in imbalanced datasets. Since it relies on
-        majority voting, classes with a larger number of instances tend to have
-        a stronger influence on predictions. This can lead to a biased
-        classification performance, especially when the minority class is of
-        interest.
+      <br />&nbsp;&nbsp;&nbsp;<b>Curse of dimensionality</b>: KNN's
+      performance deteriorates as the number of dimensions (features)
+      increases. In high-dimensional spaces, the concept of "nearest
+      neighbors" becomes less meaningful, and the data points become more
+      equidistant from each other. This can lead to a loss of accuracy and
+      increased computational cost.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to feature scaling</b>: KNN is
-        sensitive to the scale of features. If the features have different
-        scales, those with larger magnitudes can dominate the distance
-        calculations. Feature scaling techniques, such as normalization or
-        standardization, may be necessary to ensure fair comparisons between
-        features.
-      </p>
-      <h4>How KNN algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Data Preparation</b>: Collect a labeled training
-        dataset, where each data point consists of a set of features (input
-        variables) and a corresponding class or target value. Normalize or scale
-        the features if necessary to ensure fair comparisons during distance
-        calculations. <br />&nbsp;&nbsp;&nbsp;<b>Selecting a K Value</b>:
-        Determine the value of k, which represents the number of nearest
-        neighbors to consider for classification or regression. The choice of k
-        depends on the dataset and problem at hand. A smaller k value may lead
-        to more flexible decision boundaries but can be sensitive to noise,
-        while a larger k value can oversmooth the decision boundaries.
-        <br />&nbsp;&nbsp;&nbsp;<b>Distance Calculation</b>: Calculate the
-        distance between the new data point (the one to be classified or
-        predicted) and all the data points in the training dataset. The most
-        common distance metric used is the Euclidean distance, but other
-        distance measures such as Manhattan distance or cosine similarity can
-        also be used. <br />&nbsp;&nbsp;&nbsp;<b>Nearest Neighbor Selection</b>:
-        Select the k data points (neighbors) with the shortest distances to the
-        new data point. These data points are referred to as the k nearest
-        neighbors. The selection can be based on the smallest Euclidean
-        distances or any other distance metric used. <br />&nbsp;&nbsp;&nbsp;<b
-          >Classification or Regression</b
-        >:
+      <br />&nbsp;&nbsp;&nbsp;<b>Choosing an appropriate k value</b>: The
+      value of k, the number of neighbors to consider, is a crucial parameter
+      in KNN. Selecting the optimal k value depends on the dataset and problem
+      at hand. A smaller k value can make the model more sensitive to noise,
+      while a larger k value can oversmooth decision boundaries, potentially
+      introducing bias.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>For classification</b>: Determine the class
-        of the new data point by majority voting. Assign the class that appears
-        most frequently among the k nearest neighbors.
-        <br />&nbsp;&nbsp;&nbsp;<b>For regression</b>: Calculate the average (or
-        weighted average) of the target values of the k nearest neighbors. This
-        average is assigned as the predicted value for the new data point.
-        <br />&nbsp;&nbsp;&nbsp;<b>Output</b>: Return the predicted class or
-        target value for the new data point. <br />&nbsp;&nbsp;&nbsp;The KNN
-        algorithm does not involve a training phase as it relies on the stored
-        training dataset during prediction. It is considered an instance-based
-        learning algorithm since it uses the entire training dataset as its
-        knowledge base.
+      <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced data</b>: KNN can be biased
+      towards the majority class in imbalanced datasets. Since it relies on
+      majority voting, classes with a larger number of instances tend to have
+      a stronger influence on predictions. This can lead to a biased
+      classification performance, especially when the minority class is of
+      interest.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that KNN assumes that
-        closer instances in the feature space are more likely to have similar
-        outputs. Therefore, it works well when instances of the same class or
-        similar output values tend to cluster together in the dataset.
-        Additionally, feature scaling and selection can impact the performance
-        of the KNN algorithm.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Classification Metrics</b>:
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to feature scaling</b>: KNN is
+      sensitive to the scale of features. If the features have different
+      scales, those with larger magnitudes can dominate the distance
+      calculations. Feature scaling techniques, such as normalization or
+      standardization, may be necessary to ensure fair comparisons between
+      features.
+    </p>
+    <h4>How KNN algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Data Preparation</b>: Collect a labeled training
+      dataset, where each data point consists of a set of features (input
+      variables) and a corresponding class or target value. Normalize or scale
+      the features if necessary to ensure fair comparisons during distance
+      calculations. <br />&nbsp;&nbsp;&nbsp;<b>Selecting a K Value</b>:
+      Determine the value of k, which represents the number of nearest
+      neighbors to consider for classification or regression. The choice of k
+      depends on the dataset and problem at hand. A smaller k value may lead
+      to more flexible decision boundaries but can be sensitive to noise,
+      while a larger k value can oversmooth the decision boundaries.
+      <br />&nbsp;&nbsp;&nbsp;<b>Distance Calculation</b>: Calculate the
+      distance between the new data point (the one to be classified or
+      predicted) and all the data points in the training dataset. The most
+      common distance metric used is the Euclidean distance, but other
+      distance measures such as Manhattan distance or cosine similarity can
+      also be used. <br />&nbsp;&nbsp;&nbsp;<b>Nearest Neighbor Selection</b>:
+      Select the k data points (neighbors) with the shortest distances to the
+      new data point. These data points are referred to as the k nearest
+      neighbors. The selection can be based on the smallest Euclidean
+      distances or any other distance metric used. <br />&nbsp;&nbsp;&nbsp;<b>Classification or Regression</b>:
 
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Accuracy</b>: The percentage of
-        correctly classified instances out of the total instances.
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Precision</b>: The proportion of
-        true positive predictions out of all positive predictions. It measures
-        the accuracy of positive predictions.
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-          >Recall (Sensitivity or True Positive Rate)</b
-        >: The proportion of true positive predictions out of all actual
-        positive instances. It measures the ability to correctly identify
-        positive instances. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>F1-Score</b>:
-        The harmonic mean of precision and recall. It provides a balanced
-        measure between precision and recall.
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-          >Specificity (True Negative Rate)</b
-        >: The proportion of true negative predictions out of all actual
-        negative instances. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-          >ROC Curve (Receiver Operating Characteristic Curve)</b
-        >: A graphical representation of the trade-off between true positive
-        rate (TPR) and false positive rate (FPR) at various classification
-        thresholds. The Area Under the ROC Curve (AUC-ROC) is often used as a
-        summary metric. <br /><br />&nbsp;&nbsp;&nbsp;<b>Regression Metrics</b>:
+      <br />&nbsp;&nbsp;&nbsp;<b>For classification</b>: Determine the class
+      of the new data point by majority voting. Assign the class that appears
+      most frequently among the k nearest neighbors.
+      <br />&nbsp;&nbsp;&nbsp;<b>For regression</b>: Calculate the average (or
+      weighted average) of the target values of the k nearest neighbors. This
+      average is assigned as the predicted value for the new data point.
+      <br />&nbsp;&nbsp;&nbsp;<b>Output</b>: Return the predicted class or
+      target value for the new data point. <br />&nbsp;&nbsp;&nbsp;The KNN
+      algorithm does not involve a training phase as it relies on the stored
+      training dataset during prediction. It is considered an instance-based
+      learning algorithm since it uses the entire training dataset as its
+      knowledge base.
 
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>:
-        The average absolute difference between the predicted and actual values.
-        It provides a measure of average prediction error.
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: The
-        average squared difference between the predicted and actual values. It
-        gives more weight to larger errors.
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b
-        >: The square root of the MSE. It provides an interpretable measure in
-        the original units of the target variable.
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-          >R-squared (Coefficient of Determination)</b
-        >: The proportion of the variance in the target variable explained by
-        the regression model. It ranges from 0 to 1, with higher values
-        indicating better fit. <br />&nbsp;&nbsp;&nbsp;It's important to select
-        evaluation metrics that are relevant to the problem domain and align
-        with the specific goals of the project. Additionally, cross-validation
-        techniques such as k-fold cross-validation can be used to obtain more
-        reliable estimates of the model's performance by evaluating it on
-        multiple subsets of the data.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that KNN assumes that
+      closer instances in the feature space are more likely to have similar
+      outputs. Therefore, it works well when instances of the same class or
+      similar output values tend to cluster together in the dataset.
+      Additionally, feature scaling and selection can impact the performance
+      of the KNN algorithm.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Classification Metrics</b>:
+
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Accuracy</b>: The percentage of
+      correctly classified instances out of the total instances.
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Precision</b>: The proportion of
+      true positive predictions out of all positive predictions. It measures
+      the accuracy of positive predictions.
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Recall (Sensitivity or True Positive Rate)</b>: The proportion of true
+      positive predictions out of all actual
+      positive instances. It measures the ability to correctly identify
+      positive instances. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>F1-Score</b>:
+      The harmonic mean of precision and recall. It provides a balanced
+      measure between precision and recall.
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Specificity (True Negative Rate)</b>: The proportion of true negative
+      predictions out of all actual
+      negative instances. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>ROC Curve (Receiver Operating Characteristic
+        Curve)</b>: A graphical representation of the trade-off between true positive
+      rate (TPR) and false positive rate (FPR) at various classification
+      thresholds. The Area Under the ROC Curve (AUC-ROC) is often used as a
+      summary metric. <br /><br />&nbsp;&nbsp;&nbsp;<b>Regression Metrics</b>:
+
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>:
+      The average absolute difference between the predicted and actual values.
+      It provides a measure of average prediction error.
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: The
+      average squared difference between the predicted and actual values. It
+      gives more weight to larger errors.
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: The square root of the MSE. It provides
+      an interpretable measure in
+      the original units of the target variable.
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>R-squared (Coefficient of Determination)</b>: The proportion of the
+      variance in the target variable explained by
+      the regression model. It ranges from 0 to 1, with higher values
+      indicating better fit. <br />&nbsp;&nbsp;&nbsp;It's important to select
+      evaluation metrics that are relevant to the problem domain and align
+      with the specific goals of the project. Additionally, cross-validation
+      techniques such as k-fold cross-validation can be used to obtain more
+      reliable estimates of the model's performance by evaluating it on
+      multiple subsets of the data.
+    </p>
+  </div>
+</body>
+
 </html>

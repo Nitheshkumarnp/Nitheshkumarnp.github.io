@@ -1,385 +1,366 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>LGBM</h4>
-      <h4>What is LGBM?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;LGBM stands for LightGBM, which is an acronym for
-        Light Gradient Boosting Machine. It is a popular gradient boosting
-        framework used in machine learning for building powerful and efficient
-        models. LightGBM is known for its speed and scalability.
 
-        <br />&nbsp;&nbsp;&nbsp;Gradient boosting is an ensemble learning method
-        that combines multiple weak models (usually decision trees) to create a
-        stronger predictive model. LightGBM, in particular, focuses on
-        optimizing the training speed and efficiency of gradient boosting
-        algorithms.
-      </p>
-      <h4>When to use LGBM?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Large-scale datasets</b>: LGBM is particularly
-        suitable for large datasets with a high number of features and
-        instances. Its efficient training process and memory optimization make
-        it a good choice for handling big data.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Time-constrained applications</b>: If you
-        have time constraints and need to train models quickly, LGBM's fast
-        training speed can be beneficial. It is designed to optimize the
-        training process, making it faster than many other gradient boosting
-        implementations.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>LGBM</h4>
+    <h4>What is LGBM?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;LGBM stands for LightGBM, which is an acronym for
+      Light Gradient Boosting Machine. It is a popular gradient boosting
+      framework used in machine learning for building powerful and efficient
+      models. LightGBM is known for its speed and scalability.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced datasets</b>: When dealing with
-        imbalanced datasets where one class is much more prevalent than others,
-        LGBM provides options for handling class imbalance. It allows you to
-        assign higher weights to minority classes or use different evaluation
-        metrics that consider class imbalance, such as AUC-PR (Area Under the
-        Precision-Recall curve).
+      <br />&nbsp;&nbsp;&nbsp;Gradient boosting is an ensemble learning method
+      that combines multiple weak models (usually decision trees) to create a
+      stronger predictive model. LightGBM, in particular, focuses on
+      optimizing the training speed and efficiency of gradient boosting
+      algorithms.
+    </p>
+    <h4>When to use LGBM?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Large-scale datasets</b>: LGBM is particularly
+      suitable for large datasets with a high number of features and
+      instances. Its efficient training process and memory optimization make
+      it a good choice for handling big data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>High-dimensional data</b>: LGBM performs well
-        with high-dimensional feature spaces. It can effectively handle a large
-        number of features without significantly impacting performance or
-        increasing training time.
+      <br />&nbsp;&nbsp;&nbsp;<b>Time-constrained applications</b>: If you
+      have time constraints and need to train models quickly, LGBM's fast
+      training speed can be beneficial. It is designed to optimize the
+      training process, making it faster than many other gradient boosting
+      implementations.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature importance analysis</b>: LGBM
-        provides built-in feature importance analysis, which can help you
-        understand the relative importance of different features in your
-        dataset. This analysis can be valuable for feature selection,
-        identifying key predictors, and gaining insights into the underlying
-        relationships in your data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced datasets</b>: When dealing with
+      imbalanced datasets where one class is much more prevalent than others,
+      LGBM provides options for handling class imbalance. It allows you to
+      assign higher weights to minority classes or use different evaluation
+      metrics that consider class imbalance, such as AUC-PR (Area Under the
+      Precision-Recall curve).
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Kaggle competitions and benchmarking</b>:
-        LGBM has been successful in machine learning competitions and is often
-        used as a benchmark algorithm due to its speed and performance. If
-        you're participating in Kaggle competitions or comparing different
-        models, LGBM can be a strong contender.
+      <br />&nbsp;&nbsp;&nbsp;<b>High-dimensional data</b>: LGBM performs well
+      with high-dimensional feature spaces. It can effectively handle a large
+      number of features without significantly impacting performance or
+      increasing training time.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while LGBM offers
-        many advantages, its performance may vary depending on the specific
-        dataset and problem domain. It's always recommended to experiment and
-        compare different algorithms to determine the best approach for your
-        particular task.
-      </p>
-      <h4>Why to use LGBM?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Speed and efficiency</b>: LGBM is known for its
-        fast training speed and efficiency, making it well-suited for
-        large-scale datasets and time-constrained applications. It utilizes
-        techniques like gradient-based one-side sampling (GOSS) and leaf-wise
-        tree growth to optimize the training process, resulting in shorter
-        training times compared to other gradient boosting implementations.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature importance analysis</b>: LGBM
+      provides built-in feature importance analysis, which can help you
+      understand the relative importance of different features in your
+      dataset. This analysis can be valuable for feature selection,
+      identifying key predictors, and gaining insights into the underlying
+      relationships in your data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>High performance</b>: LGBM often delivers
-        competitive performance in terms of prediction accuracy. It achieves
-        this through the combination of gradient boosting and its unique
-        features like leaf-wise tree growth, which aims to find the most
-        informative split at each tree level. This can lead to more precise
-        models and better predictive performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Kaggle competitions and benchmarking</b>:
+      LGBM has been successful in machine learning competitions and is often
+      used as a benchmark algorithm due to its speed and performance. If
+      you're participating in Kaggle competitions or comparing different
+      models, LGBM can be a strong contender.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling large and high-dimensional data</b>:
-        LGBM can effectively handle large datasets with a high number of
-        features. Its memory optimization techniques and ability to handle
-        high-dimensional data make it a suitable choice when dealing with
-        complex datasets that have a large number of variables.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while LGBM offers
+      many advantages, its performance may vary depending on the specific
+      dataset and problem domain. It's always recommended to experiment and
+      compare different algorithms to determine the best approach for your
+      particular task.
+    </p>
+    <h4>Why to use LGBM?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Speed and efficiency</b>: LGBM is known for its
+      fast training speed and efficiency, making it well-suited for
+      large-scale datasets and time-constrained applications. It utilizes
+      techniques like gradient-based one-side sampling (GOSS) and leaf-wise
+      tree growth to optimize the training process, resulting in shorter
+      training times compared to other gradient boosting implementations.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility and customizability</b>: LGBM
-        provides a wide range of hyperparameters that allow you to customize and
-        fine-tune the model according to your specific needs. You can adjust
-        parameters related to the tree structure, regularization, learning rate,
-        and more. This flexibility enables you to optimize the model's
-        performance for your specific dataset and problem.
+      <br />&nbsp;&nbsp;&nbsp;<b>High performance</b>: LGBM often delivers
+      competitive performance in terms of prediction accuracy. It achieves
+      this through the combination of gradient boosting and its unique
+      features like leaf-wise tree growth, which aims to find the most
+      informative split at each tree level. This can lead to more precise
+      models and better predictive performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature importance analysis</b>: LGBM offers
-        built-in feature importance analysis, allowing you to gain insights into
-        the relative importance of different features in your dataset. This can
-        be valuable for feature selection, identifying key predictors, and
-        understanding the underlying relationships in your data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling large and high-dimensional data</b>:
+      LGBM can effectively handle large datasets with a high number of
+      features. Its memory optimization techniques and ability to handle
+      high-dimensional data make it a suitable choice when dealing with
+      complex datasets that have a large number of variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Wide language support</b>: LGBM has
-        implementations in multiple programming languages, including Python, R,
-        and C++. This broad language support makes it accessible to a wide range
-        of users and integrates well with existing machine learning ecosystems.
+      <br />&nbsp;&nbsp;&nbsp;<b>Flexibility and customizability</b>: LGBM
+      provides a wide range of hyperparameters that allow you to customize and
+      fine-tune the model according to your specific needs. You can adjust
+      parameters related to the tree structure, regularization, learning rate,
+      and more. This flexibility enables you to optimize the model's
+      performance for your specific dataset and problem.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Adoption and community support</b>: LGBM has
-        gained popularity in the machine learning community and is widely used
-        in various domains. This popularity ensures a robust ecosystem, active
-        community support, and resources such as tutorials, examples, and
-        documentation.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature importance analysis</b>: LGBM offers
+      built-in feature importance analysis, allowing you to gain insights into
+      the relative importance of different features in your dataset. This can
+      be valuable for feature selection, identifying key predictors, and
+      understanding the underlying relationships in your data.
 
-        <br />&nbsp;&nbsp;&nbsp;It's worth noting that while LGBM offers
-        advantages in many scenarios, it may not always be the best choice for
-        every problem. It's important to evaluate and compare different
-        algorithms based on your specific requirements and the characteristics
-        of your dataset.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b
-          >Independent and identically distributed (IID) data</b
-        >: Like many machine learning algorithms, LGBM assumes that the data
-        instances are independently and identically distributed. This assumption
-        implies that the order of the instances does not matter and that each
-        instance is sampled from the same underlying distribution. Violating
-        this assumption may affect the performance of LGBM.
+      <br />&nbsp;&nbsp;&nbsp;<b>Wide language support</b>: LGBM has
+      implementations in multiple programming languages, including Python, R,
+      and C++. This broad language support makes it accessible to a wide range
+      of users and integrates well with existing machine learning ecosystems.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Numerical input features</b>: LGBM is
-        designed to handle numerical input features. If your dataset includes
-        categorical features, you need to convert them into numerical
-        representations before using LGBM. One-hot encoding, label encoding, or
-        other appropriate techniques can be employed for categorical feature
-        preprocessing.
+      <br />&nbsp;&nbsp;&nbsp;<b>Adoption and community support</b>: LGBM has
+      gained popularity in the machine learning community and is widely used
+      in various domains. This popularity ensures a robust ecosystem, active
+      community support, and resources such as tutorials, examples, and
+      documentation.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>No missing values</b>: LGBM does not handle
-        missing values by default. Therefore, you need to handle missing values
-        in your dataset before using LGBM. Various techniques such as imputation
-        or treating missing values as a separate category can be applied to
-        address missing data.
+      <br />&nbsp;&nbsp;&nbsp;It's worth noting that while LGBM offers
+      advantages in many scenarios, it may not always be the best choice for
+      every problem. It's important to evaluate and compare different
+      algorithms based on your specific requirements and the characteristics
+      of your dataset.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Independent and identically distributed (IID) data</b>: Like many machine learning
+      algorithms, LGBM assumes that the data
+      instances are independently and identically distributed. This assumption
+      implies that the order of the instances does not matter and that each
+      instance is sampled from the same underlying distribution. Violating
+      this assumption may affect the performance of LGBM.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Proper data scaling</b>: LGBM does not
-        inherently require feature scaling. It can handle features at different
-        scales effectively. However, if your dataset contains features with
-        significantly different scales, standardizing or normalizing the data
-        may help improve convergence and model performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Numerical input features</b>: LGBM is
+      designed to handle numerical input features. If your dataset includes
+      categorical features, you need to convert them into numerical
+      representations before using LGBM. One-hot encoding, label encoding, or
+      other appropriate techniques can be employed for categorical feature
+      preprocessing.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Adequate sample size</b>: While LGBM can
-        handle large-scale datasets efficiently, having an adequate sample size
-        is still important to ensure generalization and reliable model
-        performance. Insufficient data may lead to overfitting, where the model
-        fails to generalize well to unseen instances.
+      <br />&nbsp;&nbsp;&nbsp;<b>No missing values</b>: LGBM does not handle
+      missing values by default. Therefore, you need to handle missing values
+      in your dataset before using LGBM. Various techniques such as imputation
+      or treating missing values as a separate category can be applied to
+      address missing data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Appropriate hyperparameter tuning</b>: LGBM
-        offers various hyperparameters that need to be tuned based on your
-        specific dataset and problem. It is essential to perform proper
-        hyperparameter tuning to achieve optimal performance. Considerations
-        should be given to parameters related to the tree structure, learning
-        rate, regularization, and early stopping criteria.
+      <br />&nbsp;&nbsp;&nbsp;<b>Proper data scaling</b>: LGBM does not
+      inherently require feature scaling. It can handle features at different
+      scales effectively. However, if your dataset contains features with
+      significantly different scales, standardizing or normalizing the data
+      may help improve convergence and model performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Understanding the model outputs</b>: LGBM
-        provides feature importance analysis and predictions, but it is
-        important to interpret the results with caution. Feature importance does
-        not necessarily imply causality, and predictions should be evaluated in
-        the context of the specific problem domain.
+      <br />&nbsp;&nbsp;&nbsp;<b>Adequate sample size</b>: While LGBM can
+      handle large-scale datasets efficiently, having an adequate sample size
+      is still important to ensure generalization and reliable model
+      performance. Insufficient data may lead to overfitting, where the model
+      fails to generalize well to unseen instances.
 
-        <br />&nbsp;&nbsp;&nbsp;It is always advisable to evaluate the
-        assumptions and limitations of any machine learning algorithm and
-        consider their compatibility with your dataset and problem requirements.
-        Experimentation, validation, and comparing alternative algorithms can
-        help you choose the most suitable approach for your specific task.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Speed and efficiency</b>: LGBM is known for its
-        fast training speed and efficiency. It is designed to optimize the
-        training process, making it faster than many other gradient boosting
-        implementations. This makes LGBM particularly suitable for large-scale
-        datasets and time-constrained applications.
+      <br />&nbsp;&nbsp;&nbsp;<b>Appropriate hyperparameter tuning</b>: LGBM
+      offers various hyperparameters that need to be tuned based on your
+      specific dataset and problem. It is essential to perform proper
+      hyperparameter tuning to achieve optimal performance. Considerations
+      should be given to parameters related to the tree structure, learning
+      rate, regularization, and early stopping criteria.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>High performance</b>: LGBM often delivers
-        competitive performance in terms of prediction accuracy. Its leaf-wise
-        tree growth strategy and gradient-based one-side sampling (GOSS)
-        technique can lead to more precise models and better predictive
-        performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Understanding the model outputs</b>: LGBM
+      provides feature importance analysis and predictions, but it is
+      important to interpret the results with caution. Feature importance does
+      not necessarily imply causality, and predictions should be evaluated in
+      the context of the specific problem domain.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling large and high-dimensional data</b>:
-        LGBM can effectively handle large datasets with a high number of
-        features. Its memory optimization techniques and ability to handle
-        high-dimensional data make it a suitable choice when dealing with
-        complex datasets that have a large number of variables.
+      <br />&nbsp;&nbsp;&nbsp;It is always advisable to evaluate the
+      assumptions and limitations of any machine learning algorithm and
+      consider their compatibility with your dataset and problem requirements.
+      Experimentation, validation, and comparing alternative algorithms can
+      help you choose the most suitable approach for your specific task.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Speed and efficiency</b>: LGBM is known for its
+      fast training speed and efficiency. It is designed to optimize the
+      training process, making it faster than many other gradient boosting
+      implementations. This makes LGBM particularly suitable for large-scale
+      datasets and time-constrained applications.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility and customizability</b>: LGBM
-        provides a wide range of hyperparameters that allow you to customize and
-        fine-tune the model according to your specific needs. You can adjust
-        parameters related to the tree structure, regularization, learning rate,
-        and more. This flexibility enables you to optimize the model's
-        performance for your specific dataset and problem.
+      <br />&nbsp;&nbsp;&nbsp;<b>High performance</b>: LGBM often delivers
+      competitive performance in terms of prediction accuracy. Its leaf-wise
+      tree growth strategy and gradient-based one-side sampling (GOSS)
+      technique can lead to more precise models and better predictive
+      performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature importance analysis</b>: LGBM offers
-        built-in feature importance analysis, allowing you to gain insights into
-        the relative importance of different features in your dataset. This can
-        be valuable for feature selection, identifying key predictors, and
-        understanding the underlying relationships in your data.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Sensitivity to hyperparameters</b>: While the
-        flexibility of LGBM is an advantage, it also means that there are many
-        hyperparameters to tune. Selecting the right combination of
-        hyperparameters can be a time-consuming process and may require careful
-        experimentation and validation.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling large and high-dimensional data</b>:
+      LGBM can effectively handle large datasets with a high number of
+      features. Its memory optimization techniques and ability to handle
+      high-dimensional data make it a suitable choice when dealing with
+      complex datasets that have a large number of variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Lack of interpretability</b>: Like other
-        gradient boosting algorithms, LGBM is considered a black-box model,
-        meaning it provides little interpretability compared to simpler models
-        like linear regression. It can be challenging to understand the exact
-        decision rules and interpret the model's predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Flexibility and customizability</b>: LGBM
+      provides a wide range of hyperparameters that allow you to customize and
+      fine-tune the model according to your specific needs. You can adjust
+      parameters related to the tree structure, regularization, learning rate,
+      and more. This flexibility enables you to optimize the model's
+      performance for your specific dataset and problem.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling of categorical features</b>: LGBM
-        natively handles numerical features, but categorical features require
-        preprocessing, such as one-hot encoding or label encoding. This
-        preprocessing step adds complexity and may increase the dimensionality
-        of the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature importance analysis</b>: LGBM offers
+      built-in feature importance analysis, allowing you to gain insights into
+      the relative importance of different features in your dataset. This can
+      be valuable for feature selection, identifying key predictors, and
+      understanding the underlying relationships in your data.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Sensitivity to hyperparameters</b>: While the
+      flexibility of LGBM is an advantage, it also means that there are many
+      hyperparameters to tune. Selecting the right combination of
+      hyperparameters can be a time-consuming process and may require careful
+      experimentation and validation.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to outliers</b>: LGBM is not
-        inherently robust to outliers. Outliers can have a significant impact on
-        the tree-building process and model performance. It is essential to
-        preprocess the data and handle outliers appropriately before applying
-        LGBM.
+      <br />&nbsp;&nbsp;&nbsp;<b>Lack of interpretability</b>: Like other
+      gradient boosting algorithms, LGBM is considered a black-box model,
+      meaning it provides little interpretability compared to simpler models
+      like linear regression. It can be challenging to understand the exact
+      decision rules and interpret the model's predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Memory requirements</b>: Although LGBM is
-        memory-efficient compared to some other gradient boosting algorithms, it
-        can still require substantial memory when dealing with large-scale
-        datasets or complex models. This consideration becomes important when
-        working with limited computational resources.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling of categorical features</b>: LGBM
+      natively handles numerical features, but categorical features require
+      preprocessing, such as one-hot encoding or label encoding. This
+      preprocessing step adds complexity and may increase the dimensionality
+      of the data.
 
-        <br />&nbsp;&nbsp;&nbsp;As with any machine learning algorithm, it's
-        important to consider the specific characteristics of your dataset and
-        problem requirements when deciding whether to use LGBM. Evaluating the
-        advantages and disadvantages, experimenting with different algorithms,
-        and conducting thorough validation can help you make an informed choice.
-      </p>
-      <h4>How LGBM algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;The LGBM (LightGBM) algorithm is a gradient boosting
-        framework that works by iteratively training an ensemble of weak
-        learners (usually decision trees) and combining them to create a strong
-        predictive model. Here is an overview of how the LGBM algorithm works in
-        machine learning:
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to outliers</b>: LGBM is not
+      inherently robust to outliers. Outliers can have a significant impact on
+      the tree-building process and model performance. It is essential to
+      preprocess the data and handle outliers appropriately before applying
+      LGBM.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Data Preparation</b>: Before applying LGBM,
-        you need to prepare your data. This includes handling missing values,
-        converting categorical features into numerical representations (e.g.,
-        one-hot encoding or label encoding), and splitting the data into
-        training and validation sets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Memory requirements</b>: Although LGBM is
+      memory-efficient compared to some other gradient boosting algorithms, it
+      can still require substantial memory when dealing with large-scale
+      datasets or complex models. This consideration becomes important when
+      working with limited computational resources.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: The algorithm starts by
-        initializing an empty ensemble model. At this stage, the model is
-        considered a single weak learner, which is usually a shallow decision
-        tree with a small number of leaf nodes.
+      <br />&nbsp;&nbsp;&nbsp;As with any machine learning algorithm, it's
+      important to consider the specific characteristics of your dataset and
+      problem requirements when deciding whether to use LGBM. Evaluating the
+      advantages and disadvantages, experimenting with different algorithms,
+      and conducting thorough validation can help you make an informed choice.
+    </p>
+    <h4>How LGBM algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;The LGBM (LightGBM) algorithm is a gradient boosting
+      framework that works by iteratively training an ensemble of weak
+      learners (usually decision trees) and combining them to create a strong
+      predictive model. Here is an overview of how the LGBM algorithm works in
+      machine learning:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Iterative Training</b>: LGBM trains the weak
-        learners in an iterative manner. In each iteration, a new decision tree
-        is trained to correct the mistakes made by the ensemble model so far.
+      <br />&nbsp;&nbsp;&nbsp;<b>Data Preparation</b>: Before applying LGBM,
+      you need to prepare your data. This includes handling missing values,
+      converting categorical features into numerical representations (e.g.,
+      one-hot encoding or label encoding), and splitting the data into
+      training and validation sets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Gradient-based One-Side Sampling (GOSS)</b>:
-        LGBM employs the GOSS technique to sample the data instances for each
-        iteration. GOSS selects the most informative data instances based on
-        their gradients, prioritizing the instances that contribute more to the
-        overall loss. This sampling strategy helps reduce the computational
-        complexity and improves training speed.
+      <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: The algorithm starts by
+      initializing an empty ensemble model. At this stage, the model is
+      considered a single weak learner, which is usually a shallow decision
+      tree with a small number of leaf nodes.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Leaf-wise Tree Growth</b>: Unlike traditional
-        depth-wise tree growth, LGBM grows trees in a leaf-wise fashion. It
-        selects the leaf node that leads to the maximum loss reduction,
-        resulting in a more precise model. Leaf-wise growth can also reduce the
-        number of levels in each tree, further enhancing training speed.
+      <br />&nbsp;&nbsp;&nbsp;<b>Iterative Training</b>: LGBM trains the weak
+      learners in an iterative manner. In each iteration, a new decision tree
+      is trained to correct the mistakes made by the ensemble model so far.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Lightness Regularization</b>: LGBM applies
-        regularization techniques to prevent overfitting and improve
-        generalization. It includes L1 regularization (also known as feature
-        importance regularization) and L2 regularization (also known as ridge
-        regularization). These regularization methods help control the
-        complexity of the model and prevent it from memorizing noise in the
-        data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Gradient-based One-Side Sampling (GOSS)</b>:
+      LGBM employs the GOSS technique to sample the data instances for each
+      iteration. GOSS selects the most informative data instances based on
+      their gradients, prioritizing the instances that contribute more to the
+      overall loss. This sampling strategy helps reduce the computational
+      complexity and improves training speed.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Combination</b>: After training
-        multiple weak learners, LGBM combines them to create the final ensemble
-        model. The predictions of each weak learner are weighted and summed to
-        produce the overall prediction. The weights are determined based on the
-        performance of the weak learners during training.
+      <br />&nbsp;&nbsp;&nbsp;<b>Leaf-wise Tree Growth</b>: Unlike traditional
+      depth-wise tree growth, LGBM grows trees in a leaf-wise fashion. It
+      selects the leaf node that leads to the maximum loss reduction,
+      resulting in a more precise model. Leaf-wise growth can also reduce the
+      number of levels in each tree, further enhancing training speed.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Prediction</b>: Once the ensemble model is
-        built, it can be used to make predictions on new, unseen instances. The
-        model applies the trained decision trees sequentially, aggregating their
-        predictions to produce the final output.
+      <br />&nbsp;&nbsp;&nbsp;<b>Lightness Regularization</b>: LGBM applies
+      regularization techniques to prevent overfitting and improve
+      generalization. It includes L1 regularization (also known as feature
+      importance regularization) and L2 regularization (also known as ridge
+      regularization). These regularization methods help control the
+      complexity of the model and prevent it from memorizing noise in the
+      data.
 
-        <br />&nbsp;&nbsp;&nbsp;Throughout the training process, LGBM optimizes
-        the loss function by iteratively updating the model parameters based on
-        the gradients. It uses techniques like histogram-based gradient
-        estimation and gradient-based leaf-wise tree construction to improve
-        efficiency and reduce memory usage.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Combination</b>: After training
+      multiple weak learners, LGBM combines them to create the final ensemble
+      model. The predictions of each weak learner are weighted and summed to
+      produce the overall prediction. The weights are determined based on the
+      performance of the weak learners during training.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that LGBM provides
-        various hyperparameters that can be tuned to optimize the model's
-        performance, including parameters related to the tree structure,
-        learning rate, regularization, and more. Proper hyperparameter tuning is
-        crucial to achieve the best results with LGBM.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        Classification Metrics:
+      <br />&nbsp;&nbsp;&nbsp;<b>Prediction</b>: Once the ensemble model is
+      built, it can be used to make predictions on new, unseen instances. The
+      model applies the trained decision trees sequentially, aggregating their
+      predictions to produce the final output.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Accuracy</b>: The proportion of correctly
-        classified instances. <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: The
-        ratio of true positives to the sum of true positives and false
-        positives. It measures the model's ability to correctly identify
-        positive instances. <br />&nbsp;&nbsp;&nbsp;<b
-          >Recall (Sensitivity or True Positive Rate)</b
-        >: The ratio of true positives to the sum of true positives and false
-        negatives. It measures the model's ability to correctly identify all
-        positive instances. <br />&nbsp;&nbsp;&nbsp;<b>F1-score</b>: The
-        harmonic mean of precision and recall. It provides a balanced measure of
-        the model's accuracy. <br />&nbsp;&nbsp;&nbsp;<b
-          >Area Under the Receiver Operating Characteristic curve (AUC-ROC)</b
-        >: It measures the model's ability to distinguish between positive and
-        negative instances by varying the classification threshold. A higher
-        AUC-ROC indicates better performance. <br />&nbsp;&nbsp;&nbsp;<b
-          >Area Under the Precision-Recall curve (AUC-PR)</b
-        >: Similar to AUC-ROC, AUC-PR evaluates the precision-recall trade-off.
-        It is particularly useful for imbalanced datasets where the positive
-        class is rare. <br />Regression Metrics:
+      <br />&nbsp;&nbsp;&nbsp;Throughout the training process, LGBM optimizes
+      the loss function by iteratively updating the model parameters based on
+      the gradients. It uses techniques like histogram-based gradient
+      estimation and gradient-based leaf-wise tree construction to improve
+      efficiency and reduce memory usage.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: The average of
-        the squared differences between the predicted and actual values. It
-        measures the average squared error of the model's predictions.
-        <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: The
-        square root of the MSE. It provides the error in the same unit as the
-        target variable. <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b
-        >: The average of the absolute differences between the predicted and
-        actual values. It measures the average absolute error of the model's
-        predictions. <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R2)</b>: The
-        proportion of the variance in the target variable explained by the
-        model. It ranges from 0 to 1, with higher values indicating better fit.
-        <br />Additional Metrics:
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that LGBM provides
+      various hyperparameters that can be tuned to optimize the model's
+      performance, including parameters related to the tree structure,
+      learning rate, regularization, and more. Proper hyperparameter tuning is
+      crucial to achieve the best results with LGBM.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      Classification Metrics:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Log Loss</b>: A metric commonly used in
-        probabilistic classification tasks. It measures the logarithm of the
-        likelihood function, assessing the model's probability estimates.
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Average Precision (MAP)</b>: An
-        evaluation metric often used in information retrieval tasks. It
-        considers the precision at different recall levels and averages them.
-        <br />&nbsp;&nbsp;&nbsp;The choice of evaluation metric depends on the
-        specific requirements and goals of the machine learning task. It's
-        advisable to select metrics that align with the problem domain and
-        provide meaningful insights into the model's performance. Additionally,
-        cross-validation or holdout validation techniques can be employed to
-        obtain more reliable estimates of the model's performance.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Accuracy</b>: The proportion of correctly
+      classified instances. <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: The
+      ratio of true positives to the sum of true positives and false
+      positives. It measures the model's ability to correctly identify
+      positive instances. <br />&nbsp;&nbsp;&nbsp;<b>Recall (Sensitivity or True Positive Rate)</b>: The ratio of true
+      positives to the sum of true positives and false
+      negatives. It measures the model's ability to correctly identify all
+      positive instances. <br />&nbsp;&nbsp;&nbsp;<b>F1-score</b>: The
+      harmonic mean of precision and recall. It provides a balanced measure of
+      the model's accuracy. <br />&nbsp;&nbsp;&nbsp;<b>Area Under the Receiver Operating Characteristic curve
+        (AUC-ROC)</b>: It measures the model's ability to distinguish between positive and
+      negative instances by varying the classification threshold. A higher
+      AUC-ROC indicates better performance. <br />&nbsp;&nbsp;&nbsp;<b>Area Under the Precision-Recall curve
+        (AUC-PR)</b>: Similar to AUC-ROC, AUC-PR evaluates the precision-recall trade-off.
+      It is particularly useful for imbalanced datasets where the positive
+      class is rare. <br />Regression Metrics:
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: The average of
+      the squared differences between the predicted and actual values. It
+      measures the average squared error of the model's predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: The
+      square root of the MSE. It provides the error in the same unit as the
+      target variable. <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: The average of the absolute differences
+      between the predicted and
+      actual values. It measures the average absolute error of the model's
+      predictions. <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R2)</b>: The
+      proportion of the variance in the target variable explained by the
+      model. It ranges from 0 to 1, with higher values indicating better fit.
+      <br />Additional Metrics:
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Log Loss</b>: A metric commonly used in
+      probabilistic classification tasks. It measures the logarithm of the
+      likelihood function, assessing the model's probability estimates.
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Average Precision (MAP)</b>: An
+      evaluation metric often used in information retrieval tasks. It
+      considers the precision at different recall levels and averages them.
+      <br />&nbsp;&nbsp;&nbsp;The choice of evaluation metric depends on the
+      specific requirements and goals of the machine learning task. It's
+      advisable to select metrics that align with the problem domain and
+      provide meaningful insights into the model's performance. Additionally,
+      cross-validation or holdout validation techniques can be employed to
+      obtain more reliable estimates of the model's performance.
+    </p>
+  </div>
+</body>
+
 </html>

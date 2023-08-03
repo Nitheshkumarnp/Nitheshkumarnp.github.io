@@ -1,407 +1,391 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>What is logistic regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Logistic regression is a supervised machine learning
-        algorithm mainly used for classification problems where the goal is to
-        predict the probability that an instance of belonging to a given
-        class.<br />&nbsp;&nbsp;&nbsp;It's referred to as regression because it
-        takes the output of the linear regression function as input and uses a
-        sigmoid function to estimate the probability for the given class.
 
-        <br />&nbsp;&nbsp;&nbsp;Logistic regression works by modeling the
-        log-odds of the output variable, which is also known as the logit
-        function. The logit function takes any real value and maps it to a value
-        between 0 and 1, which can be interpreted as the probability of the
-        output variable being 1. The logistic regression model estimates the
-        coefficients of the input variables, which indicate the strength and
-        direction of the relationship between the input variables and the output
-        variable.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;Logistic regression is widely used in various
-        fields such as finance, healthcare, marketing, and social sciences for
-        predicting the probability of a certain outcome. It is a simple and
-        effective algorithm for binary classification problems and can be easily
-        extended to multi-class classification problems.
-      </p>
-      <h4>Useful Terms</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Odds:</b> It is the ratio of something occurring to
-        something not occurring. it is different from probability as probability
-        is the ratio of something occurring to everything that could possibly
-        occur.<br />
-        &nbsp;&nbsp;&nbsp;<b>Log-odds:</b> The log-odds, also known as the logit
-        function, is the natural logarithm of the odds. In logistic regression,
-        the log odds of the dependent variable are modeled as a linear
-        combination of the independent variables and the intercept.<br />
-        &nbsp;&nbsp;&nbsp;<b>Coefficient:</b> The logistic regression model's
-        estimated parameters, show how the independent and dependent variables
-        relate to one another.<br />
-        &nbsp;&nbsp;&nbsp;<b>Intercept:</b> A constant term in the logistic
-        regression model, which represents the log odds when all independent
-        variables are equal to zero.<br />
-        &nbsp;&nbsp;&nbsp;<b>Maximum likelihood estimation:</b> The method used
-        to estimate the coefficients of the logistic regression model, which
-        maximizes the likelihood of observing the data given the model.
-      </p>
-      <h4>When to use logistic regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Binary classification problems</b>: Logistic
-        regression is a good choice when you have a binary classification
-        problem, where you need to classify data into two categories such as yes
-        or no, pass or fail, and so on.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>What is logistic regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Logistic regression is a supervised machine learning
+      algorithm mainly used for classification problems where the goal is to
+      predict the probability that an instance of belonging to a given
+      class.<br />&nbsp;&nbsp;&nbsp;It's referred to as regression because it
+      takes the output of the linear regression function as input and uses a
+      sigmoid function to estimate the probability for the given class.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Predicting probabilities</b>: Logistic
-        regression is used when you need to predict probabilities of the binary
-        outcome variable based on a set of predictor variables. This is
-        especially useful when you need to estimate the likelihood of an event
-        happening.
+      <br />&nbsp;&nbsp;&nbsp;Logistic regression works by modeling the
+      log-odds of the output variable, which is also known as the logit
+      function. The logit function takes any real value and maps it to a value
+      between 0 and 1, which can be interpreted as the probability of the
+      output variable being 1. The logistic regression model estimates the
+      coefficients of the input variables, which indicate the strength and
+      direction of the relationship between the input variables and the output
+      variable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Linearly separable data</b>: Logistic
-        regression is a good choice when the data is linearly separable, which
-        means that there is a clear linear boundary between the two classes of
-        data.
+      <br />&nbsp;&nbsp;&nbsp;Logistic regression is widely used in various
+      fields such as finance, healthcare, marketing, and social sciences for
+      predicting the probability of a certain outcome. It is a simple and
+      effective algorithm for binary classification problems and can be easily
+      extended to multi-class classification problems.
+    </p>
+    <h4>Useful Terms</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Odds:</b> It is the ratio of something occurring to
+      something not occurring. it is different from probability as probability
+      is the ratio of something occurring to everything that could possibly
+      occur.<br />
+      &nbsp;&nbsp;&nbsp;<b>Log-odds:</b> The log-odds, also known as the logit
+      function, is the natural logarithm of the odds. In logistic regression,
+      the log odds of the dependent variable are modeled as a linear
+      combination of the independent variables and the intercept.<br />
+      &nbsp;&nbsp;&nbsp;<b>Coefficient:</b> The logistic regression model's
+      estimated parameters, show how the independent and dependent variables
+      relate to one another.<br />
+      &nbsp;&nbsp;&nbsp;<b>Intercept:</b> A constant term in the logistic
+      regression model, which represents the log odds when all independent
+      variables are equal to zero.<br />
+      &nbsp;&nbsp;&nbsp;<b>Maximum likelihood estimation:</b> The method used
+      to estimate the coefficients of the logistic regression model, which
+      maximizes the likelihood of observing the data given the model.
+    </p>
+    <h4>When to use logistic regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Binary classification problems</b>: Logistic
+      regression is a good choice when you have a binary classification
+      problem, where you need to classify data into two categories such as yes
+      or no, pass or fail, and so on.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Small to medium-sized datasets</b>: Logistic
-        regression is computationally efficient and can handle small to
-        medium-sized datasets with a moderate number of predictor variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Predicting probabilities</b>: Logistic
+      regression is used when you need to predict probabilities of the binary
+      outcome variable based on a set of predictor variables. This is
+      especially useful when you need to estimate the likelihood of an event
+      happening.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretable results</b>: Logistic
-        regression provides interpretable results as the coefficients of the
-        input variables can be used to determine the impact of each variable on
-        the outcome. This is useful for gaining insights into the relationship
-        between the input variables and the outcome.
+      <br />&nbsp;&nbsp;&nbsp;<b>Linearly separable data</b>: Logistic
+      regression is a good choice when the data is linearly separable, which
+      means that there is a clear linear boundary between the two classes of
+      data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Benchmark model</b>: Logistic regression can
-        serve as a benchmark model for evaluating the performance of other
-        classification algorithms.
+      <br />&nbsp;&nbsp;&nbsp;<b>Small to medium-sized datasets</b>: Logistic
+      regression is computationally efficient and can handle small to
+      medium-sized datasets with a moderate number of predictor variables.
 
-        <br />&nbsp;&nbsp;&nbsp;However, logistic regression may not be suitable
-        for complex classification problems where the decision boundary is
-        nonlinear or where there are multiple classes. In these situations,
-        other machine learning algorithms such as decision trees, random
-        forests, or neural networks may be more appropriate.
-      </p>
-      <h4>Why to use logistic regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simple and efficient</b>: Logistic regression is a
-        simple and efficient algorithm that is easy to implement and interpret.
-        It is computationally efficient and can handle small to medium-sized
-        datasets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretable results</b>: Logistic
+      regression provides interpretable results as the coefficients of the
+      input variables can be used to determine the impact of each variable on
+      the outcome. This is useful for gaining insights into the relationship
+      between the input variables and the outcome.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Linear decision boundary</b>: Logistic
-        regression models the probability of the outcome variable using a linear
-        function of the input variables, which leads to a linear decision
-        boundary. This makes it easy to understand and visualize the
-        relationship between the input variables and the outcome.
+      <br />&nbsp;&nbsp;&nbsp;<b>Benchmark model</b>: Logistic regression can
+      serve as a benchmark model for evaluating the performance of other
+      classification algorithms.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Probabilistic output</b>: Logistic regression
-        models the probability of the outcome variable, which makes it useful
-        for predicting the likelihood of an event happening. It can be used to
-        estimate the probability of a customer buying a product, the likelihood
-        of a patient having a disease, or the probability of a loan being
-        repaid.
+      <br />&nbsp;&nbsp;&nbsp;However, logistic regression may not be suitable
+      for complex classification problems where the decision boundary is
+      nonlinear or where there are multiple classes. In these situations,
+      other machine learning algorithms such as decision trees, random
+      forests, or neural networks may be more appropriate.
+    </p>
+    <h4>Why to use logistic regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simple and efficient</b>: Logistic regression is a
+      simple and efficient algorithm that is easy to implement and interpret.
+      It is computationally efficient and can handle small to medium-sized
+      datasets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretable results</b>: The coefficients
-        of the input variables in logistic regression models can be used to
-        determine the impact of each variable on the outcome. This makes it
-        useful for gaining insights into the relationship between the input
-        variables and the outcome.
+      <br />&nbsp;&nbsp;&nbsp;<b>Linear decision boundary</b>: Logistic
+      regression models the probability of the outcome variable using a linear
+      function of the input variables, which leads to a linear decision
+      boundary. This makes it easy to understand and visualize the
+      relationship between the input variables and the outcome.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Logistic regression can
-        be regularized to avoid overfitting and improve generalization
-        performance. Regularization techniques such as L1 and L2 regularization
-        can be used to prevent the model from fitting noise in the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Probabilistic output</b>: Logistic regression
+      models the probability of the outcome variable, which makes it useful
+      for predicting the likelihood of an event happening. It can be used to
+      estimate the probability of a customer buying a product, the likelihood
+      of a patient having a disease, or the probability of a loan being
+      repaid.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Benchmark model</b>: Logistic regression can
-        serve as a benchmark model for evaluating the performance of other
-        classification algorithms. It is a good starting point for
-        classification problems and can help identify the most important
-        features for predicting the outcome.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretable results</b>: The coefficients
+      of the input variables in logistic regression models can be used to
+      determine the impact of each variable on the outcome. This makes it
+      useful for gaining insights into the relationship between the input
+      variables and the outcome.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, logistic regression is a versatile
-        algorithm that is suitable for a wide range of binary classification
-        problems. Its simplicity and interpretability make it a popular choice
-        in various fields such as finance, healthcare, marketing, and social
-        sciences.
-      </p>
-      <h4>Types:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Binary logistic regression</b>: Binary logistic
-        regression is the most basic type of logistic regression, which is used
-        when the output variable has only two possible values (e.g., 0 or 1, yes
-        or no). This type of logistic regression models the probability of the
-        output variable being 1 as a function of the input variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Logistic regression can
+      be regularized to avoid overfitting and improve generalization
+      performance. Regularization techniques such as L1 and L2 regularization
+      can be used to prevent the model from fitting noise in the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Multinomial logistic regression</b>:
-        Multinomial logistic regression is used when the output variable has
-        more than two possible values, but the values are not ordered. This type
-        of logistic regression models the probability of each value of the
-        output variable as a function of the input variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Benchmark model</b>: Logistic regression can
+      serve as a benchmark model for evaluating the performance of other
+      classification algorithms. It is a good starting point for
+      classification problems and can help identify the most important
+      features for predicting the outcome.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ordinal logistic regression</b>: Ordinal
-        logistic regression is used when the output variable has more than two
-        possible values, and the values are ordered (e.g., low, medium, high).
-        This type of logistic regression models the cumulative probability of
-        the output variable being less than or equal to each value as a function
-        of the input variables.
+      <br />&nbsp;&nbsp;&nbsp;Overall, logistic regression is a versatile
+      algorithm that is suitable for a wide range of binary classification
+      problems. Its simplicity and interpretability make it a popular choice
+      in various fields such as finance, healthcare, marketing, and social
+      sciences.
+    </p>
+    <h4>Types:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Binary logistic regression</b>: Binary logistic
+      regression is the most basic type of logistic regression, which is used
+      when the output variable has only two possible values (e.g., 0 or 1, yes
+      or no). This type of logistic regression models the probability of the
+      output variable being 1 as a function of the input variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularized logistic regression</b>:
-        Regularized logistic regression is used to prevent overfitting and
-        improve generalization performance. Regularization techniques such as L1
-        and L2 regularization can be applied to logistic regression to control
-        the magnitude of the coefficients of the input variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Multinomial logistic regression</b>:
+      Multinomial logistic regression is used when the output variable has
+      more than two possible values, but the values are not ordered. This type
+      of logistic regression models the probability of each value of the
+      output variable as a function of the input variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Bayesian logistic regression</b>: Bayesian
-        logistic regression is a probabilistic approach to logistic regression
-        that uses Bayes' theorem to estimate the posterior distribution of the
-        coefficients of the input variables. This allows for uncertainty
-        quantification and model selection.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ordinal logistic regression</b>: Ordinal
+      logistic regression is used when the output variable has more than two
+      possible values, and the values are ordered (e.g., low, medium, high).
+      This type of logistic regression models the cumulative probability of
+      the output variable being less than or equal to each value as a function
+      of the input variables.
 
-        <br />&nbsp;&nbsp;&nbsp;Each type of logistic regression has its own
-        strengths and weaknesses and is suitable for different types of
-        classification problems. It is important to choose the appropriate type
-        of logistic regression based on the nature of the problem and the
-        characteristics of the data.
-      </p>
-      <h4>Assumption of logistic regression:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Binary outcome</b>: Logistic regression assumes
-        that the outcome variable is binary, meaning that it can take on only
-        two values (e.g., 0 or 1, yes or no).
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularized logistic regression</b>:
+      Regularized logistic regression is used to prevent overfitting and
+      improve generalization performance. Regularization techniques such as L1
+      and L2 regularization can be applied to logistic regression to control
+      the magnitude of the coefficients of the input variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Linearity</b>: Logistic regression assumes
-        that the relationship between the input variables and the log odds of
-        the outcome variable is linear.
+      <br />&nbsp;&nbsp;&nbsp;<b>Bayesian logistic regression</b>: Bayesian
+      logistic regression is a probabilistic approach to logistic regression
+      that uses Bayes' theorem to estimate the posterior distribution of the
+      coefficients of the input variables. This allows for uncertainty
+      quantification and model selection.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: Logistic regression assumes
-        that the observations are independent of each other. This means that the
-        value of the outcome variable for one observation should not influence
-        the value of the outcome variable for another observation.
+      <br />&nbsp;&nbsp;&nbsp;Each type of logistic regression has its own
+      strengths and weaknesses and is suitable for different types of
+      classification problems. It is important to choose the appropriate type
+      of logistic regression based on the nature of the problem and the
+      characteristics of the data.
+    </p>
+    <h4>Assumption of logistic regression:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Binary outcome</b>: Logistic regression assumes
+      that the outcome variable is binary, meaning that it can take on only
+      two values (e.g., 0 or 1, yes or no).
 
-        <br />&nbsp;&nbsp;&nbsp;<b>No multicollinearity</b>: Logistic regression
-        assumes that there is no perfect multicollinearity among the input
-        variables. This means that the input variables should not be highly
-        correlated with each other.
+      <br />&nbsp;&nbsp;&nbsp;<b>Linearity</b>: Logistic regression assumes
+      that the relationship between the input variables and the log odds of
+      the outcome variable is linear.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Large sample size</b>: Logistic regression
-        assumes that the sample size is large enough to estimate the
-        coefficients of the input variables accurately. A common rule of thumb
-        is that there should be at least 10 observations for each input
-        variable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: Logistic regression assumes
+      that the observations are independent of each other. This means that the
+      value of the outcome variable for one observation should not influence
+      the value of the outcome variable for another observation.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>No outliers</b>: Logistic regression assumes
-        that there are no outliers in the data that can significantly affect the
-        results.
+      <br />&nbsp;&nbsp;&nbsp;<b>No multicollinearity</b>: Logistic regression
+      assumes that there is no perfect multicollinearity among the input
+      variables. This means that the input variables should not be highly
+      correlated with each other.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Correctly specified model</b>: Logistic
-        regression assumes that the model is correctly specified and that all
-        relevant input variables are included in the model.
+      <br />&nbsp;&nbsp;&nbsp;<b>Large sample size</b>: Logistic regression
+      assumes that the sample size is large enough to estimate the
+      coefficients of the input variables accurately. A common rule of thumb
+      is that there should be at least 10 observations for each input
+      variable.
 
-        <br />&nbsp;&nbsp;&nbsp;Violations of these assumptions can lead to
-        biased or inefficient estimates of the coefficients and inaccurate
-        predictions. Therefore, it is important to check the assumptions of
-        logistic regression before applying the model to the data.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simple and efficient</b>: Logistic regression is a
-        simple and efficient algorithm that is easy to implement and interpret.
+      <br />&nbsp;&nbsp;&nbsp;<b>No outliers</b>: Logistic regression assumes
+      that there are no outliers in the data that can significantly affect the
+      results.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretable results</b>: The coefficients
-        of the input variables in logistic regression models can be used to
-        determine the impact of each variable on the outcome. This makes it
-        useful for gaining insights into the relationship between the input
-        variables and the outcome.
+      <br />&nbsp;&nbsp;&nbsp;<b>Correctly specified model</b>: Logistic
+      regression assumes that the model is correctly specified and that all
+      relevant input variables are included in the model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Probabilistic output</b>: Logistic regression
-        models the probability of the outcome variable, which makes it useful
-        for predicting the likelihood of an event happening.
+      <br />&nbsp;&nbsp;&nbsp;Violations of these assumptions can lead to
+      biased or inefficient estimates of the coefficients and inaccurate
+      predictions. Therefore, it is important to check the assumptions of
+      logistic regression before applying the model to the data.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simple and efficient</b>: Logistic regression is a
+      simple and efficient algorithm that is easy to implement and interpret.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Logistic regression can
-        be regularized to avoid overfitting and improve generalization
-        performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretable results</b>: The coefficients
+      of the input variables in logistic regression models can be used to
+      determine the impact of each variable on the outcome. This makes it
+      useful for gaining insights into the relationship between the input
+      variables and the outcome.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Good for binary classification problems</b>:
-        Logistic regression is well suited for binary classification problems
-        where the outcome variable has only two possible values.
-      </p>
-      <h4>Disadvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Limited to linear decision boundaries</b>: Logistic
-        regression models the probability of the outcome variable using a linear
-        function of the input variables, which leads to a linear decision
-        boundary. This makes it less suitable for problems where the decision
-        boundary is nonlinear.
+      <br />&nbsp;&nbsp;&nbsp;<b>Probabilistic output</b>: Logistic regression
+      models the probability of the outcome variable, which makes it useful
+      for predicting the likelihood of an event happening.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitive to outliers</b>: Logistic
-        regression is sensitive to outliers in the data, which can significantly
-        affect the results.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Logistic regression can
+      be regularized to avoid overfitting and improve generalization
+      performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Assumes independence of observations</b>:
-        Logistic regression assumes that the observations are independent of
-        each other, which may not be true in some cases.
+      <br />&nbsp;&nbsp;&nbsp;<b>Good for binary classification problems</b>:
+      Logistic regression is well suited for binary classification problems
+      where the outcome variable has only two possible values.
+    </p>
+    <h4>Disadvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Limited to linear decision boundaries</b>: Logistic
+      regression models the probability of the outcome variable using a linear
+      function of the input variables, which leads to a linear decision
+      boundary. This makes it less suitable for problems where the decision
+      boundary is nonlinear.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Limited to categorical and numerical input variables</b
-        >: Logistic regression is limited to handling categorical and numerical
-        input variables and cannot handle text or image data directly.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitive to outliers</b>: Logistic
+      regression is sensitive to outliers in the data, which can significantly
+      affect the results.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Limited to binary outcome variables</b>:
-        Logistic regression is limited to handling binary outcome variables and
-        cannot handle multi-class outcomes without modification.
+      <br />&nbsp;&nbsp;&nbsp;<b>Assumes independence of observations</b>:
+      Logistic regression assumes that the observations are independent of
+      each other, which may not be true in some cases.
 
-        <br />&nbsp;&nbsp;&nbsp;In summary, logistic regression is a useful
-        algorithm for binary classification problems where the decision boundary
-        is linear, and the input variables are either categorical or numerical.
-        However, it may not be suitable for problems where the decision boundary
-        is nonlinear or the input variables are not well suited for linear
-        modeling.
-      </p>
-      <h4>How logistic regression algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Data preprocessing</b>: The input data is first
-        preprocessed to ensure that it is in the correct format for logistic
-        regression. This may involve scaling the input variables or encoding
-        categorical variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Limited to categorical and numerical input variables</b>: Logistic regression is
+      limited to handling categorical and numerical
+      input variables and cannot handle text or image data directly.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model specification</b>: The logistic
-        regression model is specified by defining the mathematical relationship
-        between the input variables and the probability of the outcome variable.
-        This relationship is typically modeled using a sigmoid function, which
-        maps the input variables to a probability value between 0 and 1.
+      <br />&nbsp;&nbsp;&nbsp;<b>Limited to binary outcome variables</b>:
+      Logistic regression is limited to handling binary outcome variables and
+      cannot handle multi-class outcomes without modification.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model training</b>: The logistic regression
-        model is trained using a dataset that contains the input variables and
-        the corresponding values of the outcome variable. The goal of training
-        is to find the optimal values of the model parameters (i.e., the
-        coefficients of the input variables) that maximize the likelihood of the
-        observed data.
+      <br />&nbsp;&nbsp;&nbsp;In summary, logistic regression is a useful
+      algorithm for binary classification problems where the decision boundary
+      is linear, and the input variables are either categorical or numerical.
+      However, it may not be suitable for problems where the decision boundary
+      is nonlinear or the input variables are not well suited for linear
+      modeling.
+    </p>
+    <h4>How logistic regression algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Data preprocessing</b>: The input data is first
+      preprocessed to ensure that it is in the correct format for logistic
+      regression. This may involve scaling the input variables or encoding
+      categorical variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model evaluation</b>: The trained logistic
-        regression model is evaluated using a separate dataset that was not used
-        for training. The performance of the model is typically measured using
-        metrics such as accuracy, precision, recall, and F1 score.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model specification</b>: The logistic
+      regression model is specified by defining the mathematical relationship
+      between the input variables and the probability of the outcome variable.
+      This relationship is typically modeled using a sigmoid function, which
+      maps the input variables to a probability value between 0 and 1.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model prediction</b>: Once the logistic
-        regression model has been trained and evaluated, it can be used to make
-        predictions on new data. Given a set of input variables, the model
-        computes the probability of the outcome variable using the learned
-        coefficients and the sigmoid function. The output is typically
-        interpreted as the probability of the positive class (e.g., 1) given the
-        input variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model training</b>: The logistic regression
+      model is trained using a dataset that contains the input variables and
+      the corresponding values of the outcome variable. The goal of training
+      is to find the optimal values of the model parameters (i.e., the
+      coefficients of the input variables) that maximize the likelihood of the
+      observed data.
 
-        <br />&nbsp;&nbsp;&nbsp;In summary, logistic regression is a simple yet
-        powerful algorithm that models the probability of a binary outcome
-        variable based on one or more input variables. The algorithm is widely
-        used in classification problems where the goal is to predict whether an
-        observation belongs to a certain class or not.
-      </p>
-      <h4>Evaluation metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy is the proportion of
-        correctly classified observations out of the total number of
-        observations. It is a simple and intuitive metric that is often used to
-        evaluate classification models. However, accuracy can be misleading when
-        the classes are imbalanced.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model evaluation</b>: The trained logistic
+      regression model is evaluated using a separate dataset that was not used
+      for training. The performance of the model is typically measured using
+      metrics such as accuracy, precision, recall, and F1 score.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: Precision is the proportion of
-        true positive predictions out of all positive predictions. It measures
-        how well the model is able to correctly identify positive cases.
-        Precision is useful when the cost of a false positive is high.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model prediction</b>: Once the logistic
+      regression model has been trained and evaluated, it can be used to make
+      predictions on new data. Given a set of input variables, the model
+      computes the probability of the outcome variable using the learned
+      coefficients and the sigmoid function. The output is typically
+      interpreted as the probability of the positive class (e.g., 1) given the
+      input variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Recall</b>: Recall is the proportion of true
-        positive predictions out of all actual positive cases. It measures how
-        well the model is able to capture positive cases. Recall is useful when
-        the cost of a false negative is high.
+      <br />&nbsp;&nbsp;&nbsp;In summary, logistic regression is a simple yet
+      powerful algorithm that models the probability of a binary outcome
+      variable based on one or more input variables. The algorithm is widely
+      used in classification problems where the goal is to predict whether an
+      observation belongs to a certain class or not.
+    </p>
+    <h4>Evaluation metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy is the proportion of
+      correctly classified observations out of the total number of
+      observations. It is a simple and intuitive metric that is often used to
+      evaluate classification models. However, accuracy can be misleading when
+      the classes are imbalanced.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>F1 score</b>: F1 score is the harmonic mean
-        of precision and recall. It provides a single metric that balances both
-        precision and recall. F1 score is useful when the classes are
-        imbalanced.
+      <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: Precision is the proportion of
+      true positive predictions out of all positive predictions. It measures
+      how well the model is able to correctly identify positive cases.
+      Precision is useful when the cost of a false positive is high.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>ROC curve and AUC</b>: ROC (Receiver
-        Operating Characteristic) curve is a graphical representation of the
-        performance of a binary classifier as the discrimination threshold is
-        varied. AUC (Area Under the Curve) is the area under the ROC curve and
-        provides a single metric that summarizes the overall performance of the
-        classifier.
+      <br />&nbsp;&nbsp;&nbsp;<b>Recall</b>: Recall is the proportion of true
+      positive predictions out of all actual positive cases. It measures how
+      well the model is able to capture positive cases. Recall is useful when
+      the cost of a false negative is high.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Confusion matrix</b>: A confusion matrix is a
-        table that summarizes the performance of a classification model. It
-        shows the number of true positives, true negatives, false positives, and
-        false negatives. From the confusion matrix, various evaluation metrics
-        such as accuracy, precision, recall, and F1 score can be computed.
+      <br />&nbsp;&nbsp;&nbsp;<b>F1 score</b>: F1 score is the harmonic mean
+      of precision and recall. It provides a single metric that balances both
+      precision and recall. F1 score is useful when the classes are
+      imbalanced.
 
-        <br />&nbsp;&nbsp;&nbsp;In summary, there are several evaluation metrics
-        that can be used to assess the performance of a logistic regression
-        model. The choice of metric depends on the specific problem and the
-        relative importance of different types of errors.
-      </p>
-      <h4>Maximum likelihood:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Maximum likelihood is a statistical method used to
-        estimate the parameters of a probability distribution based on observed
-        data. The idea behind maximum likelihood is to find the values of the
-        parameters that maximize the likelihood of the observed data.
-        <br />&nbsp;&nbsp;&nbsp;One of the advantages of maximum likelihood is
-        that it produces unbiased estimates of the parameters under certain
-        assumptions, such as i.i.d. observations and a correctly specified
-        probability distribution. However, maximum likelihood can be sensitive
-        to outliers and can be computationally intensive for complex models.
-        <br />&nbsp;&nbsp;&nbsp;It is a powerful and flexible method that can be
-        used to estimate a wide range of probability distributions, including
-        normal, exponential, binomial, and Poisson distributions.
-      </p>
-      <h4>Sigmoid function:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;The sigmoid function is a mathematical function that
-        maps any real-valued number to a value between 0 and 1.
+      <br />&nbsp;&nbsp;&nbsp;<b>ROC curve and AUC</b>: ROC (Receiver
+      Operating Characteristic) curve is a graphical representation of the
+      performance of a binary classifier as the discrimination threshold is
+      varied. AUC (Area Under the Curve) is the area under the ROC curve and
+      provides a single metric that summarizes the overall performance of the
+      classifier.
 
-        <br />&nbsp;&nbsp;&nbsp;The logistic function has an S-shaped curve and
-        is symmetric around x = 0.
+      <br />&nbsp;&nbsp;&nbsp;<b>Confusion matrix</b>: A confusion matrix is a
+      table that summarizes the performance of a classification model. It
+      shows the number of true positives, true negatives, false positives, and
+      false negatives. From the confusion matrix, various evaluation metrics
+      such as accuracy, precision, recall, and F1 score can be computed.
 
-        <br />&nbsp;&nbsp;&nbsp;The sigmoid function is commonly used in
-        logistic regression, a statistical method used to model the probability
-        of an event occurring, given a set of input variables. In logistic
-        regression, the sigmoid function is used to map the linear combination
-        of the input variables and their coefficients to a probability between 0
-        and 1. The coefficients of the input variables in the logistic
-        regression model represent the effect of each variable on the outcome,
-        and are estimated from a training dataset.
+      <br />&nbsp;&nbsp;&nbsp;In summary, there are several evaluation metrics
+      that can be used to assess the performance of a logistic regression
+      model. The choice of metric depends on the specific problem and the
+      relative importance of different types of errors.
+    </p>
+    <h4>Maximum likelihood:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Maximum likelihood is a statistical method used to
+      estimate the parameters of a probability distribution based on observed
+      data. The idea behind maximum likelihood is to find the values of the
+      parameters that maximize the likelihood of the observed data.
+      <br />&nbsp;&nbsp;&nbsp;One of the advantages of maximum likelihood is
+      that it produces unbiased estimates of the parameters under certain
+      assumptions, such as i.i.d. observations and a correctly specified
+      probability distribution. However, maximum likelihood can be sensitive
+      to outliers and can be computationally intensive for complex models.
+      <br />&nbsp;&nbsp;&nbsp;It is a powerful and flexible method that can be
+      used to estimate a wide range of probability distributions, including
+      normal, exponential, binomial, and Poisson distributions.
+    </p>
+    <h4>Sigmoid function:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;The sigmoid function is a mathematical function that
+      maps any real-valued number to a value between 0 and 1.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, the sigmoid function is a versatile
-        mathematical tool that has numerous applications in various fields,
-        including machine learning, neuroscience, and physiology.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;The logistic function has an S-shaped curve and
+      is symmetric around x = 0.
+
+      <br />&nbsp;&nbsp;&nbsp;The sigmoid function is commonly used in
+      logistic regression, a statistical method used to model the probability
+      of an event occurring, given a set of input variables. In logistic
+      regression, the sigmoid function is used to map the linear combination
+      of the input variables and their coefficients to a probability between 0
+      and 1. The coefficients of the input variables in the logistic
+      regression model represent the effect of each variable on the outcome,
+      and are estimated from a training dataset.
+
+      <br />&nbsp;&nbsp;&nbsp;Overall, the sigmoid function is a versatile
+      mathematical tool that has numerous applications in various fields,
+      including machine learning, neuroscience, and physiology.
+    </p>
+  </div>
+</body>
+
 </html>

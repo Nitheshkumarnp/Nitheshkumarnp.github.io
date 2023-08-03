@@ -1,365 +1,349 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>AdaBoost</h4>
-      <h4>What is AdaBoost?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;AdaBoost, short for Adaptive Boosting, is a popular
-        machine learning algorithm that belongs to the family of ensemble
-        methods. It has been widely used for both classification and regression
-        tasks.
 
-        <br />&nbsp;&nbsp;&nbsp;The basic idea behind AdaBoost is to combine
-        multiple "weak" learners (often referred to as "weak classifiers") to
-        create a strong classifier. A weak classifier is a model that performs
-        slightly better than random guessing. Examples of weak classifiers can
-        be decision trees with a small depth or simple linear classifiers.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;The AdaBoost algorithm works in iterations. In
-        each iteration, it assigns weights to the training instances based on
-        how well they were classified by the previous weak classifiers.
-        Instances that were misclassified or classified with low confidence are
-        assigned higher weights, while correctly classified instances receive
-        lower weights.
-      </p>
-      <h4>When to use AdaBoost?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Classification problems</b>: AdaBoost is primarily
-        designed for classification tasks. It performs well when there is a
-        binary classification problem or when extending it to multi-class
-        problems using techniques like one-vs-all or one-vs-one.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>AdaBoost</h4>
+    <h4>What is AdaBoost?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;AdaBoost, short for Adaptive Boosting, is a popular
+      machine learning algorithm that belongs to the family of ensemble
+      methods. It has been widely used for both classification and regression
+      tasks.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced datasets</b>: When dealing with
-        imbalanced datasets, where the classes are not equally represented,
-        AdaBoost can be effective. By assigning higher weights to the minority
-        class instances, it focuses on improving their classification accuracy.
+      <br />&nbsp;&nbsp;&nbsp;The basic idea behind AdaBoost is to combine
+      multiple "weak" learners (often referred to as "weak classifiers") to
+      create a strong classifier. A weak classifier is a model that performs
+      slightly better than random guessing. Examples of weak classifiers can
+      be decision trees with a small depth or simple linear classifiers.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Weak classifiers</b>: AdaBoost works well
-        with weak classifiers, which are models that perform slightly better
-        than random guessing. Weak classifiers can be simple decision trees,
-        such as decision stumps (trees with a single split), or linear
-        classifiers. AdaBoost boosts their performance by combining them into a
-        strong classifier.
+      <br />&nbsp;&nbsp;&nbsp;The AdaBoost algorithm works in iterations. In
+      each iteration, it assigns weights to the training instances based on
+      how well they were classified by the previous weak classifiers.
+      Instances that were misclassified or classified with low confidence are
+      assigned higher weights, while correctly classified instances receive
+      lower weights.
+    </p>
+    <h4>When to use AdaBoost?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Classification problems</b>: AdaBoost is primarily
+      designed for classification tasks. It performs well when there is a
+      binary classification problem or when extending it to multi-class
+      problems using techniques like one-vs-all or one-vs-one.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ensemble methods</b>: AdaBoost is part of the
-        ensemble learning family of algorithms. If you want to explore ensemble
-        methods to improve prediction accuracy, AdaBoost is a good choice to
-        consider.
+      <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced datasets</b>: When dealing with
+      imbalanced datasets, where the classes are not equally represented,
+      AdaBoost can be effective. By assigning higher weights to the minority
+      class instances, it focuses on improving their classification accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling complex datasets</b>: AdaBoost can
-        handle complex datasets, including those with high-dimensional feature
-        spaces or non-linear relationships. By leveraging multiple weak
-        classifiers, it captures different aspects of the data and combines them
-        to make accurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Weak classifiers</b>: AdaBoost works well
+      with weak classifiers, which are models that perform slightly better
+      than random guessing. Weak classifiers can be simple decision trees,
+      such as decision stumps (trees with a single split), or linear
+      classifiers. AdaBoost boosts their performance by combining them into a
+      strong classifier.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Avoiding overfitting</b>: AdaBoost has a
-        built-in mechanism to prevent overfitting. By iteratively focusing on
-        misclassified instances and adjusting their weights, it provides more
-        attention to challenging examples and helps to generalize well to unseen
-        data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ensemble methods</b>: AdaBoost is part of the
+      ensemble learning family of algorithms. If you want to explore ensemble
+      methods to improve prediction accuracy, AdaBoost is a good choice to
+      consider.
 
-        <br />&nbsp;&nbsp;&nbsp;It's worth noting that while AdaBoost can be a
-        powerful algorithm, its performance depends on the quality and
-        representativeness of the training data. Additionally, it may not be the
-        best choice for datasets with severe outliers or noisy data. In such
-        cases, preprocessing or other algorithms may be more appropriate.
-      </p>
-      <h4>Why to use AdaBoost?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved accuracy</b>: AdaBoost can significantly
-        enhance the performance of weak classifiers by combining them into a
-        strong classifier. It focuses on difficult instances, assigning higher
-        weights to misclassified examples and adjusting subsequent classifiers
-        to pay more attention to them. This adaptive boosting leads to improved
-        accuracy compared to using a single weak classifier.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling complex datasets</b>: AdaBoost can
+      handle complex datasets, including those with high-dimensional feature
+      spaces or non-linear relationships. By leveraging multiple weak
+      classifiers, it captures different aspects of the data and combines them
+      to make accurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility with weak classifiers</b>:
-        AdaBoost is versatile in its ability to work with various weak
-        classifiers. It can accommodate simple models like decision stumps or
-        linear classifiers, allowing you to choose a weak classifier that suits
-        your problem domain or the available data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Avoiding overfitting</b>: AdaBoost has a
+      built-in mechanism to prevent overfitting. By iteratively focusing on
+      misclassified instances and adjusting their weights, it provides more
+      attention to challenging examples and helps to generalize well to unseen
+      data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Effective on complex datasets</b>: AdaBoost
-        can handle complex datasets, including those with high-dimensional
-        feature spaces or non-linear relationships. By leveraging multiple weak
-        classifiers, it captures different aspects of the data, enabling it to
-        model intricate patterns and make accurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;It's worth noting that while AdaBoost can be a
+      powerful algorithm, its performance depends on the quality and
+      representativeness of the training data. Additionally, it may not be the
+      best choice for datasets with severe outliers or noisy data. In such
+      cases, preprocessing or other algorithms may be more appropriate.
+    </p>
+    <h4>Why to use AdaBoost?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved accuracy</b>: AdaBoost can significantly
+      enhance the performance of weak classifiers by combining them into a
+      strong classifier. It focuses on difficult instances, assigning higher
+      weights to misclassified examples and adjusting subsequent classifiers
+      to pay more attention to them. This adaptive boosting leads to improved
+      accuracy compared to using a single weak classifier.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Resistance to overfitting</b>: AdaBoost has
-        built-in mechanisms that help prevent overfitting. By iteratively
-        adjusting the weights of misclassified instances, it focuses on
-        challenging examples and avoids excessively fitting the training data.
-        This makes the model generalize better to unseen data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Flexibility with weak classifiers</b>:
+      AdaBoost is versatile in its ability to work with various weak
+      classifiers. It can accommodate simple models like decision stumps or
+      linear classifiers, allowing you to choose a weak classifier that suits
+      your problem domain or the available data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling imbalanced data</b>: Imbalanced
-        datasets, where one class is significantly more prevalent than the
-        others, can pose challenges for many algorithms. AdaBoost addresses this
-        issue by assigning higher weights to the minority class instances,
-        allowing them to have a stronger influence on the ensemble's learning
-        process. This can improve the classification performance for the
-        minority class.
+      <br />&nbsp;&nbsp;&nbsp;<b>Effective on complex datasets</b>: AdaBoost
+      can handle complex datasets, including those with high-dimensional
+      feature spaces or non-linear relationships. By leveraging multiple weak
+      classifiers, it captures different aspects of the data, enabling it to
+      model intricate patterns and make accurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Unlike some complex
-        models, AdaBoost is relatively interpretable. Since it combines weak
-        classifiers, you can understand and interpret the contribution of each
-        classifier to the final ensemble's decision. This interpretability can
-        be valuable for understanding the factors driving the predictions and
-        gaining insights into the problem at hand.
+      <br />&nbsp;&nbsp;&nbsp;<b>Resistance to overfitting</b>: AdaBoost has
+      built-in mechanisms that help prevent overfitting. By iteratively
+      adjusting the weights of misclassified instances, it focuses on
+      challenging examples and avoids excessively fitting the training data.
+      This makes the model generalize better to unseen data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Wide applicability</b>: AdaBoost has been
-        successfully applied to a variety of domains and problem types,
-        including computer vision, natural language processing, bioinformatics,
-        and more. Its effectiveness and versatility have made it a popular
-        choice across different fields.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling imbalanced data</b>: Imbalanced
+      datasets, where one class is significantly more prevalent than the
+      others, can pose challenges for many algorithms. AdaBoost addresses this
+      issue by assigning higher weights to the minority class instances,
+      allowing them to have a stronger influence on the ensemble's learning
+      process. This can improve the classification performance for the
+      minority class.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while AdaBoost
-        offers advantages, it may not always be the best choice. Factors such as
-        the specific problem domain, dataset characteristics, and the
-        availability of labeled data should be considered when deciding whether
-        AdaBoost is suitable for a particular task.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Weak classifiers</b>: AdaBoost assumes the
-        availability of weak classifiers that perform slightly better than
-        random guessing. These weak classifiers should have an error rate that
-        is consistently better than chance, albeit not perfect. The algorithm
-        relies on the ability of weak classifiers to learn from and adapt to the
-        data during the boosting process.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Unlike some complex
+      models, AdaBoost is relatively interpretable. Since it combines weak
+      classifiers, you can understand and interpret the contribution of each
+      classifier to the final ensemble's decision. This interpretability can
+      be valuable for understanding the factors driving the predictions and
+      gaining insights into the problem at hand.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: AdaBoost assumes that the
-        weak classifiers are independent of each other. In other words, the
-        errors made by one weak classifier should not be influenced by the
-        errors made by other weak classifiers. This assumption ensures that each
-        weak classifier contributes unique information to the ensemble.
+      <br />&nbsp;&nbsp;&nbsp;<b>Wide applicability</b>: AdaBoost has been
+      successfully applied to a variety of domains and problem types,
+      including computer vision, natural language processing, bioinformatics,
+      and more. Its effectiveness and versatility have made it a popular
+      choice across different fields.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Representative training data</b>: AdaBoost
-        assumes that the training data is representative of the underlying
-        population or the problem domain. The algorithm relies on the assumption
-        that the training instances provide sufficient information to learn a
-        generalized model that can make accurate predictions on unseen data.
-        Biased or unrepresentative training data can affect the performance of
-        AdaBoost.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while AdaBoost
+      offers advantages, it may not always be the best choice. Factors such as
+      the specific problem domain, dataset characteristics, and the
+      availability of labeled data should be considered when deciding whether
+      AdaBoost is suitable for a particular task.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Weak classifiers</b>: AdaBoost assumes the
+      availability of weak classifiers that perform slightly better than
+      random guessing. These weak classifiers should have an error rate that
+      is consistently better than chance, albeit not perfect. The algorithm
+      relies on the ability of weak classifiers to learn from and adapt to the
+      data during the boosting process.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Correctly weighted instances</b>: AdaBoost
-        assumes that the initial weights assigned to the training instances are
-        correct or approximately correct. The initial weights influence the
-        focus of the algorithm on difficult instances during the boosting
-        process. If the initial weights are significantly biased or incorrect,
-        it can impact the performance of AdaBoost.
+      <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: AdaBoost assumes that the
+      weak classifiers are independent of each other. In other words, the
+      errors made by one weak classifier should not be influenced by the
+      errors made by other weak classifiers. This assumption ensures that each
+      weak classifier contributes unique information to the ensemble.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Consistency of weak classifiers</b>: AdaBoost
-        assumes that the weak classifiers consistently perform slightly better
-        than random guessing on different subsets of the training data. This
-        assumption allows the algorithm to iteratively adjust the weights and
-        focus on misclassified instances to improve performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Representative training data</b>: AdaBoost
+      assumes that the training data is representative of the underlying
+      population or the problem domain. The algorithm relies on the assumption
+      that the training instances provide sufficient information to learn a
+      generalized model that can make accurate predictions on unseen data.
+      Biased or unrepresentative training data can affect the performance of
+      AdaBoost.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while AdaBoost makes
-        these assumptions, it can still perform reasonably well even if some
-        assumptions are violated to some extent. However, the effectiveness of
-        the algorithm is typically higher when these assumptions hold in the
-        given problem setting.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved accuracy</b>: AdaBoost can significantly
-        enhance the accuracy of weak classifiers by combining them into a strong
-        ensemble classifier. It focuses on difficult instances, adjusting
-        subsequent classifiers to pay more attention to them, and leading to
-        improved overall accuracy.
+      <br />&nbsp;&nbsp;&nbsp;<b>Correctly weighted instances</b>: AdaBoost
+      assumes that the initial weights assigned to the training instances are
+      correct or approximately correct. The initial weights influence the
+      focus of the algorithm on difficult instances during the boosting
+      process. If the initial weights are significantly biased or incorrect,
+      it can impact the performance of AdaBoost.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Versatility with weak classifiers</b>:
-        AdaBoost is flexible in its ability to work with various weak
-        classifiers. It can accommodate simple models like decision stumps or
-        linear classifiers, allowing you to choose a weak classifier that suits
-        your problem domain or the available data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Consistency of weak classifiers</b>: AdaBoost
+      assumes that the weak classifiers consistently perform slightly better
+      than random guessing on different subsets of the training data. This
+      assumption allows the algorithm to iteratively adjust the weights and
+      focus on misclassified instances to improve performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling complex datasets</b>: AdaBoost can
-        handle complex datasets, including those with high-dimensional feature
-        spaces or non-linear relationships. By leveraging multiple weak
-        classifiers, it captures different aspects of the data, enabling it to
-        model intricate patterns and make accurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while AdaBoost makes
+      these assumptions, it can still perform reasonably well even if some
+      assumptions are violated to some extent. However, the effectiveness of
+      the algorithm is typically higher when these assumptions hold in the
+      given problem setting.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved accuracy</b>: AdaBoost can significantly
+      enhance the accuracy of weak classifiers by combining them into a strong
+      ensemble classifier. It focuses on difficult instances, adjusting
+      subsequent classifiers to pay more attention to them, and leading to
+      improved overall accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Resistance to overfitting</b>: AdaBoost has
-        built-in mechanisms that help prevent overfitting. By iteratively
-        adjusting the weights of misclassified instances, it focuses on
-        challenging examples and avoids excessively fitting the training data.
-        This makes the model generalize better to unseen data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Versatility with weak classifiers</b>:
+      AdaBoost is flexible in its ability to work with various weak
+      classifiers. It can accommodate simple models like decision stumps or
+      linear classifiers, allowing you to choose a weak classifier that suits
+      your problem domain or the available data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Effective on imbalanced data</b>: Imbalanced
-        datasets, where one class is significantly more prevalent than the
-        others, can pose challenges for many algorithms. AdaBoost addresses this
-        issue by assigning higher weights to the minority class instances,
-        allowing them to have a stronger influence on the ensemble's learning
-        process. This can improve the classification performance for the
-        minority class.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Sensitivity to noisy data and outliers</b>:
-        AdaBoost can be sensitive to noisy data or outliers in the training set.
-        Outliers or mislabeled instances can have a significant impact on the
-        algorithm's performance, leading to decreased accuracy.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling complex datasets</b>: AdaBoost can
+      handle complex datasets, including those with high-dimensional feature
+      spaces or non-linear relationships. By leveraging multiple weak
+      classifiers, it captures different aspects of the data, enabling it to
+      model intricate patterns and make accurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Computational complexity</b>: AdaBoost
-        requires training multiple weak classifiers iteratively, which can be
-        computationally expensive for large datasets or complex weak
-        classifiers. Training time increases as the number of iterations or weak
-        classifiers grows.
+      <br />&nbsp;&nbsp;&nbsp;<b>Resistance to overfitting</b>: AdaBoost has
+      built-in mechanisms that help prevent overfitting. By iteratively
+      adjusting the weights of misclassified instances, it focuses on
+      challenging examples and avoids excessively fitting the training data.
+      This makes the model generalize better to unseen data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Algorithmic complexity</b>: AdaBoost has
-        several hyperparameters that need to be tuned, such as the number of
-        iterations, the learning rate, or the specific weak classifier used.
-        Finding the optimal combination of hyperparameters may require
-        additional computational effort.
+      <br />&nbsp;&nbsp;&nbsp;<b>Effective on imbalanced data</b>: Imbalanced
+      datasets, where one class is significantly more prevalent than the
+      others, can pose challenges for many algorithms. AdaBoost addresses this
+      issue by assigning higher weights to the minority class instances,
+      allowing them to have a stronger influence on the ensemble's learning
+      process. This can improve the classification performance for the
+      minority class.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Sensitivity to noisy data and outliers</b>:
+      AdaBoost can be sensitive to noisy data or outliers in the training set.
+      Outliers or mislabeled instances can have a significant impact on the
+      algorithm's performance, leading to decreased accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: While AdaBoost can
-        provide interpretable results at the ensemble level, it may lack
-        interpretability at the individual weak classifier level. Understanding
-        the specific decision rules or features used by each weak classifier in
-        the ensemble can be challenging.
+      <br />&nbsp;&nbsp;&nbsp;<b>Computational complexity</b>: AdaBoost
+      requires training multiple weak classifiers iteratively, which can be
+      computationally expensive for large datasets or complex weak
+      classifiers. Training time increases as the number of iterations or weak
+      classifiers grows.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Potential for overfitting with weak classifiers</b
-        >: Although AdaBoost is resistant to overfitting at the ensemble level,
-        if the weak classifiers used are complex models that can overfit the
-        training data individually, there is still a risk of overfitting at the
-        weak classifier level.
+      <br />&nbsp;&nbsp;&nbsp;<b>Algorithmic complexity</b>: AdaBoost has
+      several hyperparameters that need to be tuned, such as the number of
+      iterations, the learning rate, or the specific weak classifier used.
+      Finding the optimal combination of hyperparameters may require
+      additional computational effort.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to consider these advantages and
-        disadvantages when deciding whether AdaBoost is suitable for a specific
-        problem or dataset, as they can impact the algorithm's performance and
-        suitability in different contexts.
-      </p>
-      <h4>How AdaBoost algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Initialize sample weights</b>: Each instance in the
-        training dataset is assigned an equal weight initially. These weights
-        determine the importance of each instance during the training process.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: While AdaBoost can
+      provide interpretable results at the ensemble level, it may lack
+      interpretability at the individual weak classifier level. Understanding
+      the specific decision rules or features used by each weak classifier in
+      the ensemble can be challenging.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Train weak classifier</b>: A weak classifier
-        (e.g., decision stump, linear classifier) is trained on the training
-        data, considering the current instance weights. The weak classifier's
-        performance is evaluated by calculating the weighted error rate, which
-        measures how well the classifier performs on the weighted instances.
+      <br />&nbsp;&nbsp;&nbsp;<b>Potential for overfitting with weak classifiers</b>: Although AdaBoost is resistant to
+      overfitting at the ensemble level,
+      if the weak classifiers used are complex models that can overfit the
+      training data individually, there is still a risk of overfitting at the
+      weak classifier level.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Update classifier weight</b>: The weight of
-        the trained weak classifier is computed based on its performance. A
-        better-performing weak classifier is given a higher weight, indicating
-        its higher influence in the final ensemble. The weight is calculated
-        using a formula that considers the classifier's error rate.
+      <br />&nbsp;&nbsp;&nbsp;It's important to consider these advantages and
+      disadvantages when deciding whether AdaBoost is suitable for a specific
+      problem or dataset, as they can impact the algorithm's performance and
+      suitability in different contexts.
+    </p>
+    <h4>How AdaBoost algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Initialize sample weights</b>: Each instance in the
+      training dataset is assigned an equal weight initially. These weights
+      determine the importance of each instance during the training process.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Update instance weights</b>: The instance
-        weights are updated based on the performance of the weak classifier.
-        Instances that were misclassified or classified with low confidence are
-        assigned higher weights, while correctly classified instances receive
-        lower weights. This adjustment allows subsequent weak classifiers to
-        focus more on the challenging instances.
+      <br />&nbsp;&nbsp;&nbsp;<b>Train weak classifier</b>: A weak classifier
+      (e.g., decision stump, linear classifier) is trained on the training
+      data, considering the current instance weights. The weak classifier's
+      performance is evaluated by calculating the weighted error rate, which
+      measures how well the classifier performs on the weighted instances.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Normalize instance weights</b>: The instance
-        weights are normalized so that they sum up to 1. This step ensures that
-        the weights form a valid probability distribution.
+      <br />&nbsp;&nbsp;&nbsp;<b>Update classifier weight</b>: The weight of
+      the trained weak classifier is computed based on its performance. A
+      better-performing weak classifier is given a higher weight, indicating
+      its higher influence in the final ensemble. The weight is calculated
+      using a formula that considers the classifier's error rate.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Repeat steps 2-5</b>: Steps 2 to 5 are
-        repeated iteratively for a predefined number of iterations or until a
-        termination criterion is met. In each iteration, a new weak classifier
-        is trained on the updated instance weights, and the weights of both the
-        classifier and instances are adjusted.
+      <br />&nbsp;&nbsp;&nbsp;<b>Update instance weights</b>: The instance
+      weights are updated based on the performance of the weak classifier.
+      Instances that were misclassified or classified with low confidence are
+      assigned higher weights, while correctly classified instances receive
+      lower weights. This adjustment allows subsequent weak classifiers to
+      focus more on the challenging instances.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Combine weak classifiers</b>: The final
-        prediction is made by combining the predictions of all the weak
-        classifiers. The contribution of each weak classifier is weighted by its
-        classifier weight computed in step 3.
+      <br />&nbsp;&nbsp;&nbsp;<b>Normalize instance weights</b>: The instance
+      weights are normalized so that they sum up to 1. This step ensures that
+      the weights form a valid probability distribution.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Output final ensemble classifier</b>: The
-        ensemble classifier, consisting of the weighted combination of weak
-        classifiers, is the final trained model. It can be used to make
-        predictions on new, unseen instances.
+      <br />&nbsp;&nbsp;&nbsp;<b>Repeat steps 2-5</b>: Steps 2 to 5 are
+      repeated iteratively for a predefined number of iterations or until a
+      termination criterion is met. In each iteration, a new weak classifier
+      is trained on the updated instance weights, and the weights of both the
+      classifier and instances are adjusted.
 
-        <br />&nbsp;&nbsp;&nbsp;The AdaBoost algorithm focuses on iteratively
-        improving the performance of the ensemble by adjusting the instance
-        weights and training weak classifiers that are specialized in handling
-        the challenging instances. By combining the strengths of multiple weak
-        classifiers, AdaBoost creates a powerful ensemble classifier capable of
-        accurately predicting the target variable.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy measures the overall
-        correctness of the classifier's predictions by calculating the ratio of
-        correctly classified instances to the total number of instances. It is a
-        commonly used metric for evaluating classification algorithms, including
-        AdaBoost.
+      <br />&nbsp;&nbsp;&nbsp;<b>Combine weak classifiers</b>: The final
+      prediction is made by combining the predictions of all the weak
+      classifiers. The contribution of each weak classifier is weighted by its
+      classifier weight computed in step 3.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Precision and Recall</b>: Precision and
-        recall are metrics used to assess the performance of binary classifiers.
-        Precision measures the proportion of correctly predicted positive
-        instances out of all instances predicted as positive, while recall (also
-        known as sensitivity or true positive rate) measures the proportion of
-        correctly predicted positive instances out of all actual positive
-        instances. These metrics are useful when the class distribution is
-        imbalanced.
+      <br />&nbsp;&nbsp;&nbsp;<b>Output final ensemble classifier</b>: The
+      ensemble classifier, consisting of the weighted combination of weak
+      classifiers, is the final trained model. It can be used to make
+      predictions on new, unseen instances.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>F1 Score</b>: The F1 score combines precision
-        and recall into a single metric, which is the harmonic mean of precision
-        and recall. It provides a balanced measure of performance, especially
-        when the class distribution is imbalanced. The F1 score ranges from 0 to
-        1, with 1 indicating perfect precision and recall.
+      <br />&nbsp;&nbsp;&nbsp;The AdaBoost algorithm focuses on iteratively
+      improving the performance of the ensemble by adjusting the instance
+      weights and training weak classifiers that are specialized in handling
+      the challenging instances. By combining the strengths of multiple weak
+      classifiers, AdaBoost creates a powerful ensemble classifier capable of
+      accurately predicting the target variable.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy measures the overall
+      correctness of the classifier's predictions by calculating the ratio of
+      correctly classified instances to the total number of instances. It is a
+      commonly used metric for evaluating classification algorithms, including
+      AdaBoost.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Area Under the ROC Curve (AUC-ROC)</b>: The
-        AUC-ROC metric measures the performance of a binary classifier across
-        different classification thresholds. It plots the true positive rate
-        (TPR or recall) against the false positive rate (FPR) as the
-        classification threshold varies. A higher AUC-ROC indicates better
-        classifier performance, with a value of 1 representing a perfect
-        classifier.
+      <br />&nbsp;&nbsp;&nbsp;<b>Precision and Recall</b>: Precision and
+      recall are metrics used to assess the performance of binary classifiers.
+      Precision measures the proportion of correctly predicted positive
+      instances out of all instances predicted as positive, while recall (also
+      known as sensitivity or true positive rate) measures the proportion of
+      correctly predicted positive instances out of all actual positive
+      instances. These metrics are useful when the class distribution is
+      imbalanced.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Confusion Matrix</b>: A confusion matrix
-        provides a detailed breakdown of the classifier's predictions. It
-        displays the true positive (TP), true negative (TN), false positive
-        (FP), and false negative (FN) counts. From the confusion matrix,
-        additional metrics such as specificity, precision, and recall can be
-        derived.
+      <br />&nbsp;&nbsp;&nbsp;<b>F1 Score</b>: The F1 score combines precision
+      and recall into a single metric, which is the harmonic mean of precision
+      and recall. It provides a balanced measure of performance, especially
+      when the class distribution is imbalanced. The F1 score ranges from 0 to
+      1, with 1 indicating perfect precision and recall.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Cross-Validation</b>: Cross-validation is a
-        technique used to assess the generalization performance of a classifier.
-        By splitting the data into multiple subsets (folds), the model is
-        trained and evaluated on different subsets to obtain a more robust
-        estimate of its performance. Common cross-validation techniques include
-        k-fold cross-validation and stratified k-fold cross-validation.
+      <br />&nbsp;&nbsp;&nbsp;<b>Area Under the ROC Curve (AUC-ROC)</b>: The
+      AUC-ROC metric measures the performance of a binary classifier across
+      different classification thresholds. It plots the true positive rate
+      (TPR or recall) against the false positive rate (FPR) as the
+      classification threshold varies. A higher AUC-ROC indicates better
+      classifier performance, with a value of 1 representing a perfect
+      classifier.
 
-        <br />&nbsp;&nbsp;&nbsp;The choice of evaluation metrics depends on the
-        specific problem, the nature of the data, and the desired evaluation
-        criteria. It is often recommended to consider multiple metrics to gain a
-        comprehensive understanding of the classifier's performance.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Confusion Matrix</b>: A confusion matrix
+      provides a detailed breakdown of the classifier's predictions. It
+      displays the true positive (TP), true negative (TN), false positive
+      (FP), and false negative (FN) counts. From the confusion matrix,
+      additional metrics such as specificity, precision, and recall can be
+      derived.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Cross-Validation</b>: Cross-validation is a
+      technique used to assess the generalization performance of a classifier.
+      By splitting the data into multiple subsets (folds), the model is
+      trained and evaluated on different subsets to obtain a more robust
+      estimate of its performance. Common cross-validation techniques include
+      k-fold cross-validation and stratified k-fold cross-validation.
+
+      <br />&nbsp;&nbsp;&nbsp;The choice of evaluation metrics depends on the
+      specific problem, the nature of the data, and the desired evaluation
+      criteria. It is often recommended to consider multiple metrics to gain a
+      comprehensive understanding of the classifier's performance.
+    </p>
+  </div>
+</body>
+
 </html>

@@ -1,330 +1,315 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
 
-  <body>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>Boosting</h4>
-      <h4>What is Boosting?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Boosting is a machine learning ensemble technique that
-        combines multiple weak or base models to create a strong predictive
-        model. The goal of boosting is to improve the performance of a learning
-        algorithm by reducing bias and variance and ultimately achieving higher
-        accuracy.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;In boosting, the weak models are typically
-        decision trees, referred to as "weak learners" or "base learners." These
-        weak learners are trained sequentially, where each subsequent model
-        tries to correct the mistakes made by the previous models. During
-        training, more emphasis is given to the misclassified instances, so that
-        the subsequent models focus on learning from the difficult examples.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>Boosting</h4>
+    <h4>What is Boosting?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Boosting is a machine learning ensemble technique that
+      combines multiple weak or base models to create a strong predictive
+      model. The goal of boosting is to improve the performance of a learning
+      algorithm by reducing bias and variance and ultimately achieving higher
+      accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;The boosting algorithm assigns weights to each
-        training instance, indicating their importance. Initially, all instances
-        have equal weights, but as the models are trained, these weights are
-        adjusted based on the performance of the previous models. The models are
-        trained in iterations, and at each iteration, the weights of the
-        misclassified instances are increased, so that the subsequent models pay
-        more attention to those instances.
+      <br />&nbsp;&nbsp;&nbsp;In boosting, the weak models are typically
+      decision trees, referred to as "weak learners" or "base learners." These
+      weak learners are trained sequentially, where each subsequent model
+      tries to correct the mistakes made by the previous models. During
+      training, more emphasis is given to the misclassified instances, so that
+      the subsequent models focus on learning from the difficult examples.
 
-        <br />&nbsp;&nbsp;&nbsp;The final prediction of the boosting model is
-        obtained by combining the predictions of all the weak models, typically
-        through a weighted majority voting scheme. The weights assigned to each
-        weak model depend on their performance during training, where models
-        with higher accuracy are given more weight.
+      <br />&nbsp;&nbsp;&nbsp;The boosting algorithm assigns weights to each
+      training instance, indicating their importance. Initially, all instances
+      have equal weights, but as the models are trained, these weights are
+      adjusted based on the performance of the previous models. The models are
+      trained in iterations, and at each iteration, the weights of the
+      misclassified instances are increased, so that the subsequent models pay
+      more attention to those instances.
 
-        <br />&nbsp;&nbsp;&nbsp;Some popular boosting algorithms include
-        AdaBoost (Adaptive Boosting), Gradient Boosting, and XGBoost (Extreme
-        Gradient Boosting). These algorithms have been widely used in various
-        domains and have achieved state-of-the-art results in many machine
-        learning tasks.
+      <br />&nbsp;&nbsp;&nbsp;The final prediction of the boosting model is
+      obtained by combining the predictions of all the weak models, typically
+      through a weighted majority voting scheme. The weights assigned to each
+      weak model depend on their performance during training, where models
+      with higher accuracy are given more weight.
 
-        <br />&nbsp;&nbsp;&nbsp;Boosting is known for its ability to reduce bias
-        and improve the overall predictive power of the model. It is
-        particularly effective in handling complex datasets and can often
-        outperform individual weak models or other ensemble techniques. However,
-        boosting is also more computationally intensive compared to some other
-        learning algorithms and may be more prone to overfitting if not
-        carefully tuned.
-      </p>
-      <h4>When to use Boosting?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Weak Models</b>: Boosting is particularly effective
-        when you have a set of weak or base models that individually have low
-        predictive power. By combining these weak models through boosting, you
-        can create a strong ensemble model with improved accuracy.
+      <br />&nbsp;&nbsp;&nbsp;Some popular boosting algorithms include
+      AdaBoost (Adaptive Boosting), Gradient Boosting, and XGBoost (Extreme
+      Gradient Boosting). These algorithms have been widely used in various
+      domains and have achieved state-of-the-art results in many machine
+      learning tasks.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Classification and Regression Problems</b>:
-        Boosting can be applied to both classification and regression tasks. It
-        has been successfully used in a wide range of domains, including image
-        classification, text classification, and predicting numerical values.
+      <br />&nbsp;&nbsp;&nbsp;Boosting is known for its ability to reduce bias
+      and improve the overall predictive power of the model. It is
+      particularly effective in handling complex datasets and can often
+      outperform individual weak models or other ensemble techniques. However,
+      boosting is also more computationally intensive compared to some other
+      learning algorithms and may be more prone to overfitting if not
+      carefully tuned.
+    </p>
+    <h4>When to use Boosting?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Weak Models</b>: Boosting is particularly effective
+      when you have a set of weak or base models that individually have low
+      predictive power. By combining these weak models through boosting, you
+      can create a strong ensemble model with improved accuracy.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced Data</b>: Boosting algorithms can
-        handle imbalanced datasets effectively. By assigning higher weights to
-        the misclassified instances, boosting focuses on learning from the
-        difficult examples, which can be beneficial in scenarios where the
-        classes are unevenly distributed.
+      <br />&nbsp;&nbsp;&nbsp;<b>Classification and Regression Problems</b>:
+      Boosting can be applied to both classification and regression tasks. It
+      has been successfully used in a wide range of domains, including image
+      classification, text classification, and predicting numerical values.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>High-Dimensional Data</b>: Boosting
-        algorithms can handle high-dimensional feature spaces well. They can
-        automatically select relevant features and ignore irrelevant ones, which
-        helps in dealing with data with a large number of features.
+      <br />&nbsp;&nbsp;&nbsp;<b>Imbalanced Data</b>: Boosting algorithms can
+      handle imbalanced datasets effectively. By assigning higher weights to
+      the misclassified instances, boosting focuses on learning from the
+      difficult examples, which can be beneficial in scenarios where the
+      classes are unevenly distributed.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Reducing Bias and Variance</b>: Boosting aims
-        to reduce both bias and variance in the final model. It reduces bias by
-        iteratively focusing on misclassified instances, and it reduces variance
-        by combining multiple weak models. This makes boosting suitable when you
-        want to improve the overall predictive power of your model.
+      <br />&nbsp;&nbsp;&nbsp;<b>High-Dimensional Data</b>: Boosting
+      algorithms can handle high-dimensional feature spaces well. They can
+      automatically select relevant features and ignore irrelevant ones, which
+      helps in dealing with data with a large number of features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Learning</b>: Boosting is one of the
-        popular ensemble learning techniques. If you want to explore ensemble
-        methods and combine multiple models to make predictions, boosting can be
-        a good choice.
-      </p>
-      <h4>Why to use Boosting?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved Predictive Accuracy</b>: Boosting aims to
-        improve the accuracy of the predictive model. By combining multiple weak
-        models, boosting creates a strong ensemble model that can make more
-        accurate predictions than any individual weak model. Boosting focuses on
-        difficult instances, allowing the model to learn from its mistakes and
-        adapt to complex patterns in the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Reducing Bias and Variance</b>: Boosting aims
+      to reduce both bias and variance in the final model. It reduces bias by
+      iteratively focusing on misclassified instances, and it reduces variance
+      by combining multiple weak models. This makes boosting suitable when you
+      want to improve the overall predictive power of your model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling Complex Relationships</b>: Boosting
-        algorithms can capture complex relationships in the data by iteratively
-        building models that correct the mistakes of previous models. This makes
-        boosting well-suited for handling datasets with intricate patterns or
-        non-linear relationships between features and the target variable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Learning</b>: Boosting is one of the
+      popular ensemble learning techniques. If you want to explore ensemble
+      methods and combine multiple models to make predictions, boosting can be
+      a good choice.
+    </p>
+    <h4>Why to use Boosting?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved Predictive Accuracy</b>: Boosting aims to
+      improve the accuracy of the predictive model. By combining multiple weak
+      models, boosting creates a strong ensemble model that can make more
+      accurate predictions than any individual weak model. Boosting focuses on
+      difficult instances, allowing the model to learn from its mistakes and
+      adapt to complex patterns in the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Reducing Bias and Variance</b>: Boosting
-        helps in reducing both bias and variance, two important sources of error
-        in machine learning models. The iterative nature of boosting reduces
-        bias by focusing on misclassified instances and improving the model's
-        ability to capture diverse patterns. Combining multiple weak models in
-        boosting reduces variance by smoothing out individual model's
-        fluctuations and creating a more stable and accurate final prediction.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling Complex Relationships</b>: Boosting
+      algorithms can capture complex relationships in the data by iteratively
+      building models that correct the mistakes of previous models. This makes
+      boosting well-suited for handling datasets with intricate patterns or
+      non-linear relationships between features and the target variable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling Imbalanced Data</b>: Boosting
-        algorithms can handle imbalanced datasets effectively. By assigning
-        higher weights to the misclassified instances, boosting ensures that the
-        subsequent models pay more attention to the minority class, leading to
-        better prediction performance for the underrepresented class.
+      <br />&nbsp;&nbsp;&nbsp;<b>Reducing Bias and Variance</b>: Boosting
+      helps in reducing both bias and variance, two important sources of error
+      in machine learning models. The iterative nature of boosting reduces
+      bias by focusing on misclassified instances and improving the model's
+      ability to capture diverse patterns. Combining multiple weak models in
+      boosting reduces variance by smoothing out individual model's
+      fluctuations and creating a more stable and accurate final prediction.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Selection and Importance</b>:
-        Boosting algorithms can automatically select relevant features and
-        assign them appropriate importance. They focus on features that are most
-        informative for the target variable, while disregarding irrelevant or
-        noisy features. This can help reduce overfitting and improve model
-        interpretability.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling Imbalanced Data</b>: Boosting
+      algorithms can handle imbalanced datasets effectively. By assigning
+      higher weights to the misclassified instances, boosting ensures that the
+      subsequent models pay more attention to the minority class, leading to
+      better prediction performance for the underrepresented class.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Learning</b>: Boosting is one of the
-        popular ensemble learning techniques. Ensemble models are known to have
-        better generalization capabilities compared to individual models. By
-        combining multiple weak models, boosting takes advantage of their
-        diverse perspectives and combines them into a stronger and more robust
-        model.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Selection and Importance</b>:
+      Boosting algorithms can automatically select relevant features and
+      assign them appropriate importance. They focus on features that are most
+      informative for the target variable, while disregarding irrelevant or
+      noisy features. This can help reduce overfitting and improve model
+      interpretability.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, boosting can be beneficial when you
-        need to improve the accuracy of your predictions, handle complex
-        relationships in the data, deal with imbalanced datasets, and create a
-        more reliable and interpretable model. However, it is important to
-        consider the computational requirements and potential overfitting, and
-        carefully tune the boosting parameters to achieve optimal performance.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Boosting in machine learning does not rely on strict
-        assumptions like some other algorithms such as linear regression or
-        Naive Bayes. However, there are some general considerations and
-        requirements that can affect the performance of boosting algorithms.
-        These include:
+      <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Learning</b>: Boosting is one of the
+      popular ensemble learning techniques. Ensemble models are known to have
+      better generalization capabilities compared to individual models. By
+      combining multiple weak models, boosting takes advantage of their
+      diverse perspectives and combines them into a stronger and more robust
+      model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Weak Learners</b>: Boosting assumes the
-        availability of weak or base learners that perform slightly better than
-        random guessing. These weak learners can be decision trees, linear
-        models, or other algorithms with low predictive power. The boosting
-        algorithm focuses on improving the performance of these weak learners by
-        combining them into a stronger ensemble model.
+      <br />&nbsp;&nbsp;&nbsp;Overall, boosting can be beneficial when you
+      need to improve the accuracy of your predictions, handle complex
+      relationships in the data, deal with imbalanced datasets, and create a
+      more reliable and interpretable model. However, it is important to
+      consider the computational requirements and potential overfitting, and
+      carefully tune the boosting parameters to achieve optimal performance.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Boosting in machine learning does not rely on strict
+      assumptions like some other algorithms such as linear regression or
+      Naive Bayes. However, there are some general considerations and
+      requirements that can affect the performance of boosting algorithms.
+      These include:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Data Quality</b>: Boosting algorithms assume
-        that the training data is of good quality, without significant errors or
-        outliers. Outliers or noisy instances can negatively impact the training
-        process and lead to suboptimal results.
+      <br />&nbsp;&nbsp;&nbsp;<b>Weak Learners</b>: Boosting assumes the
+      availability of weak or base learners that perform slightly better than
+      random guessing. These weak learners can be decision trees, linear
+      models, or other algorithms with low predictive power. The boosting
+      algorithm focuses on improving the performance of these weak learners by
+      combining them into a stronger ensemble model.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Training Set Coverage</b>: Boosting assumes
-        that the training set is representative of the overall population and
-        covers a wide range of instances with different patterns and
-        complexities. Having a diverse training set helps the boosting algorithm
-        to capture the underlying patterns effectively.
+      <br />&nbsp;&nbsp;&nbsp;<b>Data Quality</b>: Boosting algorithms assume
+      that the training data is of good quality, without significant errors or
+      outliers. Outliers or noisy instances can negatively impact the training
+      process and lead to suboptimal results.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Relevance</b>: Boosting assumes that
-        the available features are relevant to the target variable. Irrelevant
-        or noisy features can introduce noise and potentially degrade the
-        performance of the boosting algorithm. Feature selection techniques can
-        be employed to mitigate this issue.
+      <br />&nbsp;&nbsp;&nbsp;<b>Training Set Coverage</b>: Boosting assumes
+      that the training set is representative of the overall population and
+      covers a wide range of instances with different patterns and
+      complexities. Having a diverse training set helps the boosting algorithm
+      to capture the underlying patterns effectively.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Overfitting and Model Complexity</b>:
-        Boosting algorithms are prone to overfitting if not properly
-        regularized. It is essential to control the complexity of the weak
-        learners or limit the number of iterations to prevent overfitting on the
-        training data. Regularization techniques such as shrinkage or early
-        stopping can be used to address this issue.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Relevance</b>: Boosting assumes that
+      the available features are relevant to the target variable. Irrelevant
+      or noisy features can introduce noise and potentially degrade the
+      performance of the boosting algorithm. Feature selection techniques can
+      be employed to mitigate this issue.
 
-        <br />&nbsp;&nbsp;&nbsp;While these considerations are important for
-        achieving good performance with boosting, it's worth noting that
-        boosting algorithms are known for their flexibility and ability to adapt
-        to different types of data. They can handle both numerical and
-        categorical features and are robust to varying distributions and
-        relationships in the data. Boosting can often produce accurate results
-        even when some of the assumptions mentioned above are not strictly met.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved Predictive Accuracy</b>: Boosting
-        algorithms aim to create a strong ensemble model by combining multiple
-        weak models. This often leads to improved predictive accuracy compared
-        to using individual weak models or other ensemble techniques.
+      <br />&nbsp;&nbsp;&nbsp;<b>Overfitting and Model Complexity</b>:
+      Boosting algorithms are prone to overfitting if not properly
+      regularized. It is essential to control the complexity of the weak
+      learners or limit the number of iterations to prevent overfitting on the
+      training data. Regularization techniques such as shrinkage or early
+      stopping can be used to address this issue.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling Complex Relationships</b>: Boosting
-        algorithms can capture complex relationships in the data by iteratively
-        building models that correct the mistakes of previous models. This makes
-        boosting well-suited for handling datasets with intricate patterns or
-        non-linear relationships between features and the target variable.
+      <br />&nbsp;&nbsp;&nbsp;While these considerations are important for
+      achieving good performance with boosting, it's worth noting that
+      boosting algorithms are known for their flexibility and ability to adapt
+      to different types of data. They can handle both numerical and
+      categorical features and are robust to varying distributions and
+      relationships in the data. Boosting can often produce accurate results
+      even when some of the assumptions mentioned above are not strictly met.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved Predictive Accuracy</b>: Boosting
+      algorithms aim to create a strong ensemble model by combining multiple
+      weak models. This often leads to improved predictive accuracy compared
+      to using individual weak models or other ensemble techniques.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Reduction of Bias and Variance</b>: Boosting
-        helps in reducing both bias and variance, two important sources of error
-        in machine learning models. The iterative nature of boosting reduces
-        bias by focusing on misclassified instances and improving the model's
-        ability to capture diverse patterns. Combining multiple weak models in
-        boosting reduces variance by smoothing out individual model's
-        fluctuations and creating a more stable and accurate final prediction.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling Complex Relationships</b>: Boosting
+      algorithms can capture complex relationships in the data by iteratively
+      building models that correct the mistakes of previous models. This makes
+      boosting well-suited for handling datasets with intricate patterns or
+      non-linear relationships between features and the target variable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling Imbalanced Data</b>: Boosting
-        algorithms can handle imbalanced datasets effectively. By assigning
-        higher weights to the misclassified instances, boosting ensures that the
-        subsequent models pay more attention to the minority class, leading to
-        better prediction performance for the underrepresented class.
+      <br />&nbsp;&nbsp;&nbsp;<b>Reduction of Bias and Variance</b>: Boosting
+      helps in reducing both bias and variance, two important sources of error
+      in machine learning models. The iterative nature of boosting reduces
+      bias by focusing on misclassified instances and improving the model's
+      ability to capture diverse patterns. Combining multiple weak models in
+      boosting reduces variance by smoothing out individual model's
+      fluctuations and creating a more stable and accurate final prediction.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Selection and Importance</b>:
-        Boosting algorithms can automatically select relevant features and
-        assign them appropriate importance. They focus on features that are most
-        informative for the target variable, while disregarding irrelevant or
-        noisy features. This can help reduce overfitting and improve model
-        interpretability.
-      </p>
-      <h4>Disadvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Computationally Intensive</b>: Boosting involves
-        training multiple weak models sequentially, which can be computationally
-        expensive and time-consuming, especially for large datasets or complex
-        models. Training time can be a significant drawback when using boosting
-        algorithms.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling Imbalanced Data</b>: Boosting
+      algorithms can handle imbalanced datasets effectively. By assigning
+      higher weights to the misclassified instances, boosting ensures that the
+      subsequent models pay more attention to the minority class, leading to
+      better prediction performance for the underrepresented class.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Noisy Data and Outliers</b>:
-        Boosting algorithms are sensitive to noisy data and outliers, as they
-        assign higher weights to misclassified instances. Noisy or erroneous
-        instances can have a disproportionate impact on the model's training
-        process and potentially degrade its performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Selection and Importance</b>:
+      Boosting algorithms can automatically select relevant features and
+      assign them appropriate importance. They focus on features that are most
+      informative for the target variable, while disregarding irrelevant or
+      noisy features. This can help reduce overfitting and improve model
+      interpretability.
+    </p>
+    <h4>Disadvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Computationally Intensive</b>: Boosting involves
+      training multiple weak models sequentially, which can be computationally
+      expensive and time-consuming, especially for large datasets or complex
+      models. Training time can be a significant drawback when using boosting
+      algorithms.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Potential Overfitting</b>: Boosting
-        algorithms have a tendency to overfit the training data if not properly
-        regularized. It is crucial to carefully tune the hyperparameters and
-        apply techniques such as regularization, early stopping, or
-        cross-validation to prevent overfitting and improve generalization to
-        unseen data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Noisy Data and Outliers</b>:
+      Boosting algorithms are sensitive to noisy data and outliers, as they
+      assign higher weights to misclassified instances. Noisy or erroneous
+      instances can have a disproportionate impact on the model's training
+      process and potentially degrade its performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Lack of Interpretability</b>: Boosting
-        algorithms create complex ensemble models, making it challenging to
-        interpret the individual contributions of each weak learner. The final
-        model's interpretability may be compromised, which can be a disadvantage
-        in scenarios where interpretability is crucial.
+      <br />&nbsp;&nbsp;&nbsp;<b>Potential Overfitting</b>: Boosting
+      algorithms have a tendency to overfit the training data if not properly
+      regularized. It is crucial to carefully tune the hyperparameters and
+      apply techniques such as regularization, early stopping, or
+      cross-validation to prevent overfitting and improve generalization to
+      unseen data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model Selection and Hyperparameter Tuning</b
-        >: Boosting algorithms require careful selection of weak learners,
-        tuning of hyperparameters, and optimization of various settings. Finding
-        the optimal configuration can be a non-trivial task and may require
-        expertise or extensive experimentation.
+      <br />&nbsp;&nbsp;&nbsp;<b>Lack of Interpretability</b>: Boosting
+      algorithms create complex ensemble models, making it challenging to
+      interpret the individual contributions of each weak learner. The final
+      model's interpretability may be compromised, which can be a disadvantage
+      in scenarios where interpretability is crucial.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, boosting offers significant advantages
-        in terms of predictive accuracy and handling complex relationships in
-        the data. However, it requires careful consideration of computational
-        resources, handling of noisy data, and appropriate regularization to
-        avoid overfitting.
-      </p>
-      <h4>How Boosting works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Boosting is a machine learning technique that combines
-        multiple weak models (often decision trees) to create a strong ensemble
-        model. The boosting algorithm works iteratively, with each iteration
-        focusing on improving the model's performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model Selection and Hyperparameter Tuning</b>: Boosting algorithms require careful
+      selection of weak learners,
+      tuning of hyperparameters, and optimization of various settings. Finding
+      the optimal configuration can be a non-trivial task and may require
+      expertise or extensive experimentation.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: Initially, each instance
-        in the training set is assigned equal weights. The weak model (base
-        learner) is trained on the weighted training set.
+      <br />&nbsp;&nbsp;&nbsp;Overall, boosting offers significant advantages
+      in terms of predictive accuracy and handling complex relationships in
+      the data. However, it requires careful consideration of computational
+      resources, handling of noisy data, and appropriate regularization to
+      avoid overfitting.
+    </p>
+    <h4>How Boosting works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Boosting is a machine learning technique that combines
+      multiple weak models (often decision trees) to create a strong ensemble
+      model. The boosting algorithm works iteratively, with each iteration
+      focusing on improving the model's performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model Training</b>: The weak model is trained
-        on the weighted training set, and its performance is evaluated. The
-        model tries to minimize the errors, but it may not perform well
-        initially.
+      <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: Initially, each instance
+      in the training set is assigned equal weights. The weak model (base
+      learner) is trained on the weighted training set.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Weight Update</b>: After training the weak
-        model, the weights of the misclassified instances are increased, so that
-        the subsequent models focus on learning from the difficult examples. The
-        weights of correctly classified instances may be decreased.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model Training</b>: The weak model is trained
+      on the weighted training set, and its performance is evaluated. The
+      model tries to minimize the errors, but it may not perform well
+      initially.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Construction</b>: The weak model's
-        prediction is combined with the predictions of previous models using a
-        weighted majority voting scheme. The weights assigned to each weak model
-        depend on its accuracy during training. Models with higher accuracy are
-        given more weight.
+      <br />&nbsp;&nbsp;&nbsp;<b>Weight Update</b>: After training the weak
+      model, the weights of the misclassified instances are increased, so that
+      the subsequent models focus on learning from the difficult examples. The
+      weights of correctly classified instances may be decreased.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Iteration</b>: Steps 2 to 4 are repeated
-        iteratively for a predetermined number of iterations or until a certain
-        condition is met (e.g., a performance threshold is reached).
+      <br />&nbsp;&nbsp;&nbsp;<b>Ensemble Construction</b>: The weak model's
+      prediction is combined with the predictions of previous models using a
+      weighted majority voting scheme. The weights assigned to each weak model
+      depend on its accuracy during training. Models with higher accuracy are
+      given more weight.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Final Prediction</b>: The final prediction of
-        the boosting model is obtained by combining the predictions of all the
-        weak models, typically through a weighted majority voting scheme. The
-        weights assigned to each weak model depend on their accuracy during
-        training.
+      <br />&nbsp;&nbsp;&nbsp;<b>Iteration</b>: Steps 2 to 4 are repeated
+      iteratively for a predetermined number of iterations or until a certain
+      condition is met (e.g., a performance threshold is reached).
 
-        <br />&nbsp;&nbsp;&nbsp;During the boosting process, the weak models are
-        trained sequentially, with each subsequent model focusing on correcting
-        the mistakes made by the previous models. The aim is to iteratively
-        improve the overall predictive power of the ensemble model.
+      <br />&nbsp;&nbsp;&nbsp;<b>Final Prediction</b>: The final prediction of
+      the boosting model is obtained by combining the predictions of all the
+      weak models, typically through a weighted majority voting scheme. The
+      weights assigned to each weak model depend on their accuracy during
+      training.
 
-        <br />&nbsp;&nbsp;&nbsp;Boosting algorithms like AdaBoost (Adaptive
-        Boosting), Gradient Boosting, and XGBoost (Extreme Gradient Boosting)
-        differ in specific implementation details and strategies for weight
-        updates, weak model construction, and handling of the ensemble. However,
-        the general principle remains the same: iteratively combine weak models
-        to create a strong ensemble model that improves predictive accuracy.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;During the boosting process, the weak models are
+      trained sequentially, with each subsequent model focusing on correcting
+      the mistakes made by the previous models. The aim is to iteratively
+      improve the overall predictive power of the ensemble model.
+
+      <br />&nbsp;&nbsp;&nbsp;Boosting algorithms like AdaBoost (Adaptive
+      Boosting), Gradient Boosting, and XGBoost (Extreme Gradient Boosting)
+      differ in specific implementation details and strategies for weight
+      updates, weak model construction, and handling of the ensemble. However,
+      the general principle remains the same: iteratively combine weak models
+      to create a strong ensemble model that improves predictive accuracy.
+    </p>
+  </div>
+</body>
+
 </html>

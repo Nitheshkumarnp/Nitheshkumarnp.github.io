@@ -1,365 +1,350 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>K-means Clustering</h4>
-      <h4>What is K-means?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;K-means is a popular clustering algorithm in machine
-        learning. Clustering is an unsupervised learning task that involves
-        grouping similar data points together based on their features or
-        characteristics.
 
-        <br />&nbsp;&nbsp;&nbsp;K-means algorithm aims to partition a dataset
-        into k clusters, where each data point belongs to the cluster with the
-        nearest mean or centroid. The number of clusters, k, is specified by the
-        user. The algorithm iteratively assigns data points to clusters and
-        updates the cluster centroids until convergence.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;K-means is an iterative algorithm that aims to
-        minimize the within-cluster sum of squares, which measures the squared
-        distance between each data point and its assigned centroid. It is a
-        relatively simple and computationally efficient algorithm, making it
-        widely used for clustering tasks in various domains.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>K-means Clustering</h4>
+    <h4>What is K-means?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;K-means is a popular clustering algorithm in machine
+      learning. Clustering is an unsupervised learning task that involves
+      grouping similar data points together based on their features or
+      characteristics.
 
-        <br />&nbsp;&nbsp;&nbsp;However, K-means has some limitations. It
-        requires the number of clusters to be specified in advance, which can be
-        challenging when the optimal number of clusters is not known. The
-        algorithm is also sensitive to the initial centroid positions and can
-        converge to suboptimal solutions. Extensions like K-means++
-        initialization and careful selection of k can help mitigate these
-        issues.
-      </p>
-      <h4>When to use K-means?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;K-means algorithm is commonly used in machine learning
-        when you want to perform clustering or grouping of data points based on
-        their features. Here are some scenarios where K-means can be applied:
+      <br />&nbsp;&nbsp;&nbsp;K-means algorithm aims to partition a dataset
+      into k clusters, where each data point belongs to the cluster with the
+      nearest mean or centroid. The number of clusters, k, is specified by the
+      user. The algorithm iteratively assigns data points to clusters and
+      updates the cluster centroids until convergence.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Customer Segmentation</b>: K-means can be
-        used to cluster customers based on their purchasing behavior,
-        demographic information, or other relevant features. This can help
-        businesses understand their customer base and tailor marketing
-        strategies accordingly.
+      <br />&nbsp;&nbsp;&nbsp;K-means is an iterative algorithm that aims to
+      minimize the within-cluster sum of squares, which measures the squared
+      distance between each data point and its assigned centroid. It is a
+      relatively simple and computationally efficient algorithm, making it
+      widely used for clustering tasks in various domains.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Image Compression</b>: K-means can be
-        employed in image compression techniques. By clustering similar colors
-        together, K-means can reduce the number of colors used in an image,
-        thereby reducing storage space without significant loss of quality.
+      <br />&nbsp;&nbsp;&nbsp;However, K-means has some limitations. It
+      requires the number of clusters to be specified in advance, which can be
+      challenging when the optimal number of clusters is not known. The
+      algorithm is also sensitive to the initial centroid positions and can
+      converge to suboptimal solutions. Extensions like K-means++
+      initialization and careful selection of k can help mitigate these
+      issues.
+    </p>
+    <h4>When to use K-means?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;K-means algorithm is commonly used in machine learning
+      when you want to perform clustering or grouping of data points based on
+      their features. Here are some scenarios where K-means can be applied:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Anomaly Detection</b>: K-means can be
-        utilized for detecting anomalies or outliers in a dataset. By clustering
-        the majority of the data points together, any data point that does not
-        fit into any cluster can be considered as an anomaly.
+      <br />&nbsp;&nbsp;&nbsp;<b>Customer Segmentation</b>: K-means can be
+      used to cluster customers based on their purchasing behavior,
+      demographic information, or other relevant features. This can help
+      businesses understand their customer base and tailor marketing
+      strategies accordingly.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Document Classification</b>: K-means can be
-        applied to group documents or articles into clusters based on their
-        content. This can aid in organizing large collections of text data and
-        identifying common themes or topics.
+      <br />&nbsp;&nbsp;&nbsp;<b>Image Compression</b>: K-means can be
+      employed in image compression techniques. By clustering similar colors
+      together, K-means can reduce the number of colors used in an image,
+      thereby reducing storage space without significant loss of quality.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Recommender Systems</b>: K-means can be
-        employed in building recommender systems to group similar items or
-        products together. By clustering items based on user preferences or item
-        characteristics, personalized recommendations can be generated for
-        users.
+      <br />&nbsp;&nbsp;&nbsp;<b>Anomaly Detection</b>: K-means can be
+      utilized for detecting anomalies or outliers in a dataset. By clustering
+      the majority of the data points together, any data point that does not
+      fit into any cluster can be considered as an anomaly.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that K-means assumes the
-        clusters to be spherical and of equal size. If your data does not
-        satisfy these assumptions, other clustering algorithms such as DBSCAN or
-        hierarchical clustering may be more suitable. Additionally, it's
-        necessary to preprocess and normalize the data appropriately before
-        applying K-means to avoid any bias due to differences in feature scales.
-      </p>
-      <h4>Why to use K-means?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Data Exploration</b>: K-means can help gain
-        insights and understand the underlying structure of a dataset. By
-        clustering data points, it becomes easier to visualize and interpret
-        patterns or relationships among the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Document Classification</b>: K-means can be
+      applied to group documents or articles into clusters based on their
+      content. This can aid in organizing large collections of text data and
+      identifying common themes or topics.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Unsupervised Learning</b>: K-means is an
-        unsupervised learning algorithm, meaning it does not require labeled
-        data for training. This makes it particularly useful when there is no
-        prior knowledge or ground truth available about the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Recommender Systems</b>: K-means can be
+      employed in building recommender systems to group similar items or
+      products together. By clustering items based on user preferences or item
+      characteristics, personalized recommendations can be generated for
+      users.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: K-means is computationally
-        efficient and can handle large datasets with a large number of
-        dimensions (features). It is relatively faster compared to more complex
-        clustering algorithms, making it suitable for large-scale applications.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that K-means assumes the
+      clusters to be spherical and of equal size. If your data does not
+      satisfy these assumptions, other clustering algorithms such as DBSCAN or
+      hierarchical clustering may be more suitable. Additionally, it's
+      necessary to preprocess and normalize the data appropriately before
+      applying K-means to avoid any bias due to differences in feature scales.
+    </p>
+    <h4>Why to use K-means?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Data Exploration</b>: K-means can help gain
+      insights and understand the underlying structure of a dataset. By
+      clustering data points, it becomes easier to visualize and interpret
+      patterns or relationships among the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Easy Implementation</b>: K-means is a
-        straightforward algorithm with a simple implementation. It is widely
-        available in various machine learning libraries and can be easily
-        applied to different datasets without extensive parameter tuning.
+      <br />&nbsp;&nbsp;&nbsp;<b>Unsupervised Learning</b>: K-means is an
+      unsupervised learning algorithm, meaning it does not require labeled
+      data for training. This makes it particularly useful when there is no
+      prior knowledge or ground truth available about the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Initial Cluster Centers</b>: K-means provides
-        an initial set of cluster centers, which can be useful for initializing
-        other clustering algorithms or for subsequent analysis. The initial
-        centroids can serve as a starting point for more sophisticated
-        techniques.
+      <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: K-means is computationally
+      efficient and can handle large datasets with a large number of
+      dimensions (features). It is relatively faster compared to more complex
+      clustering algorithms, making it suitable for large-scale applications.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Preprocessing Step</b>: K-means can be used
-        as a preprocessing step before applying other machine learning
-        algorithms. By grouping similar data points together, it can help reduce
-        the dimensionality or noise in the data, leading to improved performance
-        of subsequent models.
+      <br />&nbsp;&nbsp;&nbsp;<b>Easy Implementation</b>: K-means is a
+      straightforward algorithm with a simple implementation. It is widely
+      available in various machine learning libraries and can be easily
+      applied to different datasets without extensive parameter tuning.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Engineering</b>: K-means can be used
-        to generate new features. The distance of a data point to each cluster
-        centroid can be used as a feature to represent the data point's
-        association with different clusters, which can be valuable in downstream
-        tasks.
+      <br />&nbsp;&nbsp;&nbsp;<b>Initial Cluster Centers</b>: K-means provides
+      an initial set of cluster centers, which can be useful for initializing
+      other clustering algorithms or for subsequent analysis. The initial
+      centroids can serve as a starting point for more sophisticated
+      techniques.
 
-        <br />&nbsp;&nbsp;&nbsp;While K-means has its limitations and
-        assumptions, it remains a popular and widely used algorithm in machine
-        learning, especially in exploratory data analysis, data preprocessing,
-        and as a building block for more advanced clustering techniques.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Number of Clusters (k)</b>: K-means assumes that
-        the number of clusters, k, is known or specified in advance. It requires
-        the user to determine the appropriate number of clusters based on prior
-        knowledge or domain expertise. Choosing an incorrect value of k can lead
-        to suboptimal or meaningless clustering results.
+      <br />&nbsp;&nbsp;&nbsp;<b>Preprocessing Step</b>: K-means can be used
+      as a preprocessing step before applying other machine learning
+      algorithms. By grouping similar data points together, it can help reduce
+      the dimensionality or noise in the data, leading to improved performance
+      of subsequent models.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Centroid Initialization</b>: K-means assumes
-        that the initial centroids are randomly selected from the dataset. The
-        algorithm is sensitive to the initial centroid positions, and different
-        initializations can lead to different final clustering results. To
-        mitigate this, techniques like K-means++ initialization can be used to
-        select initial centroids in a more intelligent manner.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Engineering</b>: K-means can be used
+      to generate new features. The distance of a data point to each cluster
+      centroid can be used as a feature to represent the data point's
+      association with different clusters, which can be valuable in downstream
+      tasks.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Cluster Shape and Size</b>: K-means assumes
-        that the clusters are spherical and have equal variances. It also
-        assumes that the clusters are of similar size. This means that the
-        algorithm performs best when the clusters have similar densities and
-        shapes. If the clusters have different shapes or sizes, or if they are
-        non-linearly separable, K-means may struggle to produce accurate
-        clustering results.
+      <br />&nbsp;&nbsp;&nbsp;While K-means has its limitations and
+      assumptions, it remains a popular and widely used algorithm in machine
+      learning, especially in exploratory data analysis, data preprocessing,
+      and as a building block for more advanced clustering techniques.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Number of Clusters (k)</b>: K-means assumes that
+      the number of clusters, k, is known or specified in advance. It requires
+      the user to determine the appropriate number of clusters based on prior
+      knowledge or domain expertise. Choosing an incorrect value of k can lead
+      to suboptimal or meaningless clustering results.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Scaling</b>: K-means is sensitive to
-        the scale of the features in the dataset. It assumes that all features
-        have equal importance and should be given equal weight. Therefore, it is
-        important to preprocess and normalize the data appropriately to ensure
-        that the features are on a similar scale. Failure to do so can result in
-        certain features dominating the clustering process.
+      <br />&nbsp;&nbsp;&nbsp;<b>Centroid Initialization</b>: K-means assumes
+      that the initial centroids are randomly selected from the dataset. The
+      algorithm is sensitive to the initial centroid positions, and different
+      initializations can lead to different final clustering results. To
+      mitigate this, techniques like K-means++ initialization can be used to
+      select initial centroids in a more intelligent manner.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Euclidean Distance Metric</b>: K-means uses
-        the Euclidean distance metric to measure the similarity between data
-        points and centroids. It assumes that the Euclidean distance is an
-        appropriate measure of similarity for the given dataset. If the data has
-        categorical or non-numeric features, or if the data does not satisfy the
-        assumptions of Euclidean distance, alternative distance metrics or
-        preprocessing techniques may be required.
+      <br />&nbsp;&nbsp;&nbsp;<b>Cluster Shape and Size</b>: K-means assumes
+      that the clusters are spherical and have equal variances. It also
+      assumes that the clusters are of similar size. This means that the
+      algorithm performs best when the clusters have similar densities and
+      shapes. If the clusters have different shapes or sizes, or if they are
+      non-linearly separable, K-means may struggle to produce accurate
+      clustering results.
 
-        <br />&nbsp;&nbsp;&nbsp;It's crucial to be mindful of these assumptions
-        and assess whether they hold for your specific dataset before applying
-        K-means. If the assumptions are violated, other clustering algorithms
-        that can handle different cluster shapes and sizes, such as DBSCAN or
-        Gaussian Mixture Models, may be more appropriate.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: K-means is a simple and
-        easy-to-understand algorithm. It has a straightforward implementation
-        and does not require complex parameter tuning.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Scaling</b>: K-means is sensitive to
+      the scale of the features in the dataset. It assumes that all features
+      have equal importance and should be given equal weight. Therefore, it is
+      important to preprocess and normalize the data appropriately to ensure
+      that the features are on a similar scale. Failure to do so can result in
+      certain features dominating the clustering process.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Efficiency</b>: K-means is computationally
-        efficient and can handle large datasets with a large number of
-        dimensions. Its time complexity is linear with the number of data
-        points, making it suitable for large-scale applications.
+      <br />&nbsp;&nbsp;&nbsp;<b>Euclidean Distance Metric</b>: K-means uses
+      the Euclidean distance metric to measure the similarity between data
+      points and centroids. It assumes that the Euclidean distance is an
+      appropriate measure of similarity for the given dataset. If the data has
+      categorical or non-numeric features, or if the data does not satisfy the
+      assumptions of Euclidean distance, alternative distance metrics or
+      preprocessing techniques may be required.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: K-means scales well with the
-        number of data points, making it applicable to datasets of varying
-        sizes. It can handle both small and large datasets effectively.
+      <br />&nbsp;&nbsp;&nbsp;It's crucial to be mindful of these assumptions
+      and assess whether they hold for your specific dataset before applying
+      K-means. If the assumptions are violated, other clustering algorithms
+      that can handle different cluster shapes and sizes, such as DBSCAN or
+      Gaussian Mixture Models, may be more appropriate.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: K-means is a simple and
+      easy-to-understand algorithm. It has a straightforward implementation
+      and does not require complex parameter tuning.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretable Results</b>: The cluster
-        centroids obtained from K-means represent the mean values of the data
-        points within each cluster. These centroids can provide meaningful
-        interpretations or insights about the clusters and can be used for
-        further analysis.
+      <br />&nbsp;&nbsp;&nbsp;<b>Efficiency</b>: K-means is computationally
+      efficient and can handle large datasets with a large number of
+      dimensions. Its time complexity is linear with the number of data
+      points, making it suitable for large-scale applications.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Initial Centroids</b>: K-means provides an
-        initial set of cluster centers, which can be used as a starting point
-        for other clustering algorithms or for subsequent analysis tasks. The
-        initial centroids can serve as a basis for more complex techniques.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Assumption of Spherical Clusters</b>: K-means
-        assumes that the clusters are spherical and have equal variances. It may
-        not perform well when the clusters have different shapes, densities, or
-        sizes, or when the data is non-linearly separable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: K-means scales well with the
+      number of data points, making it applicable to datasets of varying
+      sizes. It can handle both small and large datasets effectively.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Initialization</b>: K-means is
-        sensitive to the initial positions of the centroids. Different
-        initializations can lead to different final clustering results.
-        Initialization techniques like K-means++ can help mitigate this issue,
-        but it does not guarantee the global optimal solution.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretable Results</b>: The cluster
+      centroids obtained from K-means represent the mean values of the data
+      points within each cluster. These centroids can provide meaningful
+      interpretations or insights about the clusters and can be used for
+      further analysis.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Dependency on Number of Clusters (k)</b>: The
-        number of clusters, k, needs to be specified by the user in advance.
-        Determining the optimal value of k can be challenging, and an incorrect
-        choice can result in suboptimal clustering results.
+      <br />&nbsp;&nbsp;&nbsp;<b>Initial Centroids</b>: K-means provides an
+      initial set of cluster centers, which can be used as a starting point
+      for other clustering algorithms or for subsequent analysis tasks. The
+      initial centroids can serve as a basis for more complex techniques.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Assumption of Spherical Clusters</b>: K-means
+      assumes that the clusters are spherical and have equal variances. It may
+      not perform well when the clusters have different shapes, densities, or
+      sizes, or when the data is non-linearly separable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Outliers</b>: K-means can be sensitive to
-        outliers. Outliers can significantly affect the positions of the cluster
-        centroids and distort the clustering results. Preprocessing or outlier
-        handling techniques may be necessary to mitigate this issue.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Initialization</b>: K-means is
+      sensitive to the initial positions of the centroids. Different
+      initializations can lead to different final clustering results.
+      Initialization techniques like K-means++ can help mitigate this issue,
+      but it does not guarantee the global optimal solution.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Impact of Feature Scaling</b>: K-means is
-        sensitive to the scale of the features. Features with larger scales can
-        dominate the clustering process. It is important to preprocess and
-        normalize the data appropriately to ensure that all features contribute
-        equally to the clustering.
+      <br />&nbsp;&nbsp;&nbsp;<b>Dependency on Number of Clusters (k)</b>: The
+      number of clusters, k, needs to be specified by the user in advance.
+      Determining the optimal value of k can be challenging, and an incorrect
+      choice can result in suboptimal clustering results.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, while K-means is a popular and widely
-        used clustering algorithm, it is important to consider its assumptions
-        and limitations before applying it to a specific dataset. Depending on
-        the characteristics of the data, alternative clustering algorithms may
-        provide more suitable results.
-      </p>
-      <h4>How K-means algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Initialization</b>: Randomly select k data points
-        from the dataset as the initial centroids. These initial centroids will
-        represent the initial cluster centers.
+      <br />&nbsp;&nbsp;&nbsp;<b>Outliers</b>: K-means can be sensitive to
+      outliers. Outliers can significantly affect the positions of the cluster
+      centroids and distort the clustering results. Preprocessing or outlier
+      handling techniques may be necessary to mitigate this issue.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Assignment</b>: Assign each data point in the
-        dataset to the nearest centroid based on a distance metric, typically
-        the Euclidean distance. Each data point is assigned to the cluster whose
-        centroid is closest to it.
+      <br />&nbsp;&nbsp;&nbsp;<b>Impact of Feature Scaling</b>: K-means is
+      sensitive to the scale of the features. Features with larger scales can
+      dominate the clustering process. It is important to preprocess and
+      normalize the data appropriately to ensure that all features contribute
+      equally to the clustering.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Update</b>: Recalculate the centroids of the
-        clusters by taking the mean of all the data points assigned to each
-        cluster. The centroid represents the center of the cluster.
+      <br />&nbsp;&nbsp;&nbsp;Overall, while K-means is a popular and widely
+      used clustering algorithm, it is important to consider its assumptions
+      and limitations before applying it to a specific dataset. Depending on
+      the characteristics of the data, alternative clustering algorithms may
+      provide more suitable results.
+    </p>
+    <h4>How K-means algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Initialization</b>: Randomly select k data points
+      from the dataset as the initial centroids. These initial centroids will
+      represent the initial cluster centers.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Repeat</b>: Iteratively repeat the assignment
-        and update steps until convergence. Convergence occurs when either the
-        centroids no longer change significantly between iterations or a maximum
-        number of iterations is reached.
+      <br />&nbsp;&nbsp;&nbsp;<b>Assignment</b>: Assign each data point in the
+      dataset to the nearest centroid based on a distance metric, typically
+      the Euclidean distance. Each data point is assigned to the cluster whose
+      centroid is closest to it.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Output</b>: The final output of the algorithm
-        is the set of cluster assignments, where each data point is associated
-        with a specific cluster.
+      <br />&nbsp;&nbsp;&nbsp;<b>Update</b>: Recalculate the centroids of the
+      clusters by taking the mean of all the data points assigned to each
+      cluster. The centroid represents the center of the cluster.
 
-        <br />&nbsp;&nbsp;&nbsp;Here's a more detailed explanation of the steps:
+      <br />&nbsp;&nbsp;&nbsp;<b>Repeat</b>: Iteratively repeat the assignment
+      and update steps until convergence. Convergence occurs when either the
+      centroids no longer change significantly between iterations or a maximum
+      number of iterations is reached.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: Randomly select k data
-        points from the dataset as the initial centroids. These initial
-        centroids can be selected uniformly at random or using more
-        sophisticated techniques like K-means++ initialization.
+      <br />&nbsp;&nbsp;&nbsp;<b>Output</b>: The final output of the algorithm
+      is the set of cluster assignments, where each data point is associated
+      with a specific cluster.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Assignment</b>: For each data point in the
-        dataset, calculate the Euclidean distance between the data point and
-        each centroid. Assign the data point to the cluster whose centroid is
-        closest to it. This is done by minimizing the distance metric.
+      <br />&nbsp;&nbsp;&nbsp;Here's a more detailed explanation of the steps:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Update</b>: Once all data points have been
-        assigned to clusters, update the centroids by calculating the mean of
-        all the data points assigned to each cluster. The centroid represents
-        the center of the cluster and is recalculated as the average of all the
-        data points in that cluster.
+      <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: Randomly select k data
+      points from the dataset as the initial centroids. These initial
+      centroids can be selected uniformly at random or using more
+      sophisticated techniques like K-means++ initialization.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Repeat</b>: Repeat the assignment and update
-        steps until convergence. In each iteration, data points are reassigned
-        to clusters based on the updated centroids, and the centroids are
-        recalculated using the new assignments. The process continues until the
-        centroids no longer change significantly or a maximum number of
-        iterations is reached.
+      <br />&nbsp;&nbsp;&nbsp;<b>Assignment</b>: For each data point in the
+      dataset, calculate the Euclidean distance between the data point and
+      each centroid. Assign the data point to the cluster whose centroid is
+      closest to it. This is done by minimizing the distance metric.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Output</b>: The algorithm outputs the final
-        cluster assignments, where each data point is associated with a specific
-        cluster. The cluster assignments can be used for further analysis or
-        visualization.
+      <br />&nbsp;&nbsp;&nbsp;<b>Update</b>: Once all data points have been
+      assigned to clusters, update the centroids by calculating the mean of
+      all the data points assigned to each cluster. The centroid represents
+      the center of the cluster and is recalculated as the average of all the
+      data points in that cluster.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that the quality of the
-        clustering results can be influenced by the initial centroid positions,
-        the choice of the distance metric, and the number of clusters (k)
-        specified. It is often recommended to run the algorithm multiple times
-        with different initializations to mitigate the impact of initialization
-        sensitivity.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Within-Cluster Sum of Squares (WCSS)</b>: WCSS
-        measures the compactness of the clusters. It calculates the sum of
-        squared distances between each data point and its assigned centroid
-        within the cluster. Lower values of WCSS indicate better clustering.
-        WCSS can be used to find the optimal value of k by comparing the WCSS
-        values for different values of k.
+      <br />&nbsp;&nbsp;&nbsp;<b>Repeat</b>: Repeat the assignment and update
+      steps until convergence. In each iteration, data points are reassigned
+      to clusters based on the updated centroids, and the centroids are
+      recalculated using the new assignments. The process continues until the
+      centroids no longer change significantly or a maximum number of
+      iterations is reached.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Silhouette Coefficient</b>: The Silhouette
-        Coefficient measures the quality of clustering by evaluating both the
-        compactness of data points within their own cluster and the separation
-        between different clusters. It calculates the average Silhouette
-        Coefficient across all data points, ranging from -1 to +1. Higher values
-        indicate better clustering, where values close to +1 suggest
-        well-separated clusters, values close to 0 indicate overlapping
-        clusters, and negative values indicate data points assigned to the wrong
-        clusters.
+      <br />&nbsp;&nbsp;&nbsp;<b>Output</b>: The algorithm outputs the final
+      cluster assignments, where each data point is associated with a specific
+      cluster. The cluster assignments can be used for further analysis or
+      visualization.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Davies-Bouldin Index (DBI)</b>: DBI measures
-        the ratio of within-cluster scatter to between-cluster separation. It
-        considers both the compactness of clusters and the distance between
-        clusters. Lower DBI values indicate better clustering, with values
-        closer to 0 suggesting well-separated and compact clusters.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that the quality of the
+      clustering results can be influenced by the initial centroid positions,
+      the choice of the distance metric, and the number of clusters (k)
+      specified. It is often recommended to run the algorithm multiple times
+      with different initializations to mitigate the impact of initialization
+      sensitivity.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Within-Cluster Sum of Squares (WCSS)</b>: WCSS
+      measures the compactness of the clusters. It calculates the sum of
+      squared distances between each data point and its assigned centroid
+      within the cluster. Lower values of WCSS indicate better clustering.
+      WCSS can be used to find the optimal value of k by comparing the WCSS
+      values for different values of k.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Calinski-Harabasz Index</b>: The
-        Calinski-Harabasz Index evaluates the ratio of between-cluster variance
-        to within-cluster variance. It quantifies the separation between
-        clusters and the compactness of data points within clusters. Higher
-        values of the index indicate better-defined and well-separated clusters.
+      <br />&nbsp;&nbsp;&nbsp;<b>Silhouette Coefficient</b>: The Silhouette
+      Coefficient measures the quality of clustering by evaluating both the
+      compactness of data points within their own cluster and the separation
+      between different clusters. It calculates the average Silhouette
+      Coefficient across all data points, ranging from -1 to +1. Higher values
+      indicate better clustering, where values close to +1 suggest
+      well-separated clusters, values close to 0 indicate overlapping
+      clusters, and negative values indicate data points assigned to the wrong
+      clusters.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Rand Index</b>: The Rand Index measures the
-        similarity between the clustering results and the ground truth (if
-        available). It compares the pairwise agreements and disagreements
-        between data point assignments in the clustering results and the true
-        labels. Rand Index ranges from 0 to 1, where values closer to 1 indicate
-        higher similarity between the clustering and true labels.
+      <br />&nbsp;&nbsp;&nbsp;<b>Davies-Bouldin Index (DBI)</b>: DBI measures
+      the ratio of within-cluster scatter to between-cluster separation. It
+      considers both the compactness of clusters and the distance between
+      clusters. Lower DBI values indicate better clustering, with values
+      closer to 0 suggesting well-separated and compact clusters.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Adjusted Rand Index (ARI)</b>: ARI is an
-        extension of the Rand Index that takes into account the chance agreement
-        between data point assignments. ARI adjusts for the expected agreement
-        due to random chance. ARI ranges from -1 to 1, where values close to 1
-        indicate high similarity between clustering and true labels, values
-        close to 0 suggest clustering results no better than random, and
-        negative values indicate disagreement worse than random.
+      <br />&nbsp;&nbsp;&nbsp;<b>Calinski-Harabasz Index</b>: The
+      Calinski-Harabasz Index evaluates the ratio of between-cluster variance
+      to within-cluster variance. It quantifies the separation between
+      clusters and the compactness of data points within clusters. Higher
+      values of the index indicate better-defined and well-separated clusters.
 
-        <br />&nbsp;&nbsp;&nbsp;These evaluation metrics can help assess the
-        quality of the clustering results obtained from K-means and guide the
-        selection of the optimal number of clusters or compare different
-        clustering algorithms. It's important to choose the appropriate metric
-        based on the characteristics of the dataset and the specific goals of
-        the clustering task.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Rand Index</b>: The Rand Index measures the
+      similarity between the clustering results and the ground truth (if
+      available). It compares the pairwise agreements and disagreements
+      between data point assignments in the clustering results and the true
+      labels. Rand Index ranges from 0 to 1, where values closer to 1 indicate
+      higher similarity between the clustering and true labels.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Adjusted Rand Index (ARI)</b>: ARI is an
+      extension of the Rand Index that takes into account the chance agreement
+      between data point assignments. ARI adjusts for the expected agreement
+      due to random chance. ARI ranges from -1 to 1, where values close to 1
+      indicate high similarity between clustering and true labels, values
+      close to 0 suggest clustering results no better than random, and
+      negative values indicate disagreement worse than random.
+
+      <br />&nbsp;&nbsp;&nbsp;These evaluation metrics can help assess the
+      quality of the clustering results obtained from K-means and guide the
+      selection of the optimal number of clusters or compare different
+      clustering algorithms. It's important to choose the appropriate metric
+      based on the characteristics of the dataset and the specific goals of
+      the clustering task.
+    </p>
+  </div>
+</body>
+
 </html>

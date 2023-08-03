@@ -1,283 +1,264 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>Naive Bayes</h4>
-      <h4>What is Naive Bayes?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Naive Bayes is a probabilistic machine learning
-        algorithm based on Bayes' theorem. It is called "naive" because it makes
-        the assumption of independence between the features (i.e., the
-        variables) used to classify the data. This assumption simplifies the
-        calculations required to estimate the probability of each class, given
-        the values of the features.
 
-        <br />&nbsp;&nbsp;&nbsp;In other words, Naive Bayes assumes that the
-        presence or absence of a particular feature is independent of the
-        presence or absence of any other feature. This is often not true in
-        real-world data sets, but the assumption is made for the sake of
-        computational efficiency.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;Despite its simplifying assumptions, Naive Bayes
-        can be surprisingly effective in many practical applications, especially
-        when the number of features is large relative to the amount of training
-        data available. It is commonly used in natural language processing
-        tasks, such as sentiment analysis and spam filtering.
-      </p>
-      <h4>When to use Naive Bayes?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Naive Bayes is a popular algorithm in machine
-        learning, and it is often used for classification tasks, particularly
-        for text classification problems, such as spam detection, sentiment
-        analysis, and document classification.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>Naive Bayes</h4>
+    <h4>What is Naive Bayes?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Naive Bayes is a probabilistic machine learning
+      algorithm based on Bayes' theorem. It is called "naive" because it makes
+      the assumption of independence between the features (i.e., the
+      variables) used to classify the data. This assumption simplifies the
+      calculations required to estimate the probability of each class, given
+      the values of the features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Small to medium-sized datasets</b>: Naive
-        Bayes can be effective with small to medium-sized datasets. This is
-        because it is a relatively simple algorithm that requires less training
-        data than some other methods, and it can be trained quickly.
+      <br />&nbsp;&nbsp;&nbsp;In other words, Naive Bayes assumes that the
+      presence or absence of a particular feature is independent of the
+      presence or absence of any other feature. This is often not true in
+      real-world data sets, but the assumption is made for the sake of
+      computational efficiency.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Text classification problems</b>: Naive Bayes
-        is particularly well-suited for text classification problems because of
-        its ability to handle high-dimensional data (i.e., data with a large
-        number of features). It is often used in natural language processing
-        tasks such as sentiment analysis, text categorization, and spam
-        filtering.
+      <br />&nbsp;&nbsp;&nbsp;Despite its simplifying assumptions, Naive Bayes
+      can be surprisingly effective in many practical applications, especially
+      when the number of features is large relative to the amount of training
+      data available. It is commonly used in natural language processing
+      tasks, such as sentiment analysis and spam filtering.
+    </p>
+    <h4>When to use Naive Bayes?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Naive Bayes is a popular algorithm in machine
+      learning, and it is often used for classification tasks, particularly
+      for text classification problems, such as spam detection, sentiment
+      analysis, and document classification.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Binary classification problems</b>: Naive
-        Bayes is effective for binary classification problems where the target
-        variable has two possible outcomes (e.g., spam or not spam, positive
-        sentiment or negative sentiment).
+      <br />&nbsp;&nbsp;&nbsp;<b>Small to medium-sized datasets</b>: Naive
+      Bayes can be effective with small to medium-sized datasets. This is
+      because it is a relatively simple algorithm that requires less training
+      data than some other methods, and it can be trained quickly.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Multiclass classification problems</b>: Naive
-        Bayes can also be used for multiclass classification problems, where the
-        target variable has more than two possible outcomes. However, it may not
-        perform as well as other algorithms such as support vector machines or
-        random forests.
+      <br />&nbsp;&nbsp;&nbsp;<b>Text classification problems</b>: Naive Bayes
+      is particularly well-suited for text classification problems because of
+      its ability to handle high-dimensional data (i.e., data with a large
+      number of features). It is often used in natural language processing
+      tasks such as sentiment analysis, text categorization, and spam
+      filtering.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, Naive Bayes is a simple and effective
-        algorithm that can be used for a variety of classification problems,
-        particularly in the domain of text classification. However, it may not
-        be the best choice for very large datasets or problems with complex
-        relationships between the features.
-      </p>
-      <h4>Why to use Naive Bayes?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simple and easy to implement</b>: Naive Bayes is a
-        simple algorithm that is relatively easy to understand and implement. It
-        does not require complex parameter tuning or sophisticated optimization
-        techniques.
+      <br />&nbsp;&nbsp;&nbsp;<b>Binary classification problems</b>: Naive
+      Bayes is effective for binary classification problems where the target
+      variable has two possible outcomes (e.g., spam or not spam, positive
+      sentiment or negative sentiment).
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Fast training and prediction</b>: Naive Bayes
-        is a fast algorithm that can be trained quickly and is efficient at
-        making predictions. This makes it suitable for real-time applications or
-        situations where speed is important.
+      <br />&nbsp;&nbsp;&nbsp;<b>Multiclass classification problems</b>: Naive
+      Bayes can also be used for multiclass classification problems, where the
+      target variable has more than two possible outcomes. However, it may not
+      perform as well as other algorithms such as support vector machines or
+      random forests.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handles high-dimensional data</b>: Naive
-        Bayes is particularly well-suited to handle high-dimensional data, such
-        as text data, where the number of features can be very large.
+      <br />&nbsp;&nbsp;&nbsp;Overall, Naive Bayes is a simple and effective
+      algorithm that can be used for a variety of classification problems,
+      particularly in the domain of text classification. However, it may not
+      be the best choice for very large datasets or problems with complex
+      relationships between the features.
+    </p>
+    <h4>Why to use Naive Bayes?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simple and easy to implement</b>: Naive Bayes is a
+      simple algorithm that is relatively easy to understand and implement. It
+      does not require complex parameter tuning or sophisticated optimization
+      techniques.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Works well with small to medium-sized datasets</b
-        >: Naive Bayes can be effective with small to medium-sized datasets. It
-        does not require as much training data as some other algorithms, making
-        it useful when data is limited.
+      <br />&nbsp;&nbsp;&nbsp;<b>Fast training and prediction</b>: Naive Bayes
+      is a fast algorithm that can be trained quickly and is efficient at
+      making predictions. This makes it suitable for real-time applications or
+      situations where speed is important.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Good performance in many applications</b>:
-        Despite its simplicity, Naive Bayes has been shown to perform well in a
-        variety of applications, particularly in text classification problems,
-        such as spam detection and sentiment analysis.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handles high-dimensional data</b>: Naive
+      Bayes is particularly well-suited to handle high-dimensional data, such
+      as text data, where the number of features can be very large.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, Naive Bayes is a useful algorithm that
-        can be a good choice in many situations, particularly when dealing with
-        high-dimensional data or small to medium-sized datasets. Its simplicity,
-        efficiency, and good performance make it a valuable tool in machine
-        learning.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Independence</b>: Naive Bayes assumes that the
-        features used to classify the data are independent of each other. This
-        means that the presence or absence of one feature does not affect the
-        presence or absence of another feature.
+      <br />&nbsp;&nbsp;&nbsp;<b>Works well with small to medium-sized datasets</b>: Naive Bayes can be effective with
+      small to medium-sized datasets. It
+      does not require as much training data as some other algorithms, making
+      it useful when data is limited.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Equal importance of features</b>: Naive Bayes
-        assumes that all features are equally important in making predictions.
-        This means that each feature is given the same weight when calculating
-        the probability of a particular class.
+      <br />&nbsp;&nbsp;&nbsp;<b>Good performance in many applications</b>:
+      Despite its simplicity, Naive Bayes has been shown to perform well in a
+      variety of applications, particularly in text classification problems,
+      such as spam detection and sentiment analysis.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Normal distribution</b>: Naive Bayes assumes
-        that the values of the features are normally distributed. This
-        assumption is particularly important for continuous features.
+      <br />&nbsp;&nbsp;&nbsp;Overall, Naive Bayes is a useful algorithm that
+      can be a good choice in many situations, particularly when dealing with
+      high-dimensional data or small to medium-sized datasets. Its simplicity,
+      efficiency, and good performance make it a valuable tool in machine
+      learning.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Independence</b>: Naive Bayes assumes that the
+      features used to classify the data are independent of each other. This
+      means that the presence or absence of one feature does not affect the
+      presence or absence of another feature.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Training and test data are drawn from the same distribution</b
-        >: Naive Bayes assumes that the training data and the test data are
-        drawn from the same underlying distribution. If the test data has a
-        significantly different distribution from the training data, the
-        performance of the algorithm may be affected.
+      <br />&nbsp;&nbsp;&nbsp;<b>Equal importance of features</b>: Naive Bayes
+      assumes that all features are equally important in making predictions.
+      This means that each feature is given the same weight when calculating
+      the probability of a particular class.
 
-        <br />&nbsp;&nbsp;&nbsp;It is important to note that these assumptions
-        may not hold true in all cases. In practice, it is important to evaluate
-        the performance of the Naive Bayes algorithm on the specific dataset and
-        task at hand to determine whether the assumptions are valid and whether
-        the algorithm is suitable for the task.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: Naive Bayes is a simple algorithm
-        that is easy to understand and implement. It does not require complex
-        parameter tuning or sophisticated optimization techniques.
+      <br />&nbsp;&nbsp;&nbsp;<b>Normal distribution</b>: Naive Bayes assumes
+      that the values of the features are normally distributed. This
+      assumption is particularly important for continuous features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Fast training and prediction</b>: Naive Bayes
-        is a fast algorithm that can be trained quickly and is efficient at
-        making predictions. This makes it suitable for real-time applications or
-        situations where speed is important.
+      <br />&nbsp;&nbsp;&nbsp;<b>Training and test data are drawn from the same distribution</b>: Naive Bayes assumes
+      that the training data and the test data are
+      drawn from the same underlying distribution. If the test data has a
+      significantly different distribution from the training data, the
+      performance of the algorithm may be affected.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handles high-dimensional data</b>: Naive
-        Bayes is particularly well-suited to handle high-dimensional data, such
-        as text data, where the number of features can be very large.
+      <br />&nbsp;&nbsp;&nbsp;It is important to note that these assumptions
+      may not hold true in all cases. In practice, it is important to evaluate
+      the performance of the Naive Bayes algorithm on the specific dataset and
+      task at hand to determine whether the assumptions are valid and whether
+      the algorithm is suitable for the task.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Simplicity</b>: Naive Bayes is a simple algorithm
+      that is easy to understand and implement. It does not require complex
+      parameter tuning or sophisticated optimization techniques.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Works well with small to medium-sized datasets</b
-        >: Naive Bayes can be effective with small to medium-sized datasets. It
-        does not require as much training data as some other algorithms, making
-        it useful when data is limited.
+      <br />&nbsp;&nbsp;&nbsp;<b>Fast training and prediction</b>: Naive Bayes
+      is a fast algorithm that can be trained quickly and is efficient at
+      making predictions. This makes it suitable for real-time applications or
+      situations where speed is important.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Good performance in many applications</b>:
-        Despite its simplicity, Naive Bayes has been shown to perform well in a
-        variety of applications, particularly in text classification problems,
-        such as spam detection and sentiment analysis.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Assumption of independence</b>: Naive Bayes assumes
-        that the features used to classify the data are independent of each
-        other. This assumption may not hold true in all cases and can affect the
-        accuracy of the predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handles high-dimensional data</b>: Naive
+      Bayes is particularly well-suited to handle high-dimensional data, such
+      as text data, where the number of features can be very large.
 
-        <br />&nbsp;&nbsp;&nbsp;<b
-          >Cannot handle complex relationships between features</b
-        >: Naive Bayes is not suitable for problems where there are complex
-        relationships between the features. It may not perform well in
-        situations where the interaction between features is important.
+      <br />&nbsp;&nbsp;&nbsp;<b>Works well with small to medium-sized datasets</b>: Naive Bayes can be effective with
+      small to medium-sized datasets. It
+      does not require as much training data as some other algorithms, making
+      it useful when data is limited.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>May require preprocessing of data</b>: Naive
-        Bayes assumes that the features are normally distributed, which may not
-        be the case in all datasets. Data preprocessing may be required to
-        transform the data into a normal distribution.
+      <br />&nbsp;&nbsp;&nbsp;<b>Good performance in many applications</b>:
+      Despite its simplicity, Naive Bayes has been shown to perform well in a
+      variety of applications, particularly in text classification problems,
+      such as spam detection and sentiment analysis.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Assumption of independence</b>: Naive Bayes assumes
+      that the features used to classify the data are independent of each
+      other. This assumption may not hold true in all cases and can affect the
+      accuracy of the predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Limited to classification problems</b>: Naive
-        Bayes is a classification algorithm and cannot be used for regression
-        problems.
+      <br />&nbsp;&nbsp;&nbsp;<b>Cannot handle complex relationships between features</b>: Naive Bayes is not suitable
+      for problems where there are complex
+      relationships between the features. It may not perform well in
+      situations where the interaction between features is important.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, Naive Bayes is a useful algorithm that
-        can be a good choice in many situations, particularly when dealing with
-        high-dimensional data or small to medium-sized datasets. Its simplicity,
-        efficiency, and good performance make it a valuable tool in machine
-        learning. However, it is important to keep in mind the assumptions and
-        limitations of the algorithm and to evaluate its performance on the
-        specific dataset and task at hand.
-      </p>
-      <h4>How Naive Bayes algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Naive Bayes is a probabilistic machine learning
-        algorithm that is based on the Bayes theorem. The algorithm makes
-        predictions by calculating the probability of a given input belonging to
-        a certain class. Here are the basic steps involved in the Naive Bayes
-        algorithm:
+      <br />&nbsp;&nbsp;&nbsp;<b>May require preprocessing of data</b>: Naive
+      Bayes assumes that the features are normally distributed, which may not
+      be the case in all datasets. Data preprocessing may be required to
+      transform the data into a normal distribution.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Data Preprocessing</b>: The first step is to
-        preprocess the data, which involves cleaning and transforming the data
-        into a suitable format for the algorithm. The data may be split into
-        training and testing sets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Limited to classification problems</b>: Naive
+      Bayes is a classification algorithm and cannot be used for regression
+      problems.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Training</b>: In the training phase, the
-        algorithm uses the training data to calculate the probability of each
-        class and the conditional probability of each feature given each class.
-        These probabilities are calculated using Bayes' theorem and the
-        assumption of conditional independence of features given the class.
+      <br />&nbsp;&nbsp;&nbsp;Overall, Naive Bayes is a useful algorithm that
+      can be a good choice in many situations, particularly when dealing with
+      high-dimensional data or small to medium-sized datasets. Its simplicity,
+      efficiency, and good performance make it a valuable tool in machine
+      learning. However, it is important to keep in mind the assumptions and
+      limitations of the algorithm and to evaluate its performance on the
+      specific dataset and task at hand.
+    </p>
+    <h4>How Naive Bayes algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Naive Bayes is a probabilistic machine learning
+      algorithm that is based on the Bayes theorem. The algorithm makes
+      predictions by calculating the probability of a given input belonging to
+      a certain class. Here are the basic steps involved in the Naive Bayes
+      algorithm:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Prediction</b>: In the prediction phase, the
-        algorithm uses the conditional probabilities calculated in the training
-        phase to calculate the probability of the input belonging to each class.
-        The class with the highest probability is chosen as the predicted class
-        for the input.
+      <br />&nbsp;&nbsp;&nbsp;<b>Data Preprocessing</b>: The first step is to
+      preprocess the data, which involves cleaning and transforming the data
+      into a suitable format for the algorithm. The data may be split into
+      training and testing sets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model Evaluation</b>: The performance of the
-        model is evaluated using the testing data. The accuracy of the
-        predictions is calculated by comparing the predicted classes with the
-        true classes of the testing data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Training</b>: In the training phase, the
+      algorithm uses the training data to calculate the probability of each
+      class and the conditional probability of each feature given each class.
+      These probabilities are calculated using Bayes' theorem and the
+      assumption of conditional independence of features given the class.
 
-        <br />&nbsp;&nbsp;&nbsp;In summary, Naive Bayes is a simple but powerful
-        algorithm that uses probability theory to make predictions. It is
-        particularly well-suited to handle high-dimensional data and works well
-        with small to medium-sized datasets. However, it has some assumptions
-        and limitations that need to be taken into account when using the
-        algorithm.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Accuracy</b> Accuracy is the most common evaluation
-        metric used for classification problems. It measures the proportion of
-        correctly classified instances out of the total number of instances in
-        the testing dataset.
+      <br />&nbsp;&nbsp;&nbsp;<b>Prediction</b>: In the prediction phase, the
+      algorithm uses the conditional probabilities calculated in the training
+      phase to calculate the probability of the input belonging to each class.
+      The class with the highest probability is chosen as the predicted class
+      for the input.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: Precision measures the
-        proportion of true positive predictions out of all the positive
-        predictions. It is useful in cases where false positives are costly,
-        such as in medical diagnosis.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model Evaluation</b>: The performance of the
+      model is evaluated using the testing data. The accuracy of the
+      predictions is calculated by comparing the predicted classes with the
+      true classes of the testing data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Recall</b>: Recall measures the proportion of
-        true positive predictions out of all the actual positive instances in
-        the dataset. It is useful in cases where false negatives are costly,
-        such as in fraud detection.
+      <br />&nbsp;&nbsp;&nbsp;In summary, Naive Bayes is a simple but powerful
+      algorithm that uses probability theory to make predictions. It is
+      particularly well-suited to handle high-dimensional data and works well
+      with small to medium-sized datasets. However, it has some assumptions
+      and limitations that need to be taken into account when using the
+      algorithm.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Accuracy</b> Accuracy is the most common evaluation
+      metric used for classification problems. It measures the proportion of
+      correctly classified instances out of the total number of instances in
+      the testing dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>F1-score</b>: The F1-score is the harmonic
-        mean of precision and recall. It is a useful metric when both precision
-        and recall are important.
+      <br />&nbsp;&nbsp;&nbsp;<b>Precision</b>: Precision measures the
+      proportion of true positive predictions out of all the positive
+      predictions. It is useful in cases where false positives are costly,
+      such as in medical diagnosis.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Area under the ROC curve (AUC-ROC)</b>: The
-        ROC curve plots the true positive rate against the false positive rate
-        at different threshold values. The AUC-ROC measures the area under the
-        curve and provides an overall measure of the model's performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Recall</b>: Recall measures the proportion of
+      true positive predictions out of all the actual positive instances in
+      the dataset. It is useful in cases where false negatives are costly,
+      such as in fraud detection.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Confusion matrix</b>: The confusion matrix
-        provides a detailed breakdown of the model's predictions. It shows the
-        number of true positives, false positives, true negatives, and false
-        negatives.
+      <br />&nbsp;&nbsp;&nbsp;<b>F1-score</b>: The F1-score is the harmonic
+      mean of precision and recall. It is a useful metric when both precision
+      and recall are important.
 
-        <br />&nbsp;&nbsp;&nbsp;In summary, the choice of evaluation metric
-        depends on the specific problem and the requirements of the application.
-        Accuracy, precision, recall, F1-score, AUC-ROC, and confusion matrix are
-        commonly used metrics for evaluating the performance of Naive Bayes in
-        classification problems.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Area under the ROC curve (AUC-ROC)</b>: The
+      ROC curve plots the true positive rate against the false positive rate
+      at different threshold values. The AUC-ROC measures the area under the
+      curve and provides an overall measure of the model's performance.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Confusion matrix</b>: The confusion matrix
+      provides a detailed breakdown of the model's predictions. It shows the
+      number of true positives, false positives, true negatives, and false
+      negatives.
+
+      <br />&nbsp;&nbsp;&nbsp;In summary, the choice of evaluation metric
+      depends on the specific problem and the requirements of the application.
+      Accuracy, precision, recall, F1-score, AUC-ROC, and confusion matrix are
+      commonly used metrics for evaluating the performance of Naive Bayes in
+      classification problems.
+    </p>
+  </div>
+</body>
+
 </html>

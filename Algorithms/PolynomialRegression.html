@@ -1,304 +1,289 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>What is Polynomial regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;In polynomial regression, the relationship between the
-        independent variable x and the dependent variable y is described as an
-        nth degree polynomial in x<br />
-        &nbsp;&nbsp;&nbsp;It is a form of linear regression, but it allows for
-        non-linear relationships between the variables.<br />
-        &nbsp;&nbsp;&nbsp;The algorithm of linear regression works only when the
-        regression in the data is linear. Polynomial regression can be
-        considered one of the exceptional cases of multiple linear regression
-        models. In other words, it is a linear regression type containing
-        dependent and independent variables, and they both share a curvilinear
-        relationship. A polynomial relationship is fitted in the data
-      </p>
-      <h4>When to use polynomial regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Curved relationships</b>: If the scatter plot of
-        the dependent variable and independent variable shows a curved pattern,
-        polynomial regression can be used to capture the non-linear
-        relationship.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Non-constant variance</b>: If the variance of
-        the dependent variable is not constant across the range of the
-        independent variable, polynomial regression can be used to model the
-        varying variance.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Outliers</b>: If there are outliers in the
-        data, a polynomial model may be better able to handle them than a linear
-        model.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>What is Polynomial regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;In polynomial regression, the relationship between the
+      independent variable x and the dependent variable y is described as an
+      nth degree polynomial in x<br />
+      &nbsp;&nbsp;&nbsp;It is a form of linear regression, but it allows for
+      non-linear relationships between the variables.<br />
+      &nbsp;&nbsp;&nbsp;The algorithm of linear regression works only when the
+      regression in the data is linear. Polynomial regression can be
+      considered one of the exceptional cases of multiple linear regression
+      models. In other words, it is a linear regression type containing
+      dependent and independent variables, and they both share a curvilinear
+      relationship. A polynomial relationship is fitted in the data
+    </p>
+    <h4>When to use polynomial regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Curved relationships</b>: If the scatter plot of
+      the dependent variable and independent variable shows a curved pattern,
+      polynomial regression can be used to capture the non-linear
+      relationship.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Limited data</b>: If the data set is small, a
-        polynomial model may be preferred over a more complex model with a large
-        number of features.
+      <br />&nbsp;&nbsp;&nbsp;<b>Non-constant variance</b>: If the variance of
+      the dependent variable is not constant across the range of the
+      independent variable, polynomial regression can be used to model the
+      varying variance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Prior domain knowledge</b>: If there is prior
-        domain knowledge suggesting that the relationship between the variables
-        is non-linear, polynomial regression can be used to model the
-        relationship.
+      <br />&nbsp;&nbsp;&nbsp;<b>Outliers</b>: If there are outliers in the
+      data, a polynomial model may be better able to handle them than a linear
+      model.
 
-        <br />&nbsp;&nbsp;&nbsp;However, it is important to note that polynomial
-        regression can be sensitive to the choice of the degree of the
-        polynomial, and overfitting can occur if the degree is too high.
-        Therefore, it is important to select an appropriate degree of the
-        polynomial and to validate the model using appropriate evaluation
-        metrics.
-      </p>
-      <h4>Why to use polynomial regression?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Non-linearity</b>: Linear regression assumes a
-        linear relationship between the independent and dependent variables.
-        However, in many real-world situations, the relationship is non-linear.
-        Polynomial regression can capture non-linear relationships and provide a
-        better fit to the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Limited data</b>: If the data set is small, a
+      polynomial model may be preferred over a more complex model with a large
+      number of features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Polynomial regression allows
-        for greater flexibility in modeling complex relationships between
-        variables. By increasing the degree of the polynomial, you can add more
-        bends and curves to the fitted line.
+      <br />&nbsp;&nbsp;&nbsp;<b>Prior domain knowledge</b>: If there is prior
+      domain knowledge suggesting that the relationship between the variables
+      is non-linear, polynomial regression can be used to model the
+      relationship.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Polynomial regression
-        models are often more interpretable than other non-linear models such as
-        neural networks or decision trees. The coefficients of the polynomial
-        can be used to understand the impact of the independent variables on the
-        dependent variable.
+      <br />&nbsp;&nbsp;&nbsp;However, it is important to note that polynomial
+      regression can be sensitive to the choice of the degree of the
+      polynomial, and overfitting can occur if the degree is too high.
+      Therefore, it is important to select an appropriate degree of the
+      polynomial and to validate the model using appropriate evaluation
+      metrics.
+    </p>
+    <h4>Why to use polynomial regression?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Non-linearity</b>: Linear regression assumes a
+      linear relationship between the independent and dependent variables.
+      However, in many real-world situations, the relationship is non-linear.
+      Polynomial regression can capture non-linear relationships and provide a
+      better fit to the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ease of implementation</b>: Polynomial
-        regression is a simple and widely-used technique in machine learning.
-        There are many libraries and packages available in popular programming
-        languages such as Python and R that make it easy to implement polynomial
-        regression.
+      <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Polynomial regression allows
+      for greater flexibility in modeling complex relationships between
+      variables. By increasing the degree of the polynomial, you can add more
+      bends and curves to the fitted line.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Computational efficiency</b>: Polynomial
-        regression is computationally efficient and can handle large datasets.
-        It is a relatively fast algorithm compared to other non-linear models
-        such as neural networks.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Polynomial regression
+      models are often more interpretable than other non-linear models such as
+      neural networks or decision trees. The coefficients of the polynomial
+      can be used to understand the impact of the independent variables on the
+      dependent variable.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, polynomial regression is a useful tool
-        in machine learning when you need to model non-linear relationships
-        between variables. It can provide a flexible and interpretable model
-        that is easy to implement and computationally efficient.
-      </p>
-      <h4>Types:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Linear regression</b>: A linear regression model
-        uses a degree-1 polynomial to fit the data. It assumes that there is a
-        linear relationship between the independent and dependent variables. The
-        formula for a linear regression model is y = mx + b, where y is the
-        dependent variable, x is the independent variable, m is the slope, and b
-        is the intercept.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ease of implementation</b>: Polynomial
+      regression is a simple and widely-used technique in machine learning.
+      There are many libraries and packages available in popular programming
+      languages such as Python and R that make it easy to implement polynomial
+      regression.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Quadratic regression</b>: A quadratic
-        regression model uses a degree-2 polynomial to fit the data. It assumes
-        that the relationship between the independent and dependent variables is
-        parabolic. The formula for a quadratic regression model is y = ax^2 + bx
-        + c, where y is the dependent variable, x is the independent variable, a
-        is the coefficient of x^2, b is the coefficient of x, and c is the
-        intercept.
+      <br />&nbsp;&nbsp;&nbsp;<b>Computational efficiency</b>: Polynomial
+      regression is computationally efficient and can handle large datasets.
+      It is a relatively fast algorithm compared to other non-linear models
+      such as neural networks.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Cubic regression</b>: A cubic regression
-        model uses a degree-3 polynomial to fit the data. It assumes that the
-        relationship between the independent and dependent variables is cubic.
-        The formula for a cubic regression model is y = ax^3 + bx^2 + cx + d,
-        where y is the dependent variable, x is the independent variable, a is
-        the coefficient of x^3, b is the coefficient of x^2, c is the
-        coefficient of x, and d is the intercept.
+      <br />&nbsp;&nbsp;&nbsp;Overall, polynomial regression is a useful tool
+      in machine learning when you need to model non-linear relationships
+      between variables. It can provide a flexible and interpretable model
+      that is easy to implement and computationally efficient.
+    </p>
+    <h4>Types:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Linear regression</b>: A linear regression model
+      uses a degree-1 polynomial to fit the data. It assumes that there is a
+      linear relationship between the independent and dependent variables. The
+      formula for a linear regression model is y = mx + b, where y is the
+      dependent variable, x is the independent variable, m is the slope, and b
+      is the intercept.
 
-        <br />&nbsp;&nbsp;&nbsp;In general, the degree of the polynomial can be
-        increased to fit more complex relationships between the variables.
-        However, it is important to note that as the degree of the polynomial
-        increases, the model becomes more complex, and there is a greater risk
-        of overfitting the data. Therefore, it is important to choose the
-        appropriate degree of the polynomial and to use appropriate validation
-        techniques to ensure that the model is not overfitting the data.
-      </p>
-      <h4>Assumption:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Linearity</b>: The relationship between the
-        independent variable(s) and the dependent variable should be linear.
-        Polynomial regression assumes that this relationship can be modeled by a
-        polynomial function.
+      <br />&nbsp;&nbsp;&nbsp;<b>Quadratic regression</b>: A quadratic
+      regression model uses a degree-2 polynomial to fit the data. It assumes
+      that the relationship between the independent and dependent variables is
+      parabolic. The formula for a quadratic regression model is y = ax^2 + bx
+      + c, where y is the dependent variable, x is the independent variable, a
+      is the coefficient of x^2, b is the coefficient of x, and c is the
+      intercept.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: The observations in the
-        dataset should be independent of each other. This means that the value
-        of one observation should not be influenced by the value of another
-        observation.
+      <br />&nbsp;&nbsp;&nbsp;<b>Cubic regression</b>: A cubic regression
+      model uses a degree-3 polynomial to fit the data. It assumes that the
+      relationship between the independent and dependent variables is cubic.
+      The formula for a cubic regression model is y = ax^3 + bx^2 + cx + d,
+      where y is the dependent variable, x is the independent variable, a is
+      the coefficient of x^3, b is the coefficient of x^2, c is the
+      coefficient of x, and d is the intercept.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Homoscedasticity</b>: The variance of the
-        errors should be constant across all levels of the independent variable.
-        In other words, the spread of the residuals should be the same for all
-        values of the independent variable.
+      <br />&nbsp;&nbsp;&nbsp;In general, the degree of the polynomial can be
+      increased to fit more complex relationships between the variables.
+      However, it is important to note that as the degree of the polynomial
+      increases, the model becomes more complex, and there is a greater risk
+      of overfitting the data. Therefore, it is important to choose the
+      appropriate degree of the polynomial and to use appropriate validation
+      techniques to ensure that the model is not overfitting the data.
+    </p>
+    <h4>Assumption:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Linearity</b>: The relationship between the
+      independent variable(s) and the dependent variable should be linear.
+      Polynomial regression assumes that this relationship can be modeled by a
+      polynomial function.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Normality</b>: The errors should be normally
-        distributed. This means that the distribution of the residuals should be
-        approximately symmetrical and bell-shaped.
+      <br />&nbsp;&nbsp;&nbsp;<b>Independence</b>: The observations in the
+      dataset should be independent of each other. This means that the value
+      of one observation should not be influenced by the value of another
+      observation.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>No multicollinearity</b>: If there are
-        multiple independent variables in the model, they should not be highly
-        correlated with each other. This can lead to problems with the
-        interpretation of the coefficients.
+      <br />&nbsp;&nbsp;&nbsp;<b>Homoscedasticity</b>: The variance of the
+      errors should be constant across all levels of the independent variable.
+      In other words, the spread of the residuals should be the same for all
+      values of the independent variable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Independence of residuals</b>: The residuals
-        should be independent of the independent variable(s). In other words,
-        there should be no pattern in the residuals that is related to the
-        values of the independent variable(s).
+      <br />&nbsp;&nbsp;&nbsp;<b>Normality</b>: The errors should be normally
+      distributed. This means that the distribution of the residuals should be
+      approximately symmetrical and bell-shaped.
 
-        <br />&nbsp;&nbsp;&nbsp;It is important to note that these assumptions
-        are not always met in real-world data. Therefore, it is important to
-        check these assumptions before using polynomial regression and to use
-        appropriate techniques to address violations of the assumptions if
-        necessary.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Polynomial regression can fit a
-        wide range of non-linear relationships between the independent and
-        dependent variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>No multicollinearity</b>: If there are
+      multiple independent variables in the model, they should not be highly
+      correlated with each other. This can lead to problems with the
+      interpretation of the coefficients.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Polynomial regression
-        models are often more interpretable than other non-linear models such as
-        neural networks or decision trees. The coefficients of the polynomial
-        can be used to understand the impact of the independent variables on the
-        dependent variable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Independence of residuals</b>: The residuals
+      should be independent of the independent variable(s). In other words,
+      there should be no pattern in the residuals that is related to the
+      values of the independent variable(s).
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Computational efficiency</b>: Polynomial
-        regression is computationally efficient and can handle large datasets.
-        It is a relatively fast algorithm compared to other non-linear models
-        such as neural networks.
+      <br />&nbsp;&nbsp;&nbsp;It is important to note that these assumptions
+      are not always met in real-world data. Therefore, it is important to
+      check these assumptions before using polynomial regression and to use
+      appropriate techniques to address violations of the assumptions if
+      necessary.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Polynomial regression can fit a
+      wide range of non-linear relationships between the independent and
+      dependent variables.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ease of implementation</b>: Polynomial
-        regression is a simple and widely-used technique in machine learning.
-        There are many libraries and packages available in popular programming
-        languages such as Python and R that make it easy to implement polynomial
-        regression.
-      </p>
-      <h4>Disadvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Overfitting</b>: Polynomial regression can be prone
-        to overfitting, particularly if the degree of the polynomial is too
-        high. This can lead to poor generalization performance on new data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Interpretability</b>: Polynomial regression
+      models are often more interpretable than other non-linear models such as
+      neural networks or decision trees. The coefficients of the polynomial
+      can be used to understand the impact of the independent variables on the
+      dependent variable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to outliers</b>: Polynomial
-        regression can be sensitive to outliers in the data, particularly if the
-        degree of the polynomial is high. Outliers can have a large impact on
-        the fitted curve, leading to poor performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Computational efficiency</b>: Polynomial
+      regression is computationally efficient and can handle large datasets.
+      It is a relatively fast algorithm compared to other non-linear models
+      such as neural networks.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Extrapolation</b>: Polynomial regression is
-        not well-suited for extrapolation, which is the process of predicting
-        values outside the range of the training data. The fitted curve may not
-        be reliable outside the range of the training data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ease of implementation</b>: Polynomial
+      regression is a simple and widely-used technique in machine learning.
+      There are many libraries and packages available in popular programming
+      languages such as Python and R that make it easy to implement polynomial
+      regression.
+    </p>
+    <h4>Disadvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Overfitting</b>: Polynomial regression can be prone
+      to overfitting, particularly if the degree of the polynomial is too
+      high. This can lead to poor generalization performance on new data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model selection</b>: Selecting the
-        appropriate degree of the polynomial can be challenging. A model with
-        too low a degree may underfit the data, while a model with too high a
-        degree may overfit the data.
-      </p>
-      <h4>How polynomial regression works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Data preprocessing</b>: Collect the data and
-        preprocess it by cleaning, normalizing, and standardizing it. Split the
-        data into training and test sets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to outliers</b>: Polynomial
+      regression can be sensitive to outliers in the data, particularly if the
+      degree of the polynomial is high. Outliers can have a large impact on
+      the fitted curve, leading to poor performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature selection</b>: Select the independent
-        variable(s) that have a strong correlation with the dependent variable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Extrapolation</b>: Polynomial regression is
+      not well-suited for extrapolation, which is the process of predicting
+      values outside the range of the training data. The fitted curve may not
+      be reliable outside the range of the training data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Choose the degree of the polynomial</b>:
-        Decide on the degree of the polynomial that you want to fit to the data.
-        A degree of 1 is equivalent to linear regression, and higher degrees
-        allow for more complex models with more curves and bends.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model selection</b>: Selecting the
+      appropriate degree of the polynomial can be challenging. A model with
+      too low a degree may underfit the data, while a model with too high a
+      degree may overfit the data.
+    </p>
+    <h4>How polynomial regression works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Data preprocessing</b>: Collect the data and
+      preprocess it by cleaning, normalizing, and standardizing it. Split the
+      data into training and test sets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Fit the polynomial model</b>: Use the
-        training data to fit the polynomial regression model. This involves
-        using a regression algorithm to estimate the coefficients of the
-        polynomial.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature selection</b>: Select the independent
+      variable(s) that have a strong correlation with the dependent variable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Evaluate the model</b>: Use the test data to
-        evaluate the performance of the model. Calculate the evaluation metrics
-        such as mean squared error, R-squared value, and root mean squared error
-        to assess how well the model is performing.
+      <br />&nbsp;&nbsp;&nbsp;<b>Choose the degree of the polynomial</b>:
+      Decide on the degree of the polynomial that you want to fit to the data.
+      A degree of 1 is equivalent to linear regression, and higher degrees
+      allow for more complex models with more curves and bends.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Adjust the model</b>: If the model is not
-        performing well, adjust the degree of the polynomial or try a different
-        regression algorithm. You can also consider adding or removing features.
+      <br />&nbsp;&nbsp;&nbsp;<b>Fit the polynomial model</b>: Use the
+      training data to fit the polynomial regression model. This involves
+      using a regression algorithm to estimate the coefficients of the
+      polynomial.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Use the model</b>: Once you are satisfied
-        with the performance of the model, you can use it to make predictions on
-        new data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Evaluate the model</b>: Use the test data to
+      evaluate the performance of the model. Calculate the evaluation metrics
+      such as mean squared error, R-squared value, and root mean squared error
+      to assess how well the model is performing.
 
-        <br />&nbsp;&nbsp;&nbsp;It is important to note that polynomial
-        regression can suffer from overfitting, especially with high degrees of
-        polynomial. Therefore, it is important to use regularization techniques
-        such as L1, L2, or elastic net regularization to prevent overfitting.
-      </p>
-      <h4>Evaluation metrics</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: MSE is a widely-used
-        metric for evaluating regression models. It measures the average squared
-        difference between the predicted and actual values. A lower MSE
-        indicates better model performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Adjust the model</b>: If the model is not
+      performing well, adjust the degree of the polynomial or try a different
+      regression algorithm. You can also consider adding or removing features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: RMSE is
-        the square root of the MSE and is often used to interpret the error in
-        the same units as the dependent variable. A lower RMSE indicates better
-        model performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Use the model</b>: Once you are satisfied
+      with the performance of the model, you can use it to make predictions on
+      new data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R2)</b>: R2 is a statistical
-        measure that represents the proportion of the variance in the dependent
-        variable that is explained by the independent variables in the model. It
-        ranges from 0 to 1, with a higher value indicating a better fit.
+      <br />&nbsp;&nbsp;&nbsp;It is important to note that polynomial
+      regression can suffer from overfitting, especially with high degrees of
+      polynomial. Therefore, it is important to use regularization techniques
+      such as L1, L2, or elastic net regularization to prevent overfitting.
+    </p>
+    <h4>Evaluation metrics</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Mean Squared Error (MSE)</b>: MSE is a widely-used
+      metric for evaluating regression models. It measures the average squared
+      difference between the predicted and actual values. A lower MSE
+      indicates better model performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Adjusted R-squared</b>: Adjusted R-squared is
-        similar to R-squared, but it takes into account the number of
-        independent variables in the model. It penalizes overfitting and is a
-        better measure of model performance for models with multiple independent
-        variables.
+      <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: RMSE is
+      the square root of the MSE and is often used to interpret the error in
+      the same units as the dependent variable. A lower RMSE indicates better
+      model performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: MAE is the
-        average absolute difference between the predicted and actual values. It
-        is less sensitive to outliers than MSE and RMSE.
+      <br />&nbsp;&nbsp;&nbsp;<b>R-squared (R2)</b>: R2 is a statistical
+      measure that represents the proportion of the variance in the dependent
+      variable that is explained by the independent variables in the model. It
+      ranges from 0 to 1, with a higher value indicating a better fit.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Percentage Error (MAPE)</b>:
-        MAPE is the average percentage difference between the predicted and
-        actual values. It is a relative measure of error and is useful for
-        comparing the performance of models with different scales.
+      <br />&nbsp;&nbsp;&nbsp;<b>Adjusted R-squared</b>: Adjusted R-squared is
+      similar to R-squared, but it takes into account the number of
+      independent variables in the model. It penalizes overfitting and is a
+      better measure of model performance for models with multiple independent
+      variables.
 
-        <br />&nbsp;&nbsp;&nbsp;It is important to select the appropriate
-        evaluation metric based on the problem at hand and the specific
-        requirements of the model. For example, MSE and RMSE are more useful
-        when the focus is on minimizing the error, while R-squared is more
-        useful when the focus is on explaining the variance in the dependent
-        variable.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: MAE is the
+      average absolute difference between the predicted and actual values. It
+      is less sensitive to outliers than MSE and RMSE.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Percentage Error (MAPE)</b>:
+      MAPE is the average percentage difference between the predicted and
+      actual values. It is a relative measure of error and is useful for
+      comparing the performance of models with different scales.
+
+      <br />&nbsp;&nbsp;&nbsp;It is important to select the appropriate
+      evaluation metric based on the problem at hand and the specific
+      requirements of the model. For example, MSE and RMSE are more useful
+      when the focus is on minimizing the error, while R-squared is more
+      useful when the focus is on explaining the variance in the dependent
+      variable.
+    </p>
+  </div>
+</body>
+
 </html>

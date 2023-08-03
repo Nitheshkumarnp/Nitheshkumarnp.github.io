@@ -1,311 +1,296 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
 
-  <body>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>Bagging</h4>
-      <h4>What is Bagging?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Bagging (short for bootstrap aggregating) is a
-        technique used to improve the performance and robustness of predictive
-        models, especially in the context of ensemble learning. It involves
-        creating multiple subsets of the original dataset through a process
-        called bootstrapping, training a separate model on each subset, and
-        combining the predictions of these models to make the final prediction.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;The key idea behind bagging is that by training
-        multiple models on different subsets of the data and combining their
-        predictions, the overall prediction tends to be more accurate and
-        stable. It helps in reducing the variance of the model, which can be
-        particularly beneficial when dealing with complex or noisy datasets.
-        Additionally, bagging can also provide insights into the variability of
-        the predictions and help estimate prediction uncertainty.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>Bagging</h4>
+    <h4>What is Bagging?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Bagging (short for bootstrap aggregating) is a
+      technique used to improve the performance and robustness of predictive
+      models, especially in the context of ensemble learning. It involves
+      creating multiple subsets of the original dataset through a process
+      called bootstrapping, training a separate model on each subset, and
+      combining the predictions of these models to make the final prediction.
 
-        <br />&nbsp;&nbsp;&nbsp;Bagging is often used in conjunction with
-        decision trees, resulting in an ensemble method known as random forests.
-        However, it can be applied to other types of models as well. The
-        individual models in the bagging ensemble are typically trained
-        independently and can be parallelized, making bagging a useful technique
-        for improving model performance and scalability.
-      </p>
-      <h4>When to use Bagging?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>High Variance Models</b>: Bagging is particularly
-        useful when dealing with models that have high variance, meaning they
-        are sensitive to the fluctuations in the training data. Examples include
-        decision trees and neural networks. Bagging helps in reducing the
-        variance by training multiple models on different subsets of the data
-        and averaging their predictions.
+      <br />&nbsp;&nbsp;&nbsp;The key idea behind bagging is that by training
+      multiple models on different subsets of the data and combining their
+      predictions, the overall prediction tends to be more accurate and
+      stable. It helps in reducing the variance of the model, which can be
+      particularly beneficial when dealing with complex or noisy datasets.
+      Additionally, bagging can also provide insights into the variability of
+      the predictions and help estimate prediction uncertainty.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Noisy Data</b>: When the dataset contains
-        noise or outliers, individual models can be affected by these anomalies
-        and produce less accurate predictions. By using bagging, the impact of
-        such outliers can be reduced, as different models are trained on
-        different subsets of the data and are less likely to be affected by the
-        same outliers.
+      <br />&nbsp;&nbsp;&nbsp;Bagging is often used in conjunction with
+      decision trees, resulting in an ensemble method known as random forests.
+      However, it can be applied to other types of models as well. The
+      individual models in the bagging ensemble are typically trained
+      independently and can be parallelized, making bagging a useful technique
+      for improving model performance and scalability.
+    </p>
+    <h4>When to use Bagging?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>High Variance Models</b>: Bagging is particularly
+      useful when dealing with models that have high variance, meaning they
+      are sensitive to the fluctuations in the training data. Examples include
+      decision trees and neural networks. Bagging helps in reducing the
+      variance by training multiple models on different subsets of the data
+      and averaging their predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Large and Complex Datasets</b>: Bagging can
-        improve the scalability and efficiency of model training on large
-        datasets. Since each model is trained independently on a bootstrap
-        sample, the process can be easily parallelized, allowing for faster
-        training times.
+      <br />&nbsp;&nbsp;&nbsp;<b>Noisy Data</b>: When the dataset contains
+      noise or outliers, individual models can be affected by these anomalies
+      and produce less accurate predictions. By using bagging, the impact of
+      such outliers can be reduced, as different models are trained on
+      different subsets of the data and are less likely to be affected by the
+      same outliers.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Unstable Models</b>: Some models are
-        inherently unstable, meaning small changes in the training data can lead
-        to significant variations in the resulting model. Bagging can stabilize
-        such models by averaging the predictions of multiple models, reducing
-        the impact of individual instabilities.
+      <br />&nbsp;&nbsp;&nbsp;<b>Large and Complex Datasets</b>: Bagging can
+      improve the scalability and efficiency of model training on large
+      datasets. Since each model is trained independently on a bootstrap
+      sample, the process can be easily parallelized, allowing for faster
+      training times.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Estimating Prediction Uncertainty</b>: In
-        addition to improving prediction accuracy, bagging can also provide
-        insights into the variability of predictions and help estimate
-        prediction uncertainty. By examining the variation in predictions across
-        the ensemble of models, one can gain a sense of the confidence or
-        uncertainty associated with the predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Unstable Models</b>: Some models are
+      inherently unstable, meaning small changes in the training data can lead
+      to significant variations in the resulting model. Bagging can stabilize
+      such models by averaging the predictions of multiple models, reducing
+      the impact of individual instabilities.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that bagging is not
-        always necessary or beneficial for every machine learning problem. It
-        depends on the characteristics of the dataset, the complexity of the
-        model, and the goals of the analysis. It's always a good practice to
-        experiment with different techniques, including bagging, to assess their
-        impact on model performance and choose the approach that best suits the
-        problem at hand.
-      </p>
-      <h4>Why to use Bagging?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved Prediction Accuracy</b>: Bagging can help
-        improve the overall prediction accuracy of the model. By training
-        multiple models on different subsets of the data and combining their
-        predictions, bagging reduces the impact of individual models' errors and
-        biases. The averaging or voting mechanism used to combine the
-        predictions often leads to more robust and accurate predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Estimating Prediction Uncertainty</b>: In
+      addition to improving prediction accuracy, bagging can also provide
+      insights into the variability of predictions and help estimate
+      prediction uncertainty. By examining the variation in predictions across
+      the ensemble of models, one can gain a sense of the confidence or
+      uncertainty associated with the predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Reduced Overfitting</b>: Overfitting occurs
-        when a model learns to perform well on the training data but fails to
-        generalize to unseen data. Bagging can mitigate overfitting by
-        introducing randomness through bootstrapping and creating diverse
-        subsets of the data. Each model is trained on a slightly different
-        subset, leading to different perspectives and reducing the tendency to
-        overfit the training data.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that bagging is not
+      always necessary or beneficial for every machine learning problem. It
+      depends on the characteristics of the dataset, the complexity of the
+      model, and the goals of the analysis. It's always a good practice to
+      experiment with different techniques, including bagging, to assess their
+      impact on model performance and choose the approach that best suits the
+      problem at hand.
+    </p>
+    <h4>Why to use Bagging?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved Prediction Accuracy</b>: Bagging can help
+      improve the overall prediction accuracy of the model. By training
+      multiple models on different subsets of the data and combining their
+      predictions, bagging reduces the impact of individual models' errors and
+      biases. The averaging or voting mechanism used to combine the
+      predictions often leads to more robust and accurate predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Robustness to Noise and Outliers</b>: Bagging
-        helps to improve the model's robustness to noise and outliers in the
-        dataset. By training multiple models on different subsets of the data,
-        the impact of individual noisy or outlier data points is reduced.
-        Outliers are less likely to have a strong influence on the final
-        prediction when multiple models' predictions are combined.
+      <br />&nbsp;&nbsp;&nbsp;<b>Reduced Overfitting</b>: Overfitting occurs
+      when a model learns to perform well on the training data but fails to
+      generalize to unseen data. Bagging can mitigate overfitting by
+      introducing randomness through bootstrapping and creating diverse
+      subsets of the data. Each model is trained on a slightly different
+      subset, leading to different perspectives and reducing the tendency to
+      overfit the training data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Stability and Consistency</b>: Bagging
-        enhances the stability and consistency of the model's predictions. As
-        the model is trained on multiple bootstrap samples, the predictions are
-        averaged or combined, resulting in a more stable and reliable
-        prediction. Bagging reduces the variability of the model's output,
-        providing more consistent results.
+      <br />&nbsp;&nbsp;&nbsp;<b>Robustness to Noise and Outliers</b>: Bagging
+      helps to improve the model's robustness to noise and outliers in the
+      dataset. By training multiple models on different subsets of the data,
+      the impact of individual noisy or outlier data points is reduced.
+      Outliers are less likely to have a strong influence on the final
+      prediction when multiple models' predictions are combined.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Scalability and Parallelization</b>: Bagging
-        can be easily parallelized, making it suitable for large datasets or
-        computationally intensive models. Each model in the ensemble can be
-        trained independently on different subsets of the data, allowing for
-        efficient utilization of computational resources and faster training
-        times.
+      <br />&nbsp;&nbsp;&nbsp;<b>Stability and Consistency</b>: Bagging
+      enhances the stability and consistency of the model's predictions. As
+      the model is trained on multiple bootstrap samples, the predictions are
+      averaged or combined, resulting in a more stable and reliable
+      prediction. Bagging reduces the variability of the model's output,
+      providing more consistent results.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Estimating Prediction Uncertainty</b>:
-        Bagging provides a way to estimate the uncertainty associated with
-        predictions. By examining the variation in predictions across the
-        ensemble of models, it is possible to gain insights into the confidence
-        or uncertainty associated with the predictions. This can be valuable in
-        decision-making scenarios where understanding the uncertainty of
-        predictions is important.
+      <br />&nbsp;&nbsp;&nbsp;<b>Scalability and Parallelization</b>: Bagging
+      can be easily parallelized, making it suitable for large datasets or
+      computationally intensive models. Each model in the ensemble can be
+      trained independently on different subsets of the data, allowing for
+      efficient utilization of computational resources and faster training
+      times.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, bagging is used in machine learning to
-        improve the accuracy, robustness, stability, and scalability of models,
-        particularly when dealing with complex datasets, noisy data, or unstable
-        models. By leveraging the power of ensemble learning, bagging helps to
-        mitigate overfitting and reduce the impact of individual models'
-        weaknesses, resulting in more reliable and accurate predictions.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Independence</b>: The models in the bagging
-        ensemble should be trained on independent subsets of the data. This
-        assumption ensures that the models capture different aspects of the
-        dataset and provide diverse predictions. It is achieved through the
-        process of bootstrapping, where each subset is created by sampling the
-        data with replacement.
+      <br />&nbsp;&nbsp;&nbsp;<b>Estimating Prediction Uncertainty</b>:
+      Bagging provides a way to estimate the uncertainty associated with
+      predictions. By examining the variation in predictions across the
+      ensemble of models, it is possible to gain insights into the confidence
+      or uncertainty associated with the predictions. This can be valuable in
+      decision-making scenarios where understanding the uncertainty of
+      predictions is important.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Identically Distributed Data</b>: Bagging
-        assumes that the training data and the underlying data distribution are
-        stationary and identically distributed (i.i.d). This assumption implies
-        that each subset created through bootstrapping represents the same data
-        distribution and is reflective of the overall population. By training
-        models on multiple subsets, bagging aims to improve the overall model's
-        generalization performance.
+      <br />&nbsp;&nbsp;&nbsp;Overall, bagging is used in machine learning to
+      improve the accuracy, robustness, stability, and scalability of models,
+      particularly when dealing with complex datasets, noisy data, or unstable
+      models. By leveraging the power of ensemble learning, bagging helps to
+      mitigate overfitting and reduce the impact of individual models'
+      weaknesses, resulting in more reliable and accurate predictions.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Independence</b>: The models in the bagging
+      ensemble should be trained on independent subsets of the data. This
+      assumption ensures that the models capture different aspects of the
+      dataset and provide diverse predictions. It is achieved through the
+      process of bootstrapping, where each subset is created by sampling the
+      data with replacement.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Unbiased Base Models</b>: Bagging assumes
-        that the base models (learners) used in the ensemble are unbiased. An
-        unbiased model refers to a model that, on average, produces predictions
-        that are close to the true values. By using multiple unbiased models,
-        bagging aims to reduce the overall bias and improve the accuracy of the
-        ensemble predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Identically Distributed Data</b>: Bagging
+      assumes that the training data and the underlying data distribution are
+      stationary and identically distributed (i.i.d). This assumption implies
+      that each subset created through bootstrapping represents the same data
+      distribution and is reflective of the overall population. By training
+      models on multiple subsets, bagging aims to improve the overall model's
+      generalization performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Base Models with Low Covariance</b>: Bagging
-        assumes that the base models have low covariance, meaning that they make
-        predictions that are different from each other. If the base models are
-        highly correlated, the benefits of averaging or combining their
-        predictions may diminish. Therefore, using diverse base models, such as
-        models trained on different subsets of data or with different
-        configurations, is important for effective bagging.
+      <br />&nbsp;&nbsp;&nbsp;<b>Unbiased Base Models</b>: Bagging assumes
+      that the base models (learners) used in the ensemble are unbiased. An
+      unbiased model refers to a model that, on average, produces predictions
+      that are close to the true values. By using multiple unbiased models,
+      bagging aims to reduce the overall bias and improve the accuracy of the
+      ensemble predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;It is worth noting that while these assumptions
-        are desirable for bagging, they may not always be strictly met in
-        practice. In some cases, violating these assumptions may still lead to
-        reasonable performance improvements. However, for optimal results and
-        reliable predictions, it is generally beneficial to ensure that these
-        assumptions are reasonably satisfied when using bagging.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved Prediction Accuracy</b>: Bagging often
-        leads to improved prediction accuracy compared to using a single model.
-        By combining predictions from multiple models trained on different
-        subsets of the data, bagging reduces the variance and helps to capture
-        different aspects of the underlying data distribution. The ensemble
-        predictions tend to be more robust and accurate.
+      <br />&nbsp;&nbsp;&nbsp;<b>Base Models with Low Covariance</b>: Bagging
+      assumes that the base models have low covariance, meaning that they make
+      predictions that are different from each other. If the base models are
+      highly correlated, the benefits of averaging or combining their
+      predictions may diminish. Therefore, using diverse base models, such as
+      models trained on different subsets of data or with different
+      configurations, is important for effective bagging.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Reduced Overfitting</b>: Bagging reduces the
-        risk of overfitting by introducing randomness through bootstrapping. By
-        training models on different subsets of the data, bagging decreases the
-        impact of outliers and reduces the tendency of individual models to
-        memorize noise or peculiarities in the training data. This
-        regularization effect leads to improved generalization on unseen data.
+      <br />&nbsp;&nbsp;&nbsp;It is worth noting that while these assumptions
+      are desirable for bagging, they may not always be strictly met in
+      practice. In some cases, violating these assumptions may still lead to
+      reasonable performance improvements. However, for optimal results and
+      reliable predictions, it is generally beneficial to ensure that these
+      assumptions are reasonably satisfied when using bagging.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved Prediction Accuracy</b>: Bagging often
+      leads to improved prediction accuracy compared to using a single model.
+      By combining predictions from multiple models trained on different
+      subsets of the data, bagging reduces the variance and helps to capture
+      different aspects of the underlying data distribution. The ensemble
+      predictions tend to be more robust and accurate.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Increased Robustness</b>: Bagging improves
-        the model's robustness to noise and outliers in the dataset. By training
-        multiple models on different subsets, the impact of individual noisy or
-        outlier data points is reduced. The ensemble predictions are less likely
-        to be influenced by individual instances that do not represent the
-        underlying patterns.
+      <br />&nbsp;&nbsp;&nbsp;<b>Reduced Overfitting</b>: Bagging reduces the
+      risk of overfitting by introducing randomness through bootstrapping. By
+      training models on different subsets of the data, bagging decreases the
+      impact of outliers and reduces the tendency of individual models to
+      memorize noise or peculiarities in the training data. This
+      regularization effect leads to improved generalization on unseen data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Estimation of Prediction Uncertainty</b>:
-        Bagging provides a way to estimate the uncertainty associated with
-        predictions. By examining the variation in predictions across the
-        ensemble of models, it is possible to gauge the confidence or
-        uncertainty of the predictions. This information is valuable in
-        decision-making scenarios where understanding prediction uncertainty is
-        crucial.
+      <br />&nbsp;&nbsp;&nbsp;<b>Increased Robustness</b>: Bagging improves
+      the model's robustness to noise and outliers in the dataset. By training
+      multiple models on different subsets, the impact of individual noisy or
+      outlier data points is reduced. The ensemble predictions are less likely
+      to be influenced by individual instances that do not represent the
+      underlying patterns.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Scalability and Parallelization</b>: Bagging
-        can be parallelized, making it suitable for large datasets or
-        computationally intensive models. Each model in the ensemble can be
-        trained independently on different subsets of the data, allowing for
-        efficient utilization of computational resources and faster training
-        times.
-      </p>
-      <h4>Disadvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Increased Computational Complexity</b>: Bagging
-        requires training multiple models on different subsets of the data,
-        which increases the computational complexity compared to training a
-        single model. The training time and memory requirements are multiplied
-        by the number of models in the ensemble. However, this drawback can be
-        mitigated by parallelizing the training process.
+      <br />&nbsp;&nbsp;&nbsp;<b>Estimation of Prediction Uncertainty</b>:
+      Bagging provides a way to estimate the uncertainty associated with
+      predictions. By examining the variation in predictions across the
+      ensemble of models, it is possible to gauge the confidence or
+      uncertainty of the predictions. This information is valuable in
+      decision-making scenarios where understanding prediction uncertainty is
+      crucial.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Lack of Interpretability</b>: The predictions
-        from a bagging ensemble are the result of combining multiple models,
-        making it less interpretable compared to a single model. It can be
-        challenging to understand the contributions of individual models or the
-        specific features driving the predictions. If interpretability is a
-        priority, using a single model may be more suitable.
+      <br />&nbsp;&nbsp;&nbsp;<b>Scalability and Parallelization</b>: Bagging
+      can be parallelized, making it suitable for large datasets or
+      computationally intensive models. Each model in the ensemble can be
+      trained independently on different subsets of the data, allowing for
+      efficient utilization of computational resources and faster training
+      times.
+    </p>
+    <h4>Disadvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Increased Computational Complexity</b>: Bagging
+      requires training multiple models on different subsets of the data,
+      which increases the computational complexity compared to training a
+      single model. The training time and memory requirements are multiplied
+      by the number of models in the ensemble. However, this drawback can be
+      mitigated by parallelizing the training process.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Redundant Information</b>: In some cases,
-        bagging may introduce redundant information if the base models are
-        highly correlated. If the base models are similar in their structure or
-        training approach, the ensemble may not capture diverse perspectives,
-        limiting the potential benefits of bagging. Ensuring diversity among
-        base models is crucial to maximize the advantages of bagging.
+      <br />&nbsp;&nbsp;&nbsp;<b>Lack of Interpretability</b>: The predictions
+      from a bagging ensemble are the result of combining multiple models,
+      making it less interpretable compared to a single model. It can be
+      challenging to understand the contributions of individual models or the
+      specific features driving the predictions. If interpretability is a
+      priority, using a single model may be more suitable.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Increased Model Complexity</b>: Bagging can
-        result in a more complex model ensemble compared to using a single
-        model. The ensemble may require more memory and storage to store
-        multiple models and their associated predictions. This additional
-        complexity may be a consideration in resource-constrained environments.
-      </p>
-      <h4>How Bagging works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Bagging (bootstrap aggregating) is a technique used in
-        machine learning to improve the performance and robustness of predictive
-        models. Here's a step-by-step explanation of how bagging works:
+      <br />&nbsp;&nbsp;&nbsp;<b>Redundant Information</b>: In some cases,
+      bagging may introduce redundant information if the base models are
+      highly correlated. If the base models are similar in their structure or
+      training approach, the ensemble may not capture diverse perspectives,
+      limiting the potential benefits of bagging. Ensuring diversity among
+      base models is crucial to maximize the advantages of bagging.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Data Sampling</b>: The process starts by
-        creating multiple random subsets of the original training data. Each
-        subset, called a bootstrap sample, is created by randomly sampling the
-        training data with replacement. As a result, some instances may be
-        repeated in a subset, while others may be left out.
+      <br />&nbsp;&nbsp;&nbsp;<b>Increased Model Complexity</b>: Bagging can
+      result in a more complex model ensemble compared to using a single
+      model. The ensemble may require more memory and storage to store
+      multiple models and their associated predictions. This additional
+      complexity may be a consideration in resource-constrained environments.
+    </p>
+    <h4>How Bagging works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Bagging (bootstrap aggregating) is a technique used in
+      machine learning to improve the performance and robustness of predictive
+      models. Here's a step-by-step explanation of how bagging works:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model Training</b>: For each bootstrap
-        sample, a separate model is trained on the corresponding subset of the
-        data. The type of model used can vary, but popular choices include
-        decision trees, random forests, or neural networks. Each model is
-        trained independently of the others and is unaware of the other models
-        in the ensemble.
+      <br />&nbsp;&nbsp;&nbsp;<b>Data Sampling</b>: The process starts by
+      creating multiple random subsets of the original training data. Each
+      subset, called a bootstrap sample, is created by randomly sampling the
+      training data with replacement. As a result, some instances may be
+      repeated in a subset, while others may be left out.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Prediction Combination</b>: Once all the
-        individual models are trained, they are used to make predictions on new,
-        unseen data. For classification tasks, the predictions of the models are
-        often combined through majority voting, where the most frequent class
-        label among the models is selected as the final prediction. For
-        regression tasks, the predictions are typically averaged to obtain the
-        final prediction.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model Training</b>: For each bootstrap
+      sample, a separate model is trained on the corresponding subset of the
+      data. The type of model used can vary, but popular choices include
+      decision trees, random forests, or neural networks. Each model is
+      trained independently of the others and is unaware of the other models
+      in the ensemble.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Aggregating Predictions</b>: The predictions
-        from the individual models are aggregated to obtain the final
-        prediction. The aggregation step can vary depending on the problem and
-        the type of model used. It can involve averaging, voting, or using more
-        advanced techniques like weighted averaging or stacking.
+      <br />&nbsp;&nbsp;&nbsp;<b>Prediction Combination</b>: Once all the
+      individual models are trained, they are used to make predictions on new,
+      unseen data. For classification tasks, the predictions of the models are
+      often combined through majority voting, where the most frequent class
+      label among the models is selected as the final prediction. For
+      regression tasks, the predictions are typically averaged to obtain the
+      final prediction.
 
-        <br />&nbsp;&nbsp;&nbsp;The key idea behind bagging is that by training
-        multiple models on different subsets of the data and combining their
-        predictions, the overall prediction tends to be more accurate and
-        robust. The ensemble of models helps to reduce the variance and improve
-        the generalization performance of the model.
+      <br />&nbsp;&nbsp;&nbsp;<b>Aggregating Predictions</b>: The predictions
+      from the individual models are aggregated to obtain the final
+      prediction. The aggregation step can vary depending on the problem and
+      the type of model used. It can involve averaging, voting, or using more
+      advanced techniques like weighted averaging or stacking.
 
-        <br />&nbsp;&nbsp;&nbsp;Bagging can be applied to various machine
-        learning algorithms, but it is commonly used with decision trees,
-        resulting in an ensemble method called random forests. The random forest
-        algorithm applies bagging to decision trees, where each tree is trained
-        on a bootstrap sample and the final prediction is obtained through
-        averaging or voting of the individual tree predictions.
+      <br />&nbsp;&nbsp;&nbsp;The key idea behind bagging is that by training
+      multiple models on different subsets of the data and combining their
+      predictions, the overall prediction tends to be more accurate and
+      robust. The ensemble of models helps to reduce the variance and improve
+      the generalization performance of the model.
 
-        <br />&nbsp;&nbsp;&nbsp;Bagging provides several advantages, such as
-        reducing overfitting, improving prediction accuracy, and increasing
-        model robustness. It also enables the estimation of prediction
-        uncertainty and can be parallelized for efficient computation.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;Bagging can be applied to various machine
+      learning algorithms, but it is commonly used with decision trees,
+      resulting in an ensemble method called random forests. The random forest
+      algorithm applies bagging to decision trees, where each tree is trained
+      on a bootstrap sample and the final prediction is obtained through
+      averaging or voting of the individual tree predictions.
+
+      <br />&nbsp;&nbsp;&nbsp;Bagging provides several advantages, such as
+      reducing overfitting, improving prediction accuracy, and increasing
+      model robustness. It also enables the estimation of prediction
+      uncertainty and can be parallelized for efficient computation.
+    </p>
+  </div>
+</body>
+
 </html>

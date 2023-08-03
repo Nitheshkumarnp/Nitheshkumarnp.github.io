@@ -1,386 +1,371 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>Gradient Descent</h4>
-      <h4>What is Gradient Descent?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Gradient descent is an optimization algorithm commonly
-        used in machine learning to minimize the cost or loss function of a
-        model. It is an iterative algorithm that adjusts the parameters of the
-        model by taking steps proportional to the negative gradient of the cost
-        function with respect to those parameters.
 
-        <br />&nbsp;&nbsp;&nbsp;The basic idea behind gradient descent is to
-        find the minimum of a function by iteratively updating the parameters in
-        the direction of steepest descent. In the context of machine learning,
-        the goal is to minimize the difference between the predicted output of
-        the model and the actual target output.
-      </p>
-      <h4>When to use Gradient Descent?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Training models with large datasets</b>: When
-        dealing with a large dataset, computing the cost function and its
-        gradient using the entire dataset can be computationally expensive.
-        Gradient descent algorithms, such as stochastic gradient descent (SGD)
-        or mini-batch gradient descent, enable efficient parameter updates by
-        using a subset of the data or individual samples at each iteration.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Non-linear models</b>: Gradient descent can
-        be used to optimize non-linear models such as neural networks, where the
-        relationship between the inputs and outputs is complex and may not have
-        a closed-form solution. By iteratively updating the model's parameters
-        using gradient descent, these models can learn intricate patterns and
-        relationships in the data.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>Gradient Descent</h4>
+    <h4>What is Gradient Descent?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Gradient descent is an optimization algorithm commonly
+      used in machine learning to minimize the cost or loss function of a
+      model. It is an iterative algorithm that adjusts the parameters of the
+      model by taking steps proportional to the negative gradient of the cost
+      function with respect to those parameters.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Convex optimization problems</b>: Gradient
-        descent is particularly effective in convex optimization problems, where
-        the cost function has a single global minimum. In such cases, gradient
-        descent is guaranteed to converge to the optimal solution. Linear
-        regression and logistic regression are examples of convex optimization
-        problems where gradient descent is commonly used.
+      <br />&nbsp;&nbsp;&nbsp;The basic idea behind gradient descent is to
+      find the minimum of a function by iteratively updating the parameters in
+      the direction of steepest descent. In the context of machine learning,
+      the goal is to minimize the difference between the predicted output of
+      the model and the actual target output.
+    </p>
+    <h4>When to use Gradient Descent?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Training models with large datasets</b>: When
+      dealing with a large dataset, computing the cost function and its
+      gradient using the entire dataset can be computationally expensive.
+      Gradient descent algorithms, such as stochastic gradient descent (SGD)
+      or mini-batch gradient descent, enable efficient parameter updates by
+      using a subset of the data or individual samples at each iteration.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularized models</b>: When training
-        regularized models, such as L1 or L2 regularization, gradient descent
-        can be used to find the optimal values for the regularization
-        parameters. Regularization helps prevent overfitting by adding penalty
-        terms to the cost function, and gradient descent facilitates finding the
-        best trade-off between fitting the data and minimizing the
-        regularization terms.
+      <br />&nbsp;&nbsp;&nbsp;<b>Non-linear models</b>: Gradient descent can
+      be used to optimize non-linear models such as neural networks, where the
+      relationship between the inputs and outputs is complex and may not have
+      a closed-form solution. By iteratively updating the model's parameters
+      using gradient descent, these models can learn intricate patterns and
+      relationships in the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Deep learning</b>: Gradient descent,
-        especially stochastic gradient descent (SGD) and its variants, is widely
-        used in training deep neural networks. Deep learning models often have a
-        large number of parameters, and the computational efficiency of gradient
-        descent makes it feasible to optimize these models on large-scale
-        datasets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Convex optimization problems</b>: Gradient
+      descent is particularly effective in convex optimization problems, where
+      the cost function has a single global minimum. In such cases, gradient
+      descent is guaranteed to converge to the optimal solution. Linear
+      regression and logistic regression are examples of convex optimization
+      problems where gradient descent is commonly used.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while gradient
-        descent is a powerful optimization algorithm, it may have certain
-        limitations. For instance, it can get trapped in local minima or saddle
-        points, where the gradient becomes close to zero, leading to slow
-        convergence or suboptimal solutions. Various techniques, such as
-        learning rate schedules, momentum, and adaptive learning rates, are
-        employed to address these challenges and improve the performance of
-        gradient descent.
-      </p>
-      <h4>Why to use Gradient Descent?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Optimization</b>: The primary purpose of gradient
-        descent is to optimize the parameters of a machine learning model. By
-        minimizing a cost function through gradient descent, we can find the
-        optimal set of parameter values that result in the best fit to the
-        training data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularized models</b>: When training
+      regularized models, such as L1 or L2 regularization, gradient descent
+      can be used to find the optimal values for the regularization
+      parameters. Regularization helps prevent overfitting by adding penalty
+      terms to the cost function, and gradient descent facilitates finding the
+      best trade-off between fitting the data and minimizing the
+      regularization terms.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Gradient descent can be
-        applied to a wide range of machine learning models, including linear
-        regression, logistic regression, neural networks, and deep learning
-        architectures. It is a versatile optimization algorithm that can handle
-        different types of models and cost functions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Deep learning</b>: Gradient descent,
+      especially stochastic gradient descent (SGD) and its variants, is widely
+      used in training deep neural networks. Deep learning models often have a
+      large number of parameters, and the computational efficiency of gradient
+      descent makes it feasible to optimize these models on large-scale
+      datasets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Efficiency</b>: Gradient descent algorithms,
-        such as stochastic gradient descent (SGD) and mini-batch gradient
-        descent, offer computational efficiency. Instead of computing the
-        gradients using the entire dataset, these algorithms use smaller subsets
-        or individual samples to update the parameters. This makes it feasible
-        to train models on large-scale datasets without requiring excessive
-        computational resources.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while gradient
+      descent is a powerful optimization algorithm, it may have certain
+      limitations. For instance, it can get trapped in local minima or saddle
+      points, where the gradient becomes close to zero, leading to slow
+      convergence or suboptimal solutions. Various techniques, such as
+      learning rate schedules, momentum, and adaptive learning rates, are
+      employed to address these challenges and improve the performance of
+      gradient descent.
+    </p>
+    <h4>Why to use Gradient Descent?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Optimization</b>: The primary purpose of gradient
+      descent is to optimize the parameters of a machine learning model. By
+      minimizing a cost function through gradient descent, we can find the
+      optimal set of parameter values that result in the best fit to the
+      training data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: Gradient descent is scalable
-        to large datasets. Since it processes the data in small batches or
-        individual samples, it can handle datasets that do not fit into memory.
-        This scalability is particularly important in fields like computer
-        vision and natural language processing, where datasets can be extremely
-        large.
+      <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Gradient descent can be
+      applied to a wide range of machine learning models, including linear
+      regression, logistic regression, neural networks, and deep learning
+      architectures. It is a versatile optimization algorithm that can handle
+      different types of models and cost functions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Nonlinearity</b>: Many machine learning
-        models, such as neural networks, are highly nonlinear and do not have
-        closed-form solutions. Gradient descent allows us to optimize these
-        models by iteratively adjusting the parameters based on the gradients.
-        This flexibility makes gradient descent suitable for complex models that
-        can capture intricate patterns and relationships in the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Efficiency</b>: Gradient descent algorithms,
+      such as stochastic gradient descent (SGD) and mini-batch gradient
+      descent, offer computational efficiency. Instead of computing the
+      gradients using the entire dataset, these algorithms use smaller subsets
+      or individual samples to update the parameters. This makes it feasible
+      to train models on large-scale datasets without requiring excessive
+      computational resources.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Gradient descent can
-        incorporate regularization techniques, such as L1 or L2 regularization,
-        into the optimization process. Regularization helps prevent overfitting
-        by adding penalty terms to the cost function, and gradient descent
-        optimizes the trade-off between fitting the data and minimizing the
-        regularization terms.
+      <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: Gradient descent is scalable
+      to large datasets. Since it processes the data in small batches or
+      individual samples, it can handle datasets that do not fit into memory.
+      This scalability is particularly important in fields like computer
+      vision and natural language processing, where datasets can be extremely
+      large.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Extensibility</b>: Gradient descent can be
-        extended to include various enhancements and variations to improve
-        convergence and performance. Techniques like momentum, adaptive learning
-        rates, and advanced optimization algorithms (e.g., Adam, RMSprop) can be
-        incorporated into gradient descent to accelerate convergence and handle
-        different optimization challenges.
+      <br />&nbsp;&nbsp;&nbsp;<b>Nonlinearity</b>: Many machine learning
+      models, such as neural networks, are highly nonlinear and do not have
+      closed-form solutions. Gradient descent allows us to optimize these
+      models by iteratively adjusting the parameters based on the gradients.
+      This flexibility makes gradient descent suitable for complex models that
+      can capture intricate patterns and relationships in the data.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, gradient descent is a fundamental and
-        powerful optimization algorithm in machine learning. It enables us to
-        find optimal parameter values for our models, handle large-scale
-        datasets efficiently, and train complex nonlinear models effectively.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Differentiability</b>: The cost function used in
-        gradient descent should be differentiable, meaning it has continuous and
-        well-defined derivatives with respect to the model parameters. This
-        assumption allows the calculation of gradients, which determine the
-        direction and magnitude of parameter updates.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Gradient descent can
+      incorporate regularization techniques, such as L1 or L2 regularization,
+      into the optimization process. Regularization helps prevent overfitting
+      by adding penalty terms to the cost function, and gradient descent
+      optimizes the trade-off between fitting the data and minimizing the
+      regularization terms.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Convexity or concavity</b>: Gradient descent
-        is particularly effective when dealing with convex or concave
-        optimization problems. In convex problems, the cost function has a
-        single global minimum, which is the optimal solution. For concave
-        problems, the cost function has a single global maximum. These
-        properties guarantee that the optimization process will converge to the
-        optimal solution, and gradient descent will find it.
+      <br />&nbsp;&nbsp;&nbsp;<b>Extensibility</b>: Gradient descent can be
+      extended to include various enhancements and variations to improve
+      convergence and performance. Techniques like momentum, adaptive learning
+      rates, and advanced optimization algorithms (e.g., Adam, RMSprop) can be
+      incorporated into gradient descent to accelerate convergence and handle
+      different optimization challenges.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Locally Lipschitz continuity</b>: The cost
-        function should exhibit locally Lipschitz continuity, meaning its
-        derivative should not vary too rapidly within a small neighborhood
-        around a point. This assumption ensures that gradient descent can make
-        meaningful progress towards the minimum by taking steps in the direction
-        of steepest descent.
+      <br />&nbsp;&nbsp;&nbsp;Overall, gradient descent is a fundamental and
+      powerful optimization algorithm in machine learning. It enables us to
+      find optimal parameter values for our models, handle large-scale
+      datasets efficiently, and train complex nonlinear models effectively.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Differentiability</b>: The cost function used in
+      gradient descent should be differentiable, meaning it has continuous and
+      well-defined derivatives with respect to the model parameters. This
+      assumption allows the calculation of gradients, which determine the
+      direction and magnitude of parameter updates.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Stationarity</b>: The assumption of
-        stationarity implies that the cost function reaches a minimum or maximum
-        at the point where its derivative (gradient) is zero. Gradient descent
-        relies on this assumption to identify the optimal solution by
-        iteratively moving towards areas of lower cost.
+      <br />&nbsp;&nbsp;&nbsp;<b>Convexity or concavity</b>: Gradient descent
+      is particularly effective when dealing with convex or concave
+      optimization problems. In convex problems, the cost function has a
+      single global minimum, which is the optimal solution. For concave
+      problems, the cost function has a single global maximum. These
+      properties guarantee that the optimization process will converge to the
+      optimal solution, and gradient descent will find it.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Boundedness</b>: In some cases, it is assumed
-        that the cost function is bounded from below. This assumption ensures
-        that the minimum value of the cost function exists and can be approached
-        by gradient descent.
+      <br />&nbsp;&nbsp;&nbsp;<b>Locally Lipschitz continuity</b>: The cost
+      function should exhibit locally Lipschitz continuity, meaning its
+      derivative should not vary too rapidly within a small neighborhood
+      around a point. This assumption ensures that gradient descent can make
+      meaningful progress towards the minimum by taking steps in the direction
+      of steepest descent.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Ergodicity</b>: This assumption is
-        particularly relevant for stochastic gradient descent (SGD) and its
-        variants. Ergodicity implies that the stochastic gradients estimated
-        from randomly sampled subsets or individual data points converge to the
-        true gradient over time. This assumption ensures that SGD can converge
-        to a good solution despite using noisy gradients.
+      <br />&nbsp;&nbsp;&nbsp;<b>Stationarity</b>: The assumption of
+      stationarity implies that the cost function reaches a minimum or maximum
+      at the point where its derivative (gradient) is zero. Gradient descent
+      relies on this assumption to identify the optimal solution by
+      iteratively moving towards areas of lower cost.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that not all machine
-        learning problems satisfy these assumptions. In practice, gradient
-        descent is often used successfully even when some assumptions are
-        violated or relaxed. Additionally, variations of gradient descent, such
-        as SGD and mini-batch gradient descent, can be more robust and suitable
-        for handling a wider range of problem settings.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Efficiency</b>: Gradient descent algorithms, such
-        as stochastic gradient descent (SGD) and mini-batch gradient descent,
-        are computationally efficient. They update model parameters based on a
-        subset of the data or individual samples, making them suitable for
-        large-scale datasets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Boundedness</b>: In some cases, it is assumed
+      that the cost function is bounded from below. This assumption ensures
+      that the minimum value of the cost function exists and can be approached
+      by gradient descent.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Gradient descent is a
-        versatile optimization algorithm that can be applied to a wide range of
-        machine learning models, including linear regression, logistic
-        regression, neural networks, and deep learning architectures.
+      <br />&nbsp;&nbsp;&nbsp;<b>Ergodicity</b>: This assumption is
+      particularly relevant for stochastic gradient descent (SGD) and its
+      variants. Ergodicity implies that the stochastic gradients estimated
+      from randomly sampled subsets or individual data points converge to the
+      true gradient over time. This assumption ensures that SGD can converge
+      to a good solution despite using noisy gradients.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: Due to its ability to
-        process data in small batches or individual samples, gradient descent is
-        scalable to large datasets that do not fit into memory. This scalability
-        is particularly important in fields like computer vision and natural
-        language processing.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that not all machine
+      learning problems satisfy these assumptions. In practice, gradient
+      descent is often used successfully even when some assumptions are
+      violated or relaxed. Additionally, variations of gradient descent, such
+      as SGD and mini-batch gradient descent, can be more robust and suitable
+      for handling a wider range of problem settings.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Efficiency</b>: Gradient descent algorithms, such
+      as stochastic gradient descent (SGD) and mini-batch gradient descent,
+      are computationally efficient. They update model parameters based on a
+      subset of the data or individual samples, making them suitable for
+      large-scale datasets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Nonlinearity</b>: Gradient descent enables
-        the optimization of nonlinear models by iteratively adjusting the
-        parameters based on gradients. This flexibility makes it suitable for
-        complex models that can capture intricate patterns and relationships in
-        the data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Flexibility</b>: Gradient descent is a
+      versatile optimization algorithm that can be applied to a wide range of
+      machine learning models, including linear regression, logistic
+      regression, neural networks, and deep learning architectures.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Gradient descent can
-        incorporate regularization techniques, such as L1 or L2 regularization,
-        into the optimization process. Regularization helps prevent overfitting
-        and allows finding a good trade-off between fitting the data and
-        minimizing the regularization terms.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Convergence to Local Minima</b>: Gradient descent
-        may converge to a local minimum instead of the global minimum,
-        especially in non-convex optimization problems. This can lead to
-        suboptimal solutions, and different initializations or modifications to
-        the algorithm may be needed to mitigate this issue.
+      <br />&nbsp;&nbsp;&nbsp;<b>Scalability</b>: Due to its ability to
+      process data in small batches or individual samples, gradient descent is
+      scalable to large datasets that do not fit into memory. This scalability
+      is particularly important in fields like computer vision and natural
+      language processing.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Learning Rate</b>: The
-        learning rate in gradient descent determines the step size for parameter
-        updates. Selecting an appropriate learning rate is crucial, as a
-        learning rate that is too small can result in slow convergence, while a
-        learning rate that is too large can cause overshooting or instability.
+      <br />&nbsp;&nbsp;&nbsp;<b>Nonlinearity</b>: Gradient descent enables
+      the optimization of nonlinear models by iteratively adjusting the
+      parameters based on gradients. This flexibility makes it suitable for
+      complex models that can capture intricate patterns and relationships in
+      the data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>High-Dimensional Spaces</b>: In
-        high-dimensional spaces, gradient descent can face challenges such as
-        slow convergence and getting stuck in saddle points, where the gradient
-        is close to zero. Advanced techniques, like momentum or adaptive
-        learning rates, are often used to address these issues.
+      <br />&nbsp;&nbsp;&nbsp;<b>Regularization</b>: Gradient descent can
+      incorporate regularization techniques, such as L1 or L2 regularization,
+      into the optimization process. Regularization helps prevent overfitting
+      and allows finding a good trade-off between fitting the data and
+      minimizing the regularization terms.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Convergence to Local Minima</b>: Gradient descent
+      may converge to a local minimum instead of the global minimum,
+      especially in non-convex optimization problems. This can lead to
+      suboptimal solutions, and different initializations or modifications to
+      the algorithm may be needed to mitigate this issue.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Data Scaling</b>: Gradient
-        descent can be sensitive to the scaling of input features. If features
-        have different scales, the optimization process can be skewed towards
-        features with larger magnitudes. It is often necessary to preprocess the
-        data and normalize or standardize the features to ensure better
-        convergence.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Learning Rate</b>: The
+      learning rate in gradient descent determines the step size for parameter
+      updates. Selecting an appropriate learning rate is crucial, as a
+      learning rate that is too small can result in slow convergence, while a
+      learning rate that is too large can cause overshooting or instability.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Noisy or Incomplete Data</b>: When dealing
-        with noisy or incomplete data, gradient descent may be susceptible to
-        overfitting or getting trapped in suboptimal solutions. Regularization
-        techniques and careful handling of missing data can help mitigate these
-        challenges.
+      <br />&nbsp;&nbsp;&nbsp;<b>High-Dimensional Spaces</b>: In
+      high-dimensional spaces, gradient descent can face challenges such as
+      slow convergence and getting stuck in saddle points, where the gradient
+      is close to zero. Advanced techniques, like momentum or adaptive
+      learning rates, are often used to address these issues.
 
-        <br />&nbsp;&nbsp;&nbsp;It's worth noting that many of the disadvantages
-        of gradient descent can be addressed or mitigated through careful
-        selection of hyperparameters, appropriate initialization strategies,
-        regularization techniques, and the use of advanced optimization
-        algorithms.
-      </p>
-      <h4>How Gradient Descent algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;The gradient descent algorithm in machine learning
-        works by iteratively updating the parameters of a model in the direction
-        of steepest descent of the cost function. Here's a step-by-step
-        explanation of how the algorithm operates:
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Data Scaling</b>: Gradient
+      descent can be sensitive to the scaling of input features. If features
+      have different scales, the optimization process can be skewed towards
+      features with larger magnitudes. It is often necessary to preprocess the
+      data and normalize or standardize the features to ensure better
+      convergence.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: The algorithm starts by
-        initializing the parameters of the model with some initial values. This
-        can be random initialization or done using certain strategies based on
-        prior knowledge.
+      <br />&nbsp;&nbsp;&nbsp;<b>Noisy or Incomplete Data</b>: When dealing
+      with noisy or incomplete data, gradient descent may be susceptible to
+      overfitting or getting trapped in suboptimal solutions. Regularization
+      techniques and careful handling of missing data can help mitigate these
+      challenges.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Compute the Cost Function</b>: The cost
-        function measures the discrepancy between the predicted output of the
-        model and the actual target output. It quantifies the performance of the
-        model. The goal is to minimize this cost function. The cost function can
-        vary depending on the specific problem and model being used.
+      <br />&nbsp;&nbsp;&nbsp;It's worth noting that many of the disadvantages
+      of gradient descent can be addressed or mitigated through careful
+      selection of hyperparameters, appropriate initialization strategies,
+      regularization techniques, and the use of advanced optimization
+      algorithms.
+    </p>
+    <h4>How Gradient Descent algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;The gradient descent algorithm in machine learning
+      works by iteratively updating the parameters of a model in the direction
+      of steepest descent of the cost function. Here's a step-by-step
+      explanation of how the algorithm operates:
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Compute the Gradient</b>: The gradient of the
-        cost function with respect to each parameter is computed. The gradient
-        represents the direction and magnitude of the steepest ascent in the
-        cost function. It indicates how the cost function changes as the
-        parameters are adjusted.
+      <br />&nbsp;&nbsp;&nbsp;<b>Initialization</b>: The algorithm starts by
+      initializing the parameters of the model with some initial values. This
+      can be random initialization or done using certain strategies based on
+      prior knowledge.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Parameter Update</b>: The parameters are
-        updated by taking a step in the opposite direction of the gradient. This
-        step is determined by the learning rate, which controls the size of the
-        update. The learning rate determines how fast or slow the algorithm
-        progresses towards the optimal solution. A smaller learning rate results
-        in slower convergence, while a larger learning rate can cause
-        instability or overshooting.
+      <br />&nbsp;&nbsp;&nbsp;<b>Compute the Cost Function</b>: The cost
+      function measures the discrepancy between the predicted output of the
+      model and the actual target output. It quantifies the performance of the
+      model. The goal is to minimize this cost function. The cost function can
+      vary depending on the specific problem and model being used.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Repeat Steps 2 to 4</b>: Steps 2 to 4 are
-        repeated iteratively until a stopping criterion is met. This stopping
-        criterion can be reaching a maximum number of iterations, achieving a
-        specific level of convergence, or when the improvement in the cost
-        function falls below a certain threshold. The algorithm continues to
-        update the parameters, moving closer to the optimal solution with each
-        iteration.
+      <br />&nbsp;&nbsp;&nbsp;<b>Compute the Gradient</b>: The gradient of the
+      cost function with respect to each parameter is computed. The gradient
+      represents the direction and magnitude of the steepest ascent in the
+      cost function. It indicates how the cost function changes as the
+      parameters are adjusted.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Convergence</b>: The algorithm converges when
-        it reaches a point where the parameters have found a local minimum of
-        the cost function. This local minimum represents the best-fit solution
-        given the model and the training data. However, it's important to note
-        that gradient descent may converge to a local minimum rather than the
-        global minimum in non-convex optimization problems.
+      <br />&nbsp;&nbsp;&nbsp;<b>Parameter Update</b>: The parameters are
+      updated by taking a step in the opposite direction of the gradient. This
+      step is determined by the learning rate, which controls the size of the
+      update. The learning rate determines how fast or slow the algorithm
+      progresses towards the optimal solution. A smaller learning rate results
+      in slower convergence, while a larger learning rate can cause
+      instability or overshooting.
 
-        <br />&nbsp;&nbsp;&nbsp;The process of computing the cost function,
-        gradient, and updating the parameters is repeated iteratively until
-        convergence is achieved or the stopping criterion is met. Gradient
-        descent algorithms can be modified and optimized with various techniques
-        such as momentum, adaptive learning rates, and regularization to improve
-        convergence speed and robustness.
+      <br />&nbsp;&nbsp;&nbsp;<b>Repeat Steps 2 to 4</b>: Steps 2 to 4 are
+      repeated iteratively until a stopping criterion is met. This stopping
+      criterion can be reaching a maximum number of iterations, achieving a
+      specific level of convergence, or when the improvement in the cost
+      function falls below a certain threshold. The algorithm continues to
+      update the parameters, moving closer to the optimal solution with each
+      iteration.
 
-        <br />&nbsp;&nbsp;&nbsp;It's worth noting that there are different
-        variants of gradient descent, including batch gradient descent,
-        stochastic gradient descent (SGD), and mini-batch gradient descent.
-        These variants differ in how they compute the gradient and update the
-        parameters, but the underlying principle of iteratively updating
-        parameters based on the gradient remains the same.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Loss Function</b>: The loss function used in the
-        gradient descent optimization process is often a crucial evaluation
-        metric. It quantifies the discrepancy between the predicted output of
-        the model and the actual target output. Lower values of the loss
-        function indicate better model performance. The specific loss function
-        used depends on the problem and can include mean squared error (MSE),
-        cross-entropy loss, or others.
+      <br />&nbsp;&nbsp;&nbsp;<b>Convergence</b>: The algorithm converges when
+      it reaches a point where the parameters have found a local minimum of
+      the cost function. This local minimum represents the best-fit solution
+      given the model and the training data. However, it's important to note
+      that gradient descent may converge to a local minimum rather than the
+      global minimum in non-convex optimization problems.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy is a commonly used
-        evaluation metric for classification problems. It measures the
-        percentage of correctly classified instances. For binary classification,
-        it is calculated as the ratio of the number of true positives and true
-        negatives to the total number of instances. In multi-class
-        classification, accuracy can be computed by dividing the number of
-        correct predictions by the total number of instances.
+      <br />&nbsp;&nbsp;&nbsp;The process of computing the cost function,
+      gradient, and updating the parameters is repeated iteratively until
+      convergence is achieved or the stopping criterion is met. Gradient
+      descent algorithms can be modified and optimized with various techniques
+      such as momentum, adaptive learning rates, and regularization to improve
+      convergence speed and robustness.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Precision, Recall, and F1-Score</b>: These
-        metrics are commonly used in binary classification and evaluate the
-        performance of the model in terms of true positives, false positives,
-        and false negatives. Precision measures the proportion of correctly
-        predicted positive instances out of all predicted positive instances.
-        Recall (also known as sensitivity or true positive rate) measures the
-        proportion of correctly predicted positive instances out of all actual
-        positive instances. F1-score is the harmonic mean of precision and
-        recall and provides a single metric that balances both metrics.
+      <br />&nbsp;&nbsp;&nbsp;It's worth noting that there are different
+      variants of gradient descent, including batch gradient descent,
+      stochastic gradient descent (SGD), and mini-batch gradient descent.
+      These variants differ in how they compute the gradient and update the
+      parameters, but the underlying principle of iteratively updating
+      parameters based on the gradient remains the same.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Loss Function</b>: The loss function used in the
+      gradient descent optimization process is often a crucial evaluation
+      metric. It quantifies the discrepancy between the predicted output of
+      the model and the actual target output. Lower values of the loss
+      function indicate better model performance. The specific loss function
+      used depends on the problem and can include mean squared error (MSE),
+      cross-entropy loss, or others.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: MAE is an
-        evaluation metric often used in regression problems. It measures the
-        average absolute difference between the predicted values and the actual
-        values. Lower MAE values indicate better model performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Accuracy</b>: Accuracy is a commonly used
+      evaluation metric for classification problems. It measures the
+      percentage of correctly classified instances. For binary classification,
+      it is calculated as the ratio of the number of true positives and true
+      negatives to the total number of instances. In multi-class
+      classification, accuracy can be computed by dividing the number of
+      correct predictions by the total number of instances.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: RMSE is
-        another evaluation metric used in regression tasks. It calculates the
-        square root of the average of the squared differences between predicted
-        and actual values. RMSE is sensitive to outliers and penalizes large
-        errors more than MAE.
+      <br />&nbsp;&nbsp;&nbsp;<b>Precision, Recall, and F1-Score</b>: These
+      metrics are commonly used in binary classification and evaluate the
+      performance of the model in terms of true positives, false positives,
+      and false negatives. Precision measures the proportion of correctly
+      predicted positive instances out of all predicted positive instances.
+      Recall (also known as sensitivity or true positive rate) measures the
+      proportion of correctly predicted positive instances out of all actual
+      positive instances. F1-score is the harmonic mean of precision and
+      recall and provides a single metric that balances both metrics.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Area Under the ROC Curve (AUC-ROC)</b>:
-        AUC-ROC is a metric typically used to evaluate the performance of binary
-        classification models. It measures the ability of the model to
-        distinguish between positive and negative instances by plotting the true
-        positive rate against the false positive rate. Higher AUC-ROC values
-        indicate better discrimination performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Absolute Error (MAE)</b>: MAE is an
+      evaluation metric often used in regression problems. It measures the
+      average absolute difference between the predicted values and the actual
+      values. Lower MAE values indicate better model performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Mean Average Precision (mAP)</b>: mAP is
-        often used for evaluation in object detection and information retrieval
-        tasks. It considers precision and recall values at different thresholds
-        and calculates the average precision across all thresholds.
+      <br />&nbsp;&nbsp;&nbsp;<b>Root Mean Squared Error (RMSE)</b>: RMSE is
+      another evaluation metric used in regression tasks. It calculates the
+      square root of the average of the squared differences between predicted
+      and actual values. RMSE is sensitive to outliers and penalizes large
+      errors more than MAE.
 
-        <br />&nbsp;&nbsp;&nbsp;These are just a few examples of evaluation
-        metrics used in machine learning. The choice of the appropriate metrics
-        depends on the problem domain, the specific task, and the desired
-        evaluation criteria. It's important to consider the context and
-        requirements of the problem when selecting the evaluation metrics.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Area Under the ROC Curve (AUC-ROC)</b>:
+      AUC-ROC is a metric typically used to evaluate the performance of binary
+      classification models. It measures the ability of the model to
+      distinguish between positive and negative instances by plotting the true
+      positive rate against the false positive rate. Higher AUC-ROC values
+      indicate better discrimination performance.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Mean Average Precision (mAP)</b>: mAP is
+      often used for evaluation in object detection and information retrieval
+      tasks. It considers precision and recall values at different thresholds
+      and calculates the average precision across all thresholds.
+
+      <br />&nbsp;&nbsp;&nbsp;These are just a few examples of evaluation
+      metrics used in machine learning. The choice of the appropriate metrics
+      depends on the problem domain, the specific task, and the desired
+      evaluation criteria. It's important to consider the context and
+      requirements of the problem when selecting the evaluation metrics.
+    </p>
+  </div>
+</body>
+
 </html>

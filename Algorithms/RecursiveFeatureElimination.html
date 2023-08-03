@@ -1,369 +1,354 @@
 <html>
-  <head>
-    <title>Complete Profile</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <h1>Let's start</h1>
-    <div class="flex bg-black font-white">
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../MachineLearning/MachineLearning.html'"
-      >
-        Machine learning
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Python/python.html'"
-      >
-        Python
-      </h1>
-      <div class="gap"></div>
-      <h1
-        class="pd-5-15 mr-0"
-        onclick="document.location='../Algorithms/Algorithms.html'"
-      >
-        ML Algorithms
-      </h1>
-    </div>
-    <div>
-      <h4>Recursive Feature Elimination</h4>
-      <h4>What is Recursive Feature Elimination?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;Recursive Feature Elimination (RFE) is a technique
-        used in machine learning for feature selection. It is an iterative
-        method that aims to identify the most relevant features in a dataset by
-        recursively eliminating less important features.
-      </p>
-      <h4>When to use Recursive Feature Elimination?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Feature Selection</b>: When working with
-        high-dimensional datasets that contain a large number of features, it is
-        often beneficial to reduce the feature space to improve model
-        performance and interpretability. RFE can be used as a feature selection
-        technique to identify the most relevant features and discard irrelevant
-        or redundant ones.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model Interpretability</b>: In some cases, it
-        is crucial to understand which features contribute the most to the
-        predictions of a model. RFE can help in identifying and ranking the
-        features based on their importance. By reducing the feature set to the
-        most relevant features, the resulting model becomes more interpretable
-        and easier to explain.
+<head>
+  <title>Complete Profile</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Computational Efficiency</b>: Large feature
-        sets can lead to increased computational complexity and slower model
-        training and inference times. By using RFE to select a subset of the
-        most informative features, the computational burden can be reduced
-        without sacrificing too much predictive performance.
+<body>
+  <div class="flex bg-black font-white text-center sticky">
+    <h1 class="pd-5-15 mr-0 text-center" onclick="document.location='../Algorithms/Algorithms.html'">
+      Back to Algorithm
+    </h1>
+  </div>
+  <div>
+    <h4>Recursive Feature Elimination</h4>
+    <h4>What is Recursive Feature Elimination?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;Recursive Feature Elimination (RFE) is a technique
+      used in machine learning for feature selection. It is an iterative
+      method that aims to identify the most relevant features in a dataset by
+      recursively eliminating less important features.
+    </p>
+    <h4>When to use Recursive Feature Elimination?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Feature Selection</b>: When working with
+      high-dimensional datasets that contain a large number of features, it is
+      often beneficial to reduce the feature space to improve model
+      performance and interpretability. RFE can be used as a feature selection
+      technique to identify the most relevant features and discard irrelevant
+      or redundant ones.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Dealing with Multicollinearity</b>:
-        Multicollinearity occurs when two or more features in a dataset are
-        highly correlated. This can cause instability in the model and lead to
-        unreliable feature importance estimates. RFE can help identify and
-        eliminate one of the correlated features, ensuring that only one
-        representative feature is retained.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model Interpretability</b>: In some cases, it
+      is crucial to understand which features contribute the most to the
+      predictions of a model. RFE can help in identifying and ranking the
+      features based on their importance. By reducing the feature set to the
+      most relevant features, the resulting model becomes more interpretable
+      and easier to explain.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Handling Overfitting</b>: Including
-        irrelevant or noisy features in the model can lead to overfitting, where
-        the model learns the noise present in the training data and performs
-        poorly on unseen data. RFE can assist in removing such features,
-        resulting in a more generalizable model that performs better on unseen
-        data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Computational Efficiency</b>: Large feature
+      sets can lead to increased computational complexity and slower model
+      training and inference times. By using RFE to select a subset of the
+      most informative features, the computational burden can be reduced
+      without sacrificing too much predictive performance.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that while RFE is a
-        useful technique, its effectiveness depends on the specific dataset and
-        problem at hand. It may not always be the most appropriate feature
-        selection method, and other techniques such as L1 regularization (Lasso)
-        or tree-based feature importance may yield better results in certain
-        cases. Therefore, it's recommended to experiment with different feature
-        selection methods and evaluate their impact on the model's performance
-        before making a final decision.
-      </p>
-      <h4>Why to use Recursive Feature Elimination?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved Model Performance</b>: By eliminating
-        irrelevant or redundant features from the dataset, RFE helps to focus
-        the model's attention on the most informative features. This can lead to
-        improved model performance, as the model can better capture the
-        underlying patterns and relationships in the data without being
-        distracted by irrelevant noise.
+      <br />&nbsp;&nbsp;&nbsp;<b>Dealing with Multicollinearity</b>:
+      Multicollinearity occurs when two or more features in a dataset are
+      highly correlated. This can cause instability in the model and lead to
+      unreliable feature importance estimates. RFE can help identify and
+      eliminate one of the correlated features, ensuring that only one
+      representative feature is retained.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>:
-        High-dimensional datasets with a large number of features can pose
-        challenges in terms of computational efficiency, model interpretability,
-        and generalization. RFE reduces the feature space by iteratively
-        removing less important features, resulting in a reduced-dimensional
-        dataset that is easier to work with. This can lead to faster training
-        and inference times, improved interpretability, and better
-        generalization to unseen data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Handling Overfitting</b>: Including
+      irrelevant or noisy features in the model can lead to overfitting, where
+      the model learns the noise present in the training data and performs
+      poorly on unseen data. RFE can assist in removing such features,
+      resulting in a more generalizable model that performs better on unseen
+      data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Importance Ranking</b>: RFE provides
-        a ranking of feature importance based on the contribution of each
-        feature to the model's performance. This ranking can be valuable for
-        understanding the underlying relationships between features and the
-        target variable. It helps to identify the most influential features and
-        allows for better interpretation and explanation of the model's
-        behavior.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that while RFE is a
+      useful technique, its effectiveness depends on the specific dataset and
+      problem at hand. It may not always be the most appropriate feature
+      selection method, and other techniques such as L1 regularization (Lasso)
+      or tree-based feature importance may yield better results in certain
+      cases. Therefore, it's recommended to experiment with different feature
+      selection methods and evaluate their impact on the model's performance
+      before making a final decision.
+    </p>
+    <h4>Why to use Recursive Feature Elimination?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved Model Performance</b>: By eliminating
+      irrelevant or redundant features from the dataset, RFE helps to focus
+      the model's attention on the most informative features. This can lead to
+      improved model performance, as the model can better capture the
+      underlying patterns and relationships in the data without being
+      distracted by irrelevant noise.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Addressing Multicollinearity</b>:
-        Multicollinearity occurs when two or more features in the dataset are
-        highly correlated. This can lead to unstable or unreliable feature
-        importance estimates. RFE can help identify and address
-        multicollinearity by selecting a representative feature from a group of
-        correlated features, ensuring that only one of them is included in the
-        final feature set.
+      <br />&nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>:
+      High-dimensional datasets with a large number of features can pose
+      challenges in terms of computational efficiency, model interpretability,
+      and generalization. RFE reduces the feature space by iteratively
+      removing less important features, resulting in a reduced-dimensional
+      dataset that is easier to work with. This can lead to faster training
+      and inference times, improved interpretability, and better
+      generalization to unseen data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Enhanced Model Interpretability</b>: RFE
-        results in a reduced feature set that focuses on the most relevant
-        features. This can make the model more interpretable and easier to
-        explain, as the relationship between the selected features and the
-        target variable becomes clearer. It enables practitioners to gain
-        insights into the key factors driving the model's predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Importance Ranking</b>: RFE provides
+      a ranking of feature importance based on the contribution of each
+      feature to the model's performance. This ranking can be valuable for
+      understanding the underlying relationships between features and the
+      target variable. It helps to identify the most influential features and
+      allows for better interpretation and explanation of the model's
+      behavior.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Overfitting Prevention</b>: Including
-        irrelevant or noisy features in the model can lead to overfitting, where
-        the model fits the noise in the training data instead of the underlying
-        patterns. RFE helps mitigate overfitting by eliminating such features,
-        resulting in a more robust and generalizable model that performs better
-        on unseen data.
+      <br />&nbsp;&nbsp;&nbsp;<b>Addressing Multicollinearity</b>:
+      Multicollinearity occurs when two or more features in the dataset are
+      highly correlated. This can lead to unstable or unreliable feature
+      importance estimates. RFE can help identify and address
+      multicollinearity by selecting a representative feature from a group of
+      correlated features, ensuring that only one of them is included in the
+      final feature set.
 
-        <br />&nbsp;&nbsp;&nbsp;Overall, Recursive Feature Elimination is a
-        valuable technique in machine learning that offers several advantages,
-        including improved model performance, dimensionality reduction, feature
-        importance ranking, addressing multicollinearity, enhanced
-        interpretability, and overfitting prevention. It is a powerful tool for
-        selecting the most relevant features and building effective and
-        efficient models.
-      </p>
-      <h4>Assumptions:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Relevance of Features</b>: RFE assumes that not all
-        features in the dataset are equally relevant or informative for
-        predicting the target variable. It assumes that there exist some
-        features that are more important and contribute more to the model's
-        performance, while others may be irrelevant or redundant. RFE aims to
-        identify and retain the most relevant features while discarding the less
-        important ones.
+      <br />&nbsp;&nbsp;&nbsp;<b>Enhanced Model Interpretability</b>: RFE
+      results in a reduced feature set that focuses on the most relevant
+      features. This can make the model more interpretable and easier to
+      explain, as the relationship between the selected features and the
+      target variable becomes clearer. It enables practitioners to gain
+      insights into the key factors driving the model's predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Independence</b>: RFE assumes that
-        the features in the dataset are independent or have a low level of
-        multicollinearity. If the features are highly correlated or exhibit
-        multicollinearity, the feature importance estimates obtained through RFE
-        may not accurately reflect their true importance. In such cases, it's
-        important to preprocess the data and address multicollinearity before
-        applying RFE.
+      <br />&nbsp;&nbsp;&nbsp;<b>Overfitting Prevention</b>: Including
+      irrelevant or noisy features in the model can lead to overfitting, where
+      the model fits the noise in the training data instead of the underlying
+      patterns. RFE helps mitigate overfitting by eliminating such features,
+      resulting in a more robust and generalizable model that performs better
+      on unseen data.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Consistency of Estimator</b>: RFE assumes
-        that the chosen estimator or model used for evaluating feature
-        importance provides consistent and reliable estimates. The estimator
-        should be capable of ranking the importance of features consistently
-        across iterations. For example, linear regression models can provide
-        coefficient values as a measure of feature importance, while tree-based
-        models can provide feature importances.
+      <br />&nbsp;&nbsp;&nbsp;Overall, Recursive Feature Elimination is a
+      valuable technique in machine learning that offers several advantages,
+      including improved model performance, dimensionality reduction, feature
+      importance ranking, addressing multicollinearity, enhanced
+      interpretability, and overfitting prevention. It is a powerful tool for
+      selecting the most relevant features and building effective and
+      efficient models.
+    </p>
+    <h4>Assumptions:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Relevance of Features</b>: RFE assumes that not all
+      features in the dataset are equally relevant or informative for
+      predicting the target variable. It assumes that there exist some
+      features that are more important and contribute more to the model's
+      performance, while others may be irrelevant or redundant. RFE aims to
+      identify and retain the most relevant features while discarding the less
+      important ones.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Homogeneity of Feature Importance</b>: RFE
-        assumes that the importance or relevance of features remains relatively
-        consistent throughout the recursive elimination process. In other words,
-        it assumes that removing one feature does not significantly alter the
-        importance of the remaining features. This assumption allows RFE to
-        iteratively eliminate the least important features without affecting the
-        ranking of other features.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Independence</b>: RFE assumes that
+      the features in the dataset are independent or have a low level of
+      multicollinearity. If the features are highly correlated or exhibit
+      multicollinearity, the feature importance estimates obtained through RFE
+      may not accurately reflect their true importance. In such cases, it's
+      important to preprocess the data and address multicollinearity before
+      applying RFE.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that these assumptions
-        may not hold true in all scenarios or datasets. Therefore, it is
-        recommended to validate these assumptions and assess the suitability of
-        RFE for a specific problem and dataset. It's also important to
-        experiment with different feature selection techniques and evaluate
-        their impact on the model's performance to make informed decisions.
-      </p>
-      <h4>Advantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Improved Model Performance</b>: By focusing on the
-        most relevant features, RFE helps to reduce overfitting and improve
-        model generalization. Removing irrelevant or redundant features can
-        enhance the model's ability to capture the underlying patterns and
-        relationships in the data, leading to better predictive performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Consistency of Estimator</b>: RFE assumes
+      that the chosen estimator or model used for evaluating feature
+      importance provides consistent and reliable estimates. The estimator
+      should be capable of ranking the importance of features consistently
+      across iterations. For example, linear regression models can provide
+      coefficient values as a measure of feature importance, while tree-based
+      models can provide feature importances.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>: RFE helps to
-        reduce the dimensionality of the dataset by eliminating less important
-        features. This can result in faster training and inference times,
-        reduced computational complexity, and improved efficiency in handling
-        high-dimensional datasets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Homogeneity of Feature Importance</b>: RFE
+      assumes that the importance or relevance of features remains relatively
+      consistent throughout the recursive elimination process. In other words,
+      it assumes that removing one feature does not significantly alter the
+      importance of the remaining features. This assumption allows RFE to
+      iteratively eliminate the least important features without affecting the
+      ranking of other features.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Importance Ranking</b>: RFE provides
-        a ranking of feature importance, allowing practitioners to identify the
-        most influential features in the model. This ranking aids in
-        understanding the underlying relationships between features and the
-        target variable, providing valuable insights for interpretation and
-        decision-making.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that these assumptions
+      may not hold true in all scenarios or datasets. Therefore, it is
+      recommended to validate these assumptions and assess the suitability of
+      RFE for a specific problem and dataset. It's also important to
+      experiment with different feature selection techniques and evaluate
+      their impact on the model's performance to make informed decisions.
+    </p>
+    <h4>Advantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Improved Model Performance</b>: By focusing on the
+      most relevant features, RFE helps to reduce overfitting and improve
+      model generalization. Removing irrelevant or redundant features can
+      enhance the model's ability to capture the underlying patterns and
+      relationships in the data, leading to better predictive performance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Model Interpretability</b>: With a reduced
-        feature set, the model becomes more interpretable and easier to explain.
-        By eliminating irrelevant features, the model's behavior becomes more
-        transparent, facilitating better understanding and communication of the
-        model's predictions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Dimensionality Reduction</b>: RFE helps to
+      reduce the dimensionality of the dataset by eliminating less important
+      features. This can result in faster training and inference times,
+      reduced computational complexity, and improved efficiency in handling
+      high-dimensional datasets.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Addressing Multicollinearity</b>: RFE can
-        help in identifying and addressing multicollinearity by selecting a
-        representative feature from a group of highly correlated features. By
-        including only one representative feature, RFE improves the stability
-        and reliability of feature importance estimates.
-      </p>
-      <h4>Disdvantages:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Sensitivity to Estimator Choice</b>: The choice of
-        the estimator used in RFE can impact the results. Different estimators
-        may yield different rankings of feature importance, affecting the final
-        feature selection outcome. It's important to choose an appropriate
-        estimator and consider its limitations and assumptions.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Importance Ranking</b>: RFE provides
+      a ranking of feature importance, allowing practitioners to identify the
+      most influential features in the model. This ranking aids in
+      understanding the underlying relationships between features and the
+      target variable, providing valuable insights for interpretation and
+      decision-making.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Computationally Intensive</b>: RFE involves a
-        recursive process that iteratively trains and evaluates models with
-        different feature subsets. This can be computationally expensive,
-        especially for large datasets or when the number of features is high.
-        The computational cost increases with the number of iterations required
-        for convergence.
+      <br />&nbsp;&nbsp;&nbsp;<b>Model Interpretability</b>: With a reduced
+      feature set, the model becomes more interpretable and easier to explain.
+      By eliminating irrelevant features, the model's behavior becomes more
+      transparent, facilitating better understanding and communication of the
+      model's predictions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Dependency on Feature Order</b>: The order in
-        which features are eliminated can influence the final feature set
-        selected by RFE. This introduces some level of dependency on the order
-        of feature elimination, which may not always be desirable or consistent.
+      <br />&nbsp;&nbsp;&nbsp;<b>Addressing Multicollinearity</b>: RFE can
+      help in identifying and addressing multicollinearity by selecting a
+      representative feature from a group of highly correlated features. By
+      including only one representative feature, RFE improves the stability
+      and reliability of feature importance estimates.
+    </p>
+    <h4>Disdvantages:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Sensitivity to Estimator Choice</b>: The choice of
+      the estimator used in RFE can impact the results. Different estimators
+      may yield different rankings of feature importance, affecting the final
+      feature selection outcome. It's important to choose an appropriate
+      estimator and consider its limitations and assumptions.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Possible Information Loss</b>: In the process
-        of eliminating features, RFE may discard some features that are not
-        initially ranked as important but could contribute in combination with
-        other features. There is a risk of discarding potentially useful
-        features, especially if their relevance is not captured by the ranking
-        provided by the chosen estimator.
+      <br />&nbsp;&nbsp;&nbsp;<b>Computationally Intensive</b>: RFE involves a
+      recursive process that iteratively trains and evaluates models with
+      different feature subsets. This can be computationally expensive,
+      especially for large datasets or when the number of features is high.
+      The computational cost increases with the number of iterations required
+      for convergence.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Noise and Redundancy</b>: RFE
-        may be sensitive to noisy or redundant features, potentially leading to
-        suboptimal feature selection results. If noisy or redundant features are
-        not properly identified and eliminated, they can still be included in
-        the final feature set.
+      <br />&nbsp;&nbsp;&nbsp;<b>Dependency on Feature Order</b>: The order in
+      which features are eliminated can influence the final feature set
+      selected by RFE. This introduces some level of dependency on the order
+      of feature elimination, which may not always be desirable or consistent.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to consider these advantages and
-        disadvantages of RFE while applying it in practice. The effectiveness of
-        RFE depends on the specific dataset, problem, and the choice of the
-        estimator and other parameters. It is recommended to evaluate different
-        feature selection techniques and carefully validate the impact of RFE on
-        the model's performance.
-      </p>
-      <h4>How Recursive Feature Elimination algorithm works?</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Choose an Estimator</b>: Select an appropriate
-        machine learning algorithm or model that will be used to evaluate the
-        importance of features. This could be a linear regression model, a
-        support vector machine, a random forest, or any other model capable of
-        ranking feature importance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Possible Information Loss</b>: In the process
+      of eliminating features, RFE may discard some features that are not
+      initially ranked as important but could contribute in combination with
+      other features. There is a risk of discarding potentially useful
+      features, especially if their relevance is not captured by the ranking
+      provided by the chosen estimator.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Set the Number of Features</b>: Determine the
-        desired number of features to be selected. This can be a fixed number or
-        a percentage of the total number of features in the dataset.
+      <br />&nbsp;&nbsp;&nbsp;<b>Sensitivity to Noise and Redundancy</b>: RFE
+      may be sensitive to noisy or redundant features, potentially leading to
+      suboptimal feature selection results. If noisy or redundant features are
+      not properly identified and eliminated, they can still be included in
+      the final feature set.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Fit the Model with All Features</b>: Train
-        the chosen estimator using the entire set of features available in the
-        dataset.
+      <br />&nbsp;&nbsp;&nbsp;It's important to consider these advantages and
+      disadvantages of RFE while applying it in practice. The effectiveness of
+      RFE depends on the specific dataset, problem, and the choice of the
+      estimator and other parameters. It is recommended to evaluate different
+      feature selection techniques and carefully validate the impact of RFE on
+      the model's performance.
+    </p>
+    <h4>How Recursive Feature Elimination algorithm works?</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Choose an Estimator</b>: Select an appropriate
+      machine learning algorithm or model that will be used to evaluate the
+      importance of features. This could be a linear regression model, a
+      support vector machine, a random forest, or any other model capable of
+      ranking feature importance.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Rank the Features</b>: Obtain the importance
-        or relevance of each feature based on the estimator's coefficients (in
-        the case of linear models) or feature importances (in the case of
-        tree-based models). The ranking is typically based on a metric such as
-        the absolute value of coefficients or the importance scores.
+      <br />&nbsp;&nbsp;&nbsp;<b>Set the Number of Features</b>: Determine the
+      desired number of features to be selected. This can be a fixed number or
+      a percentage of the total number of features in the dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Eliminate the Least Important Feature</b>:
-        Remove the feature with the lowest ranking or importance from the
-        feature set. This elimination can be based on a predefined threshold or
-        a fixed number of features to be selected.
+      <br />&nbsp;&nbsp;&nbsp;<b>Fit the Model with All Features</b>: Train
+      the chosen estimator using the entire set of features available in the
+      dataset.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Fit the Model with the Reduced Feature Set</b
-        >: Retrain the model using the reduced feature set obtained after
-        eliminating the least important feature.
+      <br />&nbsp;&nbsp;&nbsp;<b>Rank the Features</b>: Obtain the importance
+      or relevance of each feature based on the estimator's coefficients (in
+      the case of linear models) or feature importances (in the case of
+      tree-based models). The ranking is typically based on a metric such as
+      the absolute value of coefficients or the importance scores.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Repeat the Process</b>: Repeat steps 4 to 6
-        iteratively until the desired number of features is reached or a
-        stopping criterion is met. In each iteration, the model is retrained
-        using the reduced feature set from the previous iteration, and the
-        feature rankings are obtained again.
+      <br />&nbsp;&nbsp;&nbsp;<b>Eliminate the Least Important Feature</b>:
+      Remove the feature with the lowest ranking or importance from the
+      feature set. This elimination can be based on a predefined threshold or
+      a fixed number of features to be selected.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Evaluate Model Performance</b>: Once the
-        feature selection process is complete, evaluate the performance of the
-        final model using a separate validation or test dataset. This step
-        ensures that the selected features are effective in improving the
-        model's performance.
+      <br />&nbsp;&nbsp;&nbsp;<b>Fit the Model with the Reduced Feature Set</b>: Retrain the model using the reduced
+      feature set obtained after
+      eliminating the least important feature.
 
-        <br />&nbsp;&nbsp;&nbsp;The RFE algorithm eliminates the least important
-        features one by one, iterating until the desired number of features is
-        reached. It assesses the importance of features based on their
-        contribution to the model's performance and removes the least important
-        features at each iteration.
+      <br />&nbsp;&nbsp;&nbsp;<b>Repeat the Process</b>: Repeat steps 4 to 6
+      iteratively until the desired number of features is reached or a
+      stopping criterion is met. In each iteration, the model is retrained
+      using the reduced feature set from the previous iteration, and the
+      feature rankings are obtained again.
 
-        <br />&nbsp;&nbsp;&nbsp;RFE can be implemented using different
-        strategies, such as backward elimination, where the least important
-        feature is removed in each iteration, or forward selection, where the
-        most important feature is added in each iteration. The backward
-        elimination approach is more commonly used in RFE.
+      <br />&nbsp;&nbsp;&nbsp;<b>Evaluate Model Performance</b>: Once the
+      feature selection process is complete, evaluate the performance of the
+      final model using a separate validation or test dataset. This step
+      ensures that the selected features are effective in improving the
+      model's performance.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to note that the specific
-        implementation details and stopping criteria may vary based on the
-        library or framework used for RFE. The scikit-learn library in Python
-        provides an RFE implementation that automates these steps and allows for
-        easy application of the algorithm.
-      </p>
-      <h4>Evaluation Metrics:</h4>
-      <p>
-        &nbsp;&nbsp;&nbsp;<b>Model Performance Metrics</b>: These metrics assess
-        the performance of the machine learning model after feature selection.
-        They can include accuracy, precision, recall, F1 score, area under the
-        receiver operating characteristic curve (AUC-ROC), or mean squared error
-        (MSE), depending on the nature of the problem (classification or
-        regression) and the specific objectives of your project. By comparing
-        the model's performance before and after feature selection, you can
-        evaluate the impact of RFE on the model's predictive power.
+      <br />&nbsp;&nbsp;&nbsp;The RFE algorithm eliminates the least important
+      features one by one, iterating until the desired number of features is
+      reached. It assesses the importance of features based on their
+      contribution to the model's performance and removes the least important
+      features at each iteration.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Feature Importance Scores</b>: RFE provides
-        rankings or scores for the importance of each feature. These scores can
-        be based on the coefficients of linear models or the feature importances
-        from tree-based models. You can use these scores to evaluate the
-        relative importance of the selected features and gain insights into
-        their contribution to the model's predictions. Visualizations such as
-        bar plots or heatmaps can be helpful in understanding the importance
-        rankings.
+      <br />&nbsp;&nbsp;&nbsp;RFE can be implemented using different
+      strategies, such as backward elimination, where the least important
+      feature is removed in each iteration, or forward selection, where the
+      most important feature is added in each iteration. The backward
+      elimination approach is more commonly used in RFE.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Stability Metrics</b>: Stability metrics
-        assess the consistency of feature selection across different iterations
-        of RFE. They provide an indication of the robustness of the feature
-        selection process. Stability metrics can include metrics such as the
-        average rank agreement, the Jaccard index, or the stability selection
-        probability. Higher stability scores indicate greater consistency in
-        feature selection.
+      <br />&nbsp;&nbsp;&nbsp;It's important to note that the specific
+      implementation details and stopping criteria may vary based on the
+      library or framework used for RFE. The scikit-learn library in Python
+      provides an RFE implementation that automates these steps and allows for
+      easy application of the algorithm.
+    </p>
+    <h4>Evaluation Metrics:</h4>
+    <p>
+      &nbsp;&nbsp;&nbsp;<b>Model Performance Metrics</b>: These metrics assess
+      the performance of the machine learning model after feature selection.
+      They can include accuracy, precision, recall, F1 score, area under the
+      receiver operating characteristic curve (AUC-ROC), or mean squared error
+      (MSE), depending on the nature of the problem (classification or
+      regression) and the specific objectives of your project. By comparing
+      the model's performance before and after feature selection, you can
+      evaluate the impact of RFE on the model's predictive power.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Computational Metrics</b>: RFE involves an
-        iterative process that may have computational costs. Therefore, it can
-        be beneficial to evaluate the computational metrics associated with RFE.
-        This can include the time taken to perform RFE, the number of iterations
-        required for convergence, or the memory usage. These metrics can help
-        assess the feasibility and efficiency of using RFE in your specific
-        setting.
+      <br />&nbsp;&nbsp;&nbsp;<b>Feature Importance Scores</b>: RFE provides
+      rankings or scores for the importance of each feature. These scores can
+      be based on the coefficients of linear models or the feature importances
+      from tree-based models. You can use these scores to evaluate the
+      relative importance of the selected features and gain insights into
+      their contribution to the model's predictions. Visualizations such as
+      bar plots or heatmaps can be helpful in understanding the importance
+      rankings.
 
-        <br />&nbsp;&nbsp;&nbsp;<b>Cross-Validation Scores</b>: To obtain a more
-        reliable estimate of the model's performance and the impact of feature
-        selection, you can use cross-validation. By applying cross-validation
-        during RFE, you can calculate the average performance of the model
-        across multiple folds or iterations. This can provide a more robust
-        evaluation of the feature selection process and help in comparing
-        different feature subsets.
+      <br />&nbsp;&nbsp;&nbsp;<b>Stability Metrics</b>: Stability metrics
+      assess the consistency of feature selection across different iterations
+      of RFE. They provide an indication of the robustness of the feature
+      selection process. Stability metrics can include metrics such as the
+      average rank agreement, the Jaccard index, or the stability selection
+      probability. Higher stability scores indicate greater consistency in
+      feature selection.
 
-        <br />&nbsp;&nbsp;&nbsp;It's important to consider multiple evaluation
-        metrics to gain a comprehensive understanding of the effectiveness of
-        RFE in your machine learning project. Each metric provides different
-        insights and perspectives on the feature selection process, model
-        performance, stability, and computational aspects. Choose the evaluation
-        metrics that align with your objectives and make informed decisions
-        based on their outcomes.
-      </p>
-    </div>
-  </body>
+      <br />&nbsp;&nbsp;&nbsp;<b>Computational Metrics</b>: RFE involves an
+      iterative process that may have computational costs. Therefore, it can
+      be beneficial to evaluate the computational metrics associated with RFE.
+      This can include the time taken to perform RFE, the number of iterations
+      required for convergence, or the memory usage. These metrics can help
+      assess the feasibility and efficiency of using RFE in your specific
+      setting.
+
+      <br />&nbsp;&nbsp;&nbsp;<b>Cross-Validation Scores</b>: To obtain a more
+      reliable estimate of the model's performance and the impact of feature
+      selection, you can use cross-validation. By applying cross-validation
+      during RFE, you can calculate the average performance of the model
+      across multiple folds or iterations. This can provide a more robust
+      evaluation of the feature selection process and help in comparing
+      different feature subsets.
+
+      <br />&nbsp;&nbsp;&nbsp;It's important to consider multiple evaluation
+      metrics to gain a comprehensive understanding of the effectiveness of
+      RFE in your machine learning project. Each metric provides different
+      insights and perspectives on the feature selection process, model
+      performance, stability, and computational aspects. Choose the evaluation
+      metrics that align with your objectives and make informed decisions
+      based on their outcomes.
+    </p>
+  </div>
+</body>
+
 </html>
