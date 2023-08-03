@@ -1,19 +1,54 @@
 <html>
-    <head>
-        <title>
-            Complete Profile
-        </title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <h1>Let's start</h1>
-        <div class="flex bg-black font-white">
-            <h1 class="pd-5-15 mr-0" onclick="document.location='./MachineLearning/MachineLearning.html'">Machine learning</h1>
-            <div class="gap"></div>
-            <h1 class="pd-5-15 mr-0" onclick="document.location='./Python/python.html'">Python</h1>
-            <div class="gap"></div>
-            <h1 class="pd-5-15 mr-0" onclick="document.location='./Algorithms/Algorithms.html'">ML Algorithms</h1>
-        </div>
-        <div id="empty">Select any one of the above topic</div>
-    </body>
+
+<head>
+    <title>
+        Complete Profile
+    </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="flex bg-black font-white text-center sticky">
+        <h1>Select Topics</h1>
+    </div>
+    <div id="empty">
+        <table style="margin: 25px">
+            <tr>
+                <td>
+                    <h1 onclick="document.location='./Algorithms/Algorithms.html'">
+                        ML Algorithms
+                    </h1>
+                </td>
+                <td>
+                    <h1 onclick="document.location='./Python/python.html'">
+                        Python Q&A
+                    </h1>
+                </td>
+                <td>
+                    <h1 onclick="document.location='./MachineLearning/MachineLearning.html'">
+                        Machine Learning Q&A
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1 onclick="document.location='./Statistics/statistics.html'">
+                        Statistics
+                    </h1>
+                </td>
+                <td>
+                    <h1 onclick="document.location='./Pdf/Pdf.html'">
+                        Pdf files
+                    </h1>
+                </td>
+                <td>
+                    <h1 onclick="document.location='./MachineLearning/Intellipaat ML Q&A.html'">
+                        Intellipaat ML Q&A
+                    </h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
 </html>
