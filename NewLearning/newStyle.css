@@ -1,0 +1,63 @@
+body {
+    margin: 0 10px;
+}
+.flex {
+    display: flex;
+}
+.bg-black {
+    background-color: black;
+}
+.font-white {
+    color: white;
+}
+.pd-5-15 {
+    padding: 5px 15px;
+}
+.mr-0 {
+    margin: 0px;
+}
+.gap {
+    width: 5px;
+    background-color: white;
+}
+.QAColumns {
+    margin: 10px 5px;
+    border: 1px solid blue;
+}
+.Question {
+    margin: 0 0 0 5px;
+}
+.Answer {
+    margin: 0 0 0 20px;
+}
+#empty {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.text-center {
+    justify-content: center;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+table,
+
+td {
+
+        border: 1px solid black;
+
+      }
+
+      td {
+
+        text-align: center;
+
+      }
+
+      h1 {
+
+        margin: 5px;
+
+      }
