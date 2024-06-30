@@ -1,63 +1,41 @@
 body {
-    margin: 0 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
-.flex {
-    display: flex;
-}
-.bg-black {
-    background-color: black;
-}
-.font-white {
+
+header {
+    background-color: #4CAF50;
     color: white;
-}
-.pd-5-15 {
-    padding: 5px 15px;
-}
-.mr-0 {
-    margin: 0px;
-}
-.gap {
-    width: 5px;
-    background-color: white;
-}
-.QAColumns {
-    margin: 10px 5px;
-    border: 1px solid blue;
-}
-.Question {
-    margin: 0 0 0 5px;
-}
-.Answer {
-    margin: 0 0 0 20px;
-}
-#empty {
-    display: flex;
     text-align: center;
-    justify-content: center;
+    padding: 1em 0;
 }
-.text-center {
-    justify-content: center;
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.sticky {
-    position: sticky;
-    top: 0;
+
+.component {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
-table,
 
-td {
+.component:hover {
+    transform: scale(1.05);
+}
 
-        border: 1px solid black;
-
-      }
-
-      td {
-
-        text-align: center;
-
-      }
-
-      h1 {
-
-        margin: 5px;
-
-      }
+#component-content {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
