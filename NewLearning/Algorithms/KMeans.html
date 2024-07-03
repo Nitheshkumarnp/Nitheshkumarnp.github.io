@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K Means Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 5px 20px;
+            background-color: #f4f4f9;
+        }
+        .containers {
+            margin: auto;
+            background: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 0px;
+            font-size: 20px;
+        }
+        h2 {
+            color: #555;
+            margin: 0px;
+            font-size: 16px;
+        }
+        p {
+            margin: 0 0 0 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        ul {
+            margin: 0;
+        }
+        li {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="containers">
+        <h1>K Means</h1>
+        
+        <h2>Introduction:</h2>
+        <p>KMeans clustering is an unsupervised learning algorithm used to partition a dataset into K distinct, non-overlapping subsets or clusters.</p>
+        <p>It involves grouping similar data points together based on their features or characteristics.</p>
+        <p>The algorithm iteratively assigns data points to clusters and updates the cluster centroids until convergence.</p>
+        <p>The goal is to minimize the variance within each cluster.</p>
+        <p>It aims to minimize the within-cluster sum of squares, which measures the squared distance between each data point and its assigned centroid.</p>
+  
+        <h2>Differences from Other Clustering Algorithms:</h2>
+        <p>Unlike hierarchical clustering which creates a tree of clusters, KMeans requires the number of clusters to be specified in advance.</p>
+        <p>The algorithm is also sensitive to the initial centroid positions and can converge to suboptimal solutions. Extensions like K-means++ initialization and careful selection of k can help mitigate these issues.</p>
+        <p>It is also more computationally efficient for large datasets compared to some other algorithms like DBSCAN or Agglomerative Clustering.</p>
+
+        <h2>Mathematical Concepts:</h2>
+        <p>The objective function in KMeans is to minimize the sum of squared distances between each data point and the centroid of its assigned cluster.</p>
+        <p>Euclidean Distance: The distance between two points x and y in Euclidean space. This distance metric is used in KMeans to measure the similarity between points and centroids.</p>
+    </div>
+</body>
+</html>
