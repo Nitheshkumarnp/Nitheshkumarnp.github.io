@@ -56,12 +56,30 @@
   
         <h2>Differences from Other Clustering Algorithms:</h2>
         <p>Unlike hierarchical clustering which creates a tree of clusters, KMeans requires the number of clusters to be specified in advance.</p>
-        <p>The algorithm is also sensitive to the initial centroid positions and can converge to suboptimal solutions. Extensions like K-means++ initialization and careful selection of k can help mitigate these issues.</p>
+        <p>This algorithm is sensitive to the initial centroid positions and can converge to suboptimal solutions. Extensions like K-means++ initialization and careful selection of k can help mitigate these issues.</p>
         <p>It is also more computationally efficient for large datasets compared to some other algorithms like DBSCAN or Agglomerative Clustering.</p>
 
         <h2>Mathematical Concepts:</h2>
         <p>The objective function in KMeans is to minimize the sum of squared distances between each data point and the centroid of its assigned cluster.</p>
-        <p>Euclidean Distance: The distance between two points x and y in Euclidean space. This distance metric is used in KMeans to measure the similarity between points and centroids.</p>
+        <p><b>Euclidean Distance</b>: The distance between two points x and y in Euclidean space. This distance metric is used in KMeans to measure the similarity between points and centroids.</p>
+        
+        <h2>Algorithm Steps:</h2>
+        <li><b>Initialization</b>: Initial centroids are chosen randomly from the data points. Alternatively, KMeans++ can be used to select initial centroids that are spread out.</li>
+        <li><b>Assignment Step</b>: Each data point is assigned to the nearest centroid based on Euclidean distance.</li>
+        <li><b>Update Step</b>: The centroids are recalculated as the mean of all data points assigned to that cluster.</li>
+        <li><b>Convergence</b>: The algorithm iterates through the assignment and update steps until the centroids no longer change significantly or a predefined number of iterations is reached.</li>
+    
+        <h2>Choosing the Number of Clusters (K):</h2>
+        <p><b>Elbow Method</b>: Plot the WCSS against the number of clusters. The "elbow" point, where the decrease in WCSS slows down, indicates the optimal number of clusters.</p>
+        <p><b>Silhouette Score</b>: Measures how similar an object is to its own cluster compared to other clusters. A high silhouette score indicates that the object is well clustered.</p>
+        <p><b>Gap Statistic</b>: Compares the total WCSS of the clusters to that of a reference null model. The optimal number of clusters is where the gap between these WCSS values is largest.</p>
+
+        <h2>Evaluation Metrics for Clustering:</h2>
+        <li><b>Within-cluster sum of squares (WCSS)</b>: Measures the variance within each cluster.</li>
+        <li><b>Between-cluster sum of squares (BCSS)</b>: Measures the variance between different clusters.</li>
+        <li><b>Total sum of squares (TSS)</b>: The total variance in the dataset, equal to WCSS + BCSS.</li>
+        <li><b>Silhouette Coefficient</b>: Measures how similar a data point is to its own cluster compared to other clusters, with values ranging from -1 to 1.</li>
+        <li><b>Davies-Bouldin Index</b>: A ratio of within-cluster distances to between-cluster distances, with lower values indicating better clustering.</li>
     </div>
 </body>
 </html>
