@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GIT Commands</title>
+    </head>
+    <body>
+        <pre>https://learngitbranching.js.org/
+
+To clone a branch from git:
+>> git clone http://10.11.135.66:7777/Omnistore_featurepoc/v8/ui/os-ui-bo-ng.git
+To go feature branch:
+>> git checkout Feature_Branch_Name
+To get updated files:
+>> git pull
+Take pull of both feature and parent branch.
+To go to parent branch:
+>> git checkout -
+To merge feature to parent branch:
+>> git merge --ff Feature_Branch_Name
+>> git push
+To push code to parent branch:
+>> git push
+To rebase feature branch:
+>> git rebase --ff parent_branch
+>> git push --force
+To squash feature branch:
+>> git rebase -i HEAD~1
+To get latest code in feature/parent branch in local:
+>> git reset --hard origin/branch
+To fetch in local:
+>> git fetch -p
+To get logs:
+>> git log --oneline
+To cherry pick using commit id:
+>> git cherry-pick commit_id
+To reset a parent/feature branch to previous commit using commit id:
+>> git reset --hard commit_id
+>> git push --force
+To fetch details after reset:
+>> git fetch -p
+</pre>
+    </body>
+    </html>
+    

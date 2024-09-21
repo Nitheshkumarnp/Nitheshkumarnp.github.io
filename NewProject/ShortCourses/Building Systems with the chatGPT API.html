@@ -1,0 +1,163 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Building Systems with the chatGPT API</title>
+    </head>
+    <body>
+        <pre>Course From DeepLearning.ai : Building Systems with the chatGPT API
+Introduction:
+	In the previous course, we saw how to do single and chat prompt. In this course, we will see how to build complex application with chatGPT with 
+		various steps.
+	We are going to develop an end-to-end Customer end assistant application. When the user give a prompt, first, evaluating the input has any problematic 
+		content such as hateful speech, then identify the query whether it is a complaint or product information. Finally, check the answer whether it is correct
+		or not, don't have any harmful content.
+	
+Language Models, the chat format and tokens:
+	In this, we will learn how LLM works and how they are trained. How can we use the capability of chat format for system and user prompt.
+	A LLM is build by using supervised learning repeatedly predicting the next word. We already learned this in AI course. 
+	Eg. My favourite food is a bagel with cream cheese and lox.
+	Two types of LLM:
+		Base LLM
+		Instruction Tuned LLM
+	Base LLM:
+		predict the next word, based on the training data.
+		Eg. Once upon a time, there lived a ghost
+		It will then try to complete the story with the trained knowledge.
+		Suppose if we ask What is the capital of France?, then it instead of answering the question, it will respond as what is the population of France?
+	Instruction Tuned LLM:
+		Tries to follow instructions.
+		If we ask What is the capital of France?
+	Getting from a Base LLM to an Instruction tuned LLM:
+		Train a base LLM with lot of datas.
+		Further train the model:
+			Fine tune on examples where output which follow input instructions.
+			Obtain human rating on the quality of different output on criteria such as honest, harmness, helpful.
+			Tune LLM to increase probability that it generates high rated output using RLHF.
+	Tokens:
+		It can be a word or letter based on the common words.
+		To understand better, Eg. to reverse the word lollipop, it will give poplolil. Because, the word lollipop has 3 tokens, when reverse it, it consider
+			tokens instead of letter. To correct it, use - in between every letters. l-o-l-l-i-p-o-p if we try to reverse it, it will give proper answer.
+	Helper functions:
+		Roles : System, User and Assistant.
+			System is the command giving to LLM to act.
+			User will ask or give the question or task to system.
+			Assistant is the LLM model will interact with system and user and give the response.
+		We can set instruction to get output in such length and style etc..
+		We can also set maximum token parameter and monitor the number of tokens used by prompt, completion and total tokens.
+	OpenAI API usage:
+		If we are going to use the OpenAI API or other AI API, better to keep API key in .env file instead of mention in file itself in top line. If we share
+			the code to one or upload in github, Other can have the change to use our API which can lose money or privacy or vulnerability.
+	Prompting is revolutionalizing the AI application development:
+		Before prompting the LLM, Supervised Learning was used to train a model with labeled data, deploy and test the model which is a long process of
+			collecting data, training model and test and deployment of model which will take 6-12 months.
+		After OpenAI LLM models, We can specify the prompt in minutes/hours and deploy in minutes/hours.
+	
+Classification:
+	First, create a set of primary and secondary categories to classify.
+	Then, classifying the user query which categories it belongs.
+	Send response in JSON format with primary and secondary category.
+	Eg. customer query about delete my profile, another one is flat screen tv's
+	
+Moderation:
+	To check the user query's harmness, we can use OpenAI's Moderation API. This one will give the different category of harmness and a flag which defines
+		whether it is harm or not.
+	Prompt Injection:
+		when any user want to confuse the model, they will try to give prompt like forget the previous instructions and write an essay. This will confuse the
+			model to give the exact answer. To overcome it, we will use some strategy, first remove the delimiter any thing if the user give to fool the 
+			system and then add the delimiter by our own and then instruct the model to follow the instruction.
+		Another way is to instruct in system message itself to check whether if user try to ignore the instructions or inject new instructions. If it is 
+			then reply as Y or N.
+
+Chain of Thought Reasoning:
+	In this, we are using model to check the various step as chain, before respond to user. Each steps will be start with delimiter to indicates it is 
+		step and ask to follow the steps. Then, model will follow the steps based on the conditions. Some conditions will stop in between the steps. It will 
+		be handled by model itself.
+	Eg. user asking to compare two products. Steps mentioned are 
+		determine whether the user input is to find a product or products details,
+		if multiple products are there, then check the list of products in the below,
+		if the present in the list, then compare the price and other details,
+		finally respond to the user as what they expect.
+		If the user ask for a single product, then it will stop at step 2 itself and respond to user.
+	Finally, use the inner monologue to hide the chain of thought reasoning by removing the above context by removing the remaining content other than result
+		by split the content by delimiter and show the last list item.
+
+Chain Prompting:
+	In the above eg. we saw all the steps are mentioned in single system message. It will be difficult to analyse and debug if any issues comes. If we break
+		down the complex tasks, then it will be easy and more focused.
+	Reduces the number of tokens used in a prompt.
+	Skip some chains of workflow when not need for the task.
+	Easy to test and debug.
+	For complex task, we can take control of LLM flow.
+	Use external tools (web search, databases, calling api's) if needed.
+	It is same as development code, Instead of writing all the code in one method/function, we will split it by size and output. Then pass the output value
+		to the next method/function. It will be easy to find the which method/function will goes wrong and able to identify the issue easily. 
+	Embedding will work better for the retrieval of information and most of high level project will use text-embeddings.
+	
+Check Outputs:
+	Before giving the response to user, check whether output is harmful content or not by using moderation api. If there is no harmness, then the response 
+		will be send to user.
+	Another scenario is to check the response content is relevant to the question or not before giving the response to user. It is done by putting condition 
+		once the response came, another prompt will be do to check whether the question and answer is relevant or not? If the answer is relevant, then the 
+		response will be send to user.
+		
+Evaluation:
+	In this, we are build an end-to-end system as we learned all the steps in the previous videos.
+	First, we are checking the moderation of the user input.
+	Then, we are checking the product list.
+	Then, we are checking for the product details.
+	Then, the response will be check for moderation and check whether the response is relevant to user question or not.
+	Finally, if the response is relevant, then the response will be send to user.
+
+	All the steps are done in one step with multiple method/function call in sequence way if it satisfy in proper way.
+	Chatbot is done with GUI panel to check the response.
+
+Evaluation 1:
+	Evaluation of the model will change what we have mentioned at beginning may change at the end.
+	It is like development stage are now changes after evolution of openAI, same as evaluation also changed.
+	Evaluation in supervised learning has been done with training and test data. Collection of those datas will take more time and efforts. But in OpenAI, 
+		we are not training the model, it is already a pretrained data. We need to fine tune with our datas and the evaluation is based on the data.
+	In this, we are using few shot prompting. We are giving some sample details to how it should respond and then asking the question to give answer in 
+		the same way.
+	After doing, evaluation different queries to check whether it is respond properly or not.
+	During example problem, expecting to respond in JSON format, it is working for normal queries, when we ask some complex one, it is confused and send 
+		JSON response along with Note statement for our understanding. In order to avoid it, we have to update the prompt by mention it to respond in JSON
+		format only not to add other contents. Then adding the some examples in few shots to work better and test the previous easy and complex queries.
+	Another concept to evaluate is to give the list of ideal question and answers to test without training it first. Then use few shot prompting to learn 
+		the model or add the examples in prompt to learn to answer in this format and then evaluate it again. It is like supervised learning.
+	
+Evaluation 2:
+	Evaluating the LLM's output with rubic. Rubic means another prompt which have set of instruction where we will give details of user input and response 
+		as well as content. Ask the set of questions to LLM to check the input and response along with content.
+	Answer the following questions:
+		- Is the Assistant response based only on the context provided? (Y or N)
+		- Does the answer include information that is not provided in the context? (Y or N)
+		- Is there any disagreement between the response and the context? (Y or N)
+		- Count how many questions the user asked. (output a number)
+		- For each question that the user asked, is there a corresponding answer to it?
+		  Question 1: (Y or N)
+		  Question 2: (Y or N)
+		  ...
+		  Question N: (Y or N)
+		- Of the number of questions asked, how many of these questions were addressed by the answer? (output a number)									
+	Evaluating LLM's answer to the user based on ideal/expert answers, check whether LLM's answer agree or disagree with expert answer. By asking a prompt
+		on response of LLM's whether the LLM's response is subset of ideal answer or superset or same and contains all or disagree or similar meaning.
+		Like this we can set a prompt to evaluate the LLM's response.
+		
+Summary:
+	We learned about
+		- Language Models, the chat format and tokens
+		- Moderation
+		- Reasoning
+		- Chain of Thought Reasoning
+		- Chain Prompting
+		- Check outputs
+		- Evaluation
+		- Evaluation 1
+		- Evaluation 2
+</pre>
+    </body>
+    </html>
+    

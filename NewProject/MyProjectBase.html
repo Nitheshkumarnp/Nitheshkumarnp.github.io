@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .topic, .subtopic {
+            margin: 5px -10px 5px;
+        }
+        .subtopic {
+            padding-left: 50px;
+        }
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #333;
+            cursor: pointer;
+            padding: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+        }
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+        .content {
+            max-height: auto;         /* (0 | auto) for load or hide all the elements initially */
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f9f9f9;
+        }
+        #topicsContainer {
+            margin: 0 30%;
+        }
+
+        #attachment {
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table">
+        <h1 style="text-align: center;">Table of Contents</h1>
+        <div id="topicsContainer"></div>
+    </div>
+    
+    <div class="content" id="content"></div>
+
+    <script>
+        const topicsData = {
+            'topic': 'My Learnings',
+            'subtopics': [
+                {
+                'topic': 'Machine Learning',
+                'subtopics': [
+                    {
+                        'topic': 'Basic Concepts',
+                        'page': '',
+                        'subtopics': [
+                            {
+                                'topic': 'Bias and Variance', 
+                                'page': 'MachineLearning/BasicConcepts/Bias_and_Variance.html',
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Central Limit Theorem',
+                                'page': 'MachineLearning/BasicConcepts/Central_Limit_Theorem.html', 
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Cost Function',
+                                'page': 'MachineLearning/BasicConcepts/Cost_Function.html', 
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Differential and Integral Calculus',
+                                'page': 'MachineLearning/BasicConcepts/Differential_Integral_Calculus.html', 
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Evaluation Metrics for Regression',
+                                'page': 'MachineLearning/BasicConcepts/Evaluation_Metrics_Regression.html', 
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Gradient Descent',
+                                'page': 'MachineLearning/BasicConcepts/Gradient_Descent.html', 
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Homoscedasticity and Heteroscedasticity', 
+                                'page': 'MachineLearning/BasicConcepts/Homoscedasticity_and_Heteroscedasticity.html',
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Normal Distribution', 
+                                'page': 'MachineLearning/BasicConcepts/Normal_Distribution.html',
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Transformation Methods', 
+                                'page': 'MachineLearning/BasicConcepts/Transformation_Methods.html',
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'Variance', 
+                                'page': 'MachineLearning/BasicConcepts/Variance.html',
+                                'subtopics': []
+                            },
+                            {
+                                'topic': 'VIF and Multicollinearity', 
+                                'page': 'MachineLearning/BasicConcepts/VIF_and_Multicollinearity.html',
+                                'subtopics': []
+                            }
+                        ]
+                    },
+                    {
+                        'topic': 'Algorithms',
+                        'page': '',
+                        'subtopics': [
+                            {
+                                'topic': 'Linear Regression', 
+                                'page': 'MachineLearning/Algorithms/LinearRegression.html',
+                                'subtopics': []
+                            },
+                        ]
+                    }
+                ]
+            },  {
+                'topic': 'Short Courses',
+                'subtopics': [
+                    {
+                        'topic': 'AI for Everyone', 
+                        'page': 'ShortCourses/AI for Everyone.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Azure OpenAI service on 19-03-2024', 
+                        'page': 'ShortCourses/Azure OpenAI service on 19-03-2024.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Building Applications with Vector Databases', 
+                        'page': 'ShortCourses/Building Applications with Vector Databases.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Building Generative AI Applications with Gradio', 
+                        'page': 'ShortCourses/Building Generative AI Applications with Gradio.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Building Systems with the chatGPT API', 
+                        'page': 'ShortCourses/Building Systems with the chatGPT API.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'ChatGPT prompt engineering for developers', 
+                        'page': 'ShortCourses/ChatGPT prompt engineering for developers.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Converting text to html format', 
+                        'page': 'ShortCourses/Converting text to html format.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Functions, Tools and Agents with Langchain', 
+                        'page': 'ShortCourses/Functions, Tools and Agents with Langchain.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Generative AI for Everyone', 
+                        'page': 'ShortCourses/Generative AI for Everyone.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Generative AI', 
+                        'page': 'ShortCourses/Generative AI.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'GIT Commands', 
+                        'page': 'ShortCourses/GIT Commands.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'How to learn effectively everything', 
+                        'page': 'ShortCourses/How to learn effectively everything.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'LangChain Documentation', 
+                        'page': 'ShortCourses/LangChain Documentation.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Learning Docker from Youtube', 
+                        'page': 'ShortCourses/Learning Docker from Youtube.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Learning of each topics from Intellipaat', 
+                        'page': 'ShortCourses/Learning of each topics from Intellipaat.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Master SQL Question and Answer for Interview', 
+                        'page': 'ShortCourses/Master SQL Question and Answer for Interview.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Open Source Models with Hugging Face', 
+                        'page': 'ShortCourses/Open Source Models with Hugging Face.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Optumera Assortment Functional KT', 
+                        'page': 'ShortCourses/Optumera Assortment Functional KT.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Optumera Markdown Module', 
+                        'page': 'ShortCourses/Optumera Markdown Module.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Optumera Pricing Module', 
+                        'page': 'ShortCourses/Optumera Pricing Module.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Optumera Project', 
+                        'page': 'ShortCourses/Optumera Project.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Optumera Promotion Module', 
+                        'page': 'ShortCourses/Optumera Promotion Module.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'SQL concept learned from internet', 
+                        'page': 'ShortCourses/SQL concept learned from internet.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'SQL new concept to learn', 
+                        'page': 'ShortCourses/SQL new concept to learn.html',
+                        'subtopics': []
+                    },
+                    {
+                        'topic': 'Translation of Spanish and finding unicode', 
+                        'page': 'ShortCourses/Translation of Spanish and finding unicode.html',
+                        'subtopics': []
+                    }
+                ]
+            }]
+        };
+
+        function generateTopics(topicData) {
+            const container = document.getElementById('topicsContainer');
+            container.innerHTML = '';  
+
+            function createCollapsibleElement(cont, data) {
+                const topicButton = document.createElement('div');
+                topicButton.classList.add('topic')
+                topicButton.classList.add('collapsible')
+                topicButton.innerHTML = data.topic;
+                if (data.subtopics.length > 0) {
+                    topicButton.innerHTML += ' <span>&darr;</span>'
+                }
+                if(data.page) {
+                    topicButton.innerHTML += ' <span id="attachment" onclick="openPage('+"'"+data.page+"'"+')">&rarr;</span>'
+                }
+                topicButton.onclick = function() {
+                    const content = this.nextElementSibling;
+                    if (content != null) {
+                        if (content.style.maxHeight == '') {
+                            // content.style.maxHeight = window.outerHeight + 'px';    //  if we are hiding all the elements first use this line
+                            content.style.maxHeight = '0px';                            //  if we are loading all elements first use this line
+                        } else if(content.style.maxHeight != '0px') {
+                            content.style.maxHeight = '0px';
+                        } else {
+                            content.style.maxHeight = window.outerHeight + 'px';
+                        }
+                    }
+                };
+
+                cont.appendChild(topicButton);
+
+                if (data.subtopics.length > 0) {
+                    const div = document.createElement('div');
+                    div.classList.add('subtopic')
+                    div.classList.add('content')
+                    data.subtopics.forEach(subtopic => {
+                        createCollapsibleElement(div, subtopic);
+                    });
+                    cont.appendChild(div);
+                } else {
+                    const div = document.createElement('div');
+                    div.classList.add('subtopic')
+                    div.classList.add('content')
+                    cont.appendChild(div);
+                }
+            }
+
+            createCollapsibleElement(container, topicData);
+        }
+
+        function loadComponent(component) {
+            fetch(component)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.log('Error:', error));
+        }
+
+        function openPage(page) {
+            window.location.href = page;
+        }
+
+        generateTopics(topicsData);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Building Applications with Vector Databases</title>
+    </head>
+    <body>
+        <pre>Course From DeepLearning.ai : Building Applications with Vector Databases
+Introduction:
+	In this course, we will learn about building applications with vector databases using pinecone. Vector databases are the most important part of the
+		infrastructure stack.
+	It is commonly used in RAG approach, but it can be used in various applications like Semantic search, Recommender Systems, Hybrid Search, Facial Similarity
+		search, Anomaly Detection.
+	Vector Databases contains lot of vectors. Eg. In RAG, we are embedding documents and asking the prompt which check the similar content in embedding documents
+		retrieve the relevant content.
+	It can be used in many applications like image recognition, Anomaly Detection etc. In image recognition, a new image will be check in the image databases 
+		and get the similar images. In Anolamy detection, a new image will be check in the image databases, if no images are similar in the image databases,
+		then it is an anomaly.
+	Explained all the applications we are going to see now one by one. How to make use of vector databases with sparse and dense methods.
+	In this, we will use lot of datas from internet or various source to store in vector databases and retrieval of process. After working in all the applications
+		we will get more idea to implement vector databases in other use cases.
+
+Semantic Search:
+	It searches the meaning of the content which are relevant in the vector databases.
+	Sentence Transformer:
+		Sentence Transformer is a special translator which finds the similar meaning of different sentences and convert them in similar codes.
+		Embedding means converting a text or images into some codes or vectors.
+		By use of sentence transformer, instead of searching word-by-word, it can search for meaning, which is very easier and more efficiency.
+	PineCone:
+		PineCone is like a smart librarian for AI. When we ask question to the AI, it checks with PineCone and PineCone store the datas in organized way which
+			contains the summary of the vectors already stored.
+		When the AI ask the PineCone, it checks the summary of the question to the summary of the vectors for the faster retrieval of data.
+		PineCone is not an AI, it is a tool which makes AI model work better by organizing their data efficiently.
+		Used in finding best answers, finding similar text and creations, find similar images.
+	Let's see the steps how it done in this tutorial:
+		Importing the required packages.
+		Loading dataset from Quora of 1,00,000 datas of questions.
+		Checking the loaded datas using print statement of first 50 questions and total number of questions.
+		Creating a model using Sentence Transformer to text embedding.
+		After creating the model, test the model by simple question and checking how it embeds the question.
+		Setting up the PineCone by mentioning:
+			API_KEY,
+			deleting the index, if already exists,
+			creating the index using serverless method
+		Create embedding and Upsert to PineCone:
+			Taking 10,000 sample from the data and giving batch value as 200.
+			Using for loop with (0, 10000, 200) conditions to upload data in batch.
+			Inside the for loop, creating an unique index which is sequence no, then the text, and using model embeds the questions.
+			Now, we having unique id, question and embedded vector.
+			All the three are stored in tuples and upsert into pinecone.
+		Then, checking the details of index: dimensions and vector size.
+		Using a helper function, we are asking a query to check the relevant answers. In that function:
+			converting the query into vector using sentence transformer model.
+			checking the similar content in the pinecone's index which already created for the query.
+			It gives the relevant answer with score which matches more.
+		
+Retrieval Augmented Generation (RAG):
+	It is process of getting answer from relevant details which send in instruction prompt or from documents.
+	Let's see the steps how it done in this tutorial:
+		Importing the required packages.
+		Setting up the PineCone which is same as did in previous.
+		Loading dataset.
+		Prepare the embedding and upsert to PineCone in batch of 250 using list and clearing list.
+		Connecting to OpenAI:
+			setting the OpenAI API key,
+			creating a embedding model for the query.
+		Then, checking the top 3 relevant content from the PineCone by sending embedded query.
+		Once the relevant contents are come as response, building a prompt using the response.
+		Finally, the prompt is send to chat completion model of OpenAI to along with the query to complete using the prompt.
+		Then, the chat model gives the response from the documents. 
+
+Recommender Systems:
+	It is a process of suggesting the same information related to topic or contents.
+	In this tutorial, we are going to implement two recommendations:
+		1) Recommending articles using query with titles.
+		2) Recommending articles using query with contents.
+	Let's see the steps how it done in this tutorial:
+		Importing the required packages.
+		Loading dataset.
+		Setting up the PineCone which is same as did in previous.
+		Prepare the embedding of the titles and upsert to PineCone in batch.
+		Using helper function, create a query embedding and search in PineCone to get relevant contents(titles).
+		Second one is, prepare the embedding of the contents and upsert to PineCone in batch.
+		Using helper function, create a query embedding and search in PineCone to get relevant contents(contents).
+
+Hybrid Search:
+	Hybrid Search means searching on both sparse and dense embeddings using sparse and dense vectors.
+	In this, we are using BM25 and CLIP to embed sparse and dense vectors to get fashionable data from dataset having text and images.
+	PineCone supports both dense and sparse search at same time.
+	BM25:
+		BM25 is a ranking function that is used to retrieve text by estimating the relative importance of terms in the text to the search query.
+		It is calculated based on the number of documents in the data corpus and the word frequency across all relevant documents.
+	CLIP:
+		Contrastive Language-Image Pre-Training is a neural network trained on a variety of (image,text) pairs.
+		It maps an image to text/caption to describe the image.
+	Let's see the steps how it done in this tutorial:
+		Importing the required packages.
+		Loading dataset.
+		Setting up the PineCone which is same as did in previous.
+		Creating a sparse vector using BM25 and checking one value.
+		Creating a dense vector using CLIP and checking one value.
+		Create embeddings using dense and sparse, then adding values(id, dense, sparse, metadata) in index of pinecone.
+		Testing with sample query by converting to dense and sparse vectors and search for top_k values in a query inside index for result. 
+		Using a helper function which contains import of html packages and bytesIO for displaying the results of images.
+		Scaling a hybrid search:
+			In the above scenario, we gave equal value of dense and sparse embeddings. Now we can change values based on requirements by changing dense and	
+				sparse index value multiply by alpha and (1-alpha).
+		Then, send the altered dense and sparse embeddings to index query for the result. The result will be different than previous.
+		If the alpha value is 0, then it gives more sparse values. If the alpha value is 1, then it gives more dense values.
+
+Facial Similarity Search:
+	In this, Facial Similarity means comparing the face of child with the face of mother and father to find who has more similarity.
+	We are using DeepFace, PCA and T-SNE(t-Distributed Stochastic Neighbour Embedding) packages to convert and compare facial similarity.
+	Visualize a data of images:
+		2 steps:
+			PCA			- preliminary step to reduce the dimension of our data of embeddings.
+			T-SNE plot  - to plot the data after PCA.
+			
+	Let's see the steps how it done in this tutorial:
+		Importing the required packages.
+		Loading dataset and checking the faces of child, mother and father.
+		Setting up the PineCone.
+		Create Embeddings of images using DeepFace.
+		checking 10 embedded data.
+		Then ploting the embedded data in graph in 2 dimensions using PCA and T-SNE.
+		Now, creating a PineCone index to store values.
+		Uploading the index with (person and file name)
+		Calculating the similarity of top 10 score whether it is dad or mom?
+		Check the matching images of one random child one with dad to get most similar images.
+		After getting the best similarity, displaying the images to confirm visually.
+		
+Anomaly Detection:
+	In this, we are finding some anomaly log from sample logs. A model is trained with training data of logs and the score as supervised learning.
+	After model is trained with data, sample logs are embedded and inserted to pinecone index.
+	Sample data is embedded and search in index and to get similar result. The last value will have least similar one which is considered as anomaly.
+	Let's see the steps how it done in this tutorial:
+		Importing the required packages.
+		Loading dataset.
+		Setting up the PineCone.
+		Checking 5 train and sample logs.
+		Setup a model with Sentence Transformer and fitting the model with training examples.
+		Encoding the model with sample dataset in list.
+		Then, upsert the embedded sample data as (id, value, metadata).
+		Finally, finding an anomaly by choosing a random sample data to check similarity matches of top 10.
+		If the last value of top 10 or some value is the worst value for the search value from the PineCone index.
+		Printing the anomaly value which came as last value.
+</pre>
+    </body>
+    </html>
+    

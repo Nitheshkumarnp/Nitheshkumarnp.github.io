@@ -1,0 +1,108 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning Docker from Youtube</title>
+    </head>
+    <body>
+        <pre>Learn Docker in 1 Hour | Full Docker Course for Beginners:
+
+Introduction:
+	Some applications works on windows, will not work on Linux, MAC due to OS. Some issue with version of libraries used.
+	To standardized and make similar to run on all over the OS as well as version issues, docker was created.
+	It resolves compatitability issues.
+	In this course, we will learn:
+		1) What Docker is?
+		2) Why, When & How to use it?
+		3) How to make life easier using docker?
+		4) Master Docker Fundamentals
+		5) Learn advanced concepts
+		6) You'll learn to fully dockerize applications
+		7) I'll teach you docker file syntax
+		8) All the most important docker commands
+		
+What is Docker?
+	Think about a lunch box, it contain rice, sambar, rasam, curd, poriyal etc... We can take the lunch box anywhere and eat food whenever. It will similar 
+		like eating in kitchen.
+	Same is what docker also, it also have code, dependencies, etc... We can run any applications anywhere(OS) with help of Docker.
+	It is used for Development, Packaging and Execution.
+	In this, we need to mention the necessary dependencies and package versions. It generates a self contained box which includes own operating system and
+		all the components essential for running our application.
+	The self contained box act as a separate computer which contain OS and all the necessary components to run our application smoothly.
+	
+Why should we use Docker?
+	Big Application like Uber, Spotify, eBay etc... use docker which make easier for development and deployment with better and faster performance.
+	1) Consistency across environments:
+		It works in all the employee system, doesn't care about the OS, package versions, same commands for all the users. It reduces that in my system, 
+			it is not working issue. It reduces confusion and better collaboration.
+	2) Isolation:
+		All the files, applications and dependencies are isolated to avoid clashes between them. It is like lunch box where we have isolated each items.
+	3) Portability:
+		Moving the container from stages development, testing, production is easy and faster. It shares the host system resources to make more efficient
+			than other traditional methods.
+	4) Version Control:
+		It has version control like GIT where we can track the version of files and history. Similarly, we have in dockers. Here, we can track the application 
+			by each version and if anything goes wrong with new version, we can easily switch to older version by one button click.
+	5) Scalability:
+		We can use multiple application and platform if more users needed. It is like restaurant menu, if more user comes, we provide more menus. But,
+			content in menu is same for all.
+	6) Devops Integration:
+		It reduces the gap between development and deployment stages. Stream lining the flow from Dev to Ops.
+		
+How does Docker work?
+	It works with 2 concepts: Images and Containers.
+	Images:
+		It is light weight, standalone, executable package that contains everything to run an application like code, runtime, libraries, system tools and OS.
+		It is like a recipe instruction menu, it contains all the required details and steps to create the recipes. Using that we can create multiple 
+			recipe with single instruction menu.
+		Same as in Images also, we can create multiple containers with single image.
+	Containers:
+		It is an executable enviroment where images are executed. It follow instruction mentioned in images from install packages to run the application.
+		It is the place where images are processed and preformed. It is like a kitchen, where the all the recipe are made.
+	
+	Terms used in Dockers:
+		Volume: a persistant data storage mechanism that shares data between docker containers and host machine which is a computer or server or multiple 
+			containers.
+		Network: a connectivity between containers or between container and outside environment. It performs well even it is isolated from host machine.
+			It works like a server in hotel who manges and gives orders to different chiefs in different envs and complete the work without collapse within
+			them.
+		
+	Docker Workflow has 3 parts:
+		Docker client
+		Docker Host (Docker Daemon)
+		Docker Registry (Docker Hub)
+		
+	Docker client is a User application where end user perform execution operation from development to deployment by giving commands.
+	Docker Host is a backend process where instructions given clients will be executed here. It manages the containers and images.
+	Docker Registry is like Github which contains both shared and private docker images. We can use it if we don't have it on local.
+		
+How to use Docker?
+	First we neeed to install Docker Desktop from the official website. Accept all the recomendations.
+	Open and just explore the main screen having Images, Containers, Volume, Builds, Dev Environments, Docker Scout.
+	Explore the docker hub to see the public images in the portal.
+	
+	To create an Own docker image, we need to create a docker file. It has set of commands to run the application.
+	Basic Commands to create docker file:
+		FROM:  from where the base image to create the new image.
+		WORKDIR: from which location to start the work.
+		COPY: bring the required tools or files to location.
+		RUN: execute the steps to create image.
+		EXPOSE: where the created image going to execute.
+		ENV: choose whether it is a production or build env.
+		ARG: it defines build time variables which going to use.
+		VOLUME: it is an extra space where some required files can you get from external storage.
+		CMD: it starts the container to work as per the image.
+		ENTRYPOINT: after container starts, it reach to entrypoint unless specific command provided.
+		
+		CMD vs ENTRYPOINT:
+			CMD can be overriden, ENTRYPOINT can't be overriden.
+			CMD is default execuable, ENTRYPOINT is fixed starting point.
+			
+	To run the docker image, let download from docker hub and run it from terminal.
+	For more confusion, check the video.	
+</pre>
+    </body>
+    </html>
+    

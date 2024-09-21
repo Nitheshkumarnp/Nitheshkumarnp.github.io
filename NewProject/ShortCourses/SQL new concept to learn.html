@@ -1,0 +1,315 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SQL new concept to learn</title>
+    </head>
+    <body>
+        <pre># check the below logic.
+set @r1 = 0, @r2 = 0, @r3 = 0, @r4 = 0;
+select min(Doctor), min(Professor), min(Singer), min(Actor)
+from (select 
+case when occupation = 'Doctor' then (@r1:=@r1+1)
+    when occupation = 'Professor' then (@r2:=@r2+1)
+    when occupation = 'Singer' then (@r3:=@r3+1)
+    when occupation = 'Actor' then (@r4:=@r4+1)
+    end as RowNumber,
+case when occupation = 'Doctor' then Name end Doctor,
+case when occupation = 'Professor' then Name end Professor,
+case when occupation = 'Singer' then Name end Singer,
+case when occupation = 'Actor' then Name end Actor
+from OCCUPATIONS
+order by name) a
+group by RowNumber
+
+# the above is in mysql format, I changed in easy way in sql server logic.
+with data as 
+	(select 
+	row_number() over(partition by Occupation order by Name) as RowNumber,
+	case when occupation = 'Doctor' then Name end Doctor,
+	case when occupation = 'Professor' then Name end Professor,
+	case when occupation = 'Singer' then Name end Singer,
+	case when occupation = 'Actor' then Name end Actor
+	from Occupations)
+select min(Doctor) Doctor, min(Professor) Professor, min(Singer) Singer, min(Actor) Actor
+from data
+group by RowNumber
+
+
+declare @counter int,
+@firstname varchar(20),
+@lastname varchar(20),
+@payment int
+set @counter  = 1
+set @firstname = 'Nitheshkumar'
+set @lastname = 'NP'
+set @payment = 200000
+print cast(@counter as varchar) + ' ' + @firstname + ' ' + @lastname +
+  ' has been paid ' + cast(@payment as varchar) 
+
+
+declare @n int
+set @n  = 5
+while @n > 0
+  begin
+  print replicate('*', @n)
+  set @n = @n - 1
+  end
+  
+  
+declare @n int, @m int
+set @n  = 5
+set @m = 5
+while @n > 0
+  begin
+  print replicate(' ', @m-1) + replicate('*', 6-@n)
+  set @n = @n - 1
+  set @m = @m - 1
+  end
+
+
+## working fine, but find any alternative way to learn new method
+select n,
+case when(nn is null and pp is null) then 'Leaf'
+     when(nn is not null and pp is not null) then 'Inner'
+     when(nn is not null and pp is null) then 'Root'
+end as Result
+from
+(select *
+from bst b1
+left join
+(select n as nn, p as pp
+from bst
+where n in (select p
+           from bst)) b2
+on n = nn) b3
+order by n
+
+## working fine
+select company_code, founder, lm, cm, m, emp 
+from company a,
+(select c.company_code cc, count(distinct e.lead_manager_code) lm, count(distinct e.senior_manager_code) cm, count(distinct e.manager_code) m, count(distinct  e.employee_code) emp
+from company c
+join employee e
+on c.company_code = e.company_code
+group by c.company_code
+order by c.company_code) b
+where a.company_code = b.cc
+order by a.company_code
+
+## working fine
+select 
+case when grade >= 8 then name
+     else null
+end, grade, marks
+from 
+(select name,
+case when marks between 0 and 9 then 1
+     when marks between 10 and 19 then 2
+     when marks between 20 and 29 then 3
+     when marks between 30 and 39 then 4
+     when marks between 40 and 49 then 5
+     when marks between 50 and 59 then 6
+     when marks between 60 and 69 then 7
+     when marks between 70 and 79 then 8
+     when marks between 80 and 89 then 9
+     when marks between 90 and 100 then 10
+end as grade,
+marks
+from students
+order by grade desc, name) a
+
+
+## working fine, check below for better solution
+select fin.hi, fin.hn
+from (
+select s.hacker_id hi, h.name hn, c.challenge_id ci, d.difficulty_level dl, s.score ss, d.score ds
+from difficulty d
+inner join challenges c
+on d.difficulty_level = c.difficulty_level
+inner join submissions s
+on c.challenge_id = s.challenge_id
+inner join hackers h
+on s.hacker_id = h.hacker_id
+where s.score = d.score) fin
+group by fin.hi, fin.hn
+having count(fin.hi) > 1
+order by count(fin.hi) desc, fin.hi
+
+
+SELECT H.hacker_id, H.name 
+FROM   submissions S 
+   JOIN challenges C 
+     ON S.challenge_id = C.challenge_id 
+   JOIN difficulty D 
+     ON C.difficulty_level = D.difficulty_level 
+   JOIN hackers H 
+     ON S.hacker_id = H.hacker_id 
+AND S.score = D.score 
+GROUP  BY H.hacker_id, H.name 
+HAVING Count(S.hacker_id) > 1 
+ORDER  BY Count(S.hacker_id) DESC,  S.hacker_id ASC;
+
+
+SELECT h.hacker_id, h.name, COUNT(c.challenge_id) AS c_count
+FROM Hackers h
+JOIN Challenges c 
+ON c.hacker_id = h.hacker_id
+GROUP BY h.hacker_id, h.name
+HAVING c_count = 
+    (SELECT COUNT(c2.challenge_id) AS c_max
+     FROM challenges as c2 
+     GROUP BY c2.hacker_id 
+     ORDER BY c_max DESC limit 1)
+OR c_count IN 
+    (SELECT DISTINCT c_compare AS c_unique
+     FROM (SELECT h2.hacker_id, 
+                  h2.name, 
+                  COUNT(challenge_id) AS c_compare
+           FROM Hackers h2
+           JOIN Challenges c ON c.hacker_id = h2.hacker_id
+           GROUP BY h2.hacker_id, h2.name) counts
+     GROUP BY c_compare
+     HAVING COUNT(c_compare) = 1)
+ORDER BY c_count DESC, h.hacker_id;
+
+
+select p.age, w.power, count(*), min(coins_needed)
+from wands w
+join wands_property p
+on w.code = p.code
+where p.is_evil = 0
+group by p.age, w.power
+order by w.power desc, p.age desc
+
+
+SELECT a.id, b.age, a.coins_needed, a.power 
+FROM  wands a 
+JOIN wands_property b 
+ON a.code = b.code 
+WHERE b.is_evil = 0 
+AND a.coins_needed = (SELECT Min(a1.coins_needed) 
+    FROM wands a1 
+    JOIN wands_property b1 
+    ON a1.code = b1.code 
+    WHERE b.age = b1.age 
+    AND a.power = a1.power)
+ORDER  BY a.power DESC, b.age DESC;
+
+
+select h.hacker_id, h.name, sum(ss)
+from hackers h
+join (select s.hacker_id, max(s.score) ss
+      from submissions s
+      group by s.hacker_id, s.challenge_id) st
+      on h.hacker_id = st.hacker_id
+group by h.hacker_id, h.name
+having sum(ss) > 0
+order by sum(ss) desc, h.hacker_id;
+
+
+## new to learn, understant and use this logic 
+SELECT START_DATE, MIN(END_DATE)
+FROM
+  (SELECT START_DATE
+   FROM PROJECTS
+   WHERE START_DATE NOT IN
+       (SELECT END_DATE
+        FROM PROJECTS)) A,
+  (SELECT END_DATE
+   FROM PROJECTS
+   WHERE END_DATE NOT IN
+       (SELECT START_DATE
+        FROM PROJECTS)) B
+WHERE START_DATE < END_DATE
+GROUP BY START_DATE
+ORDER BY (MIN(END_DATE) - START_DATE), START_DATE;
+
+## worked fine
+select aname
+from (
+select a.id aid, a.name aname, a.sal asal, a.fid afid, ps.salary afsal
+from (
+select s.id id, s.name name, p.salary sal, f.friend_id fid
+from Students s
+join Friends f
+on s.id = f.id
+join Packages p
+on s.id = p.id) a
+join Packages ps
+on a.fid = ps.id
+order by a.id) aa
+where aa.asal < aa.afsal
+order by afsal
+
+## loosu thanamana logic, please check
+SELECT X, Y
+FROM FUNCTIONS F1
+WHERE EXISTS
+    (SELECT *
+     FROM FUNCTIONS F2
+     WHERE F2.Y = F1.X
+     AND F2.X = F1.Y
+     AND F2.X > F1.X)
+AND (X != Y)
+UNION
+SELECT X, Y
+FROM FUNCTIONS F1
+WHERE X = Y
+AND (
+         (SELECT COUNT(*)
+          FROM FUNCTIONS
+          WHERE X = F1.X
+          AND Y = F1.X) > 1)
+ORDER BY X;
+
+# my logic working fine, please check below one
+select co.contest_id, co.hacker_id, co.name, sum(ss.ts), sum(ss.tas),
+sum(tv), sum(tuv)
+from Contests co
+join Colleges cl
+on co.contest_id = cl.contest_id 
+join Challenges ch
+on cl.college_id = ch.college_id
+left join (select challenge_id, sum(total_views) tv, sum(total_unique_views) tuv from View_Stats group by challenge_id) vs
+on ch.challenge_id = vs.challenge_id
+left join (select challenge_id, sum(total_submissions) ts, sum(total_accepted_submissions) tas from Submission_Stats group by challenge_id) ss
+on ch.challenge_id = ss.challenge_id
+group by co.contest_id, co.hacker_id, co.name
+order by co.contest_id
+
+# correct logic
+select con.contest_id,
+        con.hacker_id, 
+        con.name, 
+        sum(total_submissions), 
+        sum(total_accepted_submissions), 
+        sum(total_views), sum(total_unique_views)
+from contests con 
+join colleges col on con.contest_id = col.contest_id 
+join challenges cha on  col.college_id = cha.college_id 
+left join
+(select challenge_id, sum(total_views) as total_views, sum(total_unique_views) as total_unique_views
+from view_stats group by challenge_id) vs on cha.challenge_id = vs.challenge_id 
+left join
+(select challenge_id, sum(total_submissions) as total_submissions, sum(total_accepted_submissions) as total_accepted_submissions from submission_stats group by challenge_id) ss on cha.challenge_id = ss.challenge_id
+    group by con.contest_id, con.hacker_id, con.name
+        having sum(total_submissions)!=0 or 
+                sum(total_accepted_submissions)!=0 or
+                sum(total_views)!=0 or
+                sum(total_unique_views)!=0
+            order by contest_id;
+			
+# 15 days of sql learning problem solution, very very hard to understand logic
+select s1.submission_date, count(distinct s1.hacker_id),
+(select hacker_id from submissions s3 where s3.submission_date = s1.submission_date group by hacker_id order by count(submission_id) desc, min(hacker_id) limit 1) h_id,
+(select h.name from hackers h where h.hacker_id = h_id)
+from submissions s1
+where datediff(s1.submission_date, '2016-03-01')+1 = (select count(distinct s2.submission_date) from submissions s2 where s2.submission_date <= s1.submission_date and s2.hacker_id = s1.hacker_id)
+group by s1.submission_date
+</pre>
+    </body>
+    </html>
+    

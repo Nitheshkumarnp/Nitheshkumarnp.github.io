@@ -1,0 +1,75 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Converting text to html format</title>
+    </head>
+    <body>
+        <pre>x = '''What is machine learning?
+Machine learning is a field of computer science that involves the use of algorithms and statistical models to enable machines to learn from data without being explicitly programmed.
+
+What are the types of machine learning?
+There are three types of machine learning: supervised learning, unsupervised learning, and reinforcement learning.
+
+What is supervised learning?
+Supervised learning is a type of machine learning where the algorithm is trained on labeled data, and the goal is to learn a mapping function from input variables to output variables.
+
+What is unsupervised learning?
+Unsupervised learning is a type of machine learning where the algorithm is trained on unlabeled data, and the goal is to find patterns and relationships within the data.
+
+What is reinforcement learning?
+Reinforcement learning is a type of machine learning where an agent learns to behave in an environment by performing actions and receiving rewards or penalties.
+
+What is overfitting?
+Overfitting occurs when a model is too complex and fits the training data too closely, resulting in poor performance on new, unseen data.
+
+What is regularization?
+Regularization is a technique used to prevent overfitting by adding a penalty term to the loss function.
+
+What is the bias-variance tradeoff?
+The bias-variance tradeoff is a fundamental concept in machine learning that describes the relationship between the complexity of a model and its ability to generalize to new data.
+
+What is a neural network?
+A neural network is a type of machine learning algorithm that is inspired by the structure and function of the human brain.
+
+What is deep learning?
+Deep learning is a type of neural network that uses multiple layers to learn increasingly complex representations of the input data.
+
+What is a convolutional neural network (CNN)?
+A convolutional neural network is a type of deep learning algorithm that is particularly well-suited for image classification tasks.
+
+What is a recurrent neural network (RNN)?
+A recurrent neural network is a type of deep learning algorithm that is particularly well-suited for sequential data, such as natural language text.
+
+What is transfer learning?
+Transfer learning is a technique where a pre-trained model is used as a starting point for a new task, rather than training a new model from scratch.
+
+What is dimensionality reduction?
+Dimensionality reduction is a technique used to reduce the number of input features in a dataset while preserving as much of the original information as possible.
+
+What is clustering?
+Clustering is a technique used to group similar objects together in a dataset.
+
+What is classification?
+Classification is a type of machine learning task where the goal is to predict a categorical label for a given input.
+
+What is regression?
+Regression is a type of machine learning task where the goal is to predict a continuous numerical value for a given input.
+
+What is a decision tree?
+A decision tree is a type of machine learning algorithm that uses a tree-like structure to model decisions and their possible consequences.
+'''
+listedLine = x.splitlines()
+combining = ''
+for i in range(len(listedLine)):
+  if i%3 == 0:
+    combining += '<div><h4>' + listedLine[i] + '</h4>'
+  if i%3 == 1:
+    combining += '<p>' + listedLine[i] + '</p></div>'
+print(combining)
+</pre>
+    </body>
+    </html>
+    

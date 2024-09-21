@@ -1,0 +1,447 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>OOP:
+	Object Oriented Programming.
+	Spliting the functionality into many teams.
+	Spliting the complex problem into pieces to each team.
+	Every thing in python is object types.
+	
+	class BigObject:
+	  pass
+	obj = BigObject()
+	print(type(obj))		// <class '__main__.BigObject'>
+
+	class is the blueprint of object.
+	4 pillars of OOP:
+		1. Encapsulation
+		2. Abstraction
+		3. Inheritance
+		4. Polymorphism
+	
+Create Our Own Objects:
+	class PlayerCharacter:
+	  def __init__(self, name):	// constructor method
+	    self.name = name		// attributes
+	  def run(self):
+	    print('run')
+	    return 'done'
+	player1 = PlayerCharacter('nik')
+	player2 = PlayerCharacter('prime')
+	print(player1.name)			// nik
+	print(player2.name)			// prime
+	print(player1.run())			// run done
+
+	player2.attack = 50
+	print(player2.attact)			// 50
+	print(player1.attack)			// error
+	// bcoz player1 is not assigned
+
+Attributes and Methods:
+	Attributes are pieces of data to the object dynamically.
+	
+	class PlayerCharacter:
+	  membership = True		// class object attribute
+	  def __init__(self, name):	// constructor method
+	    self.name = name		// attributes
+	  def run(self):
+	    print('run')
+	    return 'done'
+	player1 = PlayerCharacter('nik')
+	player2 = PlayerCharacter('prime')
+	print(player1.name)			// nik
+	print(player2.name)			// prime
+	print(player1.membership)		// True
+
+	class PlayerCharacter:
+	  membership = True		
+	  def __init__(self, name):
+	    if self.membership:	
+	      self.name = name
+
+	// use self.membership or PlayerCharacter.membership in if condition
+	// self represents class name
+
+	class PlayerCharacter:
+	  membership = True		
+	  def __init__(self, name):
+	    if self.membership:	
+	      self.name = name
+	  def shout(self):
+	    print(f'my name is {self.name}')	// use self.name instead 
+	    return 'done'			   of name.
+	player1 = PlayerCharacter('nik')
+	player2 = PlayerCharacter('prime')
+	print(player1.shout())			// my name is nik
+
+__init__:
+	It is a Dunder method in python, we can't create a method
+	  using __ type.
+
+	def __init__(self, name, age):
+	  if(age > 18):
+	    self.name = name	
+	    self.age = age			// if age < 18, error occurs
+
+	def __init__(self, name='nik', age=15):
+	  if(age > 18):
+	    self.name = name	
+	    self.age = age
+
+@classmethod and @staticmethod:
+	class PlayerCharacter:
+	  membership = True		
+	  def __init__(self, name):
+	    if self.membership:	
+	      self.name = name
+	  def shout(self):
+	    print(f'my name is {self.name}')
+	  @classmethod				// decorator
+	  def adding_things(cls, num1, num2):	// (num1, num2) create error
+	    return num1 + num2
+	player1 = PlayerCharacter('nik', 22)
+	print(player1.adding_things(5, 6))	// 11
+
+	classmethod can be called without calling the object.
+	classmethod is related to class, not to object, so don't
+	  need to create object.
+	
+	class PlayerCharacter:
+	  membership = True		
+	  def __init__(self, name):
+	    if self.membership:	
+	      self.name = name
+	  def shout(self):
+	    print(f'my name is {self.name}')
+	  @classmethod				
+	  def adding_things(cls, num1, num2):	
+	    return num1 + num2
+	print(PlayerCharacter.adding_things(5,6))	// 11
+
+	staticmethod is not related to class
+
+	class PlayerCharacter:
+	  membership = True		
+	  def __init__(self, name):
+	    if self.membership:	
+	      self.name = name
+	  def shout(self):
+	    print(f'my name is {self.name}')
+	  @classmethod				
+	  def adding_things(cls, num1, num2):	
+	    return cls('nik',num1 + num2)		// class is related
+	  @staticmethod				
+	  def adding_things(num1, num2):	
+	    return num1 + num2				// class is not related
+
+Blueprint:
+	class NameOfClass():
+	  class_attribute = 'value'
+	  def __init__(self, param1, param2):
+	    self.param1 = param1
+	    self.param2 = param2
+	  def method(self):
+	    # code
+	  @classmethod
+	  def cls_method(cls, param1, param2):
+	    # code
+	  @staticmethod
+	  def stc_method(param1, param2):
+	    # code
+
+Encapsulation:
+	Encapsulation means wrapping the attributes and methods
+	  in a class.
+
+	class PlayerCharacter:
+	  def __init__(self, name, age):
+	    self.name = name
+	    self.age = age
+	player1 = PlayerCharacter('nik', 22)
+	print(player1.name)			// nik
+	print(player1.age)			// 22
+	player2 = {'name':'nik', 'age':22}
+	print(player2['name'])			// nik
+	print(player2['age'])			// 22
+
+Abstraction:
+	Abstraction is giving the necessary details to user.
+
+	class doesn't give all the details to user, it gives the
+	  details what the user needs, otherwise don't give.
+
+	class PlayerCharacter:
+	  def __init__(self, name, age):
+	    self.name = name
+	    self.age = age
+	  def speak(self):
+	    print(f'my name is {self.name} and {self.age}')
+	  def run(self):
+	    print('run')
+	player1 = PlayerCharacter('nik', 22)
+	print(player1.speak())			// my name is nik 22
+	
+	// This class has speak and run method, but speak method is
+	     called, so it is given.
+
+	class PlayerCharacter:
+	  def __init__(self, name, age):
+	    self.name = name
+	    self.age = age
+	  def speak(self):
+	    print(f'my name is {self.name} and {self.age}')
+	  def run(self):
+	    print('run')
+	player1 = PlayerCharacter('nik', 22)
+	player1.name = '!!!'
+	player1.speak = 'jjjjjj'
+	print(player1.speak)			// jjjjj
+	print(player1.speak())			// error
+
+	// if player1.speak is created, then speak() is reassigned
+	     to speak, so we need privacy to protect it from
+		 other programmer.
+
+Private vs Public Variables:
+	Only give the access to some variable to modify.
+	So use private variable.
+
+	self._name = name
+	self._age = age
+	
+	_ gives the privacy and __ gives the identity to not to use.
+
+Inheritance:
+	class User():
+	  def sign_in(self):
+	    print('logged in')
+	class Wizard(User):
+	  pass
+	class Archer(User):
+	  pass
+	wizard1 = Wizard()
+	print(wizard1.sign_in())	// logged in
+	
+
+	class User():
+	  def sign_in(self):
+	    print('logged in')
+	class Wizard(User):
+	  def __init__(self, name, power):
+	    self.name = name
+	    self.power = power
+	  def attack(self):
+	    print(f'attacking with power of {self.power}')
+	class Archer(User):
+	  def __init__(self, name, num_arrows):
+	    self.name = name
+	    self.num_arrows = num_arrows
+	  def attack(self):
+	    print(f'attacking with arrows of {self.num_arrows}')
+	wizard1 = Wizard('nik', 50)
+	archer1 = Archer('prime', 100)
+	wizard1.attack()		// attacking with power of 50
+	archer1.attack()		// attacking with arrows of 100
+	
+	// we have different methods and attributes in class wizard and
+	      archer, but common method sign_in is used in both.
+	// Inheritance shares the attributes and methods from parent to 
+		child class
+
+Inheritance 2:
+	isinstance(instance, class) is to check the instance of class.
+	
+	wizard1 = Wizard('nik', 50)
+	print(isinstance(wizard1, Wizard))	// True
+	print(isinstance(wizard1, User))	// True
+	print(isinstance(wizard1, object))	// True
+	
+	Everything in python is object, so various methods are used in
+	  when we type wizard1., it shows various inbuilt methods.
+
+	Object is the base class, afterthat other class comes.
+
+Polymorphism:
+	wizard1 = Wizard('nik', 50)
+	archer1 = Archer('prime', 60)
+	def player_attack(char):
+	  char.attack()
+	player_attack(wizard1)		// attacking with power of 50
+	player_attack(archer1)		// attacking with arrows 60
+
+	Even calling the same method, it gives different outputs.
+	This is polymorphism, it is powerful concept.
+
+	if the class User also have attack() method, then if we call
+	  the archer1.attack(), it gives archer attack methods.
+
+	if we want to print both the attack method, then try this.
+	
+	class User():
+	  def sign_in(self):
+	    print('logged in')
+	  def attack(self):
+	    print('do nothing')
+	class Wizard(User):
+	  def __init__(self, name, power):
+	    self.name = name
+	    self.power = power
+	  def attack(self):
+	    User.attack(self)
+	    print(f'attacking with power of {self.power}')
+	
+	// this will print both, do nothing and attacking with power of 50.
+
+Super:
+	if User and Wizard has __init__, then use this.
+
+	class User():
+	  def __init__(self, email):
+	    self.email = email
+	  def sign_in(self):
+	    print('logged in')
+	  def attack(self):
+	    print('do nothing')
+	class Wizard(User):
+	  def __init__(self, name, power, email):
+	    User.__init__(self, email)		// check below
+	    self.name = name
+	    self.power = power
+	  def attack(self):
+	    User.attack(self)
+	    print(f'attacking with power of {self.power}')
+	wizard1 = Wizard('nik', 22, 'nikp@gmail.com')
+	print(wizard1.email)			// nikp@gmail.com
+
+	// instead of User.__init__(self, email) use super().__init__(email)
+
+Object Introspection:
+	Ability to determine the type of object.
+
+	print(dir(wizard1))		// gives all dunder, user method
+
+	check the access of the method.
+
+Dunder Methods:
+	Dunder methods are special methods, derived from base class.
+
+	class Toy():
+	  def __init__(self, color, age):
+	    self.color = color
+ 	    self.age = age
+
+	action_figure = Toy('red', 5)
+	print(action_figure.__str__())	// <__main__.Toy object at addr>
+	print(str(action_figure))	// <__main__.Toy object at addr>
+
+	
+	class Toy():
+	  def __init__(self, color, age):
+	    self.color = color
+ 	    self.age = age
+	    self.my_dict = {
+		'name': 'nik',
+		'has_pets': False
+		}
+	  def __str__(self):
+	    return f'{self.color}'
+	  def __len__(self):
+	    return 5
+	  def __del__(self):
+	    print('deleted')
+	  def __call__(self):
+	    return 'yes!!'
+	  def __getitem__(self, i):
+	    return self.my_dict[i]
+
+	action_figure = Toy('red', 5)
+	print(action_figure.__str__())		// red
+	print(str(action_figure))		// red
+	print(len(action_figure))		// 5
+	del action_figure			// deleted
+	print(action_figure())			// yes!!
+	print(action_figure['name'])		// nik
+	
+	() it denotes the call in last line of action_figure.
+
+Exercise(Extending List):
+
+	class SuperList():
+	  def __len__(self):
+	    return 1000
+	super_list1 = SuperList()
+	print(len(super_list1))			// 1000
+	super_list1.append(5)			// error
+
+
+	class SuperList(list):			// inherit list object
+	  def __len__(self):
+	    return 1000
+	super_list1 = SuperList()
+	print(len(super_list1))			// 1000
+	super_list1.append(5)
+	print(super_list1[0])			// 5
+	print(issubclass(SuperList, list))	// True
+	print(issubclass(list, object))		// True
+
+Multiple Inheritance:
+	
+	class User():
+	  def sign_in(self):
+	    print('logged in')
+	class Wizard(User):
+	  def __init__(self, name, power):
+	    self.name = name
+	    self.power = power
+	  def attack(self):
+	    print(f'attacking with power of {self.power}')
+	class Archer(User):
+	  def __init__(self, name, num_arrows):
+	    self.name = name
+	    self.num_arrows = num_arrows
+	  def attackArc(self):
+	    print(f'attacking with arrows of {self.num_arrows}')
+	  def run(self):
+	    print('ran really fast')
+
+	class HybridBorg(Wizard, Archer):
+	  def __init__(self, name, power, arrows):
+	    Archer.__init__(self, name, arrows):
+	    Wizard.__init__(self, name, power):	
+	hb1 = HybridBorg()
+	print(hb1.run())			// error
+
+	hb1 = HybridBorg('nik', 50, 100)
+	print(hb1.run())			// ran really fast
+	print(hb1.attackArc())			// 100
+	print(hb1.attack())			// 50
+
+	There are lot of new things are added in these program. 
+	Check clearly to understand the concept.
+
+Method Resolution Order:
+
+	class A:
+	  num = 10
+	class B(A):
+	  pass
+ 	class C(A):
+	  num = 1
+	class D(B, C):
+	  pass
+
+	print(D.num)		// 1
+	print(D.mro())		// D, B, C, A, object classes
+
+
+
+end of part-3</pre>
+    </body>
+    </html>
+    

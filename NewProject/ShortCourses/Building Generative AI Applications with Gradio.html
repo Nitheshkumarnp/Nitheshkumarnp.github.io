@@ -1,0 +1,108 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Building Generative AI Applications with Gradio</title>
+    </head>
+    <body>
+        <pre>Course From DeepLearning.ai : Building Generative AI Applications with Gradio
+Introduction:
+	Gradio is a simple web interface which used to show a quick demo of Machine Learning or Generative AI applications.
+	It is a python interface, we don't need a JavaScript or other front end work to show quick demo or display of results.
+	In this, we are going to use HuggingFace along with Gradio and applications like text summarization, name entity recognition, image captioning, image 
+		generation using diffusion model and LLM based Chatbot.
+
+NLP Task Interface:
+	In this, we will look 2 NLP task, text summarization and name entity recognition.
+	Gradio is used to give quick demo to others for any application or result with quickly ready interface.
+	Suppose if we are creating a small specialist model designed for a specific task. Eg. copilot of POS or other applications. We don't need to implement
+		it in the specific application. Instead of that, we can create a simple web interface and check the response directly in Gradio.
+	Small Specific Model created for copilot from the LLM model have same performance as general purpose LLM. But it is cheaper and faster than general
+		purpose LLM model.
+	BART Large CNN Model:
+		This model uses a process called distillation.
+		Distillation uses a prediction of large model to train a smaller model.
+		We are using a shleifer/distilbart-cnn-12-6 model, a 306M parameter trained by Facebook.
+	BERT Model:
+		This is a Machine Learning model for Natural Language Processing.
+		When parsing a text, it is useful to identify specific entity such as person, places, companies etc..
+		bert-base-NER, a 108M parameter fine tuned BERT model ready to use for Name Entity Recognition(NER).
+	Let's see the steps how it done in this tutorial:
+		Importing the packages.
+		Creating a helper function for api request of user query to get summary of query as response. Model is running behind the api and summarized result
+			will after model performance is done.
+		
+		import gradio as gr
+		def summarize(input):
+			output = get_completion(input)
+			return output[0]['summary_text']
+		gr.close_all()
+		demo = gr.Interface(fn=summarize, inputs="text", outputs="text")
+		demo.launch(share=True, server_port=int(os.environ['PORT1']))
+		
+		This is the sample code snippet for gradio application to launch with simple input and output fields.
+		
+		After that, customizing the input and output label and height of input text box, title and description.
+		Customizing the output field by providing hightlighted text. It display the response along with entity hightlighted. But it will have entity 
+			separated with token. Some words are splitted by 2 or more tokens with B-Beginning and I-Intermediate tokens. To avoid that, merge the 
+			tokens to get single words as entity for clear understanding.
+		Added examples for quicker usage of filling input field for testing results.
+		
+		For summarization, model="shleifer/distilbart-cnn-12-6" is used.
+		For Name Entity Recognition(NER), model="dslim/bert-base-NER" is used.
+		
+Image Captioning App:
+	Creating an application to give caption based on image given by user.
+	In this, we are using open source image to text converter model - Salesforce/blip-image-captioning-base a 14M parameter captioning model.
+	The model trained on supervised learning by lot of images and captions.
+	This model will run in end point url and get back the response of caption to display for user.
+	Let's see the steps how it done in this tutorial:
+		Importing the packages.
+		Creating a helper function for api request of user query to get caption for image.
+		Customizing the input field to images and type as PIL and creating functions to convert the image to base64 and BytesIO to send image in bytes.
+		Other fields are same as previous one, like output text field, examples images, title, description and etc...
+
+Image Generation App:
+	Creating an application to generate image based on user caption. It is opposite to Image Captioning App.
+	Both model are trained on supervised learning by lot of images and captions.
+	In this, text-to-image model generates images from input text. The model used is open source runwayml/stable-diffusion-v1-5 using the diffusers library.
+	Let's see the steps how it done in this tutorial:
+		Importing the packages.
+		Creating a helper function for api request of user query to get image for caption.
+		testing with sample prompt to check image result.
+		Generating with Gradio Interface, helper function will get caption from user and generate base64 encoded response. We use another function to 
+			convert base64 to PIL type and getting result to output field.
+		Then, building some advanced option interface like slider to control values from min to max ranges.
+		Later, customizing the application using Blocks. In Blocks, we have rows and columns. using that we can create different pattern or style of UI.
+		Finally, Scale is used to set column width 4:1 or other values and Accordion to show and hide some contents. 
+	From this section, we learned to customize the Gradio Application according to our needs.
+
+Describe and Generate App:
+	In this, we are going to combine the previous apps, image captioning and image generation.
+	First we will upload an image and get caption as result and using the result, generating a new image.
+	Let's see the steps how it done in this tutorial:
+		Importing the packages.
+		Creating a helper function for api request of user query to get image for caption as well as get caption for image upload.
+		Create other function to convert image to base64, convert base64 to image, function to pass value to request and display results.
+		First, checking whether it gives caption for image upload and working as expected or not.
+		Then, creating app with one input field to image upload and 2 button to generate caption and image.
+		Finally, creating app with one input field to image upload and one button to generate both caption and image.
+		
+Chat with LLM model:
+	In this, we are going to building a chat bot using open source LLM model - falcon-40b-instruct model.
+	Let's see the steps how it done in this tutorial:
+		Importing the packages.
+		Create a helper function to communicate with LLM model give and get response.
+		Check the functionality with random prompt.
+		Creating a gradio app to check a simple functionality of prompt and answer in input and output values.
+		Then, creating a gradio app with random response to check functional flow gradio.Chatbot object for chat history.
+		Later, integrating the llm model response with chat history and checking functionality.
+		Finally, creating a gradio app with advanced functionality like system prompt and temperature inside accordion and user prompt in open and chat 
+			conversation will display, and it show response like typing the result instead of waiting for longer time to get full response. Usually
+			we can see in ChatGPT, the result comes like typing.
+</pre>
+    </body>
+    </html>
+    

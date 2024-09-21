@@ -1,0 +1,174 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Functions, Tools and Agents with Langchain</title>
+    </head>
+    <body>
+        <pre>Course From DeepLearning.ai : Functions, Tools and Agents with Langchain.
+Introduction:
+	Generally, LLM are trained with Natural Language to interact with human which creates lot of new applications in today's world.
+	Currently, LLM are trained to response in JSON, extract values from structured or tabular datas.
+	LLM are now trained with interact with software environments and able to call functions and get informations.
+	Langchain is an open source tool which connects the bridge between LLM and existing code. It can connect various tools required for applications like LLM, 	databases, embeddings, vectors stores, agents, etc...
+	In this course, we will learn about Langchain Expression Language(LCEL) and function calling from LLM.
+	
+OpenAI Function Calling:
+	In this, we are seeing how to create function calling and use it.
+	name and description given to functions is mandatory, which helps to understand LLM models when to use this functions. Description should be clear and mention when to use this function and its conditions.
+	Steps:
+		Loading OpenAI API key,
+		Creating get_current_weather function with location and unit as parameters and return details in json format.
+		Defining a functions with name, description and parameters.
+		Defining messages with role and content.
+		Import openai and use chatcompletion model with messages and functions to get response.
+		Check the response with function arguments.
+		Extracting the result from response converting in json format and passing it manually in get_current_weather function.
+		Then, changing the user messages irrelevant to function and call the chatcompletion response and check the response. It won't use functions for that.
+		We can configure chatcompletion whether to use functions or not using function_call parameter.
+		Options for function_call parameters are 'auto', 'none', {'name':'get_current_weather'}
+		Finally, append the response in messages as role = function and call chatcompletion model to get final response.
+		
+LangChain Expression Language(LCEL):
+	LCEL is used to chain various components with allowed inputs, output types and required methods which makes the chain to work without any errors.
+	It provides lot of methods like invoke, stream, batch and during runtime like bind etc...
+	Chain is using Linux pipe syntax:
+		Chain = Prompt | LLM | OutputParser
+	Interface:
+		Components implement "Runnable" protocol
+		Common methods are invoke (ainvoke), stream (astream), batch (abatch). () for async.
+		Common properties are input_schema, output_schema.
+		Common I/O are Prompt, Retriever, LLM, ChatModel, Tool, OutputParser.
+	Runnable support:
+		Async, Batch and Streaming support.
+		Fallbacks: Error and any issues can be handled.
+		Parallelism:  LLM calls can be time consuming, so we can run the components in parallel also.
+		Inbuilt logging:  helps to debug the errors easily and view it on LangSmith.
+	Fallbacks is concept of handling errors when a chain fails, I will try to go for other chains present in it until it gets success response.
+	Let's see the code:
+		Loading OpenAI API Key,
+		Importing ChatPromptTemplate, ChatOpenAI, StrOutputParser.
+		Creating a simple chain using above imports.
+		Invoking chain to get response.
+		Creating complex chain using embeddings and vectorstores.
+		Using retriever to get relevant documents from list of documents in text.
+		Now use RunnableMap to connect chain to get relevant documents from retriever and chain it with prompt, model and output_parser.
+		Invoke the chain to get result.
+		Then, bind functions in ChatOpenAI and create a chain and invoke it. We will get the function_call as response.
+		Create 2 functions and bind in model and check with different question for the selection of correct functions.
+		Introducing Fallbacks concept.
+		Running a chain which throw error for json format issue with old OpenAI model.
+		Use fallback method to chain it to new OpenAI model. If we invoke old OpenAI model and it fails, it will go for new OpenAI model.
+		Finally Interface, In this, we are calling the chain with invoke, batch, stream, ainvoke methods.
+		
+OpenAI Function Calling in LangChain:
+	In this, we will connect the OpenAI Function calling and LCEL which we have seen in earlier topics.
+	Another one is Pydantic, a data validation library for python. Helps in datatype checking, builtin methods to convert one form of datatype to another form of datatype.
+	Import and export schemas easily which is helpful for LangChain.
+	Checking the advantages of with and without using pydantic library by creating normal class with init method of describing datatypes and using pydantic for creating class.
+	Let see the steps:
+		After knows the pydantic library for data validation, now creating functions using pydantic and then convert it to openai functions using convert_pydantic_to_openai_function method.
+		It requires description of functions as mandatory one and description for arguments is optional.
+		Now, add the function to ChatOpenAI model and invoke it.
+		We can force the model to use the function by adding function_call parameter during bind function.
+		After that, we are using the model in chain.
+		Later, creating one more function using pydantic method and bind it to model and invoke to test choosing of correct function.
+		
+Tagging and Extraction:
+	Tagging means converting an unstructured data like text to structured data like json format. If we give an input query to functions in model, it checks the description of functions and extract the arguments and return in json format.
+	Extraction means extracting a specific value from input schema like json, it will return value when we ask for key.
+	Let see the code:
+		Loading OpenAI API key.
+		Importing pydantic and required packages.
+		Creating a method Tagging with Pydantic.
+		Converting to openai function.
+		Adding function to model and force it to use.
+		Creating chain and adding prompt and model for invoke it.
+		Then, using JsonOutputFunctionsParser to get required format.
+		For Extraction, Creating Person and Information class with pydantic.
+		Adding Person class inside Information class as list.
+		converting it to openai functions.
+		Bind the functions to model with force use it.
+		Create prompt and add the prompt, model and invoke it.
+		Finally add JsonOutputFunctionsParser to get output in JSON format.
+		Doing it for real:
+		Loading a document from url using loader in langchain.
+		Create a class Overview with summary, language and keywords as arguments using pydantic method.
+		Convert it to openai function and bind it in model and force use it and invoke the model with document small content for testing.
+		Document will have lot of pages and take more token and create issues in large content. So, spliting the content in chunk and extract the content and finally combines it as single response.
+		We are using RecursiveCharacterTextSplitter to split text and create a flatten function to combine multiple result to create a final one.
+		Now use RunnableLambda to convert the large document into list of chunks.
+		Then create a chain using RunnableLambda, model with map method and flatten function.
+		Invoke the chain to get result.
+		
+Tools and Routing:
+	Till now, we have covered a model will choose which function to use and its parameters using bind method to model.
+	Now we will see how to call the function with its parameters and execute it.
+	LangChain has many tools available like search tools, math tools, sql tools, etc...
+	In this, we are focusing on creating own tools and using it.
+	Select from multiple possible tools is called routing.
+	Let see the code:
+		Loading OpenAI API key.
+		Importing tool from langchain.agents.
+		create search function using tool decorator.
+		Created tool will have name, description and args.
+		Created tool don't have description for arguments. For that, we need to use pydantic at tool decorator.
+		Run the function using function_name.run().
+		Creating a function get_current_temperature with tool decorator and pydantic method.
+		Convert the tool to openai function using format_tool_to_openai_function method.
+		Creating another function search_wikipedia using tool decorator.
+		Converting the tool to openai function using format_tool_to_openai_function method.
+		Using openAPISpec from openapi to convert official swagger to functions.
+		Now, bind the functions to model and invoke, it will choose different function based on user inputs.
+		Routing:
+		Binding search_wikipedia and get_current_temperature function in ChatOpenAI and invoke to decide which function to choose.
+		If the ChatOpenAI uses function, it will return result in function_call arguments. Else it result in content.
+		Using OpenAIFunctionsAgentOutputParser, it will return result.
+		We are checking type, tool, tool_input and return_values.
+		Create a route function by importing AgentFinish to handle both tool_input and return_values to give output.
+		Now create chain using prompt, model, OpenAIFunctionsAgentOutputParser and route to get results for all the types of questions.
+		
+Conversational Agents:
+	Till that we have learned about agents, routing and how to create and add function to model and to use it.
+	We are going to use the above learned concepts to make a conversational chatbot.
+	Let's see about basic of agents:
+		Agents are combination of LLMs and code.
+		LLMs reason about which steps to take and call for actions.
+		Agent loop to choose a tool to use.
+		Observe the output of tool.
+		Repeat until a stopping condition is met.
+		Stopping conditions can be LLM determined or hardcoded by rules.
+		In this, we will build some tools which used in previous chapters and write our own agent loop using LCEL, utilize agent_executor which implements agent loop. This will adds error handling, early stopping, tracing etc.
+	Let's see the steps:
+		Loading OpenAI API key.
+		Importing tools and create function get_current_temperature with tools which already created earlier sections.
+		Create search_wikipedia function with tool and add the two functions in tools list.
+		Convert the tools to functions using format_tool_to_openai_function method.
+		Create a chain using prompt | model | OpenAIFunctionsAgentOutputParser method.
+		Invoke chain.
+		Check the tool, tool_input.
+		Introducting agent_scratchpad, a new concept. Where we can pass the result of previous query and it's response as a list of messages.
+		Initially, we have pass agent_scratchpad as [], then get the response of initial and its result and convert it to message format using format_tool_to_openai_functions and add to agent_scratchpad in invoke method.
+		It will give results in Natural way after getting response from specific function call.
+		Now, create a method run_agent to get the user input. Inside that, create while loop with true condition to invoke chain and (stop and return) the condition when gets response from general LLM. Till that it will go for functions available in it.
+		Appending the response of functions to call and result in agent_scratchpad in each steps.
+		Using RunnablePassthrough, making the format_tool_to_openai_functions as a component in chain. And in next adding the component in logic.
+		Now, calling the run_agent with user input and getting response from AgentFinish method.
+		Now asking the general question like What is LangChain? and another question like Hi! to check the response.
+		Finally, using agents importing AgentExecutor and initialize agent_executor with chain, tools. Invoke the agent with user input to get response in super format(It looks different from general print statement.)
+		On trying this agent_executor, it doesn't have memory of previous query. So, we are going to add the chat_history to it.
+		Initially, we added agent_scratchpad to promptTemplate, now we will add the chat_history to promptTemplate.
+		Initiating memory using ConversationBufferMemory and add the memory attribute in agent_executor.
+		Now invoke the agent_executor with user query. We will get the chat_history along with response.
+		Creating a GUI with Panel for chatbot scenario:
+			defining a new function with tools to reverse the string.
+			Add the function along with get_current_temperature and search_wikipedia.
+			Create panel in class logic and add the functions, model, memory, prompt, chain, agent_executor in self attribute. Now, invoke the agent_executor with user input to get results like chat bot.
+
+Conclusion:
+	Finally, we learned about how to create function calling and LCEL. Also, learned about how to use those in real time scenarios.</pre>
+    </body>
+    </html>
+    
