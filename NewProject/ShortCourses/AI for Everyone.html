@@ -1,0 +1,568 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI for Everyone</title>
+    </head>
+    <body>
+        <pre>Week 1 Introduction:
+	AI is changing the way we work and live.If you want to understand how AI is affecting society, and how you can navigate that 
+		you also learn that from this course.
+	AI is estimated to create an additional 13 trillion US dollars of value annually by the year 2030.
+	Even though AI is already creating tremendous amounts of value into software industry, a lot of the value to be created in 
+		a future lies outside the software industry. In sectors such as retail, travel, transportation, automotive, materials, 
+		manufacturing, and so on.
+	There is a lot of excitement but also a lot of unnecessary hype about AI. 
+	One of the reasons for this is because AI is actually two separate ideas. 
+		Artificial Narrow Intelligence(ANI).
+		Artificial General Intelligence(AGI). 
+		ANIs that do one thing such as a smart speaker or a self-driving car or AI to do web search or AI applications in farming 
+			or in a factory. These types of AI are one-trick ponies but when you find the appropriate trick, this can be 
+			incredibly valuable.
+		AGI is the goal to build AI. They can do anything a human can do or maybe even be superintelligence and do even more 
+			things than any human can.
+		Currently ANI is developing more than AGI. We will focus on ANIs which is focus on single task, that can help to solve 
+			our problems and organisation.
+		AGI will take more time or years to develop fully that will be helpful for reasearch analysis.
+		In this course, we will focus on ANI, how to make effective of AI in our life. we will learn more ML, DL and how to 
+			build an AI project and how to handle AI project which will help you overall understanding of AI.
+			
+Machine Learning:
+	Most commonly used is Supervised Learning.
+	Supervised learning to train a model with input and output data. Then used to predict the new input data.
+	Simply, A -> B  or input -> output
+	With Large amount of data (Big Data), the perfomance of model:
+		Large NN > Medium NN > Low NN > Traditional AI
+
+What is Data?
+	Data is raw information. Dataset is a table of datas.
+	Eg. Price prediction of house table, cat identification table.
+	Acquiring data from many ways:
+		Manual Entry(Labeling).
+		Get from observing behaviour eg. Machine behaviour, usage of mobile application by user.
+		Download from websites.
+	Use and Misuse of Data:
+		Collecting n years of data from IT team and give the data to AI team is not a proper way.
+		After collecting some data, IT team should review to AI team. AI team will give feedback and tell the changes.
+		Large amount of data will give more details, but the data should be relevant, useful and how data is stored.
+		Dataset we received may have incorrect values, incorrect label columns, missing values.
+		Efficiency of model will depends on quality of datas.If incorrect data are trained, then it will give incorrect results.
+		Investing more on IT team to collect data without feedback from AI team is useless.
+		
+The Terminology of AI:
+	We are not clear about what is Machine Learning, Data Science. So, we can't discuss with other clearly. Let's clarify it.
+	Example used is home price prediction.
+	Machine Learning:
+		Definition: Field of study that gives computers the ability to learn without being explicitly programmed.
+		Example content: Prediction of output using input data is ML, Model will be trained with input and output data.
+		Input/Output: Inputs are independent features and Output is dependent feature.
+	
+	Data Science:
+		Definition: Science of extracting knowledge and insights from data.
+		Example content: Finding insights, ideas, solution from data and output is conclusion/summary of analysis.
+		Input/Output: Input is dataset and Output is extraction of information, conclusion, summary in presentation way like power point or chart diagram.
+
+	Deep Learning:
+		Definition: It is designed and inspired by human brain. It is a big mathematical equation using ANN to map input to output data.
+		Example content: Prediction of output using input data under Artificial Neural Network, Model will be trained with input, output data as well as
+			tuning parameters and weights of neuron and features.
+		Input/Output: Inputs are independent features and Output is dependent feature.
+
+What makes an AI company?
+	A rise of internet to navigate to rise of AI. Google and Baidu are good AI companies.
+	Internet Era:
+		Shopping Mall + Website != Internet Company
+		Approaches:
+			A/B Testing - 2 or 3 applications will be handled and performance will be tested parallelly.
+			Short iteration time - changing things can be do in short time, if it is a shopping mall, then changes will take times.
+			Decision Making and strategies should be from CEO to engineer, but it won't work in traditional companies other than internet company.
+		
+	AI Era:
+		Any company + DeepLearning != AI Company
+		Approaches:
+			Strategic data acquisition
+			Sell products for data acquisition, not for money.
+			Unified Data warehouse - for easy data access.
+			Prevasive automation of process.
+			New roles like MLE etc..
+		
+	Making a company to AI company is a systematic process. It won't happen like magic.
+	Five steps to approach for AI company:
+		Execute pilot projects to gain momentum
+		Build an in-house AI team
+		Provide broad AI training
+		Develop AI strategy
+		Develop internal and External communications.
+		
+What ML can and can't do?
+	Due to Over hype, anything can be done with ML. But it is not possible. Just by seeing input and output features, we can't preform ML.
+	Most of the people are judging that AI can do anything with some stories, but more failure stories also there.
+	ML can perform classification of card fraudulent, spam detection, translation etc, those can be automate soon.
+	We cant' predict the stock price using the historical data.
+	What makes the ML problems easier?
+		Learning a simple concept, simple concept means as a human we can able to identify the cat or dog difference with in a second. Like that problems.
+		Lot of datas available.
+	
+More Examples of what ML can and can't do:
+	Self driving cars:
+		It can able to detect the infront cars and able to behave as trained.
+		But, if a person raise a hand infront of car, AI assistant don't know what is the intention of human whether to stop or help or pickup or 
+			asking lift or take diversion. Each person activities will be unique and difficult to learn AI.
+	X-Ray Scan to find pnuemonia:
+		It can able to detect whether the pneumonia is present or not by seeing the x-ray.
+		But, it can't detect the reason or severity of it. If we give set of image of x-ray and book to analyze and explain the issue, AI can't do. But
+			an average medical student can do that.
+	Advantages:
+		Learning a simple concept.
+		Lot of datas available.
+	Disadvantages:
+		Learning complex concept with limited datas.
+		Predicting answer for the new data which it is not trained well.
+		
+Non-Technical Explanation of Deep Learning (Part 1 & 2):
+	Single Feature:
+		Input features: Price	Output feature: Demand 
+		One neuron will work on it to find the demand.
+	Multiple Feature:
+		Input features: Price, Shipping Cost, Marketing, Material 	Output feature: Demand
+		Three neuron will work on find Affordability, Awareness and preceived quality.
+		One neuron will work on the output of above three neuron and give output as demand.
+	In current scenarios, more than 1000 neurons are working in deep learning model to predict most complex problems.
+
+	Face Recognition using Deep Learning will work with lot of neurons to identify the person.
+	If an image is having 1000x1000 pixels, then 1 million of data is present in array form. If it is a colored image, then it have 3 million of data.
+	Neuron inside the Neural network will try to split the parts of the face and train with different neurons. Final neuron will get details of each
+		and predict the identification of person.
+
+Week 2 Introduction:
+	Till now, we learned about basic of AI like ML, DL and DS. Let we start how to use that.
+	There are some sequence of steps need to follow to build AI project. Different projects having different steps. It is like organizing a birthday party.
+	Starting an AI project:
+		Workflow of projects
+		Selecting AI projects
+		Organizing data and team for a projects
+		
+Workflow of Machine Learning project:
+	Example: Speech recognition
+	Steps:
+		Collection of data, when we speak Alexa or hello or any other things, device will collect our data.
+		Train model, iterate many times for better results, device will get train on collected data.
+		Deployment, once model is created, deployed in a machine. When device start to respond to a new data, if won't work effectively. Suppose, if we	
+			train a model in British English, but tested with American English, it will fail. 
+	Example: Self driving car
+	Steps:
+		Collection of data, collection of car images in road is collected to find the position of other cars.
+		Train model, iterate many times for better results, device will get train on collected data.
+		Deployment, once model is created, deployed in a car, The device start to respond to data, whenever it gets old data, it performs well, when it 
+			go for new car model, it will fail. 
+	In the workflow of machine learning project, we collect, train and deploy model and update and maintain to model to better with new datas.
+
+Workflow of Data Science project:
+	Example: Optimization of sale funnel
+	Steps:
+		Collection of data, collect user data which pages they visited, from where they checking, location and price of products.
+		Analyze data, iterate many times to analyze better insights, check what is last page visited, location where they searched for shipping.
+		Suggest Hypothesis/actions, deploy the changes, re-analyze the data and make decision/analyze better.
+	Example: Manufacturing line of mug
+	Steps:
+		Collection of data, collect the mug details where made, who, temperature, time to make, etc..
+		Analyze data, iterate many times to analyze better insights, check who make this, what brand of sand, manufacturer.
+		Suggest Hypothesis/actions, deploy the changes, re-analyze the data and make decision/analyze better.
+		
+Every job function need to learn how to use data:
+	Due to data digitalization in all over the world, Every job is using data to optimize their work. ML and DS helping for bigger changes.
+	Few examples:
+		Sales:
+			DS: Sales Optimization funnel, analyzing the reason for checkout and discard.
+			ML: Automated Lead Sorting using tags of priority.
+		Manufacturing line:
+			DS: Optimizing and analyzing the mug manufacturing and finds the reason for defects.
+			ML: Automate the inspection of finding the defected mugs.
+		Recruitment:
+			DS: Optimize by analysing the user response for email, phone screen, onsite opportunity, offer etc...
+			ML: Screening resume by searching contents.
+		Marketing:
+			DS: A/B Testing, understanding the user's click on button of different color to promote marketing.
+			ML: Customized product recommendation.
+		Agriculture:
+			DS: Crop analytics, analyzing the weather, land, crop condition and other various factors to optimize production.
+			ML: Automate the weed removal by taking picture on land used weed spray on specific place instead of all over the land.
+
+How to choose an AI project (Part 1):
+	For choosing an AI project, we need domain knowledge as well as AI knowledge.
+	AI knowledge knows what can we do with AI and can'ts with AI.
+	Domain knowledge knows what can add value for the business.
+	We need to combine both AI and domain knowledge to choose a right AI project.
+	
+	BrainStorming Framework:
+		Think about automating task rather than automating job.
+		What are the main drivers of business value?
+		What are the main pain points in your business?	
+
+	We can make progress even without big data:
+		Having more data almost never hurts.
+		Data makes some business defensible.
+		But with small data, we can progress.
+		Eg. we don't need millions of defective mugs to detect a defective mugs. Few 100's is enough for good model.
+
+How to choose an AI project (Part 2):
+	There are different projects and some project we can do in few days, some project in months, and others in years.
+	Before going to start the project, analyze few conditions.
+	Technical deligence:
+		Can AI meet the desired performance.
+		How much data is required.
+		Engineering Timeline.
+	Business deligence:
+		Lower cost.
+		Higher revenue.
+		Launch new product or business.
+	Ethical deligence:
+		Whether it will help society or not.
+		Will it create any useful surround us and not harm others.
+		Check this one before creating an AI project.
+	Build Vs Buy:
+		In all the products, we have one question, whether we can build or buy to get efficiency.
+		In DS and ML also have same question, whether we need to build  or buy a DS or ML models.
+		Many ML projects are already developed and standardized, so some companies will buy that projects and some others may build.
+		Most DS projects are in-house only, analyze will take day-day efforts or even more. So, build a projects is advantage.
+		Some thing with industry standard, avoid building those.
+		
+Working with AI team:
+	Specify the acceptance creteria like Goal of % accuracy.
+	Expecting 100% accuracy is impossible with:
+		Limitation of ML model,
+		Insufficient data,
+		Mislabled data,
+		Ambigious label
+		
+Technical tool for AI team:
+	AI teams uses various tools to make their work efficiently. Some tools are mentioned below under open-source framework.
+	Machine Learning Framework:
+		PyTorch,
+		TensorFlow,
+		Hugging Face,
+		Scikit-Learn,
+		PaddlePaddle,
+		R
+	
+	Research publication:
+		Arxiv
+	
+	Open source repository:
+		GitHub
+		
+	CPU vs GPU:
+		CPU - Central Processing Unit used in computer for lot of computational process.
+		GPU - Graphic Processing Unit used in computer for processing images which highly used in high end video games. Currently used in LLM and DL models.
+		
+	Cloud vs On-Premises vs Edge (deployment):
+		Cloud - server is rented from others and deploy our model there.
+		On-Premises - server is created on own and run on local host computer.
+		Edge - server and model are deployed in place where the data is generated. Eg. In self driving car, we can't send data to internet and wait for 
+			response to react. Like that smart speakers also.
+	
+Week 3 Introduction:
+	Building AI to a company will add value to the company.
+	Points to build AI in your company:
+		Case studies of complex AI products,
+		Roles in an AI team,
+		AI Transformation Playbook(Road Map),
+		Taking your first step
+		
+Case Study Smart Speaker:
+	Let's see what are the steps we have to follow to build a smart speaker.
+	When we say "Hi Device, can you tell a joke?"
+	Steps:
+		Trigger work/ Wakeupword detection		- Hi Device
+		Speech recognition						- can you tell a joke?
+		Intent recognition						- intent of asking the question
+		Execute joke							- telling the joke
+
+	Smart speaker works based on the instructions and training data and conditions to access based on commands.
+	AI Pipeline is used to automate the steps.
+	Eg. "Hi Device, can you set timer for 10 minutes".
+	
+Case Study Self Driving Car:
+	Let's see what are the steps we have to follow to build a Self Driving Car.
+	Steps for deciding how to drive:
+		Image/Radar/Ridar sensor to capture car or person or obstacles infront of car.
+		Using GPS and Map also for more accuracy and find best route.
+		Detection of car, person, obstacles which are trained via supervised learning.
+		Prediction of next trajectory for car, person.
+		Motion Planning will decide the what to do for car ? Steer/Accelerate/Brake.
+	Images/Radar -> Detection of car, person, traffic signal, Lane, Obstacles -> Trajectory prediction -> Motion Planner
+
+Example roles of an AI team:
+	Still AI is emerging, so 100 % roles are not defined. Roles differs from once company to another company.
+	Some Roles in AI team:
+		Software Engineer,
+		Machine Learning Engineer,
+		Machine Learning Researcher,
+		Applied Data Scientist,
+		Data Scientist,
+		Data Engineer,
+		AI Product Manager
+
+AI Transformation Playbook (Part 1):
+	Execute pilot projects to gain momentum
+	Build an in-house AI team
+	Provide broad AI training
+	Develop AI strategy
+	Develop internal and External communications.
+	
+	Execute pilot projects to gain momentum:
+		Always try to get success at first instead of good experience.
+		Don't go for big projects at first to gain knowledge. Go for success even at small rate.
+		Success helps to make more things.
+		
+	Build an in-house AI team:
+		To teach and learn AI to all the level of employees, we need to build an in-house AI team.
+		Team should in invest money to learn AI to all the employees for efficient performance.
+		
+	Provide broad AI training:
+		Based on different roles, different level of AI training need to give.
+		AI topics for CEO, MD and CO will differ from software developer and team leaders.
+		Duration to learn also differ between each and every one.
+
+AI Transformation Playbook (Part 2):
+	Develop AI strategy:
+		Consider creating data strategy:
+			Strategic data acquisition.
+			Unified data warehouse.
+		Create network effect and platform advantages in industry with "winner takes all" dynamics
+		
+	Develop internal and external communications:
+		Investor relations,
+		Government relations,
+		Customer/User educations,
+		Talent/Recruitment,
+		Internal Communication
+		
+	Strategy is the most important thing in creating AI company, then only excuting pilot projects, inhouse AI team and AI training.
+	Start creating AI with smaller data and make some success and promote the product and get more data from real time and improve the model, each time
+		to get more stablize. Eg. Helping farmer using AI to remove weed from crops.
+		
+AI pitfalls to avoid:
+	Do's and Don'ts in AI:
+		we should clear about what AI can and can't do
+		Hiring 2-3 ML engineer and start working is not a proper way. Business knowledge person also required.
+		Both Technical and business deligence is required.
+		Don't try to start project with big team, even small team is there, go for that. They will groom and make projects better and better.
+		First project will be good, Second project will be better and Third project will be best. Improvement will be there.
+		Expecting project to be complete in first attempt is a wrong one. it is an iterative process will go for improvement and success.
+		
+Taking your first step in AI:
+	Get friends who are interested in AI,
+	Start brainstorming project even it is simple,
+	Hire/ Appoint a ML/DS engineer to get help,
+	Approach higher level person to get more information about project.
+	Start with what we can, then AI efforts will grow.
+	
+Survey of Major AI application areas(Optional):
+	One of the biggest achievement in Deep learning is Computer Vision.
+	
+	Using Computer Vision, There are many applications used:
+		Image Classification / Object Recognition,
+		Object Detection,
+		Image Segmentation,
+		Tracking
+
+	Image classification help in identifying the images of cat or not. Object Detection detects the cars and pedestrains the road by rectangle box. Image 
+		Segmentation segments the exact boundaries of the object which detected in object detection. Tracking helps to track the moving objects or person
+		during self driving car.
+	
+	Next is Natural Language Procession(NLP):
+		Text classification,
+		Information Retrieval,
+		Name-entity recognition,
+		Machine translator
+		
+	Text classification helps in classifying the text whether email is spam or not. Review given are good or not and predicting rating for the review.
+		Information Retrieval means web search the details and extract the relevant information. Name-entity recognition means identifying the name or place
+		from the given paragraph. Machine translator translate one language to another language.
+		
+	Next is Speech:
+		Speech Recognition,
+		Trigger word/ Wakeup direction,
+		Speaker Identification,
+		Speech Synthesis
+
+	Speech recognition converts the speech to text and go for NLP process. Trigger word used in smart speaker to start the speaker to listen. Speaker 
+		identification is used to identify the speaker whether who is speaking, is it our owner or other person. Speech Synthesis converts the text to 
+		speech to give response to user.
+		
+	Next is Gen AI:
+		AI systems that can produce high quality content, specifically text, images, and audio.
+		
+		Text generation: It generates contents and answer to the question asked by user.
+		Image generation: Based on the user commands, images can be generated by AI.
+		Audio generation: Based on the user commands, audio can be generated by AI.
+		
+	Next is Robotics:
+		AI used in Robotics for better performance of it. Eg. Self driving car.
+		Perception: figuring out what's in the world around you.
+		Motion planner: finding a path for the robot to follow.
+		Control: Sending commands to the motors to follow a path.
+		
+	Last is General machine learning:
+		Currently, AI is more focusing on unstructured data over structured data.
+		Most common unstructured data are image, audio and texts. (easy for human to understand)
+		Structured data are table format datas. (Easy for machine to understand)
+
+Survey of Major AI Techniques(Optional):
+	Unsupervised Learning:
+		Unsupervised Learning is most using one after Supervised Learning.
+		Clustering is the most useful techniques in unsupervised learning.
+		Eg. Potato chips packet analysis based on size of packets.
+		In Unsupervised  learning, given data without any specific output labels, find something interesting about the data.
+		We don't need 1000 images of coffee mug to tell our children or animal, but supervised learning needs more than human needs to learn. In future, 
+			more changes will happen in unsupervised learning and expect to learn like human.
+	
+	Transfer Learning:
+		Using knowledge which already learned from one supervised learning to learn new similar thing is called transfer learning.
+		Eg. Self driving car model is trained to detect normal cars which trained with 10,000 images. When it tried to detect the golf car which is not
+			seen during training. Now, Training to learn new golf won't need 10,000 images. It can be trained with 100 images. Because it already
+			know to detect car and parts of car. It just need some new parts of golf car to detect.
+			
+	Reinforcement Learning:
+		Learning by its own by giving feedbacks. It try to get more positive feedbacks.
+		Whenever the model works good, user give positive feedback. If model works bad, then user give negative feedback.
+		Model will be trained to get more positive feedbacks.
+		Eg. Autonomous helicopter to try fly individual with reinforcement learning. Positive and negative feedbacks will be provided based on activity.
+			It is like training a dog and giving appreciate and bitting for good and bad activity. Dog will learn to do more good things.
+		Reinforcement learning is still in development stage, more and quick advancement will come in future.
+		
+	Generative Adversarial Network(GANs):
+		Synthesis new images from scratch.
+		Eg. Changing face of celebraties and friends recently are the GANs actitivies.
+		It is used in media, games, graphics and entertainments etc...
+		
+	Knowledge Graph:
+		Have information about a person, thing, movie, event, etc...
+		It is like wikipedia which show the details of person with main information like name, dob, role, father, mother, etc...
+		It is introducted by Google, currently it is used in large giant companies to save the data or information about the organization.
+		The activity on KG is low compared to other AI techniques.
+		
+Week 4 Introduction:
+	AI and Society:
+		AI is growing faster and making the society more reliable.
+		AI and hype: unnecessary hype are there for AI can do.
+		Limitations of AI: Not all the things can be do by AI, there are few limitations we have to know. New technologies are growing and can make the AI
+			Fool, AI should be learn accordingly.
+		AI developing economies and jobs: Economy of Big countries are increased by AI and new jobs are coming for AI and lot of jobs are lost by AI.
+		Both advantage and disadvantage are there in AI.
+		AI that we are covering should be ethical and not harm others.
+	
+A realistic view of AI:
+	Goldilock's rule for AI:
+		Too Optimistic: AI will solve all the human problems is impossible.
+		Too Pessimistics: AI can lead the Human and cause harmful to our existence.
+		Just right: AI is a powerful tools but has limitations.
+		
+	Limitations of AI:
+		Performance's limitations.
+		Explainability is hard.
+		Biased AI through biased data.
+		Adversarial attacks on AI.
+		
+	Optimistic means confident on AI that it can solve all the problems and make the human free and can do anything whatever we want. It can make us to 
+		live longer and cure all the diseases.
+	Pessimistic means wrong belief that AI can over rule the human and create harm to human in future.
+	AI is hard to explain why the decision is taken, on what basis decision are made. Sometimes human also faces issue to explain the concept or issues.
+		Still, AI is evolving, it will be solved in future.
+	We want to treat each and every human as equal. but when we trained with biased data of gender, partiality based data, it leads to biased result.
+	Adversarial attack means some unwanted person will try to make the AI fool and want to make profit or personal advantage of it.
+
+Discrimination/Bias:
+	AI learning unhealthy stereotypes means similar answer.
+		Eg. Man: Woman 		King: Queen
+			Man: Woman 		Father: Mother
+			Man: Computer programmer 	Woman: Homemaker
+	
+	Why bias matters:
+		Hiring tools that discriminated against woman.
+		Facial recognition working well for light skinned person than dar skinned person.
+		Bank loan approvals.
+		
+	Combating Bias:
+		Technical solutions are use the less biased or more inclusive data.
+		Transparency and diverse workforce.
+		
+Adversarial attack on AI:
+	It is like making the AI fool. In some scenarios, AI will fail to identify the correct thing.
+	Examples:
+		Hamming bird  when resized and detect as Hammer.
+		Hare when resized and detect as Desk.
+		Normal human after wearing specs detect as celebrity.
+		Stop board with some painting in top and bottom don't detect the stop board in self driving car.
+		Banana can be misclassified as toaster when we add some sticker near banana.
+	These adversarial attack can be defended, but it will take most cost and time to train.
+
+Adverse use of AI:
+	DeepFakes:
+		Fake videos are created using images and synchronized and make it as real which the person has never done. It is used in social media recently,
+			but It will harm and cause various issues if these technology used wrongly.
+	Undermining of Democrazy and Privacy:
+		These fakes and fraud activities can be identified by another set of AI which can easily detect those changes in video. But, the videos spread on
+			the internet or social media don't know till the confirmation by the AI technology. This will create a privacy issue.
+	Generating Fake Comments:
+		Fake comments on various website have been made by AI to attract more number of users.
+	
+AI and Developing Economy:
+	Most of the low rated jobs like agriculture farming, industrial work and cottage industries works are automated using AI which reduces the work of
+		person and jumps to some other jobs. The approach of automating everything from lower to higher end jobs are increasing rapidly in current society.
+	Currently, when we want to go for any product, we looks for latest one. Like that when someone want to start a business, they will go for AI technology,
+		to increase efficiency and revenue without hard work.
+	Eg. US and China were used landlines in 1990's more. So, they find difficult to make transition to mobile phones. When India started to develop on mobiles,
+		It directly went for mobile phones instead of landlines.
+	AI competition around the world is started and everyone is trying to give the best for their country and the world. Instead of doing best AI against other
+		countries, try to do best AI technologies where you already good at.
+	Teach and train the AI to all over the countries. So, that they can also develop and use it.
+	Lot of countries who don't have proper education facilities are moving to online education which is a latest technology for advancement of lifes.
+
+AI and Jobs:
+	Lot of jobs are already automated by AI. By 2030, more number of jobs going to be displaced by AI. But analytics shows that more number of jobs are 
+		going to create than displaced by AI. But the roles are different than now. All those jobs will be related to AI and specialization of fields.
+	Top jobs going to replaced by AI are office support, production work, agriculture, food service, community service, customer service and sales etc...
+	After AI entry:
+		Our life will be continuous learner(life long learner).
+		New technology will come and we have to learn and adapt to that technology to survive.
+		If someone is specialized in one field and want to learn AI and transform to AI jobs, then it is not a correct one. They can learn the AI and use
+			it in the field where they specialized at. That is the good approach to growth and AI and lifes.
+	
+Conclusion:
+	On first week, we learned about:
+		what AI is, 
+		AI terminology, 
+		Data, 
+		Machine Learning, 
+		What ML can and can't do,
+		Deep Learning.
+	On second week, we learned about: 
+		start building a AI project, 
+		workflow of ML and DS project,
+		How to choose AI project, 
+		Working and technical tool of AI team.
+	On third week, we learned about: 
+		building AI to a company, 
+		case study of self driving car and smart speaker, 
+		Roles in AI, 
+		AI transformation Playbook, 
+		First step on AI, 
+		AI pitfalls, 
+		Major AI application areas, 
+		Major AI techniques.
+	On fourth week, we learned about:
+		AI and society, 
+		a realistic view of AI, 
+		Discrimination/Bias, 
+		An adversarial attack on AI, 
+		an adverse use of AI, 
+		AI and developing economy,
+		AI and jobs.
+</pre>
+    </body>
+    </html>
+    

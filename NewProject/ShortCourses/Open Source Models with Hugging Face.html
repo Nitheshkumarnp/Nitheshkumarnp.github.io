@@ -1,0 +1,238 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Open Source Models with Hugging Face</title>
+    </head>
+    <body>
+        <pre>Course From DeepLearning.ai : Open Source Models with Hugging Face
+Introduction:
+	Hugging Face is an open source community having lot of open sourced models for easier accessable and integration to create application.
+	There are various models, we can make use of it and create our customized application very soon than previous way without AI technology.
+	In this course, we will learn about text, audio and image generation and handling like translation, summarization, embeddings, speech recognition, Text
+		to speech, object detection, image captioning etc...
+	Multimodel Visual Question Answering means asking question by uploading image in input prompt along with text question to find some details from image.
+		The model will process the image and text and find the required content from image according to text and give the result.
+	After this, you will learn how to make use of it and create our own application.
+	
+Selecting Models:
+	There are more than 4.5 lakhs models in Hugging Face. Selecting the right one for our application is necessary.
+	To select right one, we can use filter technique to get right one. Filters are Tasks, Libraries, Datasets, Languages, Licenses and sorting based on 
+		trending or most used or most likes or most downloads or recently created.
+	After selecting one model, model card is there, it is like a readme file. It contains details of models, how it build, architecture, how trained, 
+		drawbacks and limitations.
+	Each model have different size and version. We should have to check the size and to run we need 20% more size of RAM to run efficiently.
+	Suppose we are selecting a task of Automatic Speech Recognition, it will show the details of the task and recommend the different models, datasets and 
+		space to run the model for test. 
+	Use in transformer is there to use the model in python file. It will show the code snippet to use the model in our application.
+	Now we know how to select and use the model.
+	
+Natural Language Processing (NLP):
+	In this, we are creating a chat bot using transformers available from Hugging face.
+	Let see the steps:
+		Install the transformers and other packages.
+		Importing pipeline and Conversation from transformers packages.
+		Add the conversational model in pipeline. 'blenderbot-400M-distill' from facebook.
+		Pass user query in Conversation and pass the Conversation in pipeline to get result.
+		Since we don't have chat history to continuous conversation, we can use add_message method to conversation for chat history.
+		Selecting model from Hugging Face is filter using NLP task and select conversational. From that sort, most likes or trending depends on our own.
+		After selecting model, read model card and select the file and click on use in transformer to add model in pipeline.
+		There are Benchmark option to select model based on various category, we can select based on specific performance and configuration and parameters.
+		
+Translation and Summarization:
+	In this, we are going to perform translation and summarization using Hugging Face.
+	Let see the steps:
+		Import the transformers and torch packages.
+		Add translation model in pipeline. NLLB: No Language Left Behind: 'nllb-200-distilled-600M'.
+		Pass the text query to translator with src and tgt language and see the response.
+		Before continuing, free up some memory. Use garbage collector to remove the memory.
+		Add summarization model in pipeline. 'bart-large-cnn'.
+		Pass the text query to summarizer with min and max length and see the response.
+	
+Sentence Embeddings:
+	In this, we will do similarity search of sentence using embeddings.
+	Let see the steps:
+		Import sentence-transformers packages.
+		Add model to sentence transformer. "all-MiniLM-L6-v2".
+		Create a sentence1 list with 3 sentences. Embed them using model.
+		Create a sentence2 list with 3 sentences. Embed them using model.
+		Calculate cosine similarity between two sentences.
+		Then, print each sentence along with sentence in another list and score of similarity for better understanding.
+
+Zero-Shot Audio Classification:
+	In this, we are doing audio recognition of dog using dataset trained with Hugging Face models.
+	Generally, Audio is a continuous waveform which will be recorded by mic in the digital signal and stored in digital representation. Audio signal are 
+		stored in discrete form in fixed interval. Each device will have different Hz per second. 
+	Eg.
+		Walkie-talkie 			- 8,000 Hz
+		Human speech recording 	- 16,000 Hz
+		High resolution audio 	- 1,92,000 Hz
+	Transformer models are trained on specific Hz as signal value. So, it expect to be same signal value to process fine.
+	In this, model is trained with 16,000 Hz, if a audio recording of 5 seconds with 1,92,000 Hz is given to model. It will take (5 * 1,92,000) / 16,000 = 60
+		seconds to work on it. Like that, it will vary time based on audio recording given to model.
+	Let see the steps:
+		Import transformers, datasets, soundfile and librosa packages.
+		Load dataset which has different sounds of 5 seconds.
+		After loading, check the sample file of category, it shows dog.
+		Using IPython display and audio, listen and see the audio file running.
+		Then, use pipeline to add model. laion/clap-htsat-unfused.
+		Checking the sampling rate of model and audio sample.
+		If both are different Hz, then make the dataset as same sampling rate(Hz) as model.
+		Finally, we are sending a random sounds in list to model to see the similarity of sound for dog.
+		Result comes in 100% format, Eg. if a list of 3 sounds sending, result will be [0.80, 0.15, 0.05] sum of each value will come to 1.
+		The value which is higher looks more similar to dog sound.
+	
+Automatic Speech Recognition:
+	In this, we are doing converting audio to text using Automatic Speech Recognition using Hugging Face.
+	Let see the steps:
+		Import transformers, datasets, soundfile, gradio and librosa packages.
+		Load dataset to check whether it is working fine or not.
+		After loading, get a sample data and play it.
+		Build pipeline using model "distil-whisper/distil-small.en".
+		Compare the audio sample rate of model and dataset.
+		If both are same, then pass the sample data to model to convert it to text.
+		If working fine, then try it in deploy in Gradio.
+		Audio file can be in stereo or mono type. Only mono type is accepted in ASR.
+		So, convert the stereo type audio to mono using numpy and librosa packages.
+		After converting to mono type, sample rate will be different. Convert back to same using librosa package.
+		Now send the converted mono sample to model with chunk length, batch size.
+		Later, try this too in Gradio app.
+
+Text to Speech:
+	In this, we are converting text to speech using Hugging Face model.
+	Converting text to speech is like one to many solution. It has speech has different style, voice, speed, etc.
+	This model works fine with overall and have licence to work free.
+	Let see the steps:
+		Import transformers, gradio, timm, inflect, phonemizer packages.
+		Load model in pipeline, "kakao-enterprise/vits-ljs".
+		Create a sample text and pass to model.
+		After getting result from model, use IPython display audio to hear and view the audio running.
+		
+Object Detection:
+	In this, we are going to detect objects from image and tell it in audio.
+	Initially, from image objects will be detected, then from object text will be generated, later from text audio will be generated and give to user.
+	Let see the steps:
+		Import transformers, gradio, timm, inflect, phonemizer packages.
+		2 Helper functions are used to load image from url and render result in image.
+		Load pipeline with model "facebook/detr-resnet-50".
+		Open a random images and see the objects can be detectable or not.
+		Pass the image to model and see the result of objects in dictionary format with (label, dimensions, score).
+		Using render results in image, pass the result dictionary and original image to get processed image.
+		Try to implement it in gradio for user experience and share to others.
+		Using another helper functions, summarize predictions natural language to convert dictionary result to text(count objects).
+		Then using ARS model "kakao-enterprise/vits-ljs.", convert the text to audio.
+		Finally, using IPython display audio, see and hear the audio running.
+		
+Image Segmentation:
+	In this, we are going to segment object from images using Hugging Face model.
+	Instead of ordinary image segmentation method, we will use Mask Generation with (SAM) Segment Anything Model.
+	Object inside the images are segmented by different color. Each color represents different objects.
+	We can able to segment a specific part of the image by mentioning position in 2 dimensions.
+	It is like drawing an outline of each object with different color and then fill the color.
+	Let see the steps:
+		Import transformers, gradio, timm and torchvision packages.
+		Initiate pipeline with model, "Zigeng/SlimSAM-uniform-77".
+		Open a random image and view using PIL package.
+		Pass the image to pipeline model and using helper function view the output image.
+		The above flow will take more time to detect and segment objects from images.
+		Another method to segment object for faster inference is infer an image at a single point. (i.e) finding the segmenting an object from a single point.
+		For that we need, model and processor. We are not going to use pipeline here.
+		Process the image using processor and pass it in model using torch for output.
+		Output value will have iou score and pred_masks, we have to pass to processor to process the image according to score and masks.
+		Checking the length of predicted_masks which is number of images used in input.
+		Then predicted mask is a list which have n number of images if we use in input. For this scenario, we used only one image.
+		So, predicted mask = predicted_masks[0]
+		If we check the shape of it, it results in (1, 3, 1500, 2880) which is (input, iou scores, (size of images x,y axis))
+		3 result are came, one segments who man instead of shirt, other 2 segments correctly.
+		If we want avoid those problems, we can use bounding box or multiple points to segment properly.
+		Next one is Depth Estimation with DPT (Dense Prediction Transformer).
+		The purpose is to predict the objects depth in the image. (i.e) how far the objects are placed in images.
+		Close object will have bright white color and far object will have dark black color. Based on distance, color between white and black change.
+		Using pipeline, import model 'Intel/dpt-hybrid-midas'.
+		Pass the image to pipeline model and check the size of output.
+		Using torch, interpolate and align the array and format the array using numpy to display as image.
+		Finally, Use the above logic and implement in gradio to share other to try different images.
+		
+Image Retrieval:
+	In this, we will compare whether the image and caption are matching or not. We will pass an image as well as caption to check whether both are matching
+		or not.
+	We will use multi model here like OpenAI, where it will handle text, image, audio and video as input and output.
+	Let see the steps:
+		Import transformers, torch packages.
+		Instead of pipeline, we import BlipForImageTextRetrieval from transformers.
+		Pass the "Salesforce/blip-itm-base-coco." multimodel to above Blip.
+		Import AutoProcessor from transformer to process image and text data.
+		Download an image and type a random text and pass both to processor.
+		Using the output of processor, pass the value to model as input.
+		Convert the model output to itm score using torch sensor and see the matching result of image and text.
+		
+Image Captioning:
+	In this, we will create a caption for image using Hugging Face models.
+	Let see the steps:
+		Import transformers packages.
+		Import BlipForCondititionalGeneration from transformers.
+		Pass "Salesforce/blip-image-captioning-base" model to above Blip.
+		Load the processor with above model.
+		There are two types for image captioning:
+			Conditional		-	Will have condition to start the text with.
+			Unconditional	-	Will not have any condition to start, will generate from model itself.
+		During conditional, we will pass the image along with text to start with to processor to get inputs for model.
+		Generated input will be passed to model to get output, output will be decoded using processor to see the result.
+		For unconditional scenario, only image will send to processor to get inputs for model.
+		
+Multimodal Visual Question Answering:
+	In this, we will ask question from image to get answer from model.
+	Let see the steps:
+		Import transformers package.
+		Import BlipForQuestionAnswering from transformers.
+		Pass "Salesforce/blip-vqa-base" model to above Blip.
+		Load the processor with above model.
+		Pass an image and a question to processor to get input for model.
+		After getting inputs, pass the value to model to get answer. Answer will be in encoded form.
+		Decode the answer using processor and get the answer for the question.
+		
+Zero-Shot Image Classification:
+	In this, we are asking a question whether it is a photo of cat or dog, it will give the probability result of both.
+	CLIP model - Contrastive Language-Image Pre-Training is a multi-modal vision and language model. Used for zero-shot image classification.
+	This model will give probability for the user list of text, The probability of overall list is 1. So, even giving wrong text for classification, will
+		go for some wrong answers based on probability result.
+	Let see the steps:
+		Import transformers.
+		Import CLIPModel from transformers.
+		Pass "openai/clip-vit-large-patch14." model to above CLIPModel.
+		Load the processor with above model.
+		Create a text in a list with 2 or more options like ["a photo of cat", "a photo of dog"].
+		Pass the image and text in processor to get inputs.
+		After getting inputs, pass it to model to get outputs.
+		Use logits_per_image and softmax method to get probability of matching answer.
+		Finally display the result.
+		
+Deployment:
+	In this, I learned about how to deploy the ML models or any models on Hugging Face Hub and access it via api from outside to get results.
+	First, create an account in Hugging Face.
+	Go for Space, give space name, licence, select the space SDK, space hardware, choose private or public.
+	We connect git account to this or we can directly upload or add image here.
+	Select files and add files. 
+	For Simple application, we just need a requirements.txt and .py file to run.
+	Create both the file. Once the .py file added, it will start building it.
+	Once we started the application, In the bottom of Gradio application, we can see "Use via API".
+	After click on it, we will able to get a code snippet for sample input and output.
+	We can copy and change the input for our use case and try, use the application from outside.
+	Client.view_api() will give the expected input and output parameters.
+	We can make it private also, then we need access token to access the application to access from outside.
+	First create access token and apply in code for use.
+	
+Conclusion:
+	Learned -
+		How to use the open source model.
+		How to work with text, audio, image models.
+		How to access various model in Hugging face community.
+		How to deploy in space and access it via API from outside.
+		How to use Gradio for multiple purpose.
+		Got more ideas about prototype of many applications and to implement in my person project.
+</pre>
+    </body>
+    </html>
+    

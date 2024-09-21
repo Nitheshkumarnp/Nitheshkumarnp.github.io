@@ -1,0 +1,46 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Translation of Spanish and finding unicode</title>
+    </head>
+    <body>
+        <pre>x = {
+   " Sandpits": "Areneros",
+   " to customer": " al cliente",
+   "4 Panel Doors": "4 puertas de panel",
+   "6 Panel Doors": "6 puertas de panel",
+   "6_Digit_Number": "N\u00FAmero de 6 d\u00EDgitos",
+   "ABA_NUMBER": "N\u00DAMERO ABA",
+}
+arr = {'a': 'abc3', 'b': 'def 6', 'c': 'ghi1'}
+a = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 +_:%/.-?,º!()'<>'''
+unicode = '''\u00fa\u00ed\u00d3\u00da\u00f3\u00d1\u00cd\u00d1\u00f1\u00C1\u00E9\u00D3\u00C1
+\u00D3\u00E1\u00BF\u00C9\u00A1\u00DC'''
+unique = []
+count = 0
+for val in x.values():
+  for i in val:
+    if i not in a and i not in unique:
+      unique.append(i)
+print(unique)
+key = []
+empty = []
+for val in x.items():
+  for i in val[1]:
+    if i not in a and i not in empty:
+      empty.append([val[0], i])
+      if val[0] not in key:
+        count += 1
+        key.append(val[0])
+        print(val[0], i)
+#print('Number of places need to change : ', count)
+#print(empty)
+
+#print(x)
+</pre>
+    </body>
+    </html>
+    

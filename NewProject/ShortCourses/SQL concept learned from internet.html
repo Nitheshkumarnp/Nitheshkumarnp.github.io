@@ -1,0 +1,184 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SQL concept learned from internet</title>
+    </head>
+    <body>
+        <pre># from internet
+SELECT value FROM STRING_SPLIT('Roberto,Gail,Dylan', ',')
+
+
+declare @n int
+declare @num int
+declare @str varchar(50)
+set @n = 1
+set @num = 5
+set @str = ''
+while @num > 0
+begin
+  set @str = @str + str(@n) + ','
+  set @num = @num - 1
+  set @n = @n + 5
+end
+select @str
+select value from STRING_SPLIT(@str, ',')
+
+
+declare @var varchar(50)
+declare @occ varchar(50)
+set @occ = 'Actor'
+set @var = ''
+select @var = @var + ',' + Name
+from Occupations
+where Occupation = @occ
+order by Name
+if substring(@var,1,1) = ','
+  set @var = substring(@var,2,100)
+select @var
+select value as Name from string_split(@var, ',')
+
+
+declare @n int, @str varchar(1000), @start int, @initial int, @prime int
+set @n = 100
+set @str = ''
+set @initial = 2
+while @n > 0
+begin
+  set @start = 2
+  set @prime = 1
+  while @start < @initial
+    begin
+      if @initial % @start = 0
+        set @prime = 0
+      set @start = @start + 1
+    end
+  if @prime = 1
+    set @str = @str + cast(@initial as varchar) + ' , '
+  set @initial = @initial + 1
+  set @n = @n - 1
+end
+print @str
+
+#this is recursion method, below is standard method
+WITH Fibonacci (PrevN, N) AS
+(
+     SELECT 0, 1
+     UNION ALL
+     SELECT N, PrevN + N
+     FROM Fibonacci
+     WHERE N < 100
+)
+SELECT PrevN as Fibo
+     FROM Fibonacci;
+	 
+	 
+declare @n int, @m int, @x int, @str varchar(100), @num int
+set @n = 0
+set @m = 1
+set @str = '0 , 1, '
+set @num = 10
+while @num > 0
+begin
+  set @x = @n + @m
+  set @n = @m
+  set @m = @x
+  set @str = @str + cast(@x as varchar) + ', '
+  set @num = @num - 1
+end
+print @str
+
+# concept learned from Youtube video
+create table Content (flavour varchar(20), product varchar(20))
+insert into Content values('Chocolates', 'A'), 
+(null, 'B'), 
+(null, 'C'),
+(null, 'D'),
+(null, 'E'),
+('Biscuit', 'F'),
+(null, 'G'),
+(null, 'H');
+
+select * from Content;
+
+with ct1 as (select *,
+row_number() over(order by product) as Rn
+from Content),
+ct2 as (select *, 
+lead(Rn) over(order by product) as next
+from ct1
+where flavour is not null)
+select  c2.flavour, c1.product
+from ct1 c1
+inner join ct2 c2
+on c1.Rn >= c2.Rn and (c1.Rn < c2.next or c2.next is null)
+
+# find the solution from own effort
+create table Content (flavour varchar(20), product varchar(20), row int)
+insert into Content values('Chocolates', 'A', 1), 
+(null, 'B',2), 
+(null, 'C',3),
+(null, 'D',4),
+(null, 'E',5),
+('Biscuit', 'F',6),
+(null, 'G',7),
+(null, 'H',8);
+
+select *
+from Content;
+
+declare @tab table (row int, field varchar(20))
+declare @val varchar(20)
+declare @num int
+set @num = 1
+while @num < 9
+begin
+  if (select flavour from Content where row = @num) <> ''
+    set @val = (select flavour from Content where row = @num)
+  insert into @tab values (@num, @val)
+  set @num = @num + 1
+end
+
+select *
+from @tab
+
+select t.field, c.product
+from Content c
+join @tab t
+on c.row = t.row
+
+#new method using created new table instead of with statement
+select *
+from content;
+
+select *,
+row_number() over(order by product) Row
+into newTab
+from content
+
+select * from newTab
+
+declare @tab table(flavour varchar(20), Row int)
+declare @val varchar(20)
+declare @num int
+declare @length int 
+set @length = (select count(1) from content)
+set @num = 1
+while @num < @length+1
+begin
+  if (select flavour from newTab where Row=@num) is not null
+    set @val = (select flavour from newTab where Row=@num)
+  insert into @tab values (@val, @num)
+  set @num = @num + 1
+end
+
+select t.flavour, n.product
+from newTab n 
+join @tab t
+on n.Row = t.Row
+</pre>
+    </body>
+    </html>
+    

@@ -1,0 +1,523 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Table List:
+	Basics of Programming
+	Interpreter
+	Platform to run python
+	Sample Python programming
+
+
+
+
+
+Basics of Programming:
+	Python runs on interpreter.
+	Interpreter runs each and every line code at a time.
+	Compiler runs whole line of codes at a time.
+	Faster result at interpreter.
+	save the code in .py extension.
+
+Interpreter:
+	www.python.org to download interpreter.
+	go to downloads > select the latest version.
+	there are different interpreter to convert one language
+to python. some of them are cpython, jython, pypy, ironpython.
+	we are downloading python from www.python.org is cpython.
+	Interpreter convert our .py code into bytecode.
+	Cpython virtual machine get bytecode and send to machine.
+
+Platform to run python:
+	Terminal
+	Code Editors: sublime, vs code
+	IDEs: pycharm, spyder
+	Notebooks: jupyter
+	repl.it is online platform to run and save python code.
+	repl.it is useful and free.
+	glot.io also another online platform similar to repl.it.
+
+Sample Python programming:
+ 	print('hi nik')		//hi nik
+	input('what is name?')	//what is name?Nik	//Nik
+	name = input('name: ')
+	print(name)		//name: Nik 	// Nik	
+	print('hello' + name)	//hello Nik
+	
+Python 2 vs Python 3:
+	print 'nik' , print('nik')
+	360 most popular packages in python3.
+
+Learn python:
+	Terms, 
+	Data Types, 
+	Actions,
+	Practices.
+
+Python basics:
+  	Fundamental Data Types:
+		int,
+		float,
+		complex,
+		bool,
+		str,
+		list,
+		tuple,
+		set,
+		dict.
+	Custom Data Types:
+		classes
+	Specialized Data Types:
+		Modules
+	None.
+
+Numbers:(int & float)
+	print(2+4)	// 6 addition
+	print(2-4)	// -2 subtract
+	print(2*4)	// 8 multiply
+	print(2**4)	// 16 power
+	print(2/4)	// 0.5 divide
+	print(11%4)	// 3 remainder
+	print(11//4)	// 2 quotient
+	print(type(2+4))// <class 'int'>
+	print(type(6))	// <class 'int'>
+	print(type(2/4))// <class 'float'>
+	print(type(0.5))// <class 'float'>
+
+Math function:
+	print(round(3.1))	// 3
+	print(round(3.8))	// 4
+	print(abs(-24))		// 24 no negative
+	To know more search on python documentation.
+
+Operator precedence:
+	print(20 + 3 * 4)	// 32
+	order of precedence:
+	  (), **, *, /, +, -
+
+bin() & complex:
+	complex - real + imaginary*j.
+	binary - bin(5)
+	print(bin(5))	// 0b101   int to binary
+	print(int('0b101', 2)	// 5  binary to int
+	
+Variables:
+	store informations and values.
+	n = 5, n is the variable.
+	starts with lowercase or underscore, eg. userName or _userName.
+	snake_case, eg. user_name.
+	case sensitive, eg. user is not equal to User.
+	keywords should not be used.
+	data types also not be used.
+	constant variables cannot be reassigned or overload, eg.PI = 3.14.
+	__n = 5, don't use like this 2 _ at initial.
+	variable should be readable and understandable. 
+
+Expressions vs Statements:
+	a = 5		// statement is a = 5, b = a * 4
+	b = a * 4	// expression is a * 4
+
+Augmented assignment operator:
+	a = 5
+	a = a + 4	// augmented way is a += 4
+	print(a)	// 9
+
+Strings:
+	'nitheshkumar' or "nitheshkumar".
+	print(type('nik'))	// <class 'str'>
+	for long strings use '''  anything... '''
+	a = 'nik'
+	b = 'prime'
+	c = a + b
+	print(c)	// nikprime
+	c = a + ' ' + b
+	print(c)	// nik prime
+ 
+String concatenation:
+	print('nik' + 'prime')	// nikprime
+	print('nik' + 5)	// error
+
+Type conversion:
+	print(str(5))		// 5
+	print(type(str(5)))	// <class 'str'>
+	print(type(int(str(5))))// <class 'int'>
+
+Escape sequences:
+	'It's cold'	// error
+	"It's cold"	// correct, It's cold
+	'It\'s cold'	// correct, It's cold
+	"It\'s \"kind of\" cold"	// It's "kind of" cold
+	\t is for tab.
+	\n is for new line.
+
+Formatted strings:
+	name = 'nik'
+	print('hi' + name)	// hi nik
+	age = 22
+	print('hi' + name + 'you are' + age + 'years old')
+		// hi nik you are 22 years old
+	print(f'hi {name} you are {age} years old') // same as above
+	// above is formatted string.
+	print('hi {} you are {} years old'.format('nik', '22'))
+	// it also same output.
+	print('hi {} you are {} years old'.format(name, age))
+	print('hi {1} you are {0} years old'.format(age, name))
+	print('hi {var1} you are {var2} years old'.format(var1 = 'nik', var2 = 22))
+	
+String Indexes:
+	'nik prime'
+	 012345678
+	name = 'nik prime'
+	print(name[0])	// n
+	print(name[2])	// k
+	print(name[3])	// space
+	print(name[8])	// e
+
+	All the [] have this nature,
+	[start:stop:stepover]	default stepover is 1.
+	print(name[0:5])	// nik p
+	print(name[0:])		// nik prime
+	print(name[2:])		// k prime
+	print(name[0:5:2])	// nkp
+	print(name[::])		// nik prime
+	print(name[-2])		// m
+	print(name[::-1])	// emirp kin
+	print(name[::-2])	// eipkn
+
+Immutability:
+	strings in python are immutable.
+	name = 'nik'
+	name = 'nithesh'
+	print(name)	// nithesh
+	name[0] = 'p'	// immutable.
+	print(name)	// error
+	name = name + 'p'
+	print(name)	// nitheshp
+
+Built-in Functions & Methods:
+	print(len('nik prime'))	// 9
+	len() is a function, .upper() is a method.
+	name = 'nik'
+	print(name.upper())	// NIK
+	there are many built-in functions and methods refer on docs.
+
+Boolean:
+	True or False.
+	To control the flow of program.
+	print(bool(1))		// True
+	print(bool(0))		// False
+	print(bool('nik'))	// True
+	
+Exercise-1:(Type conversion)
+	DOB = input('Enter dob: ')	//input in form of string
+	age = 2020 - int(DOB)		// so convert it to integer
+	print('My age is ' + age)	// My age is 22
+
+Comments:
+	# is used to comment a line.
+
+Exercise-2:(Password Checker)
+	userName = input('Enter user name:')
+	password = input('Enter password')
+	count = len(password)
+	hidden_password = '*' * count
+	print(f'{userName}, your password {hidden_password} is {count} letters')
+
+Lists:
+	li = [1,2,3,4,5]
+	li2 = ['a', 'b', 'c']
+	li3 = [1, 2.5, 'a', True]
+	all three is possible.
+
+List slicing:
+	li = [1,2,3,4,5,6,7,8,9,0]
+	print(li[0:2])		// [1,2]
+	print(li[0::2])		// [1,3,5,7,9]
+	list are mutable
+	li[1] = 5
+	print(li)		// [1,5,3,4,5,6,7,8,9,0]
+	
+	new concept
+	li = [1,2,3]
+	li[0] = 5
+	new_li = li		// reassigning issue
+	new_li[0] = 3
+	print(new_li)		// [3, 2, 3]
+	print(li)		// [3, 2, 3]
+
+	new_li = li[:]		// to solve this, use this to copy li
+	print(new_li)		// [3, 2, 3]
+	print(li)		// [5, 2, 3]
+
+Matrix:
+	matrix = [
+		[1,2,3],
+		[4,5,6],
+		[7,8,9]
+	]
+	print(matrix[1][2])	// 6
+
+List Methods:
+	li = [1,2,3,4,5]
+	print(len(li))		// 5	it is function
+	print(li)		// [1,2,3,4,5]
+
+	Difference on the problem
+	print(li.append(10))	// none
+	li.append(10)
+	print(li)		// [1,2,3,4,5,10]
+
+	li.insert(3, 10)
+	print(li)		// [1,2,10,3,4,5]
+
+	li.extend([10,11,15])	// extend with another list
+	print(li)		// [1,2,3,4,5,10,11,15]
+		
+	li.pop()		// remove last item
+	print(li)		// [1,2,3,4,5,10,11]
+	li.pop(1)		// remove using index
+	print(li)		// [1,3,4,5,10,11]
+	li.remove(10)		remove specific item
+	print(li)		// [1,3,4,5,11]
+	
+	new = li.pop()		// it works bcoz it return value
+	new = li.append() 	// it doesn't return value
+
+	li.clear()		// clear list
+	print(li)		// []
+
+List Method2:
+	li = ['a', 'b', 'c', 'd', 'e']
+	print(li.index('c'))		// 2
+	print(li.index('c', 0, 4))	// 2
+	
+	print('d' in li)		// True
+	print('i' in li)		// False
+	print(li.count('d'))		// 1  count occurences
+	
+
+List Method3:
+	li = ['a', 'y', 'x', 'd', 'e']
+	li.sort()
+	print(li)			// ['a', 'd', 'e', 'x', 'y']
+	print(sorted(li))		// ['a', 'd', 'e', 'x', 'y']
+	// li.sort() sorts the list but sorted(li) created new list
+
+	new_li = li.copy()
+	print(new_li)			// ['a', 'd', 'e', 'x', 'y']
+	li.reverse()
+	print(new_li)			// ['y', 'x', 'e', 'd', 'a']	
+
+Common List Patterns:
+	li = ['a', 'b', 'c', 'd', 'e']
+	print(li[::-1])			// ['e', 'd', 'c', 'b', 'a']
+
+	// list is the keyword used in the below code
+	print(list(range(10)))		// [0,1,2,3,4,5,6,7,8,9]
+	
+	word = '!'
+	new_word = word.join(['hi', 'nik', 'prime'])
+	print(new_word)			// hi!nik!prime
+
+	new_word = '!'.join(['hi', 'nik', 'prime'])
+	print(new_word)			// hi!nik!prime
+
+List Unpacking:
+	a,b,c,d,e = [1,2,3,4,5]
+	print(a)		// 1
+	print(b)		// 2
+
+	a,b,*other = [1,2,3,4,5]
+	print(a)		// 1
+	print(b)		// 2
+	print(other)		// [3,4,5]
+
+	a,b,*other,c = [1,2,3,4,5]
+	print(a)		// 1
+	print(b)		// 2
+	print(other)		// [3,4]
+	print(c)		// 5
+
+None:
+	absence of value = none.
+	java, c like lang have null.
+
+	weapon = none
+	print(weapon)		// none
+
+Dictionaries:
+	dictionary = {
+		'a': 1,
+		'b': 2
+	}	
+	print(dictionary['b'])		// 2
+	print(dictionary['c'])		// error
+	print(dictionary)		// {'a': 1, 'b': 2}
+	
+	dictionary = {
+		'a': [1,2,3],
+		'b': 2,
+		'c': 'nik'
+	}
+	print(dictionary['a'])		// [1,2,3]
+	print(dictionary['a'][2])	// 3
+	
+	li = [
+		{
+		'a': [1,2,3],
+		'b': 'nik',
+		'x': True
+		},
+		{
+		'a': [4,5,6],
+		'b': 'prime',
+		'x': False
+		}
+	]
+	print(li[0]['a'][0])		// 1
+
+	dictionary has no order and can't be sorted
+	dictionary has more information then list
+
+Dictionary Keys:
+	keys should be immutable.
+	keys are int, string, bool.
+	keys not to be list, bcoz list are mutable.
+
+	dictionary = {
+		'123': [1,2,3],
+		'123': 'hello'
+	}
+	print(dictionary['123'])	// hello
+	// keys should be unique or else it should be overwrite
+
+Dictionary Methods:
+	user = {
+		'name': [1,2,4],
+		'password': 'hi nik'
+	}
+	print(user['age'])		// error
+	print(user.get('age'))		// None  this is used to avoid errors
+	print(user.get('age', 22))	// 22  if age doesn't exist use it
+
+	user = {
+		'name': [1,2,4],
+		'password': 'hi nik',
+		'age': 25
+	}
+	print(user.get('age', 22))	// 25	if age exists use 'age'
+
+	user2 = dict(name = 'nik')
+	print(user2)			// {'name': 'nik'}
+
+Dictionary Methods2:
+	user = {
+		'name': [1,2,4],
+		'password': 'hi nik',
+		'age': 25
+	}
+	print('age' in user)		// True
+	print('size' in user)		// False
+	
+	print('age' in user.keys())	// True
+	print('size' in user.keys())	// False
+	print(25 in user.values())	// True
+	print('25' in user.values())	// False
+
+	print(user.items())		// dict_items([('name',[1,2,4]),
+					 ('password', 'hi nik'), ('age', 25)])
+	
+	user.clear()
+	print(user)			// {}
+
+	user2 = user.copy()
+	print(user)			// user data will print
+
+	user.pop('password')
+	print(user)			// {'name': [1,2,4], 'age': 25}
+
+	user.popitem()			// this will randomly pop up something
+	user.update({'num': 100})
+	print(user)			// num value also updated with dictionary	
+
+Tuples:
+	Tuples are like list but we can't modify them.
+	Tuples are immutable.
+	we can access using index but can't change that.
+
+	my_tuple = (1,2,3,4,5)
+	print(my_tuple)			// (1,2,3,4,5)
+	print(my_tuple[2])		// 3
+	print(5 in my_tuple)		// True
+
+	we can't change the order and it is safe to hold original value.
+	Tuples can be used in dictionary keys.
+
+Tuples 2: 
+	my_tuple = (1,2,3,4,5)
+	new_tuple = my_tuple[1:4]
+	print(new_tuple)		// (2,3,4)
+	print(new_tuple[1:2])		// (2,)	if one is to get it ends with ,
+	
+	x,y,z,*other = (1,2,3,4,5)
+	print(x)			// 1
+	print(other)			// [4,5]
+	
+	it is same as list, we can use methods like count, index, len.
+
+Set:
+	Sets are unordered collection of unique object.
+	
+	my_set = {1,2,3,4,5}
+	print(my_set)			// {1,2,3,4,5}
+	
+	my_set = {1,2,3,4,5,5}
+	print(my_set)			// {1,2,3,4,5} print unique 5
+
+	my_set.add(100)
+	my_set.add(2)
+	print(my_set)			// {1,2,3,4,5,100}
+
+	my_list = [1,2,3,4,5,5,5]
+	print(set(my_list))		// {1,2,3,4,5}
+
+	Indexing can't be possible.
+	my_set[1]			// error
+	len(my_set)			// 5
+	list(my_set)			// [1,2,3,4,5]
+	new_set = my_set.copy()
+
+Set 2:
+	my_set = {1,2,3,4,5}
+	your_set = {4,5,6,7,8,9,10}
+	print(my_set.difference(your_set))	// {1,2,3} it doesn't modify my_set
+	my_set.discard(4)
+	print(my_set)				// {1,2,3,5}
+	my_set.difference_update(your_set)
+	print(my_set)				// {1,2,3} it modify my_set
+	print(my_set.intersection(your_set)) 	// {4,5}
+	print(my_set.isdisjoint(your_set))	// False  if nothing common it return true.
+	print(my_set.union(your_set))		// {1,2,3,4,5,6,7,8,9,10}
+	print(my_set | your_set)		// {1,2,3,4,5,6,7,8,9,10}
+	print(my_set & your_set)		// {4,5}
+	
+	my_set = {4,5}
+	your_set = {4,5,6,7,8,9,10}
+	print(my_set.issubset(your_set))	// True
+	print(my_set.issuperset(your_set))	// False
+	print(your_set.issuperset(my_set))	// True
+
+end of python basics.
+
+
+
+
+</pre>
+    </body>
+    </html>
+    

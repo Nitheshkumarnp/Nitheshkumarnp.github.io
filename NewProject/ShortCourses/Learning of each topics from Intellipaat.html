@@ -1,0 +1,1346 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learning of each topics from Intellipaat</title>
+    </head>
+    <body>
+        <pre>Machine Learning from Intellipaat
+
+
+
+
+
+Machine Learning:
+
+  Machine learning is an subset of AI that enables machine to learn and improve from 
+    experience without being explicitly programmed. Machine learning focuses on developing 
+    programming logic that can access data and use it to learn for themselves by focuses on 
+    analyzing and interpreting patterns and structures in data to enable learning, reasoning,
+    and decision making which can't be done by human interaction.
+
+  Types:
+    Supervised
+    Unsupervised
+    Reinforcement
+  
+  Supervised Learning:
+    train and test data will be there.
+    input and output variables are known.
+    Users have a lot of data and can train your models. 
+    Supervised learning further falls into two groups: classification and regression.
+    
+  Unsupervised Learning:
+    train and test data will be there.
+    input variable known and output variable not known.
+    used in classification problem.
+    Users have to look at the data and then divide it based on its own algorithms without having any training. 
+    There is no target or outcome variable to predict nor estimate.
+    
+  Reinforcement Learning:
+    agend and environment.
+    agend observe the environment and do action, based on action
+      agend gets the rewards.
+    The process of teaching a machine to make specific decisions using trial and error.
+    
+  Problems solved by ML:
+    Classification algorithm
+    Anomoly Detection algorithm
+    Clustering algorithm
+    Regression algorithm
+
+Supervised Learning:    
+  Regression:
+    It is a technique that finds relationship btw input and output variable.
+    Major types:
+      Linear and Logistic
+    Linear - continuous variables, solves regression issues, straight line.
+    Logistic - categorical variables, solves classification issues, s-curve.
+    
+    Note: download file present in Module 8 - supervised learning algorithm in python- lecture 1.
+    It contains several ipynb files for different algorithm.
+    
+    If R^2 is 1, then our regression line equal to points.
+    If R^2 is 0, then our regression line not connected with any points
+      and error are high.
+    Good fitness of R^2 values should be above 0.6
+    
+    Linear regression cannot solve classification problems, so Logistic regression is used.
+    
+    Probability vs Odds:
+    Probability mean success / total attempt.
+    Odds mean success / failed.
+    
+    Eg. in summer day, catching 2 fishes in 5 days. in winter day, catching 3 fishes in 5 days.
+    prob = 2/5 in summer, prob = 3/5 in winter.
+    odds = 2/3 in summer, odds = 3/2 in winter.
+    log(odds) = log(2/3) in summer, log(odds) = log(3/2) in winter.
+    log(odd ratio) = log(odds in summer/odds in winter) = log((2/3)/(3/2)) = log(0.44)
+    
+    sigmoid function is used in Logistic regression.
+    maximum likelihood is the logic used in Logistic regression to fit the s-curve line.
+    
+  Classification:
+    It is the process of grouping things according to similar features.
+    works on categorical variables
+    
+    Logistic regression - s-curve, sigmoid function.
+    Decision Tree - checking all possible ways.
+    Random Forest - builds multiple Decision tree.
+    K-Nearest Neighbour - based on similarity, group variables.
+    Naive bayes - is Probability based algorithm, bayes theorem
+      
+  Decision Tree:
+    Graphical representation of all possible solutions to a decision.
+    Decisions are mainly based on some conditions.
+    splitting data based on conditions in tree structure.
+    Term pruning means opposite to splitting, basically removing unwanted branches from the tree.
+      (i.e), removing unwanted conditions.
+    
+    There are multiple conditions present. choosing the best condition as first is follows:
+      Entropy,
+      Information Gain,
+      Gini Index(Gini impurity),
+      Reduction in Variance.
+      
+    In Demo:
+      DecisionTreeClassifier
+      DecisionTreeRegressor 
+      are used.
+      
+  Confusion Matrix:
+    It is used in Classification problems.
+    To analyse the number of correct and incorrect prediction in each class.
+    concept is true positive, true negative, false positive, false negative.
+    
+  Naive Bayes:
+    Classification algorithm.
+    based on conditional probability, it works.
+    
+  Support Vector Machine:
+    SVM is a supervised ml algorithm which classifies data based on it's features.
+    separate data using hyperplanes(line).
+    SVM uses kernel function to transform 2D non-linear data to higher dimensions.
+    If plotted points are not linear, the we can't draw a hyperplanes or line, using kernel
+      it is changed to 3d or higher dimension to draw hyperplanes.
+    
+    Different kernel functions:
+      Polynomial kernel,
+      Gaussian kernel,
+      Gaussian Radial Basis kernel,
+      Laplace RBF kernel
+    
+  Random Forest:
+    Ensemble methods:
+      It combines several base models in order to produce one optimal predictive model.
+    Bagging:
+      creating multiple dataset from single dataset.
+      For eg. if we have one training dataset of 100 datas. New dataset is created by randomly picking the
+        datas from training data till 100 datas.
+        Like that multiple datasets will be created.
+        Then prediction will happen on all the multiple dataset.
+        Finally, comparing all the predictions and choosing the best one.
+    Logic behind Random forest is bagging:
+      instead of sending all the features, some features are send to training and test the data.  
+      like the multiple subset of features are send and trained.
+    Bagging vs Random Forest:
+      In Bagging, dataset will be created randomly.
+      In Random forest, a subset of columns provided from dataset randomly.
+    Once the model is build and predicted, we can find the importance of feature.
+      It will helpful to understand the features importance and how it is predicted.
+      
+Unsupervised Learning:
+  Clustering:
+    It is the process of dividing the dataset into groups, consisting of similar data-points.
+    Used in recommendation engine.
+      a) Collaborative filtering
+      b) Content filtering
+    Collaborative means similar customers based recommendation.
+    Content means similar products based recommendation.
+    Types of Clustering:
+      Exclusive
+      Overlapping
+      Hierarchical
+    Exclusive means each data object can only exist in one cluster. Eg. K-Means Clustering.
+    Overlapping means data object to be grouped in 2 or more clusters. Eg. Fuzzy/C-Means clustering.
+    Hierarchical means clusters are present inside one another.
+    For example, clusters A and B inside C. D and E inside F. C and F inside G.
+    
+  K-Means Clustering:
+    It is a clustering algorithm which focuses on grouping similar elements or data points into a cluster.
+    Used in Unsupervised learning.
+    Business Applications are:
+      Behavioural Segmentation
+      Sorting sensor measurements
+      Inventory Categorization
+      Detecting bots or anomalies
+    Working Functionality:
+      Suppose if we want to group a dataset by 3 groups.
+      Initially, 3 random data point will take from the points.
+      then, each points will be compared with the 3 random data points and finds the closest one and 
+        assign as a group.
+      then center of the group(mean) will be calculated.
+      when new point is added in group, then new mean will be calculated and finds the closest distance
+        btw each groups(mean) and assign to nearest group.
+      After 1st iteration, we can't get the correct clustering, because we choose random points initially.
+      It iterates over again and again unless and until the data points within each cluster stops changing.
+      Total variation is a term calculated, which indicates the variation of data points in each group.
+      Total variation is the sum of all variations in each group.
+      Iterations will stops when all variations quite similar to each other.
+      If we know that we want to split a dataset into 3 groups. but if we don't know how many groups we want to split.
+      Then we have to try each clusters like starts from 1.
+      Every time you increase the cluster, the variation decreases.
+      If no. of clusters = no. of data points then variation = 0.
+      Elbow method is used to find the best clustering.
+      Elbow method means get all cluster from 1 to n and plot the k values against SSE(Sum of Squared Errors). Then select the elbow point.
+      
+  Association Rule Mining:
+    Most commonly used in Market Basket Analysis.
+    It is a rule-based machine learning method for discovering interesting relations between entities.
+    One concept is there, Antecedent(If) and Consequent(Then). If then scenario.
+    Finding relation btwn 2 products or 2 items.
+    Simply find probability of 1 item when one person purchase 1 item. Eg. probability of buying milk when customer buy cake.
+    Measure in Association Rule Mining:
+      Support
+      Confidence
+      Lift
+      
+    Support :
+      buying of 2 products / total transaction.
+    Confidence:
+      buying of 2 products in order / total transaction of 2 products.
+    Lift:
+      support of 2 products / (support of first product * support of second product)
+    
+    if lift > 1, then 2nd product to be bought when 1st is bought.
+    if lift < 1, then 2nd product not to be bought when 1st is bought.
+    
+  Recommendation Engine:
+    A filtering system that seeks to predict and show the items of user interest.
+    It may or may not be accurate.
+    Mostly used in search fields like google, amazon apps.
+    Types of Recommendations:
+      Collaborative filtering
+      Content-based filtering
+      Hybrid Recommendation Systems
+    combining both Collaborative and Content-based is called Hybrid Recommendation Systems.
+    Pearson Correlation is used in Recommendation Systems.
+    
+  Dimensionality Reduction:
+    Converting data set of vast dimensions into data with lesser dimensions.
+    Reduce the complexity of data.
+    Simply, removing less impacting or useless features in dataset.
+    Types:
+      Feature Elimination
+      Feature Extraction
+    Feature Elimiation means removing some features completely.
+    It not providing any new information.
+    set smaller dataset and might lose some data.
+    
+    Feature Extraction means extracting new features from old features.
+    Main reason of Dimensionality Reduction is to decrease unwanted dimensions in ML.
+    Used in various applications. Eg. image processing, reduce the dimensions.
+    
+  Principle Component Analysis:
+    PCA also eliminate unwanted features using correlation and reduce the Dimensions.
+    Reducing the number of random variables of a given dataset.
+    Each features in dataset have different variance.
+    some have high and low variance.
+    Eigen values and Eigen vectors are used in PCA.
+    Reducing the dimensions using Eigen values and Eigen vectors to convert n dimensional data
+      to n-m dimensional data.
+  Factor Analysis:
+    It is a data Analysis method we can use to search for significant underlying trends or
+      factors from a set of observed variables.
+    It is widely used in market research, finance, PCA and CFA are types of factor Analysis.  
+  PCA vs Factor Analysis:
+    PCA explains maximum variance, FA explains covariance in data.
+    PCA components are fully orthogonal, FA does not require orthogonal.
+    PCA components is a linear combinations of observed variables.
+    FA components are linear combinations of unobserved variables.
+    PCA is a type of FA. PCA is observational, whereas FA is model technique.
+  Linear Discriminant Analysis(LDA):
+    LDA is Unsupervised learning using in NLP.
+    It also used to reduce dimensions.
+    LDA will give high accuracy
+  Singular Value Decomposition:
+    It is a method of decomposing a matrix into three other matrices.
+    Matrix Factorization is used.
+    A = U*S*v^T
+      U & v^T = orthogonal matrix
+      S = diagonal matrix
+
+Reinforcement Learning:
+  It includes training of the algorithms using a system of reward and punishment. A reinforcement
+    learning algorithm, or an agent, learn by communicating with its environment.
+  
+  Elements:
+    Agent, Environment, State, Action, Reward, Policy, Value Function.
+    
+    Agent is the component which takes actions.
+    Environment is the setting where agent performs.
+    State is the current situation of agent in environment.
+    Action is the agent's method which allow it to interact with environment.
+    Reward is what agent get from environment. Either +ve or -ve rewards.
+    Policy is a learning agent's way of behaving to estimate next action.
+    Value Function represents how good is a state for agent from current state.
+  
+  Classification of RL Agents:
+    Model Based Agent
+    Model Free Agent
+  
+  Problem solved using RL:
+    Multi Armed Bandit
+    Markov Decision Process
+  
+  Epsilon-Greedy Algorithm:
+    It is a simple method for choosing between exploration and exploitation.
+    Exploration means agent learning in environment.
+    Exploitation means agent applys the learned in environment.
+    Choosing the right time for Exploitation is important.
+    If Agent not explored properly, then exploitation will reduce rewards.
+  
+  Optimistic Initial values:
+    Initial action values are used to encourage exploration.
+    Random initial values will perform less rewards.
+  Epsilon-Greedy and Optimistic Initial values are different.
+  
+  Upper-Confidence Bound:
+    After lot of explorations, an agent will not try new path. To stop it and
+      change to exploration.
+    We use Upper-Confidence Bound.
+    It will be like box-plot. Based on voting , agent's decision will change based on
+      position of box-plot feature at the top. Each voting change the position of respective
+      feature.
+    UCB algorithm perform well than Epsilon-Greedy algorithm.
+  
+  Markov Decision Processes(MDP):
+    MDP are a classical formalization of sequential decision making, where actions influence not
+      just immediate rewards, but also subsequent situations or states.
+    Eg. Mace solving, each step will get some amount of rewards and based on rewards,
+      next step will take.
+    It is concept of agent, action, reward in each state of environment
+    Probability distribution is used in MDP to make better decision.
+    Future state is depend on current state and action.
+  
+  Policies and Value Functions:
+    A policy is a mapping from states to probabilities of selecting each possible action.
+    It depends only on current state, not other factors like time or previous state.
+    Probability of each action will be calculated and decision will be taken.
+    A state value function is the expected reward an agent can receive starting from a particular state under a policy.
+  
+  Bellman Equations:
+    It express a relationship btw the values of a state or state action pair and the 
+      possible next states or next state action pairs.
+     
+  Optimal Policies and Optimal Value Functions:
+    An optimal policy is a policy which is good or better than all the other policies.
+    It has highest possible value in every state.
+    Bellman optimality equations will give optimal value functions.
+    
+Building Machine Learning Classifier in Python with Scikit-learn:
+  Scikit-learn is a free open source ML library that contains generic 
+    implementation of common ML algorithms.
+  We can build a ML model with only using Scikit-learn library.
+  But we need to do train_test_split, np.array of train and test data manually.
+  It will take lot of manual programming efforts.
+  But it is possible to develop model with sklearn only.
+  
+  Steps in Building a Classifier:
+    Importing libraries
+    Importing datasets
+    Splitting datasets
+    Training model
+    Testing model accuracy
+    
+Web Scraping using Python:
+  Web Scraping is a method to extract unstructured data from the websites and transform
+    it to a structured data.
+  Web Crawling vs Web Scraping:
+    Web Crawling means visit all links and build list and index it and store in db.
+    Web Scraping means visit and take required fields and store in files.
+  Most common Web Scraping libraries:
+    Beautiful Soap
+    requests
+  
+  requests is used to access the url.
+  Beautiful Soap is used to extract data from raw data taken from url.
+
+
+
+
+Regression Understanding:
+
+
+
+
+
+Regression:
+  Regression means finding relationship between input/inputs and output variable.
+
+Correlation:
+  Correlation means finding relationship between 2 or more input variables.
+  
+Regression and Correlation:
+  Regression and Correlation are almost same, they are finding the relationship between
+    two variables.
+  Regression finds between input and output variable.
+  Correlation finds between 2 or more input variables.
+  
+Results of Regression and Correlation:
+  1.Positive
+  2.Negative
+  3.Zero
+  
+  Positive means both variables changes in same directions.
+  Negative means both variables changes in different directions.
+  Zero means no relationship between two variables.
+  
+  Correlation ranges from -1 to 1.
+  -.7 to -1	        Very strong	Negative
+  -.5 to -.7	      Strong Negative
+  -.3 to -.5	      Moderate Negative
+  0 to -.3	        Weak Negative
+  0	                None Zero
+  0 to .3	          Weak Positive
+  .3 to .5	        Moderate Positive
+  .5 to .7	        Strong Positive
+  .7 to 1	          Very strong	Positive
+  
+Types of Regression:
+  1.Simple Linear Regression
+  2.Multiple Linear Regression
+  3.Polynomial Regression
+  4.Logistic Regression
+  5.Ridge Regression
+  6.Lasso Regression
+  7.Bayesian Linear Regression
+  8.Decision Tree Regression
+  9.Random Forest Regression
+  favtutor.com/blogs/types-of-regression
+  
+Regression:
+  Regression is sensitive to outlier(abnormal value).
+  To get good regression, better to remove the outlier first.
+  Outlier can be easily identified using boxplot. There are other ways to remove it.
+  
+Homoscedasticity and Heteroscedasticity:
+  Homoscedasticity means all the residual points have same finite distance from regression line.
+  Heteroscedasticity means the distance between residual points and regression line varies depends on points.
+  
+MultiCollinearity:
+  It means having high positive/negative correlation between 2 or more input variables.
+  It will reduce the performance of model. It is better to remove the MultiCollinearity by removing one or
+    more variable.
+
+Underfitting:
+  It means not trained well with training data. So, error of testing data is high.
+  It has larger training and test error.
+
+Overfitting:
+  It means over trained well with training data. So, error of training data is less, error of testing data is high.
+  It has lesser training and larger training error.
+  
+Bias and Variance:
+  Bias means distance between regression line and residual points.
+  Variance means distance between each residual points.
+  
+  High Bias means distance between regression line and residual points are High.
+  Low Bias means distance between regression line and residual points are Low.
+  High Variance means distance between residual points are High.
+  Low Variance means distance between residual points are Low.
+  
+Confusion matrix:
+  It is just a tabular representation of comparison of actual and predicted values.
+  True Positive, False Positive, True Negative, False Negative.
+  These is used in Logistic regression. Because, it is discrete variable.
+  
+Simple Linear Regression:
+  It finds relationship between one input variable and output variable.
+  It is used to find the continuous values.
+  Formula, y = mx + c + e
+    y = output variable
+    x = input variable
+    m = slope
+    c = intercept
+    e = error between actual and predicted value
+  Regression line is straight line. Degree of freedom is 1.
+  Cost function, J = 1/n (summation(y - pred_y)^2)
+  
+Multiple Linear Regression:
+  It finds relationship between more input variables and output variable.
+  Formula, y = b0 + b1x1 + b2x2 + b3x3 + ... + bnxn + e
+    y  = output variable
+    b0 = intercept
+    bn = slope of n
+    xn = variable of n
+    e = error between actual and predicted value
+  Regression line should be plane, or 3d shape based on multiple input variables.
+  But Regression line will be straight, no curve or bend. because power of input variables are 1.
+  Degree of freedom is 1.
+  
+Polynomial Regression:
+  It finds relationship between one input variable and output variable.
+  Formula, y = a + bx + cx^2 + ...
+    y = output variable
+    a = intercept
+    b,c = slopes
+    x = input variables
+  Regression line is not straight, it will be curve or bend or any shape based on power of input variables.
+  Simple and Multiple linear regression have power of input variable is 1.
+  Degree of freedom depends on choosing how much power is required in input variable.
+
+Logistic Regression:
+  It finds relationship between one or more input variables and output variable.
+  Formula, y =  1 / (1 + e^-x)
+  y = output value
+  e = base of natural logarithms
+  x = input value
+  
+  Formula, y = e^(b0 + b1*x) / (1 + e^(b0 + b1*x))
+  x = input value
+  y = predicted output
+  b0 = bias or intercept term
+  b1 = coefficient for the single input value (x)
+  
+  Output variable should be discrete or categorical. Like True or False, 1 or 0, High or Low, etc..
+  Regression line should be s-curve.
+  
+  There are three types of logistic regression:
+    1.Binomial
+    2.Multinomial
+    3.Ordinal
+    
+  Binomial means have two outcomes.
+  Multinomial means have three or more outcomes, outcomes don't have specific order or rating. Eg. Colors: Blue, Red, Yellow
+  Ordinal mean have three or more outcomes, outcomes have specific order or rating. Eg. Grade Rank, A, B, C, D.
+
+Regularization:
+  Regularization is one of the most important concepts of machine learning. It is a technique to prevent the 
+    model from overfitting by adding extra information to it.
+  Regularization works by adding a penalty or complexity term to the complex model.
+  Types of Regularization:
+    Ridge
+    Lasso
+  Formula is same for as Linear regression for Ridge and Lasso.
+  Cost function will varies.
+
+Ridge Regression:
+  Ridge regression is an extension of linear regression where the loss function is modified to minimize the 
+    complexity of the model. This modification is done by adding a penalty parameter that is equivalent to 
+    the square of the magnitude of the coefficients.
+  Ridge regression is one of the types of linear regression in which a small amount of bias is introduced
+    so that we can get better long-term predictions.
+  Ridge regression is a regularization technique, which is used to reduce the complexity of the model.
+    It is also called as L2 regularization.
+  Cost function, J = 1/n (summation(y - pred_y)^2) + lambda*summation(weights^2)
+  
+Lasso Regression:
+  Lasso regression is another regularization technique to reduce the complexity of the model. 
+    It stands for Least Absolute Shrinkage and Selection Operator.
+  It is similar to the Ridge Regression except that the penalty term contains only the 
+    absolute weights instead of a square of weights.
+  It is also called as L1 regularization.
+  Cost function, J = 1/n (summation(y - pred_y)^2) + lambda*summation(|slope|)
+  
+Key Difference between Ridge Regression and Lasso Regression
+  Ridge regression is mostly used to reduce the overfitting in the model, and it includes all the features present in the model. 
+    It reduces the complexity of the model by shrinking the coefficients.
+  Lasso regression helps to reduce the overfitting in the model as well as feature selection.
+
+Bayesian Linear Regression:
+  The goal of the Bayesian Regression Model is to identify the 'posterior' distribution again for model 
+    parameters rather than the model parameters themselves.
+  Extremely efficient when the dataset is tiny.
+  The model's inference process can take some time.
+  This model follows probabilities and some assumptions:
+    The model is linear
+    The variables are i.i.d.
+    The variance σ2 is the same for every nth observation, resulting in homoscedasticity
+    The likelihood (or noise in the first formulation) follows the normal distribution, 
+      and we should not anticipate seeing heavy tails, among other things.
+  
+Decision Tree:
+  Decision Tree is a Supervised learning technique that can be used for both classification and Regression problems.
+  But mostly it is preferred for solving Classification problems.
+  Decision Tree algorithms are referred to as CART or Classification and Regression Trees.
+  
+  Root Node: Root node is from where the decision tree starts. It represents the entire dataset, which further gets divided into two or more homogeneous sets.
+  Leaf Node: Leaf nodes are the final output node, and the tree cannot be segregated further after getting a leaf node.
+  Splitting: Splitting is the process of dividing the decision node/root node into sub-nodes according to the given conditions.
+  Branch/Sub Tree: A tree formed by splitting the tree.
+  Pruning: Pruning is the process of removing the unwanted branches from the tree.
+  Parent/Child node: The root node of the tree is called the parent node, and other nodes are called the child nodes.
+  
+  Every features are turned into node to make decisions. But order of decision will change the follow and improve efficiency.
+  So, to find order, Attribute Selection Measure is important.
+  There are two methods:
+    Information Gain
+    Gini Impurity
+  Information Gain:
+    Information gain is the measurement of changes in entropy after the segmentation of a dataset based on an attribute.
+    According to the value of information gain, we split the node and build the decision tree.
+    A decision tree algorithm always tries to maximize the value of information gain, and a node/attribute having the highest information gain is split first.
+    Entropy is a metric to measure the impurity in a given attribute. It specifies randomness in data.
+  Gini Impurity:
+    Gini index is a measure of impurity or purity used while creating a decision tree.
+    An attribute with the low Gini index should be preferred as compared to the high Gini index.
+    
+  Advantages and Disadvantages:
+    It helps to think about all the possible outcomes for a problem.
+    There is less requirement of data cleaning compared to other algorithms.
+    The decision tree contains lots of layers, which makes it complex.
+    It may have an overfitting issue, which can be resolved using the Random Forest algorithm.
+    For more class labels, the computational complexity of the decision tree may increase.
+    Decision trees can be unstable because small variations in the data might result in a completely 
+      different tree being generated. This is called variance, which needs to be lowered by 
+      methods like bagging and boosting.
+    
+Random Forest algorithm:
+  It can be used for both Classification and Regression problems in ML.
+  It is based on the concept of ensemble learning, which is a process of 
+    combining multiple classifiers to solve a complex problem and to improve the performance of the model.
+  Random Forest is a classifier that contains a number of decision trees on various subsets of the given dataset and 
+    takes the average to improve the predictive accuracy of that dataset.
+  Instead of relying on one decision tree, the random forest takes the prediction from each tree and 
+    based on the majority votes of predictions, and it predicts the final output.  
+  The greater number of trees in the forest leads to higher accuracy and prevents the problem of overfitting.
+  Advantages:
+    It takes less training time as compared to other algorithms.
+    It predicts output with high accuracy, even for the large dataset it runs efficiently.
+    It can also maintain accuracy when a large proportion of data is missing.
+  
+Basic Details:
+  Difference between ML model and algorithm:
+    ML algorithm is like a procedure or method that runs on data to discover patterns from it and generate the model. 
+    At the same time, a machine learning model is like a computer program that generates output or makes predictions. 
+    More specifically, when we train an algorithm with data, it becomes a model.
+    ML Model = data + algorithm
+    
+  For feature selection using backward propagation in regression:
+    To reduce the features, we can use two libraries:
+      from mlxtend.feature_selection import SequentialFeatureSelector
+              or 
+      import statsmodels.api as smf
+    
+  ways to validate a model for classification problems:
+    1) Log-loss or cross-entropy loss
+    2) Confusion matrix
+    3) AUC-ROC curve
+    
+  for multiple classification problem, we use AUC-ROC curver to better understanding.
+    AUC - ROC curve is a performance measurement for the classification problems at various threshold settings. 
+    ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. 
+    Higher the AUC, the better the model is at predicting 0 classes as 0 and 1 classes as 1.
+    understanding AUC-ROC curve in towardsdatascience will easy to understand.
+    
+  Statistics:
+    It is classified into two types:
+      Inferential
+      Descriptive
+    Inferential statistics:
+      It are methods for quantifying properties of a population from a small Sample.
+    Descriptive statistics:
+      It summarizes (describes) observations from a set of data.
+    Raw observations are only data. They are not real knowledge.
+    We are observing, can not change the behavior of activity.
+    
+
+
+
+
+Data Visualization using Matplotlib:
+
+
+
+
+
+Data Visualization:
+It is the representation of data in a pictorial or graphical format.
+Allows the decision makers to see analytics, grasp difficult concepts and identify new patterns at ease.
+
+Anscombe's quartet:
+It comprises four datasets that have nearly identical simple descriptive statistics, yet appear very difficult when graphed.
+If we take the data in statistics representation, all the mean, median, standard deviation like multiple factors looks same.
+But graphical points are plotted in different pattern.
+
+Libraries:
+Matplotlib, seaborn, ggplot, plotly, geoplotlib
+
+Matplotlib:
+Python library for Data Visualization.
+Create 2D graphs and plots using python scripts.
+Produces output in a variety of hardcopy formats.
+provides a module called Pyplot.
+simple functions used for Visualization.
+supports a very wide variety of graphs.
+Easy integration with Pandas and Numpy.
+Provides an Object-Oriented API.
+
+Types of Plots:
+Line, Bar, Scatter, Histogram, Image, Box, Violin, Stream, Quiver, Area, Pie and Donut.
+
+Import libraries, matplotlib.pyplot as plt.
+x and y are input and output list.
+
+Line Plot:
+  Basic line plot:
+    plt.plot(x,y)
+    plt.show()
+    
+  Customize line plot:
+    plt.plot(x, y, linewidth=2.0, linestyle=":", color="r", alpha=0.5, marker='o')
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.legend(['line1'], loc='best')
+    plt.grid(True)
+    plt.show()
+    # linewidth = width of plotted line
+    # linestyle = style of plotted line
+    # color = color of plotted line
+    # alpha = opacity of plotted line
+    # marker = points in the plotted line
+  
+  changing figsize :
+    fig = plt.figure(figsize=(10,5))
+    # not required to use fig in anywhere
+
+  adding 2 or more plots:
+    x, y1, y2 are input and output variables.
+    #first create the plot position in figure.
+    plt.subplot(2,1,1)  # 2 rows, 1 column, 1 position
+    plt.plot(x,y1)
+    plt.title('Graph1')
+    plt.subplot(2,1,1)  # 2 rows, 1 column, 2 position
+    plt.plot(x,y2)
+    plt.title('Graph2')
+    plt.show()
+    
+Bar Plot:
+  simple bar plot:
+    plt.bar(x,y)
+    plt.show()
+    
+  Customize line plot:
+    plt.bar(x, y, color="r")
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()
+    # color = color of plotted line
+    # if we need horizontal bar graph
+    plt.barh(x, y)
+    plt.show()
+    
+Scatter Plot:
+  Simple Scatter plot:
+    plt.scatter(x, y)
+    plt.show()
+  
+  Multiple scatter plots:
+    plt.scatter(x, y)
+    plt.scatter(x, z)
+    plt.legend(['y','z'], loc='best')
+    plt.show()
+    
+  Customize scatter plot:
+    plt.scatter(x, y, c='g', s=300, edgecolors='y', marker='o', alpha=0.5)
+    plt.scatter(x, z, c='r', s=400, edgecolors='b', marker='4', alpha=1)
+    plt.legend(['y','z'], loc='best')
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()
+    # c = color of plotted points
+    # s = size of plotted points
+    # edgecolors = color of edge points
+    # marker = points in graph
+    # alpha = opacity of plotted points
+    
+  To save any plots:
+    plt.savefig('name.png')
+    
+Histogram:
+  Simple Histogram:
+    plt.hist(x, bins=[limit])
+    plt.show()
+    # limit means range of each x values
+    # x means list of numbers
+    
+  Customize Histogram:
+    plt.hist(x, bins=[limit], color='r', edgecolor='b')
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.savefig('name.png')
+    plt.show()
+
+Box Plot:
+  Simple Box plot:
+    plt.boxplot(x)
+    plt.show()
+    # x means list of numbers
+    
+  Customize Box plot:
+    plt.boxplot(x, showmeans=True)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()
+
+Violin Plot:
+  Simple Violin plot:
+    plt.violinplot(x)
+    plt.show()
+    # x means list of numbers
+  
+  Customize Violin plot:
+    plt.violinplot(x)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()
+  
+Pie Chart:
+  Simple Pie chart:
+    plt.pie(x, labels=y)
+    plt.show()
+    # x means list of values
+    # y means list of labels
+  
+  Customize pie chart:
+    plt.pie(x, labels=y, autopct='%1.1f%%', shadow=True, startangle=90)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.show()
+
+Donut chart:
+  Simple Donut chart:
+    plt.pie(x, labels=y, radius=1.5)
+    plt.pie(size_center, radius=1.0, colors='w')
+    plt.show()
+    # x means list of numbers
+    # y means list of labels
+    # size_center means space in center
+  
+  Customize Donut chart:
+    a,b,c = [plt.cm.Blues,plt.cm.Reds,plt.cm.Greens]
+    plt.pie(x, labels=y, radius=1.5, colors=[a(0.5),b(1.5),c(1.0)])
+    plt.pie(size_center, radius=1.0, colors='w')
+    plt.show()
+    
+Area chart:
+  Simple Area chart:
+    plt.stackplot(x,y)
+    plt.show()
+    # x means list of numbers
+    # y means list of numbers
+    
+  Customize Area chart:
+    plt.stackplot(x,y,colors='Black', alpha=0.5)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.show()
+    
+  merging area chart with line chart
+    plt.stackplot(x,y,colors='Black', alpha=0.5)
+    plt.plot(x,y,colors='g')
+    plt.show()
+
+
+
+
+Statistics and Probability
+
+
+
+Normal Distribution:
+formula is little bit complicated no need to memorize.
+values using in formula are mean, std, e, pi.
+
+Z-Scores and Z-Table:
+To gain insight about a specific value x in other normal populations,
+we standardize x by calculating a z-score:
+z = x - meu / std
+
+A z-table of standard normal probabilities maps a particular z-score
+to the area under a normal distribution curve to the left of the score.
+
+Since the total area under the curve is 1. probabilities are bounded by 0 and 1.
+
+To calculate z-score in python,
+z = 0.70
+stats.norm.cdf(z)
+p = 0.95
+stats.norm.ppf(p)
+
+Eg. a company is looking to hire a new database admin.
+They give a standardized test to applicants to measure their technical knowledge.
+Their first applicant, Amy scores an 87.
+Based on her score, is Amy exceptionally qualified?
+To decide how well an applicant scored, we need to understand the population.
+Based on thousands of previous tests, we know that the mean score is 75 out of 100,
+with a standard deviation of 7 points.
+
+Solution:
+first, convert Amy's score to a standardized z-score using the formula,
+z = x - meu / std
+z = 87 - 75 / 7 = 1.7143
+look up on 1.7143 on a z-table, 0.9564 is value
+95.64%
+
+Statistics:
+Statistics is the application of what we know to what we want to know
+
+Population Vs Sample:
+Population is every member of a group we want to study.
+Sample is a small set of random members of the population.
+
+Parameter vs Statistic:
+A parameter is a characteristic of a population. Often we want to understand parameters.
+A Statistic is a characteristic of a sample. Often we apply Statistical inferences to
+the sample in an attempt to describe the population.
+
+Variable:
+A variable is a characteristic that describes a member of the sample.
+Variables can be discrete or continuous.
+
+Sampling:
+One of the great benefits of Statistical models is that a reasonaly sized(>30) random
+sample will almost always reflect the population.
+
+The challenge becomes, how do we select members randomly, and avoid bias.
+
+Sampling bias:
+There are several forms of bias:
+Selection Bias:
+Perhaps the most common, this type of bias favors those members of a
+population who are more inclined and able to answer polls.
+There are different selection bias:
+1.Undercoverage Bias
+2.Self-selection Bias
+3.Healthy-user Bias
+4.Survivorship Bias
+
+Types of Sampling:
+1.Random
+2.Stratified Random
+3.Cluster
+
+Central Limit Theorem:
+For non-uniform distribution, sample mean is vary from population mean.
+if we take multiple sample mean, it form a distribution, it will be same as
+ population distribution. This is central limit theorem.
+Sample means are distributed over population mean
+
+Standard Error (SE):
+SE means population mean varies from sample mean.
+SE = std / sqrt(n)
+
+Eg. population mean = 100
+    sample mean = 104
+    std = 15
+    n = 10
+    solution: SE = std / sqrt(n)
+    SE = 15 / sqrt(10) = 4.743
+    sample means are expected to fall between 95.257 and 104.743
+    
+Hypothesis testing:
+There are two hypothesis: null and alternative hypothesis.
+Initially we assume null hypothesis is true.
+If null hypothesis fails, then we need to check alternative.
+
+Two types of errors:
+Type1 Error - false positive
+Type2 Error - false negative
+
+Type1 Error: Eg. telling a healthy person as cancer person.
+Type2 Error: Eg. telling a cancer person as healthy person.
+
+Student's T distribution:
+In real world scenario, we know the population, but we don't know the
+standard deviation. So, we can use student's T distribution.
+
+Eg. 2 car plants, company wants to close one plant which plant is better to close?
+
+ANOVA:
+Analysis of Variance
+Already we have seen t and z distribution, now it is f distribution.
+
+F distribution:
+One-way vs Two-way ANOVA:
+One-way anova means one independent Variable.
+Two-way anova means multiple independent Variable.
+
+Two-way anova with replication and without replication.
+
+
+
+
+Statistics from Intellipaat
+
+
+
+
+Statistics:
+  It is a branch of Mathematics that deals with collection, analyzing and interpreting large amounts of data.
+  It allows us to derive knowledge from datasets and this knowledge can be used to make predictions, decisions, classifications etc.
+  
+Sampling:
+  It is the process of collecting subset of data to perform analysis on it.
+  It is a small amount of data from population data.
+  If there is millions of data, statistics take longer time to work on it.
+    So, we need to check with sample data from the whole data.
+  Choosing correct sampling is the most important thing.
+  
+Sample vs Population:
+  Population is the entire datasets.
+  Sample is the subset of datasets.
+  
+Sample Frame:
+  It is a list from which sample is selected.
+  Eg. If I need to analyse data of employee who have 3years exp in Google company,
+    Then my list will be  1) employee should be working in Google, 
+                          2) should have 3years exp.
+  After that only, I will start analyse on their salary, skill and other etc..
+
+Sampling Error:
+  It is an error that leads to our sample not accurately representing our population.
+  Sample with some bias
+  
+Non Sampling Error:
+  It occurs due to poor sample design, inaccurate measurements, bias in data collections.
+  
+Random Sampling:
+  It is the process of selecting a subset/sample from a population in such a way that 
+    every point is equally likely to be included in the sample.
+  
+Stratified Sampling:
+  It is the process of dividing your samples into layers or groups and then performing
+    random sampling for each group.
+
+Systematic Sampling:
+  It is the process of selecting your sample by picking every Kth element
+    in your population. You don't need a list for this.
+
+Central Tendency:
+  It is used to indicate where does the middle or center of the distribution of our data lies.
+  
+  1) Mean
+  2) Median
+  3) Mode
+  
+  Mean - Average of dataset.
+  Median - center of dataset while arranged in ascending order.
+  Mode - most frequent/occured data of dataset
+
+Variation:
+  In statistics, It is used to show how data is dispersed or spread out.
+  Several measures of variation are used in statistics.
+  
+  1) Range
+  2) Quartiles
+  3) Variance
+  
+  Range:
+    diff btw min and max value of dataset.
+    It helps to understand the spread of dataset.
+    Eg. if 100 datas range from 5 to 20, then range is 15.
+    Eg. if 100 datas range from 5 to 10000, then range is 9995.
+    If lesser the range, data will help in accuracy.
+    Due to outliers, range may increase. If we remove the outliers, 
+      range will decrease.
+    
+  Percentiles:
+    It are scores that are used to describe a value below which some observations fall.
+    Eg. if x is 70th Percentiles means, 70% of other data points are below x.
+    
+  Quartiles:
+    It are used to break the data into 4 parts so as to better find the spread of data in
+      a way that is less influenced by outliers.
+    
+    There are 3 quartiles - Q1, Q2 and Q3.
+    Q1 - 25th Percentile
+    Q2 - 50th Percentile(median)
+    Q3 - 75th Percentile
+    
+  Interquartile Range(IQR):
+    It is diff btw lower and higher quartiles. This gives us a better idea of the range of data.
+    IQR = Q3 - Q1
+    
+    If IQR is large, then data is spread out higher.
+    If IQR is low, then data is spread out lesser.
+    
+  Standard Variance:
+    It measures how far a set of numbers are spread out from their average value.
+    
+  Standar Deviation:
+    It is used to express the magnitude by which the members of a group differ from
+      the mean value from the group.
+    Standard Deviation is the square root of standard variation.
+    
+  s = sqrt(summation(x - mean(x))^2) / (n - 1))
+  
+  If we finding variance and Standard Deviation, there are two types.
+  Population and Sample, so formula will be changed.
+  If population, denominator will be n only.
+  If sample, denominator will be n-1.
+
+Correlation:
+  It is a term that is a measure of the strength of linear relationship 
+    btwn two quantitative variables.
+  There are multiple ways to find correlation.
+  The most common method is Karl Pearson Correlation Coefficient.
+  
+Normal Distribution:
+  It is a term that is used to describe a distribution which when plotted gives 
+    us a shape of bell curve. It has mean of zero(mean at center) and standard deviation of 1.
+  In distribution, there are 3 types:
+    Normal, positive skewed, negative skewed
+  Normal - mean, median and mode are same and it is at center.
+  positive skewed - mode at center, median and mean towards right side.
+  negative skewed - mode at center, median and mean towards left side.
+  
+Empirical Rule:
+  It is used to remember the percentage of values that lie within a band around the mean
+    in a normal distribution with width of two, four and six std.devs.
+  In normal distribution, 2 std.dev - 1 at right and 1 at left of mean, median and mode.
+  68.3% of data lies in 2 std.dev
+  95.4% of data lies in 4 std.dev
+  99.7% of data lies in 6 std.dev
+  
+Z-Scores:
+  It is a measure of how many std.devs below or above the population mean
+    a raw score. It can be placed on a normal distribution curve.
+  
+  Empirical rules tells % of data lies btw std.devs.
+  But if we want data lies btw 50-70 or any values then z scores will help.
+  
+Linear Regression:
+  It is a basic and commonly used type of predictive analysis.
+  It is used to create a model that can predict a dependent variable using an
+    independent variable.
+  y = b0 + b1x + e
+  y - dependent variable
+  x - independent variable
+  b0 - intercept
+  b1 - slope
+  e - error
+
+
+
+
+
+
+
+
+
+Interview question for Python:
+
+
+
+
+
+Interview Question for Python:
+
+1) what are keywords in Python?
+    Python keywords ar special reserved words.
+    convey a special meaning to to compiler/interpreter.
+    Each keyword has a special meaning and a specific operation.
+    Never use it as a variable.
+    Some keywords are True, False, None, and, as, if, return, print.
+  
+2) what are literals in Python?
+    Literals are the constants used in Python.
+    String, Numeric, Boolean, Special.
+    String - string values.
+    Numeric - int, long, float, complex.
+    Boolean - True or False.
+    Special - None.
+
+3) What is a dictionary in Python?
+    Dictionary is unordered collection of elements and data stored in key-value pairs.
+
+4) what are classes and objects in Python?
+    Class is a blueprint and object is a real-world entity.
+    
+5) what do you understand by __init__() method in Python?
+    __init__ is a special method in Python classes.
+    is a constructor method for a class.
+    __init__ is called whenever an object of the class is constructed.
+
+6) what do you understand by inheritance in Python?
+    One class acquiring the property of another class.
+    Parent child inherit of character of behaviour.
+
+7) What is Numpy and how to create 1D and 2D numpy array?
+    Linear algebra library in Python
+    Provides features for operations on multidimensional arrays and 
+      matrices in Python.
+      
+8) How can you initialize a 5*5 numpy array comprises of all zeros?
+    np.zeros(5,5)
+
+9) How can you add the individual elements of 2 numpy arrays?
+    np.sum((x, y), axis=0)
+    np.sum((x, y), axis=1)
+
+10) How can you get the 'N' largest values from numpy arrays?
+    x[np.argsort(x)[-2:][::-1]]
+    
+11) How can you introduce Nan values in the first 10 rows of the 2 columns?
+    data.iloc[:10,1:3] = np.NAN
+    
+12) How can I get the number of NaN values present in each column of the dataframe?
+    data.isnull().sum()
+    data.isna().sum()
+    
+13) How to open and read a file in Python?
+    a = open('path', 'r')
+    print(a.read())
+
+14) What is a lambda function? create a lambda function to add 10 to a given number.
+    Anonymous function i.e a function without a name.
+    a = lambda x : x + 10
+    a(5)    
+    
+15) What do you understand by module in Python?
+    Module helps in logically organizing our Python code.
+    
+16) How can you randomize the items of a list in place in Python?
+    from random import shuffle
+    shuffle(arr)
+    
+17) How to get lenght of string without using len() function?
+    use for loop and count it 
+    
+18) Replace all odd number in Numpy array to -1.
+    arr[arr%2==1] = -1
+
+19) How can you get common items btw two numpy arrays?
+    np.intersect1d(arr1, arr2)
+    
+20) How can you convert the first character of each element in pandas series to uppercase?
+    a = pd.Series(['add list of values'])
+    a.map(lambda x : x.title())
+    
+21) How to calculate the number of character in each word in a series?
+    a = pd.Series(['add list of values'])
+    a.map(lambda x : len(x))
+    
+22) Change the col name for Sepal.Length to S_Length?
+    data.rename(columns={'Sepal.Length':'S_Length'})
+    
+23) what do you understand by Linear regression?
+    It helps in understanding the linear relationship betwen dependent and 
+      independent variables.
+
+24) RMSE?
+    Root Mean Square Error measures how much error is between actual and 
+      predicted values.
+      
+25) what do you understand by Logistic Regression?
+    It is a classification algorithm which is used to predict a binary outcome.
+   
+26) What is confusion matrix?
+    It can be used to evaluate the accuracy of model built. it calculates a 
+      cross-tabulation of observed and predicted classes.
+    TP, TN, FP, FN.
+    
+27) What is ROC curve?
+    Receiver Operating Characteristics helps us to achieve the right trade-off 
+      between True Positive Rate and False Positive Rate.
+
+28) What do you understand about Decision Tree?
+    It is a supervised algorithm which is used for both classification and regression purpose.
+    It is like a flow chart structure.
+
+29) What do you understand about Random Forest? also explain working mechanism?
+    Random Forest builds multiple decision trees and merges them together to get a more stable and accurate
+      prediction.
+    It is an emsemble model, it is a combination of multiple random forest.
+    
+Data Science Interview Guide:
+  Roles:
+    Consulting or Services - helping clients for their services.
+    Working in all teams in an organization like improving all fields.
+    Product Development - working on specific products
+    Research teams
+
+  Tools Required:
+    Statistical Analysis - Python or R
+    Machine Learning - Python or R
+    SQL
+    Big Data (atleast working principle)
+    TensorFlow / Pytorch
+    Git (Basic)
+    Power BI / Tableau
+    Azure / AWS (good to have)
+    
+  Three major phase of Interview stages:
+    1) Resume filtering
+    2) Hands-on Round
+        solve problem infront them (or)
+        submit the solved problem within Expected Date.
+    3) Technical Rounds
+        with team members
+        with team managers
+        product owners
+    4) Delivery Heads/ Vertical Leads/ Partners/ Principals
+  
+  Types of Questions:
+    Based on previous experience:
+      previous project done.
+      Kaggle problems
+      Possible applications of data science in your previous work.
+    Pure Technical Questions.
+    Case study/ Scenario based questions.
+    
+  Tricks of the Trade:
+    Always remember there are a lot of sub fields in DS hence interviewers
+      understand if you are not exposed to a type of problem.
+    Expect majority of the questions on the work you have done previously. Be as 
+      elaborate as you can. Data Scientist like details.
+    When you talk about a previous project expect the following questions:
+      Business Problem: why are you solving it? what could be impact if you solve this problem?
+      Data Understanding: what data are available? why did you only select these features? could have you
+        done anything else? what are some insights about the data?
+    Data Preparation & Preprocessing: What preprocessing steps did you perform?
+    Model Building: which model did you build? did you try other models? How does this model work? what are the 
+      parameters that you could use to tune this model?
+    Evaluation: How did you evaluate your model? Did you perform cross validation? what is a confusion matrix?
+      what is the difference btw recall and precision? did you plot ROC curve?
+    Deployment: Did you deploy the model? did you evaluate how the model performed in production? what as the 
+      technical stack like?
+
+Learn about confustion matrix. 
+accuracy, precision, f1score for classification and regression.
+spend more time on supervised > unsupervised > reinforcement learning.
+know Statistics, ANOVA, chi square testing, hypothesis testing, t-test, f-test.
+
+Questions to interviewers:
+  is this a new team or exist team?
+  availablility of Data
+  Discussion with clients
+  check if the work aligns with your skills
+  Beware of similar roles that sounds like Data Science but are different.
+    Data Analyst, Business Analyst, Data Engineer, Data Platform Engineer, Big Data Engineer.
+  
+Good Roles:
+  Data Scientist, AI Specialist, Data Science Specialist, ML Specialist.
+
+codility website for practice.
+</pre>
+    </body>
+    </html>
+    

@@ -1,0 +1,116 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatGPT prompt engineering for developers</title>
+    </head>
+    <body>
+        <pre>Course From DeepLearning.ai : Chat GPT Prompt Engineering for Developers:
+Introduction:
+	Two types of Large Language Models (LLM):
+		Base LLM
+		Instruction Tuned LLM
+	 
+		Base LLM:
+			Predicts next word, based on text training data.
+			Eg. what is the capital of France? instead of answering the question, it predicts the next word what is the france's populations?
+		Instruction Tuned LLM:
+			Tries to follow instructions.
+			Fine-tune on instructions and good attempts at following those instructions.
+			RLHF: Reinforcement Learning with Human Feedback.
+			Helpful, Honest, Harmless
+			Eg. what is the capital of France? It will give the answer as the capital of France is Paris.
+			This Instruction Tuned LLM are used mostly which will follow instructions according to our usecase. In this course, we will learn more about it.
+			
+Guidelines:
+	pip install openai to install openai package
+	Prompting Principles:
+		Principle 1: Write clear and specific instructions
+		Principle 2: Give the model time to “think”
+		Tactics (Principle 1):
+			Use Delimiter to ask questions. Eg. asking to summarize the text inside ```{text}```.
+			Ask for structured outputs. Eg. asking to give output in JSON format.
+			Check whether condition is satisfied or not. Eg. asking to send output in step by step if satisfy or else no steps provided.
+			Few shot prompting (asking chat gpt to continue conversations) Eg. conversation btw child and grandmother about asking stories.
+		Tactics (Principle 2):	
+			Specify the instructions in steps required to complete a task. Eg. ask for summary, then translate, name of the content and output in JSON object.
+			Ask for output in specific format. Eg. the above response will confuse the user, so asking for specific format in JSON.
+			Instruct the model to work out its own solution before rushing to a conclusion. Eg. If we give a student's solution to check whether it is 
+				correct or not, it will say correct only. To fix the issue, we have to ask the model to solve the problem first, then compare the result.
+	Model Limitations:
+		Hallucinations:
+			Sometimes answering the question which is not correct. If we ask about a company and their non-product, it will explain that product. To avoid it,
+				we have give relevant document to read first and ask to answer that document itself.
+			
+Iterative Prompt Development:
+	It means prompt will be in lifecycle like idea, prompt, response.
+	Prompt Guidelines:
+		Be clear and specific,
+		Analyze why result does not give desired output.
+		Refine the idea and prompt.
+		Repeat.
+	Eg. Asking to write description to the product.
+		The text is too long. Eg. asking to give results in 50 or 100 words.
+		Text focuses on the wrong details. Eg. asking to give results on specification of product.
+		Description needs a table of dimensions. Eg. asking to give result in html format of table dimensions.	
+	Load Python libraries to view HTML:
+		# python code to display the HTML text in screen.
+		from IPython.display import display, HTML
+		display(HTML(response))
+ 
+Summarizing:
+	Text to summarize.
+	Summarize with a word/sentence/character limit.
+	Summarize with a focus on shipping and delivery.
+	Summarize with a focus on price and value.
+	Try "extract" instead of "summarize".
+	Summarize multiple product reviews (each reviews stored in list and used for loop).
+	
+Inferring:
+	Whatever activities are we doing from LLM models can be done by manually creating model and deploying it. But, the process of collecting data, training
+		model and checking the performance will take more time for the application development process. And doing multiple conditions for different performance
+		activities like summary, sentiment, transforming, identifying, chating will be more complex. But using the well trained LLM will easy solve it.
+	Sentiment (positive/negative). Eg. lamp review as positive.
+	Identify types of emotions. Eg. happy, satisfied, grateful, impressed, content.
+	Identify anger. Eg. whether the review having anger or not.
+	Extract product and company name from customer reviews. Eg. extracting item and brand name from review.
+	Doing multiple tasks at once. Eg. Doing all the above the activies in single prompt by giving all the conditions.
+	Inferring topics. Eg. getting the topic of the content, NASA.
+	Infer 5 topics. Eg. getting the topic of the 5 contents in using list.
+	Make a news alert for certain topics. Eg. In the list, if we have NASA, then make an alert message like conditions.
+ 
+Transforming:
+	Translation. Eg. translating to french and spanish.
+	Formal and Informal translation. Eg. we can translate to formal and informal english or other languages.
+	Universal Translator. Eg. it can translate to english, french and french in english words.
+	Tone Transformation. Eg. asking to write the mail in formal or polite way to reply.
+	Format Conversion. Eg. converting from JSON to HTML format.
+	Spellcheck/Grammar check. Eg. proofread is the word mentioned in instruction to correct the grammatical mistakes and redlines are used to see the correction. 
+
+Expanding:
+	Asking the model to write briefly about the topic or context. Eg. asking to automate a reply mail based on customer reviews.
+	Temperature will be used for 2 purposes:
+		Temperature = 0 task which require reliability, predictability
+		Temperature => 0.5 task which require wider variety
+	Customize the automated reply to a customer email. Eg. based on sentiment, email will be write as positive/negative.
+	Remind the model to use details from the customer's email. Eg. 
+
+Chat bot:
+	Till now, we are using role as user and message as prompt, this is for simple conversation. For chatbot, it will have multiple conversations, so roles will 
+		be system, user, assistant, and message will be list of chat messages with role defined.
+	Pizza Order Bot with give instruction as system prompt and interaction with user and assistant to order the pizza till payment.
+
+Summary:
+	Principles:
+		Write clear and specific instructions.
+		Give the model time to think.
+	Iterative Prompt Development.
+	Capabilities: Summary, Inferring, Transforming.
+	Expanding.
+	Chatbot.
+</pre>
+    </body>
+    </html>
+    

@@ -1,0 +1,75 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Optumera Assortment Functional KT</title>
+    </head>
+    <body>
+        <pre>Assortment Functional KT:
+	Top Down approach, After Macrospace is done, Assortment planning will start.
+	In Macrospace: stores, departments, categories, min space, max space and recommended space are planned.
+	Based on Available planogram, 1ft, 2ft, 3ft, ... possible allocation will happen.
+	Ex. if recommended space is 9ft planogram, then possible allocation are 1*9ft, 2*4ft, 3*3ft, ...
+	If the approach is Bottom Up, then Assortment is first, then Macrospace will happen.
+	SKU(Stock Keeping Unit), we need to consider the all the SKU available in all over the stores, not in one store.
+	Then plan based on particular size planogram and their possible combinations.
+	We need SKU details like height, width and depth.
+	Also the fixture where SKU are going to place like shelf, bar, pegboard,.. etc.
+	Based on past/historical data, SKU performance will be monitored like no of sales, margin, days and also
+	  space allocation to the SKU also taken into account to anaylize further.
+	In Assortment, 
+	  min facing, it should be given by customer, we should have to follow that also.
+	  exact facing, it should be given by customer, we should have to keep the exact facing quantity.
+	  preserve facing, it should be same as previous facing quantity, we should have to keep the same as before.
+	  one way complementary list, if SKU A is listed, then SKU B also listed.
+	  one way complementary delist, if SKU A is listed, then SKU B is delisted.
+	  dependency list and dependency delist
+	Demand Transfer:
+	  If the expected item is not present in store, then customer go for similar item. Eg. Pepsi -> 7up
+	  
+	Explaination of Assortment in Excel with (store, category, planogram, week, sku, facing) and (sku, week, 
+		sales, margin, units, cluster, chain).
+	Explained the Parameter Used in Assortment optimization.
+	Assortment Algorithm Flow:
+	  Input Data:
+		1) Mandatory files:
+			Cluster Planogram input sheet
+			Parameter fixtures
+			Parameter sheet
+		2) Non-Mandatory files:
+			Demand Transfer percent(%)
+			SKU details
+			Customer Metrics Data
+			Group Data
+			Group Rules files
+		3) Data Processing:
+			Cluster POG level performance with selected store and active SKU list.
+			
+	Intelligent Replishment:
+	  Removing item based on specific date from the store by markdown or other reasons.
+	Legal size break means rounding the min and max value to based on the value mention as (LSB).
+	Buddy is new term used which means if we don't have relevant info about the item, then we look for
+	  similar item which perform same as the item and find the percentage of similarity to give recommendation.
+	Cummulative variance:
+	  In PCA, multiple columns are there in dataset, each column has importance %. Sorted on Descending order.
+		if cummulative variance is 80%, then columns will be added till the sum of columns which give 80%.
+	Minimum Proportion variance:
+	  In cummulative variance, it accept n no of columns till the satisfy the given %. But it will take any column%.
+		Here, if the minimum proportion variance is 25%, then columns which having more than 25% will be selected.
+	Mahalanobis need to google it to understand.
+	VARIMAX in PCA need to google it to understand.
+	cooks distance calculation need to understand.
+	stepwise regression need to understand.
+	optimization engine working functionality explained in iteration manner.
+	
+	
+	  
+	  
+	  
+	  
+</pre>
+    </body>
+    </html>
+    

@@ -1,0 +1,151 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LangChain Documentation</title>
+    </head>
+    <body>
+        <pre>#####   The data are collected and documented from Official LangChain documentation   #####
+
+LangChain is a framework for developing applications powered by language models.
+
+Are context-aware: connect a language model to sources of context (prompt instructions, few shot examples, content to ground its response in, etc.)
+Reason: rely on a language model to reason (about how to answer based on provided context, what actions to take, etc.)
+
+This framework consists of several parts:
+	LangChain Libraries: The Python and JavaScript libraries. Contains interfaces and integrations for a myriad of components, a basic run time for combining 
+		these components into chains and agents, and off-the-shelf implementations of chains and agents.
+	LangChain Templates: A collection of easily deployable reference architectures for a wide variety of tasks.
+	LangServe: A library for deploying LangChain chains as a REST API.
+	LangSmith: A developer platform that lets you debug, test, evaluate, and monitor chains built on any LLM framework and seamlessly integrates with LangChain.
+
+LangChain for Development
+LangServe for Deployment
+LangSmith for Monitoring
+
+The LangChain libraries themselves are made up of several different packages:
+	langchain-core: Base abstractions and LangChain Expression Language.
+	langchain-community: Third party integrations.
+	langchain: Chains, agents, and retrieval strategies that make up an application's cognitive architecture.
+
+Modules:
+LangChain provides standard, extendable interfaces and integrations for the following modules:
+	Model I/O: Interface with language models
+	Retrieval: Interface with application-specific data
+	Agents: Let models choose which tools to use given high-level directives
+
+Use cases:
+	Document question answering
+	Chatbots
+	Analyzing structured data
+
+For installation of langchain/langsmith/langserve, read documentation, it is clearly explained.
+
+Quick Start:
+	Get setup with LangChain, LangSmith and LangServe
+	Use the most basic and common components of LangChain: prompt templates, models, and output parsers
+	Use LangChain Expression Language, the protocol that LangChain is built on and which facilitates component chaining
+	Build a simple application with LangChain
+	Trace your application with LangSmith
+	Serve your application with LangServe
+
+Prompt templates are used to convert raw user input to a better input to the LLM.
+
+Chain: chain = prompt | llm(model)
+
+The output of a ChatModel (and therefore, of this chain) is a message. However, it's often much more convenient to work with strings. 
+	Let's add a simple output parser to convert the chat message to a string.
+	
+chain = prompt | llm | output_parser
+
+Retrieval Chain:
+	In order to properly answer the original question, we need to provide more clear context to the LLM. We can do this via retrieval. 
+		Retrieval is useful when you have too much data to pass to the LLM directly. You can then use a retriever to fetch only the 
+		most relevant pieces and pass those in.
+	In this process, we will look up relevant documents from a Retriever and then pass them into the prompt. A Retriever can be backed 
+		by anything - a SQL table, the internet, etc
+	Steps:
+		First, we need to load the data that we want to index. In order to do this, we will use the WebBaseLoader.
+		Next, we need to index it into a vectorstore. This requires a few components, namely an embedding model and a vectorstore.
+		Now, we can use this embedding model to ingest documents into a vectorstore. We will use a simple local vectorstore, FAISS, for simplicity's sake.
+		Now that we have this data indexed in a vectorstore, we will create a retrieval chain. This chain will take an incoming question, look up 
+			relevant documents, then pass those documents along with the original question into an LLM and ask it to answer the original question.
+		However, we want the documents to first come from the retriever we just set up. That way, for a given question we can use the retriever to 
+			dynamically select the most relevant documents and pass those in.
+		We can now invoke this chain. This returns a dictionary - the response from the LLM is in the answer key
+
+Conversation Retrieval Chain:
+	The chain we've created so far can only answer single questions. One of the main types of LLM applications that people are building are chat bots. 
+		So how do we turn this chain into one that can answer follow up questions?
+	We can still use the create_retrieval_chain function, but we need to change two things:
+		The retrieval method should now not just work on the most recent input, but rather should take the whole history into account.
+		The final LLM chain should likewise take the whole history into account
+
+	Updating Retrieval:
+		In order to update retrieval, we will create a new chain. This chain will take in the most recent input (input) and the conversation history 
+			(chat_history) and use an LLM to generate a search query.
+
+Agent:
+	The final thing we will create is an agent - where the LLM decides what steps to take.
+	One of the first things to do when building an agent is to decide what tools it should have access to. For this example, we will give the agent access 
+		two tools:
+		The retriever we just created. This will let it easily answer questions about LangSmith
+		A search tool. This will let it easily answer questions that require up to date information.
+
+Serving with LangServe:
+	Now that we've built an application, we need to serve it. That's where LangServe comes in. LangServe helps developers deploy LangChain chains as a 
+		REST API. You do not need to use LangServe to use LangChain, but in this guide we'll show how you can deploy your app with LangServe.
+	While the first part of this guide was intended to be run in a Jupyter Notebook, we will now move out of that. We will be creating a Python file and 
+		then interacting with it from the command line.
+
+Server:
+	To create a server for our application we'll make a serve.py file. This will contain our logic for serving our application. It consists of three things:
+		The definition of our chain that we just built above
+		Our FastAPI app
+		A definition of a route from which to serve the chain, which is done with langserve.add_routes
+
+Modules:
+	Model I/O:
+		It will introduce the two different types of models - LLMs and ChatModels.
+		The main difference between them is their input and output schemas. 
+		The LLM objects take string as input and output string. 
+		The ChatModel objects take a list of messages as input and output a message.
+
+	Vector Store:
+		It is used to store and search over unstructured data is to embed it and store the resulting embedding vectors, and then at query time to embed 
+			the unstructured query and retrieve the embedding vectors that are 'most similar' to the embedded query.
+		The vector stores is creating the vector to put in them, which is usually created via embeddings.
+		Vector stores are usually run as a separate service that requires some IO operations, and therefore they might be called asynchronously. That 
+			gives performance benefits as you don't waste time waiting for responses from external services. That might also be important if you work with 
+			an asynchronous framework, such as FastAPI.
+		Activities can we perform:
+			creating a vector,
+			Similarity search,
+			Similarity search by vector,
+			Maximal marginal relevance search (MMR)
+		We can perform the above activities in Asynchronous way.
+		Maximal marginal relevance optimizes for similarity to query and diversity among selected documents.
+		Understanding:
+			1) Document -> embeddings -> stores in vector stores
+			Anyone method we can use:
+			2) Query(question) -> search in vector stores -> similar information
+			3) Query(question) -> embeddings -> search in vector stores ->  similar information
+		
+	Output Parser:
+		Output parsers are responsible for taking the output of an LLM and transforming it to a more suitable format. This is very useful when you are 
+			using LLMs to generate any form of structured data.
+		
+
+
+
+
+
+
+
+
+</pre>
+    </body>
+    </html>
+    

@@ -1,0 +1,296 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Scripting in Python:
+	Working with images, pdf files, chat bots and password checker.
+
+Image Processing:
+	In instagram, if we upload images with 5 MB, the image processing
+	  works and convert it into 100 or less KB, to save memory and money.
+
+	Pillow is standard python library for image processing.
+	
+	To install pillow, pip3 install Pillow
+
+	warning: Pillow and PIL cannot work at same time, so before installing
+	   pillow uninstall pil.
+
+	PIL is the Python Imaging Library, which doesn't support on python3.
+	So Pillow is launched to support image library to python3.
+
+	create a file image.py.
+
+	from PIL import Image
+	img = Image.open('./currentDictory/nik.jpg')
+	print(img)		// it show the memory address
+	print(img.format())	// jpeg
+	print(img.mode)		// 640*640
+		
+
+	from PIL import Image, ImageFilter
+	img = Image.open('./currentDictory/nik.jpg')
+	filtered_img = img.filter(ImageFilter.BLUR)
+	filtered_img.save('blur.png', 'png')	
+
+
+	filtered_img = img.convert('L')		// it show img in grey color
+
+
+Image with python 2:
+	filtered_img.save('grey.png', 'png')	// to save img in format
+	filtered_img.show()			// to show img
+	filtered_img.rotate(90)			// rotate 90 degree
+	filtered_img.resize((300, 300))		// 640, 640 to 300, 300
+	box = (100, 100, 400, 400)
+	filtered_img.crop(box)			// crop the desire position
+
+Images with Python 3:
+	from PIL import Image, ImageFilter
+	img = Image.open('./currentDictory/nik.jpg')
+	new_img = img.resize((400, 400))
+	new_img.save('new.jpg')			// this is very tiny and 
+						compressed
+
+	instead of using resize, use thumbnail.
+	But thumbnail doesnot return a image, it just modify the image
+
+	from PIL import Image, ImageFilter
+	img = Image.open('./currentDictory/nik.jpg')
+	img.thumbnail((400, 400))
+	img.save('new.jpg')			// this is clear and clean
+
+	Thumbnail auto change the size to fit right to see.
+	the size of above size is (400, 380)
+
+Exercise: (jpg to png converter)
+	import sys
+	import os
+	from PIL import Image
+	image_folder = sys.argv[1]
+	output_folder = sys.arg[2]
+	if not os.path.exists(output_folder):
+	  os.makedirs(output_folder)
+	for filename in os.listdir(image_folder):
+	  img = Image.open(f'{image_folder}{filename}')
+	  clean_name = os.path.splitext(filename)[0]
+	  img.save(f'{output_folder}{clean_name}', 'png')
+	  print('all done')
+	
+	// new file is created with all images are converted from
+	  jpg to png.
+
+OpenCV:
+	It is a powerful library used for machine learning, AI, etc..
+
+PDF's with python:
+	pip3 install PyPDF2
+	//This is to install pdf library.
+
+	import PyPDF2
+	with open('one.pdf', 'rb') as file:		// rb mean 
+	  reader = PyPDF2.PdfFileReader(file)		// read binary
+	  page = reader.getPage(0)
+	  page.rotateCounterClockwise(90)
+	  writer = PyPDF2.PdfFileWriter()
+	  writer.addPage(page)
+	  with open('tilt.pdf', 'wb') as file:
+		writer.write(new_file)
+	
+Exercise:(merging PDF's)
+	In terminal, pdf.py one.pdf two.pdf tilt.pdf 
+	all the above 3 pdf are inputs.
+	
+	import PyPDF2
+	import sys
+	inputs = sys.argv[1:]
+	def pdf_combiner(pdf_list):
+	  merger = PyPDF2.PdfFileMerger()
+	  for pdf in pdf_list:
+	    print(pdf)
+	    merger.append(pdf)
+	  merger.write('super.pdf')
+	pdf_combiner(inputs)
+
+Exercise: (watermarker)
+	import PyPDF2
+	template = PyPDF2.PdfFileReader(open('super.pdf', 'rb'))
+	watermark = PyPDF2.PdfFileReader(open('wtr.pdf', 'rb')) 
+	output = PyPDF2.PdfFileWriter()
+	for i in range(template.getNumPages()):
+	  page = template.getPage(i)
+	  page.mergePage(watermark.getPage(0))
+	  output.addPage(page)
+	  with open('watermarked_output.pdf', 'wb') as file:
+	    output.write(file)
+	
+	//mergePage combines 2 page into 1 page.
+
+Sending emails with Python2:
+	// Simple Mail Tranfer Protocol is a standard protocol to send email.
+	import smtplib			// it is a server
+	from email.messages import EmailMessage
+	email = EmailMessage()
+	email['from'] = 'Nitheshkumar'
+	email['to'] = 'nitheshkumarnp@gmail.com'
+	email['subject'] = 'Just a test'
+	email.set_content('I am a Python developer')
+	with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
+	  smtp.ehlo()
+	  smtp.starttls()		// tls means encryption for security
+	  smtp.login('nikprime18@gmail.com', 'password')
+	  smtp.send_message(email)
+	  print('all done well')
+
+Sending emails with Python3:
+	In this, we are converting a html file into template.
+	we are replacing the name with name of person to mail every one.
+
+	import smtplib			// it is a server
+	from email.messages import EmailMessage
+	from string import Template
+	from pathlib import Path
+
+	html = Template(Path('index.html').read_text())
+	email = EmailMessage()
+	email['from'] = 'Nitheshkumar'
+	email['to'] = 'nitheshkumarnp@gmail.com'
+	email['subject'] = 'Just a test'
+	email.set_content(html.substitute({name='tim'}), 'html')	// else it looks like normal text.
+	with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
+	  smtp.ehlo()
+	  smtp.starttls()		// tls means encryption for security
+	  smtp.login('nikprime18@gmail.com', 'password')
+	  smtp.send_message(email)
+	  print('all done well')
+
+Password Checker:
+	create a file checkmypass.py.
+	This code is to check the password is unique or not.
+
+	haveibeenpwned? is a website used to check the email is hacked or not.
+	as well as we can check the passwords also.
+
+	SHA1 Hash Generator is a algorithm which encrypt the password with hash
+	   algorithm.
+
+Password API:
+	install requests module, pip3 install requests
+
+	import requests	
+	url = 'https://api.pwnedpasswords.com/range/' + 'password123'
+	res = requests.get(url)
+
+Hash Function:
+	md5 hash generator is a type of hash generator.
+	It hashes the string into hashed code like 5d39dkn32b66p.
+	
+	idempotent is a function always give same output for same input.
+
+Password Checker:
+	import requests	
+	import hashlib		// it is a built in module.
+	def request_api_data(query_char):
+	  url = 'https://api.pwnedpasswords.com/range/' + query_char
+	  res = requests.get(url)
+	  if res.status_code != 200:
+	 	raise RuntimeError(f'Error fetching: {res.status_code}')
+	  return res
+	def get_password_leaks_count(hashes, hash_to_check):
+	  hashes = (line.split(':') for line in hashes.text.splitlines())
+	  for h, count in hashes:
+		if h == hash_to_check:
+	 	  return count
+	  return 0
+	def pwned_api_check(password):
+	  sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
+	  first5_char, tail = sha1password[:5], sha1password[5:]
+	  response = request_api_data(first5_char)
+	  return get_password_leaks_count(response, tail)
+	pwned_api_check('123')
+	def main(args):
+	  for password in args:
+	    count = pwned_api_check(password)
+	    if count:
+	  	print(f'{password} was found {count} times')
+	    else:
+		print(f'{password} was not found')
+	  return 'done'
+	if __name__ = '__main__':
+	  sys.exit(main(sys.argv[1:]))
+
+Twitter API:
+	Twitter api is completely free but we need an account to access.
+	Click apply to get access on developer.twitter.com
+	
+	Tweepy is a python library for accessing Twitter api.
+
+Twitter Bot:
+	import tweepy
+	import time
+	auth = tweepy.OAuthHandler(customer_key, customer_secret)
+	auth.set_access_token(access_token, access_token_secret)
+	api = tweepy.API(auth)
+
+	//public_tweets = api.home_timeline()
+	//for tweet in public_tweets:
+	  //print(tweet.text)
+	// this give the home page news
+
+	user = api.me()
+	print(user.name)		// username is printed
+	print(user.screen_name)		// username in screen
+	print(user.followers_count)	// shows the followers
+
+	def limit_handle(cursor):
+	  try:
+	    while True:
+	      yield cursor.next()
+	  except tweepy.RateLimitError:
+		time.sleep(1000)
+	for follower in limit_handle(tweepy.cursor(api.followers).items()):
+	   print(follower.name)
+	
+	// This will print the name of followers who following username.
+
+	for follower in limit_handle(tweepy.cursor(api.followers).items()):
+	  if follower.name == 'nikprime':
+	    follower.follow()
+	    break
+
+	// this will follow the follower nikprime.
+
+	search_str = 'python'
+	numbersOfTweets = 2
+	for tweet in tweepy.Cursor(api.search, search_str).items(numbersOfTweets):
+	  try:
+	    tweet.favorite()
+	    print('I liked that tweet')
+	  except tweepy.TweepError as e:
+	 	print(e.reason)
+	  except StopIteration:	
+	 	break
+
+SMS with python:
+	pip3 install twilio
+	It is a best webservice api to send msg, call, or any with build version.
+
+	from twilio.rest import Client
+	account_id = 'akdi35587584sdfkdn'
+	auth_token = 'dfenfdfdfie354734j3'
+	message  = client.messages.create(
+		from_='8190011225'
+		body = 'hello nik'
+		to = '7418308651'
+		)
+	print(message.sid)
+
+end of part-8</pre>
+    </body>
+    </html>
+    
