@@ -1,0 +1,134 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Web Development:
+	Create a folder as web server and add html, css and js file.
+	Open web server folder in visual studio code.
+	
+	search on google, python http server.
+	http servers are not much secure, so we use library and frameworks
+		like flask framework.
+	flask and django are the best frameworks for python.	
+	django is very difficult frameworks, used for high level purposes.
+	
+	venv mean virtual environment.
+	It is created to use in virtual mode.
+	Open terminal, python3 -m venv venv
+		it creates a venv folder on our web server folder.
+	python3 -m venv
+		it creates files of venv on our web server folder along with
+		html, css and js file.
+	for windows on terminal, web \server/bin/activate.bat
+	This is to make web server to work on venv.
+
+	To install flask, pip3 install flask 
+	
+Building a Flask server:
+	create a python file server.py in web server folder.
+	
+	from flask import Flask
+	app = Flask(__name__)
+	@app.route('/')		// this is a decorator.
+	def hello_world():
+	  return 'Hello world'
+
+	In terminal, export FLASK_APP=server.py
+		     flask run
+
+	It shows the server runs on http://127.0.0.1:5000
+
+	type the http on browser, you see hello world on page.
+
+	In terminal, FLASK_ENV=development
+		     flask run
+
+	It opens debug mode, which automatically change the content without 
+		calling the server everytime if any change act on .py file.
+
+Flask Templates:
+	from flask import Flask
+	app = Flask(__name__)
+	@app.route('/')		
+	def hello_world():
+	  return 'Hello world'
+	@app.route('/blog')		
+	def blog():
+	  return 'This is a blog'
+	@app.route('/blog/2020/ironman')		
+	def blog2():
+	  return 'This is a ironman 2020'
+
+	This is new method
+	when we use render_template module, it search index.html file on
+	  templates folder, so create a templates folder first and move
+	  the html file inside templates folder.
+	
+	from flask import Flask, render_template
+	app = Flask(__name__)
+	@app.route('/')		
+	def hello_world():
+	  return render_template('index.html')
+	@app.route('/blog')		
+	def blog():
+	  return 'This is a blog'
+	@app.route('/blog/2020/ironman')		
+	def blog2():
+	  return 'This is a ironman 2020'
+
+	// create a new file about.html on templates folder.
+	@app.route('/about')		
+	def about():
+	  return render_template('about.html')
+
+Flask static files:
+	Static files never going to change.
+	css and js files are never change anywhere.
+
+	create static folder on web server like templates, move css and js
+		file in static folder.
+
+	file path on link tag in html file is changed now, so change the
+	 	file path static/styles.css and static/script.js
+
+Favicon:
+	<link rel='shortcut icon' href='{{ url_for('static', filename='filename.ico')}}'>
+
+	download any .ico image file and add it to the link tag.
+
+	After that, run the code, it shows the .ico image at title of page.
+	Eg. u symbol near the udemy title page.
+
+Template Engine:
+	With in body tag, {{ 4 + 5}} , it shows as same in normal html file
+	But while using flask, it shows 9 when html file inside flask template.
+
+URL parameters:
+	@app.route('/<name>')		
+	def name_renderer(name = None):
+	  return  render_template('index.html', name=name)
+	
+	In index.html, inside body tag, {{name}}
+	run the code, see the name on page change, based on typing in url.
+
+MIME Types:
+	Browsers use MIME type, not the file extension.
+	Content-type are used by browser.
+	Eg. text/html, text/css, application/script, images/img, application/json.
+	
+Hosting a website online:
+	pythonanywhere is free host websites
+ 	Login and sign up for beginner account which is free.
+
+
+
+end of part-10
+		</pre>
+    </body>
+    </html>
+    

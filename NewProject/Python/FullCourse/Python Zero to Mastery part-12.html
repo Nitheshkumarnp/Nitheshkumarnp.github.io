@@ -1,0 +1,136 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Machine Learning + Data Science:
+	The goal of ML is to make a machine to work like a human.
+	
+	ML experts doing:
+		import the data
+		clean the data
+		split the data for training and testing
+		create a model
+		check the output
+		improve model efficiency
+
+Tools in ML:
+	Python is the best programming language to perform ML.
+	Python has many tools to make ML easy.
+	Tools in python are numpy, pandas, scikit-learn, matplotlib.
+	Anaconda Navigator have jupyter Notebook and other features.
+	Kaggle is a community for datasets, discussions, etc..
+
+Data Science 1:(import data)
+	Open Jupyter Notebook, create new file with python3 as soccer.
+	import dataset from kaggle, fifa 19 complete player dataset.
+	after download the dataset, put file with soccer file created by
+		jupyter notebook.
+	
+	import pandas as pd
+	data_frame = pd.read_csv('data.csv')
+
+	// if we give enter it shows the data_frame's datas.
+	data_frame.shape		// shows the shape of data
+	data_frame.describe()		// shows count, mean, std, min, max
+	data_frame.values		// shows values as array
+	data_frame[data_frame['Age'] > 40].head()
+
+Data Science 2: (cleaning data)
+	Go to kaggle, dataset, see the columns with heading to use in code.
+	
+	df1 = pd.DataFrame(data_frame, columns=['Name', 'Wage', 'Value'])
+	df1
+	df1['difference'] = df1['Value'] - df1['Wage']	// it shows error becoz
+		Wage is '$123M' it is a string so we cannot subtract it
+	
+	// search the code in google to convert a string to integer in money.
+	// value_to_float method in stockoverflow
+	
+	wage = df1['Wage'].replace('[\$,]', '', regex=True).apply(value_to_float) 
+	value = df1['Value'].replace('[\$,]', '', regex=True).apply(value_to_float)
+	df1['Wage'] = wage
+	df1['Value'] = value
+	df1['difference'] = df1['Value'] - df1['Wage']
+	df1			// it shows the difference also.
+	df1.sort_values('difference', ascending = False)
+
+Data Science 3: (understand the data)
+	import seaborn as sns
+	sns.set()
+	graph = sns.scatterplot(x='Wage', y='Value', data=df1)
+	graph
+	
+	from bokeh.plotting import figure, show
+	from bokeh.models import HoverTool
+	// copy the tooltips from the documentations.
+	p = figure(title='soccer 2019', x_axis_label='Wage', y_axis_label='Value'
+		plot_width=700, plot_height=700, tools=[tooltips])
+	p.circle('Wage', 'Value', size=10, source=df1)
+	show(p)
+
+Machine Learning 1:(split the data)
+	from sklearn.datasets import load_iris
+	iris = load_iris()
+	x = iris.data		// this is datas
+	y = iris.target		// this is answers
+	feature_names = iris.feature_names
+	target_names = iris.target_names
+	from sklearn.model_selection import train_test_split
+	x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+	
+Machine Learning 2:(create a model)
+	from sklearn.neighbors import KNeightborsClassifier
+	knn = KNeighborsClassifier(n_neighbors = 3)
+	knn.fit(x_train, y_train)
+	y_pred = knn.predict(x_test)
+
+	// (check the output)
+	from sklearn import metrics
+	print(metrics.accuracy_score(y_test, y_pred))	// 0.96666
+	
+Machine Learning 3: 
+	in this, we have tried decision tree instead of knn.
+	and get accuracy of 95%
+	
+Machine Learning 4:
+	from sklearn.externals import joblib
+	model = joblib.dump(knn, mlbrain.joblib)
+
+	// this is to store the program with code to retrain the model.
+
+	// if you want to reuse this program	
+	model = joblib.load('mlbrain.joblib')
+	model.predict(x_test)
+	sample = something
+	predictions = model.predict(sample)
+	pred_species = [iris.target_name for p in predictions]
+	pre_species
+
+Exercise: (Really smart Brain - Image Prediction)
+	pip3 install -U tensorflow keras opencv-python
+	pip3 install imageai --upgrade
+	
+	from imageai.Prediction import ImagePrediction
+	import os 
+	execution_path = os.getcwd()
+	prediction = ImagePrediction()
+	prediction.setModelTypeAsResNet()
+	prediction.setModePath(os.path.join(execution_path, 'resnet50_weights_tf_dim_ordering_tf_kernels.h5'))
+	prediction.loadModel()
+	
+	predictions, probabilities = prediction.predictImage(os.path.join(execution_path, '1.jpg'), result_count = 5)
+	for eachPrediction, eachProbability in zip(predictions, probabilities):
+	  print(eachPrediction, ':' , eachProbability)
+
+	run on terminal, python3 brain.py
+
+
+end of part-12</pre>
+    </body>
+    </html>
+    

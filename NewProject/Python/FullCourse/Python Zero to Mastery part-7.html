@@ -1,0 +1,244 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Debugging:
+	linting is a tool used to find the error and mistakes during 
+	  coding in ide/ editor.
+	Eg. pyflakes
+	It read errors, highlight the errors
+
+	pdb is default python debugger.
+
+
+	import pdb
+	def add(num1, num2):	
+ 	  pdb.set_trace()
+	  return num1 + num2
+	add(4, 'nik')
+	
+	it show the pdb in terminal output
+	
+	(Pdb) if we type num1, it show 4
+	(Pdb) if we type num2, it show 'nik'
+
+	Like this we can check the error in the code.
+
+File IO:
+	Create an empty py file as script.py and one txt file as 
+		test.txt
+	
+	my_file = open('test.txt')
+	print(my_file.read())		//gives the text in test file
+	print(my_file.read())		// empty
+	print(my_file.read())		// empty
+
+	It just read only once, once it read the file, it becomes empty.
+
+	my_file = open('test.txt')
+	print(my_file.read())		//gives the text in test file
+	my_file.seek(0)
+	print(my_file.read())		//gives the text in test file
+	my_file.seek(0)
+	print(my_file.read())		//gives the text in test file
+
+	my_file.readline() this reads line by line, but every time it 
+	  	prints single line.
+
+	my_file.close()	this is to close the file.
+
+Read, Write and Append:
+	
+	with open('test.txt') as my_file:
+	  print(my_file.readline())	// gives output
+
+	this is the standard method to open file.
+
+	with open('test.txt', mode='r+') as my_file:
+	  text = my_file.write('hi nik')
+	  print(text)				// 6
+
+	this indicates number of character we have rewrite in the text file.
+
+	mode = r	means read
+	mode = r+	means read and write but overwrite from index 0
+	mode = w 	means write newly, also may create new file.
+
+File paths:
+	with open('sad.txt', mode='r') as my_file:
+	  text = my_file.read()
+	  print(text)			//:(
+
+	sad.txt is in desktop so we directly use this.
+	if sad.txt is in folder of desktop, app/sad.txt	(relative path)
+	absolute path is /users/desktop/app/sad.txt
+	we also use like ../app/sad.txt
+
+File IO errors:
+	try:
+	  with open('sad.txt', mode='r') as my_file:
+	    print(my_file.read())
+	except FileNotFoundError as err:
+	  print('file does not exist')
+	  raise err
+	except IOError as err:
+	  print('IO error')
+	  raise err
+	
+Exercise: Translator
+	use pypi index, install translate-python from google search.
+	or use terminal, pip3 install translate.
+
+	from translate import Translator
+	translator = Translator(to_lang='ja')
+	try:
+	  with open('./test.text', mode='r') as my_file:
+	    text = my_file.read()
+	    translation = translator.translate(text)
+	    print(translation)				// text in japanese.
+	except FileNotFoundError as err:
+	  print('File not found')
+	
+Regular Expressions:
+	import re
+	string = 'hi nik'
+	print('nik' in string) 		// True
+
+	a = re.search('nik', string)
+	print(a)			// True
+
+	pattern = re.compile('nik')
+	a = pattern.search(string)
+	print(a.group())		// nik
+
+Regular Expressions 2:
+	import re
+	pattern = re.compile(r'([a-zA-Z]).([a])')
+	string = 'Hey how are you?'
+	a = pattern.search(string)
+	print()
+
+Regular Expression 3:
+	regular expression to check email
+	r'^[a-zA-z0-9_.+-]+@[a-zA-z0-9-]+\.[a-zA-Z0-9-.]+$'
+	
+	import re
+	pattern = re.compile(the above r)
+	email = 'nik@prime.com'
+	a = pattern.search(email)
+	print(a)			//True
+
+	regular expression for password checker
+	r'^[a-zA-Z0-9@$%#]{8, \d}'
+
+	8 determines the length of password,
+	\d for access any digit.
+
+Testing:
+	Testing also done using .py file.
+	Test file is used by developer only to test the code.
+	It should not be launched in model to user.
+	Module used to test is unittest.
+
+Module Unittest:
+
+	create two file script.py and test.py.
+	
+	In script.py
+	def do_stuff(num):
+	  return num + 5
+
+	In test.py
+	import unittest
+	import script
+	class TestMain(unittest.TestCase):
+	  def test_do_stuff(self):
+	    test_param = 10
+	    result = script.do_stuff(test_param)
+	    self.assertEqual(result, 15)
+	
+	unittest.main()
+
+	run the file in terminal using python3 test.py
+	it returns ran 1 test OK
+
+	if fails, it return failed.
+ 
+	In script.py
+	def do_stuff(num):
+	  return int(num) + 5
+
+	In test.py
+	import unittest
+	import script
+	class TestMain(unittest.TestCase):
+	  def test_do_stuff(self):
+	    test_param = 10
+	    result = script.do_stuff(test_param)
+	    self.assertEqual(result, 15)
+	  def test_do_stuff2(self):
+	    test_param = 'nik'
+	    result = script.do_stuff(test_param)
+	    self.assertTrue(isinstance(result, ValueError))
+	
+	unittest.main()
+
+	it return ran 2 tests OK.
+
+Writing Unit Tests:
+
+	def test_do_stuff3(self):
+	  test_param = None
+	  result = script.do_stuff(test_param)
+	  self.assertIsInstance(result, ValueError)
+	def test_do_stuff4(self):
+	  test_param = None
+	  result = script.do_stuff(test_param)
+	  self.assertEqual(result, 'please enter number')
+
+	if __name__ == '__main__':
+	  unittest.main()
+
+Exercise: (Testing)
+	This is to test the guess game 1-10
+
+	In this script file, we have run_guess method, we have to 
+	  test this method.
+	def run_guess(guess, answer):
+	  if 0 < guess < 11:
+	    if guess == answer: 
+		print('you are a genius')
+		return True
+	  else: 
+	     print('i said 1-10')
+	
+
+	This is the test file.
+
+	import unittest
+	import script
+	class TestGame(unittest.TestCase):
+	  def test_input(self):
+	    answer = 5
+	    guess  = 5
+	    result = script.run_guess(guess, answer)
+	    self.assertTrue(result)
+	if __name__ = "__main__":
+	  unittest.main()
+
+	// ran 1 test, OK
+
+
+
+
+
+end of part-7
+</pre>
+    </body>
+    </html>
+    

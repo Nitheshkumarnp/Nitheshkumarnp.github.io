@@ -1,0 +1,392 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Breaking The Flow:
+	Interpreter flows in line by line but the real power of programming
+	     is flow in set of lines using loops, breaks and conditions.
+
+Conditional Logic:
+	isOld = True
+	isLicense = True
+	if isOld:
+	  print('you are old enough to drive')
+	print('check again')			// you are old enough to drive
+						// check again
+
+	isOld = False
+	then	// check again
+
+	isOld = False
+	isLicense = True
+	if isOld:
+	  print('you are old enough to drive')
+	else:
+	  print('check again')			// check again
+
+	isOld = False
+	isLicense = True
+	if isOld:
+	  print('you are old enough to drive')
+	elif isLicense:
+	  print('you are okay')			// you are okay
+	else:
+	  print('check again')
+
+	isOld = True
+	isLicense = True
+	if isOld and isLicense:			// both should be true
+	  print('you are old enough to drive')	// you are old enough to drive
+	elif isLicense:
+	  print('you are okay')			
+	else:
+	  print('check again')
+
+	we can use multiple elif but only one if and else condition.
+
+Indentation:
+	space in lines can change the flow of program.
+	spacing is important in programming.
+	space have meaning in python while other lang does not.
+	
+Truthy vs Falsey:
+	In integer, 0 is Falsey, others are Truthy
+	In string, '' is Falsey, others are Truthy
+	some other Falsey are None, 0, 0.0, 0j, Decimal(0), Fraction(0,1),
+		[], {}, (), b'', set(), range(0), obj.__bool__().	
+
+	print(bool(0))		// False
+	print(bool(5))		// True
+	print(bool(''))		// False
+	print(bool('nik'))	// True
+
+Ternary Operator:
+	Blue print:  trueCondition if condition else falseCondition
+	isFriend = True
+	canMessage = 'msg allowed' if isFriend else 'not allowed'
+	print(canMessage)		// msg allowed
+
+Short Circuiting:
+	and	&
+	or	|
+	In OR condition, it checks the first condition, if it true,
+	    it doesn't moves to second condition or lot of conditions.
+	In AND condition, it checks both condition.
+
+Logical Operators:
+	<, <=, >, >=, ==, !=
+	print(not(True)) 	// False
+
+Exercise-1:(logical operators)
+	is_magician = False
+	is_expert = True
+	if is_expert and is_magician:
+		print('master magician')
+	elif is_magician and not is_expert:
+		print('simple magician')
+	else:
+		print('you need to train')
+
+is vs ==:
+	print(True == 1)		// True		(True == True)
+	print('' == 1)			// False	(False == True)
+	print([] == 1)			// False	(False == True)
+	print(10 == 10.0)		// True		(True == True)
+	print([] == [])			// True		(False == False)
+
+	== checks the type '1' == 1 is false.
+
+	print(True is 1)		// False
+	print('' is 1)			// False	
+	print([] is 1)			// False	
+	print(10 is 10.0)		// False	
+	print([1,2,3] is [1,2,3])	// False
+
+	is checks the location of memory.
+
+For Loops:
+	for item in 'nikprime':
+		print(item)		// n \n i \n k .... e
+	for item in [1,2,3,4,5]:
+		print(item)		// works
+	for item in (1,2,3,4,5):
+		print(item)		// works
+
+
+	nested for loop
+	for item in (1,2,3,4,5):
+		for i in ['a', 'b', 'c']:
+			print(item, i)	// 1,a 1,b 1,c 2,a 2,b 2,c.....
+
+Iterables:
+	list, dictionary, tuple, set, string.
+	we can access this using index.
+
+	user = {
+	 name: 'nik',
+	 age: 22,
+	 id: python
+	}
+	for item in user:
+		print(item)	// name, age, id
+	for item in user.values():
+		print(item)	// nik, 22, python
+	for key, value in user.items():
+		print(key, value)	// name nik, age 22, id python
+
+Exercise-2: (Tricky Counter)
+	list = [1,2,3,4,5]
+	counter = 0
+	for item in list:
+		counter += item
+	print(counter)		// 15
+
+range():
+	num = list(range(100))
+	print(num)		// [0,1,2,...99]
+	
+	for i in range(100):
+		print(i)	// 0, 1, 2 newlines
+
+	for i in range(0, 10, 2):
+		print(i)	// 0, 2, 4, 6, 8
+
+	for i in range(0, 10, -1):
+		print(i)	// error,  use(10, 0, -1)
+
+enumerate():
+	for i, char in enumerate('nik'):
+		print(i, char)	// 0 n, 1 i, 2 k
+
+While Loop:
+	i = 0
+	while i < 10:
+		print(i)	// 0, 1, 2, 3, 4
+		i += 1
+	
+	new logic
+	i = 0
+	while i < 10:
+		print(i)		// else is used bcoz if break
+		i += 1			is worked then else can't work
+		break
+	else:
+		print('something')	
+
+	// if we don't use else, then it print whatever may be.
+
+While Loop-2:
+	for loop is simpler, but while loop can be alter by us easily.
+	we cannot easily change the flow of loop in for loop.
+	we can break the loop whenever we want in while loop.
+
+Break, Continue and Pass:
+	break - stop the iteration.
+	continue - skip the specific iteration.
+	pass - it passes the iteration, not stop the iteration,
+		it is used in less.
+
+Our First GUI:
+	picture = [
+	 [0,0,0,1,0,0,0],
+	 [0,0,1,1,1,0,0],
+	 [0,1,1,1,1,1,0],
+	 [1,1,1,1,1,1,1],
+	 [0,0,0,1,0,0,0],
+	 [0,0,0,1,0,0,0]
+	]
+
+	for image in picture:		// fill = '*'
+	  for pixel in image:		// empty = ''
+	    if pixel == 1:		// best way if pixel:
+		print('*', end='')
+	    else:
+		print('', end='')
+	  print('')
+
+Find Duplicates:
+	list = ['a', 'b', 'd', 'f', 'm', 'n', 'n']
+	duplicates = []
+	for value in list:
+	  if list.count(value) > 1:
+		duplicates.append(value)
+	print(duplicates)			// ['b', 'b', 'n', 'n']
+
+	list = ['a', 'b', 'd', 'f', 'm', 'n', 'n']
+	duplicates = []
+	for value in list:
+	  if list.count(value) > 1:
+		if value not in duplicates:
+			duplicates.append(value)
+	print(duplicates)			// ['b', 'n']
+
+Functions:
+	def is used to define a function
+
+	def say_hello():
+	  print('hello')
+	say_hello()				// hello
+
+	call the function below the function code otherwise error occurs.
+
+Arguments and Parameters:
+	def hello(name):		// name is parameter
+	  print('hi' + name)
+	hello('nik')			// hi nik	nik is argument
+
+Default Parameters and Keyword Arguments:
+	arguments should be given in correct order when more than one argument.
+
+      	This is the other way to order arguments.
+	def hello(name, emoji):
+	  print('hello' + name + emoji)
+	hello(emoji='kkkk', name='nik')		// hi nik kkkk
+
+	def hello(name='aaa', emoji='bbb'):	// it works when there is no
+	  print('hello' + name + emoji)		arguments in function call.
+	hello(emoji='kkkk', name='nik')	
+
+Return:
+	def sum(num1, num2):
+	  return num1 + num2
+	ans = sum(4,5)
+	print(ans)			// 9
+
+	def sum(num1, num2):
+	  def another_func(num1, num2):
+		return num1 + num2
+	  return another_func(num1, num2)
+	total = sum(10, 20)
+	print(total)			// 30
+
+	// return exits from the function automatically.
+
+Methods vs Functions:
+	built-in functions list(), print(), input(),...
+	user functions sum():, user_info():,...
+	
+	Methods are starts with dot(.).
+	.capitalize(), .random(), .isfind(),...
+
+Docstrings:
+	def test(a):
+	  '''
+	  Info: this function tests and prints param a
+	  '''
+	  print(a)
+	test('hi')			// hi
+
+	// when type test() it automatically show the info the function.
+	help(test) also give the info of the function.
+	test.__doc__ also give the info of the function.
+
+Clean code:
+	def is_even(num):
+	  if num % 2 == 0:
+		return True
+	  else:
+		return False
+	print(is_even(10))
+
+	def is_even(num):
+	  if num % 2 == 0:
+		return True
+	  return False
+	print(is_even(10))
+
+	def is_even(num):
+	  return num % 2 == 0
+	print(is_even(10))
+
+	// better code for good understanding and easy process.
+
+*args and **kwargs:
+	def super_func(args):
+	  return sum(args)
+	super_func(1,2,3,4,5)		// it create error,bcoz one args
+	
+	def super_func(*args):
+	  print(args)
+	super_func(1,2,3,4,5)		// (1,2,3,4,5)
+
+	def super_func(*args, **kwargs):
+	  print(**kwargs)
+	super_func(1,2,3,4,5, num1=5, num2=10)	// {'num1': 5, 'num2': 10}
+
+	// rule: params, *args, default parameters, **kwargs
+	// (name, *args, i='hi', **kwargs).	
+
+Exercise:(Functions)
+	def highest_even(li):
+	  even_li = []
+	  for item in li:
+		if item % 2 == 0:
+		  even_li.append(item)
+	  return max(even_li)
+	print(highest_even([10, 3, 4, 8, 11]))
+
+Scope:
+	what variables do I have access to?
+	outside the functions are global scope.
+	inside the functions are local scope.
+	local variables have high preference.
+
+Scope rules:
+	a = 1				// global
+	def confusion():
+	  a = 5				// local
+	  return a
+	print(a)			// 1
+	print(confusion())		// 5
+
+	// starts with local
+	// parent local?  it means function inside function.
+	// global
+	// built-in functions
+
+Global keywords:
+	total = 0
+	def count():
+	  total += 1
+	  return total
+	print(count()) 			// error
+
+	total = 0
+	def count():
+	  global total += 1		// global keyword inside function
+	  return total
+	print(count())			// 1
+
+	// alternative way
+	total = 0
+	def count(total):  	like this
+
+Nonlocal keywords:
+	def outer():
+	  x = 'local'
+	  def inner():
+	    nonlocal x			// nonlocal make the x as global
+	    x = 'nonlocal'		// after that it is reassigned
+	    print('inner:', x)
+	  inner()
+	  print('outer:', x)		// inner: nonlocal
+	outer()				// outer: nonlocal
+
+Need of scope:
+	We can declare all the variable globally.
+	But global variables occupy the memory space.
+	In function, local variables occupy space when the function
+	  is called. 
+	After the function is called, garbage collector destroy the memory.
+	High memory can crash the code.
+
+end of part-2
+</pre>
+    </body>
+    </html>
+    
