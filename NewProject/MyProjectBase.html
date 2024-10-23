@@ -54,6 +54,11 @@
     
     <div class="content" id="content"></div>
     <script>
+
+        let showAtInitial = true;       // this is to configure hide or show at during loading
+        // if (hideAtInitial) {
+        //     document.getElementById('content').style.maxHeight = 0;
+        // }
         
         function generateTopics(topicData) {
             const container = document.getElementById('topicsContainer');
@@ -74,8 +79,11 @@
                     const content = this.nextElementSibling;
                     if (content != null) {
                         if (content.style.maxHeight == '') {
-                            // content.style.maxHeight = window.outerHeight + 'px';    //  if we are hiding all the elements first use this line
-                            content.style.maxHeight = '0px';                            //  if we are loading all elements first use this line
+                            if (showAtInitial) {
+                                content.style.maxHeight = '0px'; 
+                            } else {
+                                content.style.maxHeight = window.outerHeight + 'px';
+                            }
                         } else if(content.style.maxHeight != '0px') {
                             content.style.maxHeight = '0px';
                         } else {
