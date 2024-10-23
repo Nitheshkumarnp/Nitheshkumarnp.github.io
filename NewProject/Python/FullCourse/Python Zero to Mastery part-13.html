@@ -1,0 +1,123 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text File Content</title>
+    </head>
+    <body>
+        <pre>Git & Github:
+	start a project
+	create repository name
+	public
+	initialise README file
+	
+
+	// to clone the git
+	On Terminal, git clone https://gitaccount.com
+
+	// this is to upload the changed file on github.
+	On Terminal, cd background-generator file
+	it shows as master
+	git status 		// it shows the files but that are not commited
+	git add index.html
+	git add script.js
+	git add style.css
+	git status		// it show the changes
+	git commit		// it changes to commit
+	git commit -m 'background changed'	// it shows on github near file
+	git push		// it upload the changed file on github
+	
+	
+	// this is to access the changed file from github
+	On Terminal, git status
+	git pull 		// it get the code from github
+	git status
+	git add .		// it adds all the files changed if there is many to add
+	git status
+	git commit -m 'title changed'
+	git push
+	
+	if any new changes happened and i don't know means,
+	git pull 		// this will get the latest updated file
+	
+Git & Github 2:
+	Branch: master		// it is a first created git file
+	
+	On Terminal, git branch		// it shows *master, becoz it has 1 branch
+	git branch littlefeature	// it adds new branch
+	git branch			// it shows littlefeature *master
+	git checkout littlefeature	// it switched to littlefeature branch
+	git status
+	git add .
+	git status
+	git commit -m 'changing text'
+	git push
+
+	// now all the updated files are in branch littlefeatures.
+
+	// littlefeature is a branch which is created by new person on a team, and
+	give us a pull request to combine the code to master.
+	// Then we see the request and verify if it is good, then accept the
+	changes, and merge it with master. after that we can delete the 
+	littlefeature branch from master.
+
+	git branch bigfeature
+	git checkout bigfeature
+	git branch
+	git add .
+	git commit -m 'reverting back to old title'
+	git push
+	git push --set-upstream origin bigfeature
+	
+	// I didn't clearly understand the purpose of last line in the code, 
+	check it in google.
+
+	git branch conflict
+	git checkout conflict
+	git add .
+	git commit -m 'check'
+	git checkout master   	// it calls the master branch
+	git pull
+	git checkout conflict
+	git merge master	// it merge the master with conflict
+	git add .
+	git commit -m 'fixing merging issue' 
+	git push
+	git push origin conflict
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end of part-13</pre>
+    </body>
+    </html>
+    
