@@ -443,6 +443,26 @@ let topicsData = {
                     'topic': "Window Functions",
                     'page': "SQL/Window-functions.html",
                     'subtopics': []
+                },
+                {
+                    'topic': "SQL Questions and Answers",
+                    'page': "SQL/SQLQuestionsAndAnswers.html",
+                    'subtopics': []
+                },
+                {
+                    'topic': "SQL Questions and Answers 1",
+                    'page': "SQL/SQLQuestionsAndAnswers1.html",
+                    'subtopics': []
+                },
+                {
+                    'topic': "SQL Questions and Answers 2",
+                    'page': "SQL/SQLQuestionsAndAnswers2.html",
+                    'subtopics': []
+                },
+                {
+                    'topic': "SQL Questions and Answers 3",
+                    'page': "SQL/SQLQuestionsAndAnswers3.html",
+                    'subtopics': []
                 }
             ]
         },{
