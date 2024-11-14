@@ -52,6 +52,11 @@ let topicsData = {
                             'topic': 'Dictionary',
                             'page': 'Python/DataTypes/Dictionary.html',
                             'subtopics': []
+                        },
+                        {
+                            'topic': 'Boolean',
+                            'page': 'Python/DataTypes/Boolean.html',
+                            'subtopics': []
                         }
                     ]
                 },
@@ -187,8 +192,13 @@ let topicsData = {
                             'subtopics': []
                         },
                         {
-                            'topic': 'Pandas',
-                            'page': 'Python/Libraries/Pandas.html',
+                            'topic': 'Pandas 1',
+                            'page': 'Python/Libraries/Pandas1.html',
+                            'subtopics': []
+                        },
+                        {
+                            'topic': 'Pandas 2',
+                            'page': 'Python/Libraries/Pandas2.html',
                             'subtopics': []
                         },
                         {
@@ -199,6 +209,11 @@ let topicsData = {
                         {
                             'topic': 'Seaborn',
                             'page': 'Python/Libraries/Seaborn.html',
+                            'subtopics': []
+                        },
+                        {
+                            'topic': 'All Libraries Details',
+                            'page': 'Python/Libraries/AllLibrariesDetails.html',
                             'subtopics': []
                         }
                     ]
@@ -225,6 +240,38 @@ let topicsData = {
                         {
                             'topic': 'Collections Module',
                             'page': 'Python/Modules/CollectionsModule.html',
+                            'subtopics': []
+                        }
+                    ]
+                },
+                {
+                    'topic': 'Advanced',
+                    'page': '',
+                    'subtopics': [
+                        {
+                            'topic': 'Data Structures',
+                            'page': 'Python/Advanced/DataStructures.html',
+                            'subtopics': []
+                        },
+                        {
+                            'topic': 'Python OOPs Assignment',
+                            'page': 'Python/Advanced/PythonOOPsAssignment.html',
+                            'subtopics': []
+                        },
+                        {
+                            'topic': 'Sorting Algorithms',
+                            'page': 'Python/Advanced/SortingAlgorithms.html',
+                            'subtopics': []
+                        }
+                    ]
+                },
+                {
+                    'topic': 'Interview and Coding',
+                    'page': '',
+                    'subtopics': [
+                        {
+                            'topic': 'Coding',
+                            'page': 'Python/InterviewAndCoding/Coding.html',
                             'subtopics': []
                         }
                     ]
