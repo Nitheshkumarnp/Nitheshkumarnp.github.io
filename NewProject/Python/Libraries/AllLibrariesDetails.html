@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Set</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>AllLibrariesDetails</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7516,7 +7516,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Set">Set<a class="anchor-link" href="#Set">¶</a></h3>
+<h3 id="All-libraries-details">All libraries details<a class="anchor-link" href="#All-libraries-details">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7527,189 +7527,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>A set in Python is a collection of unique and unordered elements. Sets are useful when you want to store data without duplicates and perform mathematical set operations like union, intersection, and difference. Sets are defined by curly braces {} or by using the set() constructor.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Creating a Set:</p>
-<pre><code>A set is created by placing all the elements (which must be immutable) inside curly braces {}, separated by commas, or by using the set() constructor.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">another_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">another_set</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{1, 2, 3}
-{4, 5, 6}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Sets are Unordered:</p>
-<pre><code>Unlike lists or tuples, sets are unordered collections, which means they do not preserve the insertion order of elements.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  <span class="c1"># Output might be {1, 2, 3}</span>
-<span class="c1"># print(my_set[0]) # TypeError: 'set' object is not subscriptable</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{1, 2, 3}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Sets Contain Only Unique Elements:</p>
-<pre><code>Sets automatically eliminate duplicate elements when created or updated.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{1, 2, 3}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Mutable and Immutable Sets:</p>
-<pre><code>Standard sets in Python are mutable, meaning you can add and remove elements from a set. However, there is also an immutable version of a set called frozenset.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
-
-<span class="n">frozen</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">frozen</span><span class="p">)</span>
-<span class="c1"># frozen.add(4)  # Raises AttributeError: 'frozenset' object has no attribute 'add'</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{1, 2, 3, 4}
-frozenset({1, 2, 3})
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Indexing in Set:</p>
-<pre><code>Indexing is not allowed in set, because it not maintaining any order of element. Only unique is checked.</code></pre>
+<p>This is to get all the attributes and methods used in python libraries for Machine Learning Project.</p>
 </div>
 </div>
 </div>
@@ -7718,294 +7536,62 @@ frozenset({1, 2, 3})
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># my_set[1]   #TypeError: 'set' object is not subscriptable</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># List of common python libraries</span>
+<span class="n">data_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="p">,</span> <span class="n">pd</span><span class="p">,</span> <span class="n">sns</span><span class="p">,</span> <span class="n">plt</span><span class="p">]</span>
 
-<span class="c1"># If we get this error, it means set is not immutable. It is mutable and able to add or remove elements. Indexing is not possible only.</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Set Operations:</p>
-<pre><code>Union: Combines two sets, returning a set containing all unique elements from both sets.
+<span class="c1"># Function to get attributes, methods, and their uses (docstrings) of data types</span>
+<span class="k">def</span> <span class="nf">get_data_types_attributes_methods_with_uses</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">data_type</span> <span class="ow">in</span> <span class="n">data_types</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Data Type: </span><span class="si">{</span><span class="n">data_type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        
+        <span class="n">methods</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">[]</span>
 
-Intersection: Returns a set containing only the elements that are present in both sets.
+        <span class="c1"># Split into methods (callable) and attributes (non-callable)</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">data_type</span><span class="p">):</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data_type</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+                <span class="n">methods</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">item</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__doc__</span> <span class="k">else</span> <span class="s2">"No description available"</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">attributes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">item</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__doc__</span> <span class="k">else</span> <span class="s2">"No description available"</span><span class="p">))</span>
 
-Difference: Returns a set containing elements that are in the first set but not in the second.
+        <span class="c1"># Print Attributes</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Attributes of </span><span class="si">{</span><span class="n">data_type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">attributes</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">required_space</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span> <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="mi">30</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">space</span> <span class="o">=</span> <span class="s1">' '</span> <span class="o">*</span> <span class="n">required_space</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">space</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-Symmetric Difference: Returns a set containing elements that are in either of the sets but not in both.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">set1</span> <span class="o">|</span> <span class="n">set2</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4, 5}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">set1</span> <span class="o">&amp;</span> <span class="n">set2</span><span class="p">)</span>  <span class="c1"># Output: {3}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">set1</span> <span class="o">-</span> <span class="n">set2</span><span class="p">)</span>  <span class="c1"># Output: {1, 2}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">set1</span> <span class="o">^</span> <span class="n">set2</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 4, 5}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{1, 2, 3, 4, 5}
-{3}
-{1, 2}
-{1, 2, 4, 5}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Adding and Removing Elements:</p>
-<pre><code>You can add elements to a set using add(), and multiple elements using update(). To remove elements, use remove(), discard(), or pop().</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Raises KeyError if the element is not found</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Does not raise KeyError if the element is not found</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  <span class="c1"># Output: {3, 4, 5, 6}</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{3, 4, 5, 6}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Checking Membership:</p>
-<pre><code>Use the in keyword to check if an element exists in a set.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="ow">in</span> <span class="n">my_set</span><span class="p">)</span>  <span class="c1"># Output: True</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>True
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Set Comprehension:</p>
-<pre><code>You can use a set comprehension to create a set based on a condition.</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  <span class="c1"># Output: {0, 2, 4, 6, 8}</span>
+        <span class="c1"># Print Methods</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Methods of </span><span class="si">{</span><span class="n">data_type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">methods</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">required_space</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">method</span><span class="p">)</span> <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="mi">30</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">method</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">space</span> <span class="o">=</span> <span class="s1">' '</span> <span class="o">*</span> <span class="n">required_space</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">space</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="n">my_set</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{0, 2, 4, 6, 8}
-{0, 1, 2, 3, 4, 5, 6, 8}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Built-in Set Methods:</p>
-<pre><code>Some of the important set methods are:
-    add(): Adds a single element to the set.
-    update(): Adds multiple elements to the set.
-    remove(): Removes a specific element (raises KeyError if the element is not found).
-    discard(): Removes a specific element (does not raise an error if the element is not found).
-    clear(): Removes all elements from the set.
-    union(), intersection(), difference(), symmetric_difference(): Set operations.
-    issubset(), issuperset(), isdisjoint(): Check relationships between sets.</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Frozensets:</p>
-<pre><code>A frozenset is an immutable version of a set. Once created, you cannot add, remove, or modify elements in a frozenset. However, frozensets can be used in dictionaries or as elements of other sets (because they are hashable).</code></pre>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_frozen_set</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_frozen_set</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>frozenset({1, 2, 3})
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Set Tutorials</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">}</span>
-<span class="n">your_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">your_set</span><span class="p">))</span>	<span class="c1"># {1,2,3} it doesn't modify my_set</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>				<span class="c1"># {1,2,3,5}</span>
-<span class="n">my_set</span><span class="o">.</span><span class="n">difference_update</span><span class="p">(</span><span class="n">your_set</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>				<span class="c1"># {1,2,3} it modify my_set</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">your_set</span><span class="p">))</span> 	<span class="c1"># {4,5}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">your_set</span><span class="p">))</span>	<span class="c1"># False  if nothing common it return true.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">your_set</span><span class="p">))</span>		<span class="c1"># {1,2,3,4,5,6,7,8,9,10}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span> <span class="o">|</span> <span class="n">your_set</span><span class="p">)</span>		<span class="c1"># {1,2,3,4,5,6,7,8,9,10}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span> <span class="o">&amp;</span> <span class="n">your_set</span><span class="p">)</span>		<span class="c1"># {4,5}</span>
 
-<span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">}</span>
-<span class="n">your_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">your_set</span><span class="p">))</span>	<span class="c1"># True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="n">your_set</span><span class="p">))</span>	<span class="c1"># False</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">your_set</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="n">my_set</span><span class="p">))</span>	<span class="c1"># True</span>
+<span class="c1"># Call the function to display the results</span>
+<span class="n">get_data_types_attributes_methods_with_uses</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -8018,94 +7604,1077 @@ Symmetric Difference: Returns a set containing elements that are in either of th
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{1, 2, 3}
-{1, 2, 3, 5}
-{1, 2, 3}
-set()
-True
-{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-set()
-True
-False
-True
+<pre>Data Type: numpy
+
+
+Attributes of numpy:
+
+1. False_                         : Boolean type (True or False), stored as a byte.
+2. ScalarType                     : Built-in immutable sequence.
+3. True_                          : Boolean type (True or False), stored as a byte.
+4. _NoValue                       : Special keyword value.
+5. __NUMPY_SETUP__                : bool(x) -&gt; bool
+6. __all__                        : Built-in mutable sequence.
+7. __array_api_version__          : str(object='') -&gt; str
+8. __builtins__                   : dict() -&gt; new empty dictionary
+9. __cached__                     : str(object='') -&gt; str
+10. __config__                    : No description available
+11. __doc__                       : str(object='') -&gt; str
+12. __expired_attributes__        : dict() -&gt; new empty dictionary
+13. __file__                      : str(object='') -&gt; str
+14. __former_attrs__              : dict() -&gt; new empty dictionary
+15. __future_scalars__            : set() -&gt; new empty set object
+16. __loader__                    : Concrete implementation of SourceLoader using the file system.
+17. __name__                      : str(object='') -&gt; str
+18. __numpy_submodules__          : set() -&gt; new empty set object
+19. __package__                   : str(object='') -&gt; str
+20. __path__                      : Built-in mutable sequence.
+21. __spec__                      : The specification for a module, used for loading.
+22. __version__                   : str(object='') -&gt; str
+23. _core                         : 
+24. _distributor_init             :  Distributor init file
+25. _expired_attrs_2_0            : 
+26. _globals                      : 
+27. _int_extended_msg             : str(object='') -&gt; str
+28. _mat                          : Sub-package containing the matrix class and related functions.
+29. _msg                          : str(object='') -&gt; str
+30. _pytesttester                 : 
+31. _specific_msg                 : str(object='') -&gt; str
+32. _type_info                    : Built-in mutable sequence.
+33. _typing                       : Private counterpart of ``numpy.typing``.
+34. _utils                        : 
+35. c_                            : 
+36. char                          : 
+37. core                          : 
+38. ctypeslib                     : 
+39. dtypes                        : 
+40. e                             : Convert a string or number to a floating point number, if possible.
+41. emath                         : 
+42. euler_gamma                   : Convert a string or number to a floating point number, if possible.
+43. exceptions                    : 
+44. f2py                          : Fortran to Python Interface Generator.
+45. fft                           : 
+46. index_exp                     : 
+47. inf                           : Convert a string or number to a floating point number, if possible.
+48. lib                           : 
+49. linalg                        : 
+50. little_endian                 : bool(x) -&gt; bool
+51. ma                            : 
+52. mgrid                         : 
+53. nan                           : Convert a string or number to a floating point number, if possible.
+54. newaxis                       : No description available
+55. ogrid                         : 
+56. pi                            : Convert a string or number to a floating point number, if possible.
+57. polynomial                    : 
+58. r_                            : 
+59. random                        : 
+60. rec                           : 
+61. s_                            : 
+62. sctypeDict                    : dict() -&gt; new empty dictionary
+63. strings                       : 
+64. testing                       : Common test support for all numpy test scripts.
+65. typecodes                     : dict() -&gt; new empty dictionary
+66. typing                        : 
+
+Methods of numpy:
+
+1. _CopyMode                      : 
+2. __dir__                        : No description available
+3. __getattr__                    : No description available
+4. _get_promotion_state           : Get the current NEP 50 promotion state.
+5. _no_nep50_warning              : 
+6. _pyinstaller_hooks_dir         : No description available
+7. _set_promotion_state           : Set the NEP 50 promotion state.  This is not thread-safe.
+8. abs                            : absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+9. absolute                       : absolute(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+10. acos                          : arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+11. acosh                         : arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+12. add                           : add(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+13. all                           : 
+14. allclose                      : 
+15. amax                          : 
+16. amin                          : 
+17. angle                         : 
+18. any                           : 
+19. append                        : 
+20. apply_along_axis              : 
+21. apply_over_axes               : 
+22. arange                        : arange([start,] stop[, step,], dtype=None, *, device=None, like=None)
+23. arccos                        : arccos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+24. arccosh                       : arccosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+25. arcsin                        : arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+26. arcsinh                       : arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+27. arctan                        : arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+28. arctan2                       : arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+29. arctanh                       : arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+30. argmax                        : 
+31. argmin                        : 
+32. argpartition                  : 
+33. argsort                       : 
+34. argwhere                      : 
+35. around                        : 
+36. array                         : array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,
+37. array2string                  : 
+38. array_equal                   : 
+39. array_equiv                   : 
+40. array_repr                    : 
+41. array_split                   : 
+42. array_str                     : 
+43. asanyarray                    : asanyarray(a, dtype=None, order=None, *, like=None)
+44. asarray                       : asarray(a, dtype=None, order=None, *, device=None, copy=None, like=None)
+45. asarray_chkfinite             : Convert the input to an array, checking for NaNs or Infs.
+46. ascontiguousarray             : ascontiguousarray(a, dtype=None, *, like=None)
+47. asfortranarray                : asfortranarray(a, dtype=None, *, like=None)
+48. asin                          : arcsin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+49. asinh                         : arcsinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+50. asmatrix                      : 
+51. astype                        : 
+52. atan                          : arctan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+53. atan2                         : arctan2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+54. atanh                         : arctanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+55. atleast_1d                    : 
+56. atleast_2d                    : 
+57. atleast_3d                    : 
+58. average                       : 
+59. bartlett                      : 
+60. base_repr                     : 
+61. binary_repr                   : 
+62. bincount                      : 
+63. bitwise_and                   : bitwise_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+64. bitwise_count                 : bitwise_count(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+65. bitwise_invert                : invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+66. bitwise_left_shift            : left_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+67. bitwise_not                   : invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+68. bitwise_or                    : bitwise_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+69. bitwise_right_shift           : right_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+70. bitwise_xor                   : bitwise_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+71. blackman                      : 
+72. block                         : 
+73. bmat                          : 
+74. bool                          : Boolean type (True or False), stored as a byte.
+75. bool_                         : Boolean type (True or False), stored as a byte.
+76. broadcast                     : Produce an object that mimics broadcasting.
+77. broadcast_arrays              : 
+78. broadcast_shapes              : 
+79. broadcast_to                  : Broadcast an array to a new shape.
+80. busday_count                  : 
+81. busday_offset                 : 
+82. busdaycalendar                : busdaycalendar(weekmask='1111100', holidays=None)
+83. byte                          : Signed integer type, compatible with C ``char``.
+84. bytes_                        : A byte string.
+85. can_cast                      : 
+86. cbrt                          : cbrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+87. cdouble                       : Complex number type composed of two double-precision floating-point
+88. ceil                          : ceil(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+89. character                     : Abstract base class of all character string scalar types.
+90. choose                        : 
+91. clip                          : 
+92. clongdouble                   : Complex number type composed of two extended-precision floating-point
+93. column_stack                  : 
+94. common_type                   : 
+95. complex128                    : Complex number type composed of two double-precision floating-point
+96. complex64                     : Complex number type composed of two single-precision floating-point
+97. complexfloating               : Abstract base class of all complex number scalar types that are made up of
+98. compress                      : 
+99. concat                        : 
+100. concatenate                   : 
+101. conj                          : conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+102. conjugate                     : conjugate(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+103. convolve                      : 
+104. copy                          : 
+105. copysign                      : copysign(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+106. copyto                        : 
+107. corrcoef                      : 
+108. correlate                     : 
+109. cos                           : cos(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+110. cosh                          : cosh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+111. count_nonzero                 : 
+112. cov                           : 
+113. cross                         : 
+114. csingle                       : Complex number type composed of two single-precision floating-point
+115. cumprod                       : 
+116. cumsum                        : 
+117. datetime64                    : If created from a 64-bit integer, it represents an offset from
+118. datetime_as_string            : 
+119. datetime_data                 : datetime_data(dtype, /)
+120. deg2rad                       : deg2rad(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+121. degrees                       : degrees(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+122. delete                        : 
+123. diag                          : 
+124. diag_indices                  : 
+125. diag_indices_from             : 
+126. diagflat                      : 
+127. diagonal                      : 
+128. diff                          : 
+129. digitize                      : 
+130. divide                        : divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+131. divmod                        : divmod(x1, x2[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+132. dot                           : 
+133. double                        : Double-precision floating-point number type, compatible with Python
+134. dsplit                        : 
+135. dstack                        : 
+136. dtype                         : dtype(dtype, align=False, copy=False, [metadata])
+137. ediff1d                       : 
+138. einsum                        : 
+139. einsum_path                   : 
+140. empty                         : empty(shape, dtype=float, order='C', *, device=None, like=None)
+141. empty_like                    : 
+142. equal                         : equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+143. errstate                      : 
+144. exp                           : exp(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+145. exp2                          : exp2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+146. expand_dims                   : 
+147. expm1                         : expm1(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+148. extract                       : 
+149. eye                           : 
+150. fabs                          : fabs(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+151. fill_diagonal                 : Fill the main diagonal of the given array of any dimensionality.
+152. finfo                         : 
+153. fix                           : 
+154. flatiter                      : Flat iterator object to iterate over arrays.
+155. flatnonzero                   : 
+156. flexible                      : Abstract base class of all scalar types without predefined length.
+157. flip                          : 
+158. fliplr                        : 
+159. flipud                        : 
+160. float16                       : Half-precision floating-point number type.
+161. float32                       : Single-precision floating-point number type, compatible with C ``float``.
+162. float64                       : Double-precision floating-point number type, compatible with Python
+163. float_power                   : float_power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+164. floating                      : Abstract base class of all floating-point scalar types.
+165. floor                         : floor(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+166. floor_divide                  : floor_divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+167. fmax                          : fmax(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+168. fmin                          : fmin(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+169. fmod                          : fmod(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+170. format_float_positional       : 
+171. format_float_scientific       : 
+172. frexp                         : frexp(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+173. from_dlpack                   : from_dlpack(x, /)
+174. frombuffer                    : frombuffer(buffer, dtype=float, count=-1, offset=0, *, like=None)
+175. fromfile                      : fromfile(file, dtype=float, count=-1, sep='', offset=0, *, like=None)
+176. fromfunction                  : 
+177. fromiter                      : fromiter(iter, dtype, count=-1, *, like=None)
+178. frompyfunc                    : frompyfunc(func, /, nin, nout, *[, identity])
+179. fromregex                     : 
+180. fromstring                    : fromstring(string, dtype=float, count=-1, *, sep, like=None)
+181. full                          : 
+182. full_like                     : 
+183. gcd                           : gcd(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+184. generic                       : Base class for numpy scalar types.
+185. genfromtxt                    : 
+186. geomspace                     : 
+187. get_include                   : 
+188. get_printoptions              : 
+189. getbufsize                    : 
+190. geterr                        : 
+191. geterrcall                    : 
+192. gradient                      : 
+193. greater                       : greater(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+194. greater_equal                 : greater_equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+195. half                          : Half-precision floating-point number type.
+196. hamming                       : 
+197. hanning                       : 
+198. heaviside                     : heaviside(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+199. histogram                     : 
+200. histogram2d                   : 
+201. histogram_bin_edges           : 
+202. histogramdd                   : 
+203. hsplit                        : 
+204. hstack                        : 
+205. hypot                         : hypot(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+206. i0                            : 
+207. identity                      : 
+208. iinfo                         : 
+209. imag                          : 
+210. in1d                          : 
+211. indices                       : 
+212. inexact                       : Abstract base class of all numeric scalar types with a (potentially)
+213. info                          : 
+214. inner                         : 
+215. insert                        : 
+216. int16                         : Signed integer type, compatible with C ``short``.
+217. int32                         : No description available
+218. int64                         : Default signed integer type, 64bit on 64bit systems and 32bit on 32bit
+219. int8                          : Signed integer type, compatible with C ``char``.
+220. int_                          : Default signed integer type, 64bit on 64bit systems and 32bit on 32bit
+221. intc                          : Signed integer type, compatible with C ``int``.
+222. integer                       : Abstract base class of all integer scalar types.
+223. interp                        : 
+224. intersect1d                   : 
+225. intp                          : Default signed integer type, 64bit on 64bit systems and 32bit on 32bit
+226. invert                        : invert(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+227. is_busday                     : 
+228. isclose                       : 
+229. iscomplex                     : 
+230. iscomplexobj                  : 
+231. isdtype                       : 
+232. isfinite                      : isfinite(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+233. isfortran                     : 
+234. isin                          : 
+235. isinf                         : isinf(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+236. isnan                         : isnan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+237. isnat                         : isnat(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+238. isneginf                      : 
+239. isposinf                      : 
+240. isreal                        : 
+241. isrealobj                     : 
+242. isscalar                      : 
+243. issubdtype                    : 
+244. iterable                      : 
+245. ix_                           : 
+246. kaiser                        : 
+247. kron                          : 
+248. lcm                           : lcm(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+249. ldexp                         : ldexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+250. left_shift                    : left_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+251. less                          : less(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+252. less_equal                    : less_equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+253. lexsort                       : 
+254. linspace                      : 
+255. load                          : 
+256. loadtxt                       : 
+257. log                           : log(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+258. log10                         : log10(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+259. log1p                         : log1p(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+260. log2                          : log2(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+261. logaddexp                     : logaddexp(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+262. logaddexp2                    : logaddexp2(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+263. logical_and                   : logical_and(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+264. logical_not                   : logical_not(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+265. logical_or                    : logical_or(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+266. logical_xor                   : logical_xor(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+267. logspace                      : 
+268. long                          : No description available
+269. longdouble                    : Extended-precision floating-point number type, compatible with C
+270. longlong                      : Default signed integer type, 64bit on 64bit systems and 32bit on 32bit
+271. mask_indices                  : 
+272. matmul                        : matmul(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, axes, axis])
+273. matrix                        : 
+274. matrix_transpose              : 
+275. max                           : 
+276. maximum                       : maximum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+277. may_share_memory              : 
+278. mean                          : 
+279. median                        : 
+280. memmap                        : Create a memory-map to an array stored in a *binary* file on disk.
+281. meshgrid                      : 
+282. min                           : 
+283. min_scalar_type               : 
+284. minimum                       : minimum(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+285. mintypecode                   : 
+286. mod                           : remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+287. modf                          : modf(x[, out1, out2], / [, out=(None, None)], *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+288. moveaxis                      : 
+289. multiply                      : multiply(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+290. nan_to_num                    : 
+291. nanargmax                     : 
+292. nanargmin                     : 
+293. nancumprod                    : 
+294. nancumsum                     : 
+295. nanmax                        : 
+296. nanmean                       : 
+297. nanmedian                     : 
+298. nanmin                        : 
+299. nanpercentile                 : 
+300. nanprod                       : 
+301. nanquantile                   : 
+302. nanstd                        : 
+303. nansum                        : 
+304. nanvar                        : 
+305. ndarray                       : ndarray(shape, dtype=float, buffer=None, offset=0,
+306. ndenumerate                   : 
+307. ndim                          : 
+308. ndindex                       : 
+309. nditer                        : nditer(op, flags=None, op_flags=None, op_dtypes=None, order='K',
+310. negative                      : negative(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+311. nested_iters                  : nested_iters(op, axes, flags=None, op_flags=None, op_dtypes=None,     order="K", casting="safe", buffersize=0)
+312. nextafter                     : nextafter(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+313. nonzero                       : 
+314. not_equal                     : not_equal(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+315. number                        : Abstract base class of all numeric scalar types.
+316. object_                       : Any Python object.
+317. ones                          : 
+318. ones_like                     : 
+319. outer                         : 
+320. packbits                      : 
+321. pad                           : 
+322. partition                     : 
+323. percentile                    : 
+324. permute_dims                  : 
+325. piecewise                     : 
+326. place                         : 
+327. poly                          : 
+328. poly1d                        : 
+329. polyadd                       : 
+330. polyder                       : 
+331. polydiv                       : 
+332. polyfit                       : 
+333. polyint                       : 
+334. polymul                       : 
+335. polysub                       : 
+336. polyval                       : 
+337. positive                      : positive(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+338. pow                           : power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+339. power                         : power(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+340. printoptions                  : Context manager for setting print options.
+341. prod                          : 
+342. promote_types                 : promote_types(type1, type2)
+343. ptp                           : 
+344. put                           : 
+345. put_along_axis                : 
+346. putmask                       : 
+347. quantile                      : 
+348. rad2deg                       : rad2deg(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+349. radians                       : radians(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+350. ravel                         : Return a contiguous flattened array.
+351. ravel_multi_index             : 
+352. real                          : 
+353. real_if_close                 : 
+354. recarray                      : Construct an ndarray that allows field access using attributes.
+355. reciprocal                    : reciprocal(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+356. record                        : A data-type scalar that allows field access as attribute lookup.
+357. remainder                     : remainder(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+358. repeat                        : 
+359. require                       : 
+360. reshape                       : 
+361. resize                        : 
+362. result_type                   : 
+363. right_shift                   : right_shift(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+364. rint                          : rint(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+365. roll                          : 
+366. rollaxis                      : 
+367. roots                         : 
+368. rot90                         : 
+369. round                         : 
+370. row_stack                     : 
+371. save                          : 
+372. savetxt                       : 
+373. savez                         : Save several arrays into a single file in uncompressed ``.npz`` format.
+374. savez_compressed              : 
+375. searchsorted                  : 
+376. select                        : 
+377. set_printoptions              : 
+378. setbufsize                    : 
+379. setdiff1d                     : 
+380. seterr                        : 
+381. seterrcall                    : 
+382. setxor1d                      : 
+383. shape                         : 
+384. shares_memory                 : 
+385. short                         : Signed integer type, compatible with C ``short``.
+386. show_config                   : 
+387. show_runtime                  : 
+388. sign                          : sign(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+389. signbit                       : signbit(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+390. signedinteger                 : Abstract base class of all signed integer scalar types.
+391. sin                           : sin(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+392. sinc                          : 
+393. single                        : Single-precision floating-point number type, compatible with C ``float``.
+394. sinh                          : sinh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+395. size                          : 
+396. sort                          : 
+397. sort_complex                  : 
+398. spacing                       : spacing(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+399. split                         : 
+400. sqrt                          : sqrt(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+401. square                        : square(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+402. squeeze                       : 
+403. stack                         : 
+404. std                           : 
+405. str_                          : A unicode string.
+406. subtract                      : subtract(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+407. sum                           : 
+408. swapaxes                      : 
+409. take                          : 
+410. take_along_axis               : 
+411. tan                           : tan(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+412. tanh                          : tanh(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+413. tensordot                     : 
+414. test                          : 
+415. tile                          : 
+416. timedelta64                   : A timedelta stored as a 64-bit integer.
+417. trace                         : 
+418. transpose                     : 
+419. trapezoid                     : 
+420. trapz                         : 
+421. tri                           : 
+422. tril                          : 
+423. tril_indices                  : 
+424. tril_indices_from             : 
+425. trim_zeros                    : 
+426. triu                          : 
+427. triu_indices                  : 
+428. triu_indices_from             : 
+429. true_divide                   : divide(x1, x2, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+430. trunc                         : trunc(x, /, out=None, *, where=True, casting='same_kind', order='K', dtype=None, subok=True[, signature])
+431. typename                      : 
+432. ubyte                         : Unsigned integer type, compatible with C ``unsigned char``.
+433. ufunc                         : Functions that operate element by element on whole arrays.
+434. uint                          : Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit
+435. uint16                        : Unsigned integer type, compatible with C ``unsigned short``.
+436. uint32                        : No description available
+437. uint64                        : Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit
+438. uint8                         : Unsigned integer type, compatible with C ``unsigned char``.
+439. uintc                         : Unsigned integer type, compatible with C ``unsigned int``.
+440. uintp                         : Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit
+441. ulong                         : No description available
+442. ulonglong                     : Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit
+443. union1d                       : 
+444. unique                        : 
+445. unique_all                    : 
+446. unique_counts                 : 
+447. unique_inverse                : 
+448. unique_values                 : 
+449. unpackbits                    : 
+450. unravel_index                 : 
+451. unsignedinteger               : Abstract base class of all unsigned integer scalar types.
+452. unwrap                        : 
+453. ushort                        : Unsigned integer type, compatible with C ``unsigned short``.
+454. vander                        : 
+455. var                           : 
+456. vdot                          : 
+457. vecdot                        : vecdot(x1, x2, /, out=None, *, casting='same_kind', order='K', dtype=None, subok=True[, signature, axes, axis])
+458. vectorize                     : 
+459. void                          : np.void(length_or_data, /, dtype=None)
+460. vsplit                        : 
+461. vstack                        : 
+462. where                         : 
+463. zeros                         : zeros(shape, dtype=float, order='C', *, like=None)
+464. zeros_like                    : 
+Data Type: pandas
+
+
+Attributes of pandas:
+
+1. IndexSlice                     : 
+2. NA                             : 
+3. NaT                            : 
+4. __all__                        : Built-in mutable sequence.
+5. __builtins__                   : dict() -&gt; new empty dictionary
+6. __cached__                     : str(object='') -&gt; str
+7. __doc__                        : str(object='') -&gt; str
+8. __docformat__                  : str(object='') -&gt; str
+9. __file__                       : str(object='') -&gt; str
+10. __git_version__               : str(object='') -&gt; str
+11. __loader__                    : Concrete implementation of SourceLoader using the file system.
+12. __name__                      : str(object='') -&gt; str
+13. __package__                   : str(object='') -&gt; str
+14. __path__                      : Built-in mutable sequence.
+15. __spec__                      : The specification for a module, used for loading.
+16. __version__                   : str(object='') -&gt; str
+17. _built_with_meson             : bool(x) -&gt; bool
+18. _config                       : 
+19. _is_numpy_dev                 : bool(x) -&gt; bool
+20. _libs                         : No description available
+21. _pandas_datetime_CAPI         : Capsule objects let you wrap a C "void *" pointer in a Python
+22. _pandas_parser_CAPI           : Capsule objects let you wrap a C "void *" pointer in a Python
+23. _testing                      : No description available
+24. _typing                       : No description available
+25. _version_meson                : No description available
+26. annotations                   : No description available
+27. api                           :  public toolkit API 
+28. arrays                        : 
+29. compat                        : 
+30. core                          : No description available
+31. errors                        : 
+32. io                            : No description available
+33. offsets                       : No description available
+34. options                       : provide attribute-style access to a nested dict
+35. pandas                        : 
+36. plotting                      : 
+37. testing                       : 
+38. tseries                       : No description available
+39. util                          : No description available
+
+Methods of pandas:
+
+1. ArrowDtype                     : 
+2. BooleanDtype                   : 
+3. Categorical                    : 
+4. CategoricalDtype               : 
+5. CategoricalIndex               : 
+6. DataFrame                      : 
+7. DateOffset                     : 
+8. DatetimeIndex                  : 
+9. DatetimeTZDtype                : 
+10. ExcelFile                     : 
+11. ExcelWriter                   : 
+12. Flags                         : 
+13. Float32Dtype                  : 
+14. Float64Dtype                  : 
+15. Grouper                       : 
+16. HDFStore                      : 
+17. Index                         : 
+18. Int16Dtype                    : 
+19. Int32Dtype                    : 
+20. Int64Dtype                    : 
+21. Int8Dtype                     : 
+22. Interval                      : 
+23. IntervalDtype                 : 
+24. IntervalIndex                 : 
+25. MultiIndex                    : 
+26. NamedAgg                      : 
+27. Period                        : 
+28. PeriodDtype                   : 
+29. PeriodIndex                   : 
+30. RangeIndex                    : 
+31. Series                        : 
+32. SparseDtype                   : 
+33. StringDtype                   : 
+34. Timedelta                     : 
+35. TimedeltaIndex                : 
+36. Timestamp                     : 
+37. UInt16Dtype                   : 
+38. UInt32Dtype                   : 
+39. UInt64Dtype                   : 
+40. UInt8Dtype                    : 
+41. array                         : 
+42. bdate_range                   : 
+43. concat                        : 
+44. crosstab                      : 
+45. cut                           : 
+46. date_range                    : 
+47. describe_option               : 
+48. eval                          : 
+49. factorize                     : 
+50. from_dummies                  : 
+51. get_dummies                   : 
+52. get_option                    : 
+53. infer_freq                    : 
+54. interval_range                : 
+55. isna                          : 
+56. isnull                        : 
+57. json_normalize                : 
+58. lreshape                      : 
+59. melt                          : 
+60. merge                         : 
+61. merge_asof                    : 
+62. merge_ordered                 : 
+63. notna                         : 
+64. notnull                       : 
+65. option_context                : 
+66. period_range                  : 
+67. pivot                         : 
+68. pivot_table                   : 
+69. qcut                          : 
+70. read_clipboard                : 
+71. read_csv                      : 
+72. read_excel                    : 
+73. read_feather                  : 
+74. read_fwf                      : 
+75. read_gbq                      : 
+76. read_hdf                      : 
+77. read_html                     : 
+78. read_json                     : 
+79. read_orc                      : 
+80. read_parquet                  : 
+81. read_pickle                   : 
+82. read_sas                      : 
+83. read_spss                     : 
+84. read_sql                      : 
+85. read_sql_query                : 
+86. read_sql_table                : 
+87. read_stata                    : 
+88. read_table                    : 
+89. read_xml                      : 
+90. reset_option                  : 
+91. set_eng_float_format          : 
+92. set_option                    : 
+93. show_versions                 : 
+94. test                          : 
+95. timedelta_range               : 
+96. to_datetime                   : 
+97. to_numeric                    : 
+98. to_pickle                     : 
+99. to_timedelta                  : 
+100. unique                        : 
+101. value_counts                  : 
+102. wide_to_long                  : 
+Data Type: seaborn
+
+
+Attributes of seaborn:
+
+1. __builtins__                   : dict() -&gt; new empty dictionary
+2. __cached__                     : str(object='') -&gt; str
+3. __doc__                        : No description available
+4. __file__                       : str(object='') -&gt; str
+5. __loader__                     : Concrete implementation of SourceLoader using the file system.
+6. __name__                       : str(object='') -&gt; str
+7. __package__                    : str(object='') -&gt; str
+8. __path__                       : Built-in mutable sequence.
+9. __spec__                       : The specification for a module, used for loading.
+10. __version__                   : str(object='') -&gt; str
+11. _base                         : No description available
+12. _compat                       : No description available
+13. _core                         : No description available
+14. _docstrings                   : No description available
+15. _orig_rc_params               : A dict-like key-value store for config parameters, including validation.
+16. _statistics                   : Statistical transformations for visualization.
+17. _stats                        : No description available
+18. algorithms                    : Algorithms to support fitting routines in seaborn plotting functions.
+19. axisgrid                      : No description available
+20. categorical                   : No description available
+21. cm                            : No description available
+22. colors                        : No description available
+23. crayons                       : dict() -&gt; new empty dictionary
+24. distributions                 : Plotting functions for visualizing distributions.
+25. external                      : No description available
+26. matrix                        : Functions to visualize matrices of data.
+27. miscplot                      : No description available
+28. mpl                           : 
+29. palettes                      : No description available
+30. rcmod                         : Control plot style and scaling using the matplotlib rcParams interface.
+31. regression                    : Plotting functions for linear models (broadly construed).
+32. relational                    : No description available
+33. utils                         : Utility functions, mostly for internal use.
+34. widgets                       : No description available
+35. xkcd_rgb                      : dict() -&gt; new empty dictionary
+
+Methods of seaborn:
+
+1. FacetGrid                      : Multi-plot grid for plotting conditional relationships.
+2. JointGrid                      : Grid for drawing a bivariate plot with marginal univariate plots.
+3. PairGrid                       : Subplot grid for plotting pairwise relationships in a dataset.
+4. axes_style                     : 
+5. barplot                        : Show point estimates and errors as rectangular bars.
+6. blend_palette                  : Make a palette that blends between a list of colors.
+7. boxenplot                      : Draw an enhanced box plot for larger datasets.
+8. boxplot                        : Draw a box plot to show distributions with respect to categories.
+9. catplot                        : Figure-level interface for drawing categorical plots onto a FacetGrid.
+10. choose_colorbrewer_palette    : Select a palette from the ColorBrewer set.
+11. choose_cubehelix_palette      : Launch an interactive widget to create a sequential cubehelix palette.
+12. choose_dark_palette           : Launch an interactive widget to create a dark sequential palette.
+13. choose_diverging_palette      : Launch an interactive widget to choose a diverging color palette.
+14. choose_light_palette          : Launch an interactive widget to create a light sequential palette.
+15. clustermap                    : 
+16. color_palette                 : Return a list of colors or continuous colormap defining a palette.
+17. countplot                     : Show the counts of observations in each categorical bin using bars.
+18. crayon_palette                : Make a palette with color names from Crayola crayons.
+19. cubehelix_palette             : Make a sequential palette from the cubehelix system.
+20. dark_palette                  : Make a sequential palette that blends from dark to ``color``.
+21. desaturate                    : Decrease the saturation channel of a color by some percent.
+22. despine                       : Remove the top and right spines from plot(s).
+23. displot                       : Figure-level interface for drawing distribution plots onto a FacetGrid.
+24. distplot                      : 
+25. diverging_palette             : Make a diverging palette between two HUSL colors.
+26. dogplot                       : Who's a good boy?
+27. ecdfplot                      : Plot empirical cumulative distribution functions.
+28. get_data_home                 : Return a path to the cache directory for example datasets.
+29. get_dataset_names             : Report available example datasets, useful for reporting issues.
+30. heatmap                       : Plot rectangular data as a color-encoded matrix.
+31. histplot                      : Plot univariate or bivariate histograms to show distributions of datasets.
+32. hls_palette                   : 
+33. husl_palette                  : 
+34. jointplot                     : Draw a plot of two variables with bivariate and univariate graphs.
+35. kdeplot                       : Plot univariate or bivariate distributions using kernel density estimation.
+36. light_palette                 : Make a sequential palette that blends from light to ``color``.
+37. lineplot                      : Draw a line plot with possibility of several semantic groupings.
+38. lmplot                        : Plot data and regression model fits across a FacetGrid.
+39. load_dataset                  : Load an example dataset from the online repository (requires internet).
+40. move_legend                   : 
+41. mpl_palette                   : 
+42. pairplot                      : Plot pairwise relationships in a dataset.
+43. palplot                       : Plot the values in a color palette as a horizontal array.
+44. plotting_context              : 
+45. pointplot                     : Show point estimates and errors using lines with markers.
+46. regplot                       : Plot data and a linear regression model fit.
+47. relplot                       : Figure-level interface for drawing relational plots onto a FacetGrid.
+48. reset_defaults                : Restore all RC params to default settings.
+49. reset_orig                    : Restore all RC params to original settings (respects custom rc).
+50. residplot                     : Plot the residuals of a linear regression.
+51. rugplot                       : Plot marginal distributions by drawing ticks along the x and y axes.
+52. saturate                      : Return a fully saturated color with the same hue.
+53. scatterplot                   : Draw a scatter plot with possibility of several semantic groupings.
+54. set                           : 
+55. set_color_codes               : Change how matplotlib color shorthands are interpreted.
+56. set_context                   : 
+57. set_hls_values                : Independently manipulate the h, l, or s channels of a color.
+58. set_palette                   : Set the matplotlib color cycle using a seaborn palette.
+59. set_style                     : 
+60. set_theme                     : 
+61. stripplot                     : Draw a categorical scatterplot using jitter to reduce overplotting.
+62. swarmplot                     : Draw a categorical scatterplot with points adjusted to be non-overlapping.
+63. violinplot                    : Draw a patch representing a KDE and add observations or box plot statistics.
+64. xkcd_palette                  : Make a palette with color names from the xkcd color survey.
+Data Type: matplotlib.pyplot
+
+
+Attributes of matplotlib.pyplot:
+
+1. TYPE_CHECKING                  : bool(x) -&gt; bool
+2. _NO_PYPLOT_NOTE                : Built-in mutable sequence.
+3. _REPL_DISPLAYHOOK              : No description available
+4. __annotations__                : dict() -&gt; new empty dictionary
+5. __builtins__                   : dict() -&gt; new empty dictionary
+6. __cached__                     : str(object='') -&gt; str
+7. __doc__                        : str(object='') -&gt; str
+8. __file__                       : str(object='') -&gt; str
+9. __loader__                     : Concrete implementation of SourceLoader using the file system.
+10. __name__                      : str(object='') -&gt; str
+11. __package__                   : str(object='') -&gt; str
+12. __spec__                      : The specification for a module, used for loading.
+13. _api                          : 
+14. _backend_mod                  : No description available
+15. _color_sequences              : 
+16. _docstring                    : No description available
+17. _log                          : 
+18. _pylab_helpers                : 
+19. annotations                   : No description available
+20. backend_registry              : 
+21. cbook                         : 
+22. cm                            : 
+23. color_sequences               : 
+24. functools                     : functools.py - Tools for working with functions and callable objects
+25. importlib                     : A pure Python implementation of import.
+26. inspect                       : Get useful information from live Python objects.
+27. logging                       : 
+28. matplotlib                    : 
+29. mlab                          : 
+30. np                            : 
+31. rcParams                      : A dict-like key-value store for config parameters, including validation.
+32. rcParamsDefault               : A dict-like key-value store for config parameters, including validation.
+33. rcParamsOrig                  : A dict-like key-value store for config parameters, including validation.
+34. rcsetup                       : 
+35. style                         : No description available
+36. sys                           : This module provides access to some objects used or maintained by the
+37. threading                     : Thread module emulating a subset of Java's threading model.
+38. time                          : This module provides various functions to manipulate time values.
+
+Methods of matplotlib.pyplot:
+
+1. AbstractContextManager         : An abstract base class for context managers.
+2. Annotation                     : 
+3. Arrow                          : An arrow patch.
+4. Artist                         : 
+5. AutoLocator                    : 
+6. AxLine                         : 
+7. Axes                           : An Axes object encapsulates all the elements of an individual (sub-)plot in
+8. BackendFilter                  : 
+9. Button                         : 
+10. Circle                        : 
+11. Colormap                      : 
+12. Enum                          : 
+13. ExitStack                     : Context manager for dynamic management of a stack of exit callbacks.
+14. Figure                        : The top level container for all the plot elements.
+15. FigureBase                    : 
+16. FigureCanvasBase              : 
+17. FigureManagerBase             : 
+18. FixedFormatter                : 
+19. FixedLocator                  : 
+20. FormatStrFormatter            : 
+21. Formatter                     : 
+22. FuncFormatter                 : 
+23. GridSpec                      : 
+24. IndexLocator                  : 
+25. Line2D                        : A line - the line can have both a solid linestyle connecting all
+26. LinearLocator                 : 
+27. Locator                       : 
+28. LogFormatter                  : 
+29. LogFormatterExponent          : 
+30. LogFormatterMathtext          : 
+31. LogLocator                    : 
+32. MaxNLocator                   : 
+33. MouseButton                   : No description available
+34. MultipleLocator               : 
+35. Normalize                     : 
+36. NullFormatter                 : Always return the empty string.
+37. NullLocator                   : 
+38. PolarAxes                     : 
+39. Polygon                       : A general polygon patch.
+40. Rectangle                     : 
+41. ScalarFormatter               : 
+42. Slider                        : 
+43. Subplot                       : An Axes object encapsulates all the elements of an individual (sub-)plot in
+44. SubplotSpec                   : 
+45. Text                          : Handle storing and drawing of text in window or data coordinates.
+46. TickHelper                    : No description available
+47. Widget                        : 
+48. _ReplDisplayHook              : No description available
+49. _add_pyplot_note              : 
+50. _auto_draw_if_interactive     : 
+51. _colormaps                    : 
+52. _copy_docstring_and_deprecators : No description available
+53. _draw_all_if_interactive      : No description available
+54. _get_backend_mod              : 
+55. _get_pyplot_commands          : No description available
+56. _warn_if_gui_out_of_main_thread : No description available
+57. acorr                         : Plot the autocorrelation of *x*.
+58. angle_spectrum                : Plot the angle spectrum.
+59. annotate                      : Annotate the point *xy* with text *text*.
+60. arrow                         : Add an arrow to the Axes.
+61. autoscale                     : Autoscale the axis view to the data (toggle).
+62. autumn                        : 
+63. axes                          : Add an Axes to the current figure and make it the current Axes.
+64. axhline                       : Add a horizontal line across the Axes.
+65. axhspan                       : Add a horizontal span (rectangle) across the Axes.
+66. axis                          : Convenience method to get or set some axis properties.
+67. axline                        : Add an infinitely long straight line.
+68. axvline                       : Add a vertical line across the Axes.
+69. axvspan                       : Add a vertical span (rectangle) across the Axes.
+70. bar                           : Make a bar plot.
+71. bar_label                     : Label a bar plot.
+72. barbs                         : Plot a 2D field of wind barbs.
+73. barh                          : Make a horizontal bar plot.
+74. bone                          : 
+75. box                           : 
+76. boxplot                       : Draw a box and whisker plot.
+77. broken_barh                   : Plot a horizontal sequence of rectangles.
+78. cast                          : Cast a value to a type.
+79. cla                           : Clear the current Axes.
+80. clabel                        : Label a contour plot.
+81. clf                           : Clear the current figure.
+82. clim                          : 
+83. close                         : 
+84. cohere                        : Plot the coherence between *x* and *y*.
+85. colorbar                      : Add a colorbar to a plot.
+86. colormaps                     : 
+87. connect                       : Bind function *func* to event *s*.
+88. contour                       : Plot contour lines.
+89. contourf                      : Plot filled contours.
+90. cool                          : 
+91. copper                        : 
+92. csd                           : Plot the cross-spectral density.
+93. cycler                        : 
+94. delaxes                       : 
+95. disconnect                    : Disconnect the callback with id *cid*.
+96. draw                          : 
+97. draw_all                      : 
+98. draw_if_interactive           : 
+99. ecdf                          : Compute and plot the empirical cumulative distribution function of *x*.
+100. errorbar                      : Plot y versus x as lines and/or markers with attached errorbars.
+101. eventplot                     : Plot identical parallel lines at the given positions.
+102. figaspect                     : 
+103. figimage                      : Add a non-resampled image to the figure.
+104. figlegend                     : Place a legend on the figure.
+105. fignum_exists                 : 
+106. figtext                       : Add text to figure.
+107. figure                        : 
+108. fill                          : Plot filled polygons.
+109. fill_between                  : Fill the area between two horizontal curves.
+110. fill_betweenx                 : Fill the area between two vertical curves.
+111. findobj                       : 
+112. flag                          : 
+113. gca                           : Get the current Axes.
+114. gcf                           : 
+115. gci                           : 
+116. get                           : Return the value of an `.Artist`'s *property*, or print all of them.
+117. get_backend                   : 
+118. get_cmap                      : 
+119. get_current_fig_manager       : 
+120. get_figlabels                 : Return a list of existing figure labels.
+121. get_fignums                   : Return a list of existing figure numbers.
+122. get_plot_commands             : [*Deprecated*] Get a sorted list of all of the plotting commands.
+123. get_scale_names               : Return the names of the available scales.
+124. getp                          : Return the value of an `.Artist`'s *property*, or print all of them.
+125. ginput                        : Blocking call to interact with a figure.
+126. gray                          : 
+127. grid                          : Configure the grid lines.
+128. hexbin                        : Make a 2D hexagonal binning plot of points *x*, *y*.
+129. hist                          : Compute and plot a histogram.
+130. hist2d                        : Make a 2D histogram plot.
+131. hlines                        : Plot horizontal lines at each *y* from *xmin* to *xmax*.
+132. hot                           : 
+133. hsv                           : 
+134. imread                        : Read an image from a file into an array.
+135. imsave                        : Colormap and save an array as an image file.
+136. imshow                        : Display data as an image, i.e., on a 2D regular raster.
+137. inferno                       : 
+138. install_repl_displayhook      : 
+139. interactive                   : 
+140. ioff                          : 
+141. ion                           : 
+142. isinteractive                 : 
+143. jet                           : 
+144. legend                        : Place a legend on the Axes.
+145. locator_params                : Control behavior of major tick locators.
+146. loglog                        : Make a plot with log scaling on both the x- and y-axis.
+147. magma                         : 
+148. magnitude_spectrum            : Plot the magnitude spectrum.
+149. margins                       : Set or retrieve autoscaling margins.
+150. matshow                       : 
+151. minorticks_off                : Remove minor ticks from the Axes.
+152. minorticks_on                 : Display minor ticks on the Axes.
+153. new_figure_manager            : Create a new figure manager instance.
+154. nipy_spectral                 : 
+155. overload                      : Decorator for overloaded functions/methods.
+156. pause                         : 
+157. pcolor                        : Create a pseudocolor plot with a non-regular rectangular grid.
+158. pcolormesh                    : Create a pseudocolor plot with a non-regular rectangular grid.
+159. phase_spectrum                : Plot the phase spectrum.
+160. pie                           : Plot a pie chart.
+161. pink                          : 
+162. plasma                        : 
+163. plot                          : Plot y versus x as lines and/or markers.
+164. plot_date                     : [*Deprecated*] Plot coercing the axis to treat floats as dates.
+165. polar                         : 
+166. prism                         : 
+167. psd                           : Plot the power spectral density.
+168. quiver                        : Plot a 2D field of arrows.
+169. quiverkey                     : Add a key to a quiver plot.
+170. rc                            : Set the current `.rcParams`.  *group* is the grouping for the rc, e.g.,
+171. rc_context                    : Return a context manager for temporarily changing rcParams.
+172. rcdefaults                    : Restore the `.rcParams` from Matplotlib's internal default style.
+173. rgrids                        : 
+174. savefig                       : Save the current figure as an image or vector graphic to a file.
+175. sca                           : 
+176. scatter                       : A scatter plot of *y* vs. *x* with varying marker size and/or color.
+177. sci                           : 
+178. semilogx                      : Make a plot with log scaling on the x-axis.
+179. semilogy                      : Make a plot with log scaling on the y-axis.
+180. set_cmap                      : 
+181. set_loglevel                  : Configure Matplotlib's logging levels.
+182. setp                          : Set one or more properties on an `.Artist`, or list allowed values.
+183. show                          : 
+184. specgram                      : Plot a spectrogram.
+185. spring                        : 
+186. spy                           : Plot the sparsity pattern of a 2D array.
+187. stackplot                     : Draw a stacked area plot or a streamgraph.
+188. stairs                        : Draw a stepwise constant function as a line or a filled plot.
+189. stem                          : Create a stem plot.
+190. step                          : Make a step plot.
+191. streamplot                    : Draw streamlines of a vector flow.
+192. subplot                       : Add an Axes to the current figure or retrieve an existing Axes.
+193. subplot2grid                  : 
+194. subplot_mosaic                : 
+195. subplot_tool                  : 
+196. subplots                      : 
+197. subplots_adjust               : Adjust the subplot layout parameters.
+198. summer                        : 
+199. suptitle                      : Add a centered suptitle to the figure.
+200. switch_backend                : 
+201. table                         : Add a table to an `~.axes.Axes`.
+202. text                          : Add text to the Axes.
+203. thetagrids                    : 
+204. tick_params                   : Change the appearance of ticks, tick labels, and gridlines.
+205. ticklabel_format              : Configure the `.ScalarFormatter` used by default for linear Axes.
+206. tight_layout                  : Adjust the padding between and around subplots.
+207. title                         : Set a title for the Axes.
+208. tricontour                    : Draw contour lines on an unstructured triangular grid.
+209. tricontourf                   : Draw contour regions on an unstructured triangular grid.
+210. tripcolor                     : Create a pseudocolor plot of an unstructured triangular grid.
+211. triplot                       : Draw an unstructured triangular grid as lines and/or markers.
+212. twinx                         : 
+213. twiny                         : 
+214. uninstall_repl_displayhook    : Disconnect from the display hook of the current shell.
+215. violinplot                    : Make a violin plot.
+216. viridis                       : 
+217. vlines                        : Plot vertical lines at each *x* from *ymin* to *ymax*.
+218. waitforbuttonpress            : Blocking call to interact with the figure.
+219. winter                        : 
+220. xcorr                         : Plot the cross correlation between *x* and *y*.
+221. xkcd                          : 
+222. xlabel                        : Set the label for the x-axis.
+223. xlim                          : 
+224. xscale                        : Set the xaxis' scale.
+225. xticks                        : 
+226. ylabel                        : Set the label for the y-axis.
+227. ylim                          : 
+228. yscale                        : Set the yaxis' scale.
+229. yticks                        : 
 </pre>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Possible Interview Questions in Set</p>
-<ol>
-<li><p>What is a set in Python, and how does it differ from a list?</p>
-<p>A set is an unordered collection of unique elements. It differs from a list in that sets do not allow duplicate elements and are unordered, whereas lists can have duplicates and maintain the order of elements.</p>
-</li>
-<li><p>How can you add and remove elements from a set?</p>
-<p>You can add elements using add() for a single element or update() for multiple elements. You can remove elements using remove() or discard(). The remove() method raises a KeyError if the element is not found, whereas discard() does not.</p>
-</li>
-<li><p>What are the main advantages of using a set in Python?</p>
-<p>Sets automatically handle duplicate elements.</p>
-<p>Set operations (union, intersection, difference) are more efficient for large datasets compared to lists.</p>
-<p>Membership testing (in keyword) is faster in sets compared to lists.</p>
-</li>
-<li><p>How do you check if one set is a subset or superset of another set?</p>
-<p>issubset(): Returns True if all elements of the first set are present in the second set.</p>
-<p>issuperset(): Returns True if all elements of the second set are present in the first set.</p>
-<pre><code> set1 = {1, 2, 3}
- set2 = {1, 2}
- print(set2.issubset(set1))  # Output: True</code></pre>
-</li>
-<li><p>Can a set contain mutable elements like lists or dictionaries?</p>
-<p>No, a set cannot contain mutable elements like lists or dictionaries because sets require their elements to be hashable and immutable. However, tuples and frozensets (which are immutable) can be elements of a set.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">seta</span> <span class="o">=</span> <span class="p">{</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">}</span>
-<span class="c1"># setb = {21,22,23,24,25,[1,2,3]}     #TypeError: unhashable type: 'list'</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">seta</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>{11, 12, 13, 14, 15}
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Reference">Reference<a class="anchor-link" href="#Reference">¶</a></h3><pre><code>ChatGPT
-1DataFundamentalsInPython.pdf</code></pre>
 </div>
 </div>
 </div>

@@ -8395,6 +8395,310 @@ Scatter Plot</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Data Visualization:</p>
+<pre><code>It is the representation of data in a pictorial or graphical format.
+Allows the decision makers to see analytics, grasp difficult concepts and identify new patterns at ease.</code></pre>
+<p>Anscombe's quartet:</p>
+<pre><code>It comprises four datasets that have nearly identical simple descriptive statistics, yet appear very difficult when graphed.
+If we take the data in statistics representation, all the mean, median, standard deviation like multiple factors looks same.
+But graphical points are plotted in different pattern. </code></pre>
+<p>Libraries:</p>
+<pre><code>Matplotlib, seaborn, ggplot, plotly, geoplotlib</code></pre>
+<p>Matplotlib:</p>
+<pre><code>Python library for Data Visualization.
+Create 2D graphs and plots using python scripts.
+Produces output in a variety of hardcopy formats.
+provides a module called Pyplot.
+simple functions used for Visualization.
+supports a very wide variety of graphs.
+Easy integration with Pandas and Numpy.
+Provides an Object-Oriented API.</code></pre>
+<p>Types of Plots:</p>
+<pre><code>Line, Bar, Scatter, Histogram, Image, Box, Violin, Stream, Quiver, Area, Pie and Donut.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>Import libraries, matplotlib.pyplot as plt.
+x and y are input and output list.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Line Plot:</p>
+<pre><code>Basic line plot:
+    plt.plot(x,y)
+    plt.show()
+    
+Customize line plot:
+    plt.plot(x, y, linewidth=2.0, linestyle=":", color="r", alpha=0.5, marker='o')
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.legend(['line1'], loc='best')
+    plt.grid(True)
+    plt.show()
+    # linewidth = width of plotted line
+    # linestyle = style of plotted line
+    # color = color of plotted line
+    # alpha = opacity of plotted line
+    # marker = points in the plotted line
+
+changing figsize :
+    fig = plt.figure(figsize=(10,5))
+    # not required to use fig in anywhere
+
+adding 2 or more plots:
+    x, y1, y2 are input and output variables.
+    #first create the plot position in figure.
+    plt.subplot(2,1,1)  # 2 rows, 1 column, 1 position
+    plt.plot(x,y1)
+    plt.title('Graph1')
+    plt.subplot(2,1,1)  # 2 rows, 1 column, 2 position
+    plt.plot(x,y2)
+    plt.title('Graph2')
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Bar Plot:</p>
+<pre><code>simple bar plot:
+    plt.bar(x,y)
+    plt.show()
+    
+Customize line plot:
+    plt.bar(x, y, color="r")
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()
+    # color = color of plotted line
+    # if we need horizontal bar graph
+    plt.barh(x, y)
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Scatter Plot:</p>
+<pre><code>Simple Scatter plot:
+    plt.scatter(x, y)
+    plt.show()
+
+Multiple scatter plots:
+    plt.scatter(x, y)
+    plt.scatter(x, z)
+    plt.legend(['y','z'], loc='best')
+    plt.show()
+    
+Customize scatter plot:
+    plt.scatter(x, y, c='g', s=300, edgecolors='y', marker='o', alpha=0.5)
+    plt.scatter(x, z, c='r', s=400, edgecolors='b', marker='4', alpha=1)
+    plt.legend(['y','z'], loc='best')
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()
+    # c = color of plotted points
+    # s = size of plotted points
+    # edgecolors = color of edge points
+    # marker = points in graph
+    # alpha = opacity of plotted points</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Histogram:</p>
+<pre><code>Simple Histogram:
+    plt.hist(x, bins=[limit])
+    plt.show()
+    # limit means range of each x values
+    # x means list of numbers
+    
+Customize Histogram:
+    plt.hist(x, bins=[limit], color='r', edgecolor='b')
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.savefig('name.png')
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Box Plot:</p>
+<pre><code>Simple Box plot:
+    plt.boxplot(x)
+    plt.show()
+    # x means list of numbers
+    
+Customize Box plot:
+    plt.boxplot(x, showmeans=True)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Violin Plot:</p>
+<pre><code>Simple Violin plot:
+    plt.violinplot(x)
+    plt.show()
+    # x means list of numbers
+
+Customize Violin plot:
+    plt.violinplot(x)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.grid(True)
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Pie Chart:</p>
+<pre><code>Simple Pie chart:
+    plt.pie(x, labels=y)
+    plt.show()
+    # x means list of values
+    # y means list of labels
+
+Customize pie chart:
+    plt.pie(x, labels=y, autopct='%1.1f%%', shadow=True, startangle=90)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Donut chart:</p>
+<pre><code>Simple Donut chart:
+    plt.pie(x, labels=y, radius=1.5)
+    plt.pie(size_center, radius=1.0, colors='w')
+    plt.show()
+    # x means list of numbers
+    # y means list of labels
+    # size_center means space in center
+
+Customize Donut chart:
+    a,b,c = [plt.cm.Blues,plt.cm.Reds,plt.cm.Greens]
+    plt.pie(x, labels=y, radius=1.5, colors=[a(0.5),b(1.5),c(1.0)])
+    plt.pie(size_center, radius=1.0, colors='w')
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Area chart:</p>
+<pre><code>Simple Area chart:
+    plt.stackplot(x,y)
+    plt.show()
+    # x means list of numbers
+    # y means list of numbers
+    
+Customize Area chart:
+    plt.stackplot(x,y,colors='Black', alpha=0.5)
+    plt.title('Title Name')
+    plt.xlabel('xlabel name')
+    plt.ylabel('ylabel name')
+    plt.show()
+    
+merging area chart with line chart
+    plt.stackplot(x,y,colors='Black', alpha=0.5)
+    plt.plot(x,y,colors='g')
+    plt.show()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>To save any plots:</p>
+<pre><code>plt.savefig('name.png')</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Possible Interview Questions on Matplotlib</p>
 <ol>
 <li><p>What is Matplotlib, and why is it used?</p>
